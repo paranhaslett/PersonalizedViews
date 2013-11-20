@@ -1,0 +1,11 @@
+#--unknown-language--@+leo-ver=4-thin
+#--unknown-language--@+node:hasletpara.20130905131851.1629:@shadow ./config.fmpp
+#--unknown-language--@@language plain
+sourceRoot: fmpp
+outputRoot: out
+data: {
+    tdd(data/style.tdd)
+    tabbedPages: csv(data/tabbedPages.csv)
+}
+#--unknown-language--@-node:hasletpara.20130905131851.1629:@shadow ./config.fmpp
+#--unknown-language--@-leo

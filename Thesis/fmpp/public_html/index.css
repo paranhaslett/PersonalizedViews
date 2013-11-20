@@ -1,0 +1,21 @@
+
+.navMenu{
+  display:inline-block;
+  padding:25px 50px;
+}
+
+.topNav{
+  width:520px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.main{
+  width:300px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+h2{
+    text-align:center;
+}

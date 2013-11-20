@@ -1,0 +1,94 @@
+<!--@+leo-ver=4-thin-->
+<!--@+node:hasletpara.20130905134207.1629:@shadow ./fmpp/public_html/generic.html-->
+<!--@@language xml-->
+<!--@@tabwidth -2-->
+<@pp.dropOutputFile />
+
+<#list tabbedPages as mainPage>
+<@pp.changeOutputFile name=mainPage.href />
+<!--@+others-->
+<!--@+node:hasletpara.20130905134207.1633:html-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+  <head>
+    <title>Reading Topics</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="index.js" type="text/javascript">
+    </script>
+  </head>
+  <div class="topNav">
+      <!--@      <<topNav>>-->
+      <!--@+node:hasletpara.20130905134207.1630:<<topNav>>-->
+      <ul>
+        <#list tabbedPages as tab>
+          <!--@    @+others-->
+          <!--@+node:hasletpara.20130905134207.1631:list item-->
+          <li class="navMenu">
+          <#if tab.href != mainPage.href>
+            <a href="${tab.href}">${tab.name}</a>
+          <#else>
+            ${tab.name}
+          </#if>
+          </li>
+          <!--@-node:hasletpara.20130905134207.1631:list item-->
+          <!--@-others-->
+        </#list>
+      </ul>
+      <!--@nonl-->
+      <!--@-node:hasletpara.20130905134207.1630:<<topNav>>-->
+      <!--@nl-->
+  </div>
+  <div class="main">
+     <!--@     <<Body>>-->
+     <!--@+node:hasletpara.20130905134207.1632:<<Body>>-->
+
+     <#if mainPage.name == "Home">
+       <!--@  <<Home>>-->
+       <!--@+node:hasletpara.20130905134207.1636:<<Home>>-->
+       <h2>Paran Haslett</h2>
+
+       <iframe src="http://www.mendeley.com/profiles/paran-haslett/widget/3095/2756342060/154ad93d49cfa4215250060227cfe80df365e026/" frameborder="0" allowTransparency="true" style="width:260px;height:550px;"></iframe><p style='width:260px;'><a href='http://www.mendeley.com/profiles/paran-haslett/' title='Paran Haslett on Mendeley'>Paran Haslett</a> is a memberof <a href='http://www.mendeley.com/disciplines/computer-and-information-science/' title='Computer and Information Science on Mendeley'>Computer and Information Science</a>on <a href='http://www.mendeley.com/' title='Mendeley'>Mendeley</a>.</p>
+       <!--@nonl-->
+       <!--@-node:hasletpara.20130905134207.1636:<<Home>>-->
+       <!--@nl-->
+     </#if>
+     <#if mainPage.name == "Reading Topics">
+       <!--@  <<Reading Topics>>-->
+       <!--@+node:hasletpara.20130905134207.1637:<<Reading Topics>>-->
+       <h2>Reading Topics</h2>
+       <ul>
+         <li>Code Source Mining</li>
+         <li>Comparison Tools</li>
+         <li>CSCW</li>
+         <li>Modeling and Code Viewing</li>
+         <li>Program Slicing</li>
+         <li>Templates and Macros</li>
+         <li>Version Control</li>
+         <li>View Mapping Language</li>
+       <ul>
+       <!--@nonl-->
+       <!--@-node:hasletpara.20130905134207.1637:<<Reading Topics>>-->
+       <!--@nl-->
+     </#if>
+     <#if mainPage.name == "Ideas">
+       <!--@  <<Ideas>>-->
+       <!--@+node:hasletpara.20130905134207.1638:<<Ideas>>-->
+       <h2>Ideas</h2>
+       <!--@nonl-->
+       <!--@-node:hasletpara.20130905134207.1638:<<Ideas>>-->
+       <!--@nl-->
+     </#if>
+
+     <!--@-node:hasletpara.20130905134207.1632:<<Body>>-->
+     <!--@nl-->
+  </div>
+</html>
+<!--@nonl-->
+<!--@-node:hasletpara.20130905134207.1633:html-->
+<!--@-others-->
+</#list>
+
+
+<!--@-node:hasletpara.20130905134207.1629:@shadow ./fmpp/public_html/generic.html-->
+<!--@-leo-->

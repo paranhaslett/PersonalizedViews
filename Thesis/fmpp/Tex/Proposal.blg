@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (Web2C 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Proposal.aux
+The style file: agsm.bst
+Database file #1: Thesis.bib
+Warning--there's a number but no volume in LeBenich2012
+You've used 15 entries,
+            2909 wiz_defined-function locations,
+            748 strings with 8066 characters,
+and the built_in function-call counts, 58604 in all, are:
+= -- 9399
+> -- 873
+< -- 0
++ -- 4468
+- -- 266
+* -- 5010
+:= -- 11856
+add.period$ -- 15
+call.type$ -- 15
+change.case$ -- 207
+chr.to.int$ -- 15
+cite$ -- 16
+duplicate$ -- 278
+empty$ -- 509
+format.name$ -- 307
+if$ -- 10537
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 18
+newline$ -- 59
+num.names$ -- 157
+pop$ -- 95
+preamble$ -- 1
+purify$ -- 225
+quote$ -- 0
+skip$ -- 218
+stack$ -- 0
+substring$ -- 13180
+swap$ -- 58
+text.length$ -- 210
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 54
+warning$ -- 1
+while$ -- 333
+width$ -- 0
+write$ -- 219
+(There was 1 warning)
