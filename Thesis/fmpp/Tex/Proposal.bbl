@@ -46,10 +46,11 @@ Freese, T.  \harvardyearleft 2007\harvardyearright , `{Operation-based merging
   of development histories}', {\em Refactoring Tools (WRT'07)} p.~47.
 \newline\harvardurl{http://www.eecs.tu-berlin.de/fileadmin/f4/TechReports/2007/2007-08.pdf\#page=55}
 
-\harvarditem{Grundy \harvardand\ Hosking}{n.d.}{Grundya}
+\harvarditem{Grundy \harvardand\ Hosking}{1993}{Grundy1993}
 Grundy, J.~C. \harvardand\ Hosking, J.~G.  \harvardyearleft
-  n.d.\harvardyearright , `{Constructing Integrated Software Development
-  Environments with MViews}'.
+  1993\harvardyearright , `{Constructing multi-view editing environments using
+  MViews}', {\em Visual Languages, 1993., \ldots} .
+\newline\harvardurl{http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=269600}
 
 \harvarditem{Kerievsky}{2004}{Kerievsky2004}
 Kerievsky, J.  \harvardyearleft 2004\harvardyearright , {\em {Refactoring to

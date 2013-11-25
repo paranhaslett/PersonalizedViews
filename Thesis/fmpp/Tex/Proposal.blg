@@ -6,15 +6,15 @@ Database file #1: Thesis.bib
 Warning--there's a number but no volume in LeBenich2012
 You've used 15 entries,
             2909 wiz_defined-function locations,
-            748 strings with 8066 characters,
-and the built_in function-call counts, 58604 in all, are:
-= -- 9399
+            751 strings with 8155 characters,
+and the built_in function-call counts, 58613 in all, are:
+= -- 9400
 > -- 873
 < -- 0
 + -- 4468
 - -- 266
-* -- 5010
-:= -- 11856
+* -- 5015
+:= -- 11857
 add.period$ -- 15
 call.type$ -- 15
 change.case$ -- 207
@@ -23,20 +23,20 @@ cite$ -- 16
 duplicate$ -- 278
 empty$ -- 509
 format.name$ -- 307
-if$ -- 10537
+if$ -- 10538
 int.to.chr$ -- 5
 int.to.str$ -- 0
 missing$ -- 18
-newline$ -- 59
+newline$ -- 60
 num.names$ -- 157
-pop$ -- 95
+pop$ -- 91
 preamble$ -- 1
 purify$ -- 225
 quote$ -- 0
-skip$ -- 218
+skip$ -- 219
 stack$ -- 0
 substring$ -- 13180
-swap$ -- 58
+swap$ -- 59
 text.length$ -- 210
 text.prefix$ -- 0
 top$ -- 0
@@ -44,5 +44,5 @@ type$ -- 54
 warning$ -- 1
 while$ -- 333
 width$ -- 0
-write$ -- 219
+write$ -- 221
 (There was 1 warning)

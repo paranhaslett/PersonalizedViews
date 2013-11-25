@@ -12,10 +12,31 @@
 <vnodes>
 <v t="paranhaslett.20130826181255.2958" a="E"><vh>Thesis</vh>
 <v t="paranhaslett.20130826181255.2959" a="E"><vh>Documents</vh>
-<v t="paranhaslett.20130826181255.2960"
-expanded="paranhaslett.20130826181255.2964,"><vh>@shadow ./fmpp/Tex/Thesis.tex</vh></v>
+<v t="hasletpara.20131121100256.1778" a="E"><vh>format for thesis</vh>
+<v t="hasletpara.20131121100256.1789"><vh>&lt;&lt;Front part&gt;&gt;</vh>
+<v t="hasletpara.20131121100256.1786"><vh>&lt;&lt;Title Page&gt;&gt;</vh>
+<v t="hasletpara.20131121100256.1779"><vh>&lt;&lt;header&gt;&gt;</vh></v>
+<v t="hasletpara.20131121100256.1780"><vh>&lt;&lt;title&gt;&gt;</vh></v>
+<v t="hasletpara.20131121100256.1781"><vh>&lt;&lt;author&gt;&gt;</vh></v>
+<v t="hasletpara.20131121100256.1782"><vh>&lt;&lt;Supervisors&gt;&gt;</vh></v>
+<v t="hasletpara.20131121100256.1783"><vh>&lt;&lt;Date&gt;&gt;</vh></v>
+<v t="hasletpara.20131121100256.1784"><vh>&lt;&lt;towards&gt;&gt;</vh></v>
+</v>
+<v t="hasletpara.20131121100256.1785"><vh>&lt;&lt;Abstract&gt;&gt;</vh></v>
+</v>
+<v t="hasletpara.20131121100256.1788"><vh>&lt;&lt;Introduction&gt;&gt;</vh></v>
+<v t="hasletpara.20131121100256.1790"><vh>&lt;&lt;Background&gt;&gt;</vh></v>
+<v t="hasletpara.20131121100256.1791"><vh>&lt;&lt;How it was implemented&gt;&gt;</vh></v>
+<v t="hasletpara.20131121100256.1792"><vh>&lt;&lt;How UI was implemented&gt;&gt;</vh></v>
+<v t="hasletpara.20131121100256.1793"><vh>&lt;&lt;Evaluation&gt;&gt;</vh></v>
+<v t="hasletpara.20131121100256.1794" a="E"><vh>&lt;&lt;Conclusion&gt;&gt;</vh>
+<v t="hasletpara.20131121100256.1795"><vh>&lt;&lt;Recommendations&gt;&gt;</vh></v>
+</v>
+</v>
+<v t="paranhaslett.20130826181255.2960" a="E"
+expanded="paranhaslett.20130826181255.2963,paranhaslett.20130826181255.2964,"><vh>@shadow ./fmpp/Tex/Thesis.tex</vh></v>
 <v t="hasletpara.20130905084546.1629" a="E"
-expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,"><vh>@shadow ./fmpp/Tex/Proposal.tex</vh></v>
+expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,hasletpara.20131122093500.1838,"><vh>@shadow ./fmpp/Tex/Proposal.tex</vh></v>
 </v>
 <v t="paranhaslett.20130826181255.3074"><vh>Notes</vh>
 <v t="hasletpara.20131115102112.1759"><vh>Proposed Approach</vh></v>
@@ -133,12 +154,16 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 <v t="paranhaslett.20130826181255.3061"><vh>Node</vh></v>
 </v>
 <v t="paranhaslett.20130826181255.3062"><vh>Web Pages</vh>
+<v t="hasletpara.20131121100256.1776"><vh>Data</vh>
+<v t="hasletpara.20131121100256.1777"><vh>@shadow ./fmpp/data/tabbedPages.csv</vh></v>
+</v>
 <v t="hasletpara.20130905134207.1647"><vh>@shadow ./create.sh</vh></v>
+<v t="hasletpara.20131121100256.1774"><vh>@shadow ./config.fmpp</vh></v>
 <v t="paranhaslett.20130826181255.3063"><vh>Personal Uni Home</vh>
 <v t="hasletpara.20130905131851.1629"><vh>@shadow ./config.fmpp</vh></v>
 <v t="hasletpara.20130905134207.1629"><vh>@shadow ./fmpp/public_html/generic.html</vh></v>
 </v>
-<v t="paranhaslett.20130826181255.3068" a="E"><vh>Ema Wiki</vh>
+<v t="paranhaslett.20130826181255.3068"><vh>Ema Wiki</vh>
 <v t="paranhaslett.20130826181255.3069"><vh>@shadow ../../Dropbox/PersonalWiki/Study.txt</vh></v>
 <v t="paranhaslett.20130826181255.3070" a="E"
 expanded="paranhaslett.20130826181255.2964,"><vh>@shadow ../../Dropbox/PersonalWiki/Thesis.txt</vh></v>
@@ -150,12 +175,6 @@ expanded="paranhaslett.20130826181255.3120,paranhaslett.20130826181255.3148,para
 <v t="paranhaslett.20130826181255.3158" a="E"
 expanded="paranhaslett.20130826181255.3120,"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
 </v>
-</v>
-</v>
-<v t="hasletpara.20131118094717.1762" a="E"><vh>Recovered Nodes</vh>
-<v t="hasletpara.20131118094717.1763"><vh>Recovered node "Notes from xStudy_Notes.txt</vh>
-<v t="hasletpara.20131118094717.1764"><vh>old:Notes</vh></v>
-<v t="hasletpara.20131118094717.1765"><vh>new:Notes</vh></v>
 </v>
 </v>
 </vnodes>
@@ -296,22 +315,193 @@ The solution to these issues that I am proposing goes a little further in separa
 initially as a diff tool for GIT
 initially dealing with code comments that may not need to be transfered
 @c</t>
-<t tx="hasletpara.20131118094717.1762"></t>
-<t tx="hasletpara.20131118094717.1763">(cached) paranhaslett.20130826181255.3074
-Diff...
-  NOTES
-- @others+ @others
-?        +
-+ 
-+ Git tutorial
-+ http://www.vogella.com/articles/Git/article.html</t>
-<t tx="hasletpara.20131118094717.1764">NOTES
-@others
+<t tx="hasletpara.20131121100256.1776"></t>
+<t tx="hasletpara.20131121100256.1778">&lt;&lt;Front part&gt;&gt;
 
-Git tutorial
-http://www.vogella.com/articles/Git/article.html</t>
-<t tx="hasletpara.20131118094717.1765">NOTES
-@others</t>
+&lt;&lt;Introduction&gt;&gt;
+
+&lt;&lt;Background&gt;&gt;
+
+&lt;&lt;How it was implemented&gt;&gt;
+
+&lt;&lt;How UI was implemented&gt;&gt;
+
+&lt;&lt;Evaluation&gt;&gt;
+
+&lt;&lt;Conclusion&gt;&gt;
+
+</t>
+<t tx="hasletpara.20131121100256.1779">VICTORIA UNIVERSITY OF WELLINGTON
+
+Te Whare Wananga o te ¯ Upoko o te Ika a M ¯ aui ¯
+
+School of Engineering and Computer Science
+
+Te Kura Matai P ¯ ukaha, P ¯ urorohiko ¯
+
+PO Box 600
+
+Wellington
+
+New Zealand</t>
+<t tx="hasletpara.20131121100256.1780">Chat by Searching</t>
+<t tx="hasletpara.20131121100256.1781">Alexandre Sawczuk da Silva</t>
+<t tx="hasletpara.20131121100256.1782">
+Supervisors: Xiaoying Gao, Peter Andreae</t>
+<t tx="hasletpara.20131121100256.1783">October 17, 2013</t>
+<t tx="hasletpara.20131121100256.1784">Submitted in partial fulﬁlment of the requirements for
+
+Bachelor of Engineering — Software Engineering.</t>
+<t tx="hasletpara.20131121100256.1785">
+Chatbots, which are computer programs that have conversations with users,
+
+are a well-established technology. However, the conversational ability of the typ-
+ical chatbot is greatly restricted, since it does not have access to external sources
+
+of information. The objective of this project was to investigate how the per-
+formance of a chatbot could be improved by connecting it with a knowledge
+
+source that could be used during its interactions with users. A new chatbot, Wal-
+lace, was created by extending Alice to incorporate knowledge from Wikipedia
+
+into its conversations. Mechanisms were designed and developed to retrieve
+
+Wikipedia pages, parse them, and select suitable sentences for the conversation.
+
+A user evaluation was conducted on the prototype, which showed that Wallace
+
+was generally more effective at providing factual answers to questions denoting
+
+an informational need than Alice. Participants also expressed that Wallace was
+
+more speciﬁc and more entertaining than Alice. This project identiﬁed several
+
+directions for future development, especially involving human-computer inter-
+action and artiﬁcial intelligence.</t>
+<t tx="hasletpara.20131121100256.1786">&lt;&lt;header&gt;&gt;
+
+&lt;&lt;title&gt;&gt;
+
+&lt;&lt;author&gt;&gt;
+
+&lt;&lt;Supervisors&gt;&gt;
+
+&lt;&lt;Date&gt;&gt;
+
+&lt;&lt;towards&gt;&gt;
+
+</t>
+<t tx="hasletpara.20131121100256.1788">
+1.1 Project Objectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1</t>
+<t tx="hasletpara.20131121100256.1789">&lt;&lt;Title Page&gt;&gt;
+
+&lt;&lt;Abstract&gt;&gt;
+
+Acknowledgements
+
+Contents
+
+List of Figures
+</t>
+<t tx="hasletpara.20131121100256.1790">
+2.1 History of Chatbots . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+2.2 Educational Chatbots . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+
+2.3 Chatbots for Bulletin Boards . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+
+2.4 Chatbots with Emotions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+2.5 Commercial Chatbots . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+2.6 Proﬁle-building Chatbots . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+2.7 Chatbots with Learning Capabilities . . . . . . . . . . . . . . . . . . . . . . . . 6
+
+
+General overview
+
+understanding of definitions
+
+Benefits
+
+How to do it / model it tjink about it
+
+types of
+
+tools that could help
+
+summary</t>
+<t tx="hasletpara.20131121100256.1791">3 Development of Chatbot Functionality 7
+
+3.1 Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+
+3.2 System Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+3.2.1 Chosen Technologies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+3.2.2 The Existing Alice Framework . . . . . . . . . . . . . . . . . . . . . . . 9
+
+3.2.3 System Architecture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+3.2.4 Enhancing the Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+
+3.3 Integrating Search to Wallace . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+3.3.1 Triggering the Search Behaviour . . . . . . . . . . . . . . . . . . . . . . 12
+
+3.3.2 Parsing a Wikipedia Page . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+3.3.3 Simple Sentence Selection Approach . . . . . . . . . . . . . . . . . . . . 14
+
+3.3.4 Sophisticated Sentence Selection Approach . . . . . . . . . . . . . . . . 14
+
+3.3.5 Handling Follow-up Interaction . . . . . . . . . . . . . . . . . . . . . . 15
+
+3.4 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+
+Design and implemenattion
+
+libraries used
+
+each of the compoments
+
+difficulties and problems</t>
+<t tx="hasletpara.20131121100256.1792">4 Development of the User Interface 19
+
+4.1 User Interface Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+
+4.2 User Interface Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+4.3 Initial SWT Implementation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+
+4.4 Final JavaFX Implementation . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+
+
+How it works in action</t>
+<t tx="hasletpara.20131121100256.1793">5 Formative System Evaluation 23
+
+5.1 Evaluation Design and Execution . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+
+5.1.1 Conversational Tasks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+
+5.1.2 System Performance Questions . . . . . . . . . . . . . . . . . . . . . . . 24
+
+5.1.3 Reviewing the Log . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+
+5.2 Analysis of Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+
+5.2.1 Quantitative Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+
+5.2.2 Qualitative Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+
+</t>
+<t tx="hasletpara.20131121100256.1794">6 Conclusions and Future Work 31
+
+&lt;&lt;Recommendations&gt;&gt;
+</t>
+<t tx="hasletpara.20131121100256.1795">
+6.1 Recommendations for Future Work . . . . . . . . . . . . . . . . . . . . . . . . . 32</t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>

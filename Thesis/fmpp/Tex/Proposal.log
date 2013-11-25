@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  20 NOV 2013 13:01
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (Web2C 2012) (format=pdflatex 2013.2.21)  22 NOV 2013 16:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -162,28 +162,28 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <git-diag.png, id=13, 429.605pt x 450.68375pt>
 File: git-diag.png Graphic file (type png)
  <use git-diag.png>
-Package pdftex.def Info: git-diag.png used on input line 87.
+Package pdftex.def Info: git-diag.png used on input line 91.
 (pdftex.def)             Requested size: 214.80197pt x 225.34131pt.
- [2 <./git-diag.png>] [3] (./Proposal.bbl [4]) [5] (./Proposal.aux) ) 
+ [2] [3 <./git-diag.png>] [4] (./Proposal.bbl [5]) [6] (./Proposal.aux) ) 
 Here is how much of TeX's memory you used:
- 1910 strings out of 494071
- 26312 string characters out of 3160406
+ 1911 strings out of 494071
+ 26337 string characters out of 3160406
  88728 words of memory out of 3000000
- 5152 multiletter control sequences out of 15000+200000
+ 5153 multiletter control sequences out of 15000+200000
  8423 words of font info for 30 fonts, out of 3000000 for 9000
  649 hyphenation exceptions out of 8191
- 37i,7n,32p,1328b,198s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/pkg/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/pkg/share/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/pkg/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx8.pfb></usr/pkg/share/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb></usr/pkg/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb></usr/pkg/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10
-.pfb></usr/pkg/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Proposal.pdf (5 pages, 132412 bytes).
+ 37i,7n,32p,1342b,218s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/
+pkg/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/pkg/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/pkg/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/pkg/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/pkg/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></usr/pkg/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb></usr/pkg/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Proposal.pdf (6 pages, 134995 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 53 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
