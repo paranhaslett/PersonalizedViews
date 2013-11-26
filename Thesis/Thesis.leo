@@ -36,9 +36,16 @@
 <v t="paranhaslett.20130826181255.2960" a="E"
 expanded="paranhaslett.20130826181255.2963,paranhaslett.20130826181255.2964,"><vh>@shadow ./fmpp/Tex/Thesis.tex</vh></v>
 <v t="hasletpara.20130905084546.1629" a="E"
-expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,hasletpara.20131122093500.1838,"><vh>@shadow ./fmpp/Tex/Proposal.tex</vh></v>
+expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal.tex</vh></v>
 </v>
-<v t="paranhaslett.20130826181255.3074"><vh>Notes</vh>
+<v t="paranhaslett.20130826181255.3074" a="E"><vh>Notes</vh>
+<v t="hasletpara.20131122093500.1836"><vh>testing on checkins</vh></v>
+<v t="hasletpara.20131122093500.1835"><vh>Variable names</vh></v>
+<v t="hasletpara.20131122093500.1834"><vh>planned method of test</vh></v>
+<v t="hasletpara.20131122093500.1833"><vh>merge git and Jdime</vh></v>
+<v t="hasletpara.20131122093500.1832"><vh>leverage JDime</vh></v>
+<v t="hasletpara.20131122093500.1831"><vh>seperate branch</vh></v>
+<v t="hasletpara.20131122093500.1830"><vh>annotations</vh></v>
 <v t="hasletpara.20131115102112.1759"><vh>Proposed Approach</vh></v>
 <v t="hasletpara.20130905084546.1651"><vh>Background</vh></v>
 <v t="hasletpara.20130909092051.1567"><vh>The Solution</vh></v>
@@ -78,7 +85,7 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 <v t="paranhaslett.20130826181255.3114"></v>
 <v t="paranhaslett.20130826181255.3118"></v>
 </v>
-<v t="paranhaslett.20130826181255.3120" a="E"><vh>Papers being read</vh>
+<v t="paranhaslett.20130826181255.3120"><vh>Papers being read</vh>
 <v t="paranhaslett.20130826181255.3121"><vh>Code Source Mining</vh>
 <v t="hasletpara.20130902092846.1747"><vh>Article: FRUIt</vh></v>
 <v t="paranhaslett.20130826181255.3122"><vh>Article: Mining Software Repositories with iSPAROL and a Software Evolution Ontology</vh></v>
@@ -122,7 +129,7 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 <v t="paranhaslett.20130826181255.3150"><vh>xml containing the file (which may be the same as above</vh></v>
 </v>
 </v>
-<v t="paranhaslett.20130827232850.1595" a="E"><vh>To do</vh>
+<v t="paranhaslett.20130827232850.1595"><vh>To do</vh>
 <v t="paranhaslett.20131022191134.1801" a="E"><vh>Plan</vh>
 <v t="paranhaslett.20131022191134.1802"><vh>Tonight</vh></v>
 <v t="paranhaslett.20131022191134.1803"><vh>Tommorrow</vh></v>
@@ -146,6 +153,7 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 <v t="paranhaslett.20131022191134.1801" a="E"></v>
 <v t="paranhaslett.20131022191134.1802"></v>
 <v t="paranhaslett.20131022191134.1803"></v>
+<v t="hasletpara.20131122093500.1829"><vh>how to maintain functional equilvilence</vh></v>
 </v>
 <v t="paranhaslett.20130826181255.3057"><vh>Structures</vh>
 <v t="paranhaslett.20130826181255.3058"><vh>Tab</vh></v>
@@ -168,13 +176,24 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 <v t="paranhaslett.20130826181255.3070" a="E"
 expanded="paranhaslett.20130826181255.2964,"><vh>@shadow ../../Dropbox/PersonalWiki/Thesis.txt</vh></v>
 <v t="paranhaslett.20130826181255.3073"
-expanded="paranhaslett.20130826181255.3120,paranhaslett.20130826181255.3148,paranhaslett.20130827232850.1595,paranhaslett.20131022191134.1801,"><vh>@shadow ../../Dropbox/PersonalWiki/Study_Notes.txt</vh></v>
+expanded="paranhaslett.20130826181255.3074,paranhaslett.20130826181255.3148,paranhaslett.20131022191134.1801,"><vh>@shadow ../../Dropbox/PersonalWiki/Study_Notes.txt</vh></v>
 <v t="paranhaslett.20130826181255.3151" a="E"><vh>@shadow ../../Dropbox/PersonalWiki/Structures.txt</vh></v>
 </v>
 <v t="paranhaslett.20130826181255.3157" a="E"><vh>Grad Wiki</vh>
-<v t="paranhaslett.20130826181255.3158" a="E"
-expanded="paranhaslett.20130826181255.3120,"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
+<v t="paranhaslett.20130826181255.3158" a="E"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
 </v>
+</v>
+</v>
+<v t="paranhaslett.20131122184051.1887" a="E"><vh>Recovered Nodes</vh>
+<v t="paranhaslett.20131122184051.1888"><vh>Recovered node "Notes from xStudy_Notes.txt</vh>
+<v t="paranhaslett.20131122184051.1889"><vh>old:Notes</vh></v>
+<v t="paranhaslett.20131122184051.1890"><vh>new:Notes</vh></v>
+</v>
+</v>
+<v t="hasletpara.20131126100506.1825" a="E"><vh>Recovered Nodes</vh>
+<v t="hasletpara.20131126100506.1826"><vh>Recovered node "Notes from xStudy_Notes.txt</vh>
+<v t="hasletpara.20131126100506.1827"><vh>old:Notes</vh></v>
+<v t="hasletpara.20131126100506.1828"><vh>new:Notes</vh></v>
 </v>
 </v>
 </vnodes>
@@ -502,6 +521,32 @@ How it works in action</t>
 </t>
 <t tx="hasletpara.20131121100256.1795">
 6.1 Recommendations for Future Work . . . . . . . . . . . . . . . . . . . . . . . . . 32</t>
+<t tx="hasletpara.20131122093500.1829">Being able to provide manual instructions and hints about how the source control should treat set blocks of code needs investigation. If a record is kept of conflicting items that are marked as being functionally equivalent they do not need to be included in a merge. The simplest of these would be comments that have been noted as being functionally irrelevant. If there is a conflict with the comment in one branch with a line of code in another branch, there could be an indication about which should be preferred. Another reason to mark something as functionally irrelevant might be if there is throw-away code that you do not want propagated over your whole version control system.</t>
+<t tx="hasletpara.20131122093500.1830">One way of identifying functionally equivalent code would be to use annotations in the source file as indicators. A unique key would possibly be needed if the block of code was functionally equivalent to differing code in other branches. A different annotation may need to be used to indicate that items such as code for debugging purposes, throwaway code or comments specific to a view are not merged. The benefit of this is that it can eliminate unnecessary merging when either the code has been marked as having same intention or if the code is irrelevant in other branches.</t>
+<t tx="hasletpara.20131122093500.1831">A way to keep track of irrelevant code would be to create a third branch which only pulls down the changes and is never used to commit changes. Although this would be suitable for the situation where there was throwaway code, comments or debugging it would be harder to maintain without additional tooling. It would also be harder to manually identify equivalent code segments that do not need to be merged.</t>
+<t tx="hasletpara.20131122093500.1832">There is already some refactoring aware merge tools that have been researched. An example would be the ''JDime'' system proposed by Apel \cite{Apel2011}. Most of these however, are general purpose and have been created as difference or merge tools that can be plugged into various version control systems. What this could mean is that using the progressive changes in a distributed system has not been explored.</t>
+<t tx="hasletpara.20131122093500.1833">The proposed approach is to look at the code associated with Git and JDime and figure out how we can relate each step in git to a merge. Using JDime and Git as a starting point see anything can be gained by using the additional steps rather than just merging the top items in a single merge . This should not be as computationally expensive as it sounds if the semi-structured approach set forward by Le{\ss}nich and Apel should mean that this is only necessary for conflicting items \cite{LeBenich2012} \cite{Apel2011}. By merging some of the refactoring aware functionality of JDime with GIT we plan to further reduce the amount of merge conflicts. </t>
+<t tx="hasletpara.20131122093500.1834">Evidence of this could be found by a reduced number of conflicts. What this could mean for developers in a multi-developer environment is that the branch of code that they work on could be in a more consistent state. This would hopefully reduce the time spent trying to comprehend the changes that another developer has made.
+
+This paper will test the view that being able to automatically discern and manually mark items as being related between two will reduce the amount of conflicts that occur. Initially the automatic marking all comments as being irrelevant will be tested to see if it reduces the merge conflicts. The results will be compared against the ''JDime'' system without any additional features. As things progress this could give us a clearer indication about what things could be manually marked as being equivalent.</t>
+<t tx="hasletpara.20131122093500.1835">One of the things that will be investigated is if the changing of variable or method names is possible. This is going to be a challenge as if the method is or variable is not private or local the use of it could be spread over a number of files. For this reason initially only private methods, private variables and local variables will be considered. Investigation needs to be done to see if some of these changes are already covered by ''JDime''.</t>
+<t tx="hasletpara.20131122093500.1836">This project will also test if there are any advantages in comparison on a check-in by check-in basis rather than simply comparing the most recent check-in for two branches against each other. Again this will be done by examining if the total amount of conflicts can be reduced. Some of the conflicts will also be manually examined to see if they are simpler or more simply resolved using this process. This could identify if the maintenance of the version control system could be simplified.</t>
+<t tx="hasletpara.20131126100506.1825"></t>
+<t tx="hasletpara.20131126100506.1826">(cached) paranhaslett.20130826181255.3074
+Diff...
+  NOTES
+- @others+ @others
+?        +
++ 
++ Git tutorial
++ http://www.vogella.com/articles/Git/article.html</t>
+<t tx="hasletpara.20131126100506.1827">NOTES
+@others
+
+Git tutorial
+http://www.vogella.com/articles/Git/article.html</t>
+<t tx="hasletpara.20131126100506.1828">NOTES
+@others</t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>
@@ -776,5 +821,21 @@ Friday</t>
   connect eclispe to repo at home
   submit code to repo
 </t>
+<t tx="paranhaslett.20131122184051.1887"></t>
+<t tx="paranhaslett.20131122184051.1888">(cached) paranhaslett.20130826181255.3074
+Diff...
+  NOTES
+- @others
+?        -
++ @others- 
+- Git tutorial
+- http://www.vogella.com/articles/Git/article.html</t>
+<t tx="paranhaslett.20131122184051.1889">NOTES
+@others</t>
+<t tx="paranhaslett.20131122184051.1890">NOTES
+@others
+
+Git tutorial
+http://www.vogella.com/articles/Git/article.html</t>
 </tnodes>
 </leo_file>
