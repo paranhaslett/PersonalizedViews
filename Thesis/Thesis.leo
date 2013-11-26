@@ -196,6 +196,12 @@ expanded="paranhaslett.20130826181255.3074,paranhaslett.20130826181255.3148,para
 <v t="hasletpara.20131126100506.1828"><vh>new:Notes</vh></v>
 </v>
 </v>
+<v t="paranhaslett.20131126202038.1911" a="E"><vh>Recovered Nodes</vh>
+<v t="paranhaslett.20131126202038.1912"><vh>Recovered node "Notes from xStudy_Notes.txt</vh>
+<v t="paranhaslett.20131126202038.1913"><vh>old:Notes</vh></v>
+<v t="paranhaslett.20131126202038.1914"><vh>new:Notes</vh></v>
+</v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="hasletpara.20130828093505.1608">http://en.wikipedia.org/wiki/Compare%2B%2B
@@ -566,7 +572,10 @@ Menu content
 <t tx="paranhaslett.20130826181255.3063"></t>
 <t tx="paranhaslett.20130826181255.3068"></t>
 <t tx="paranhaslett.20130826181255.3074">NOTES
-@others</t>
+@others
+
+Git tutorial
+http://www.vogella.com/articles/Git/article.html</t>
 <t tx="paranhaslett.20130826181255.3103">
 @others
 </t>
@@ -833,6 +842,22 @@ Diff...
 <t tx="paranhaslett.20131122184051.1889">NOTES
 @others</t>
 <t tx="paranhaslett.20131122184051.1890">NOTES
+@others
+
+Git tutorial
+http://www.vogella.com/articles/Git/article.html</t>
+<t tx="paranhaslett.20131126202038.1911"></t>
+<t tx="paranhaslett.20131126202038.1912">(cached) paranhaslett.20130826181255.3074
+Diff...
+  NOTES
+- @others
+?        -
++ @others- 
+- Git tutorial
+- http://www.vogella.com/articles/Git/article.html</t>
+<t tx="paranhaslett.20131126202038.1913">NOTES
+@others</t>
+<t tx="paranhaslett.20131126202038.1914">NOTES
 @others
 
 Git tutorial
