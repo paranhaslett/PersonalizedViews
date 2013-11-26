@@ -184,18 +184,6 @@ expanded="paranhaslett.20130826181255.3074,paranhaslett.20130826181255.3148,para
 </v>
 </v>
 </v>
-<v t="paranhaslett.20131122184051.1887" a="E"><vh>Recovered Nodes</vh>
-<v t="paranhaslett.20131122184051.1888"><vh>Recovered node "Notes from xStudy_Notes.txt</vh>
-<v t="paranhaslett.20131122184051.1889"><vh>old:Notes</vh></v>
-<v t="paranhaslett.20131122184051.1890"><vh>new:Notes</vh></v>
-</v>
-</v>
-<v t="hasletpara.20131126100506.1825" a="E"><vh>Recovered Nodes</vh>
-<v t="hasletpara.20131126100506.1826"><vh>Recovered node "Notes from xStudy_Notes.txt</vh>
-<v t="hasletpara.20131126100506.1827"><vh>old:Notes</vh></v>
-<v t="hasletpara.20131126100506.1828"><vh>new:Notes</vh></v>
-</v>
-</v>
 </vnodes>
 <tnodes>
 <t tx="hasletpara.20130828093505.1608">http://en.wikipedia.org/wiki/Compare%2B%2B
@@ -531,22 +519,6 @@ How it works in action</t>
 This paper will test the view that being able to automatically discern and manually mark items as being related between two will reduce the amount of conflicts that occur. Initially the automatic marking all comments as being irrelevant will be tested to see if it reduces the merge conflicts. The results will be compared against the ''JDime'' system without any additional features. As things progress this could give us a clearer indication about what things could be manually marked as being equivalent.</t>
 <t tx="hasletpara.20131122093500.1835">One of the things that will be investigated is if the changing of variable or method names is possible. This is going to be a challenge as if the method is or variable is not private or local the use of it could be spread over a number of files. For this reason initially only private methods, private variables and local variables will be considered. Investigation needs to be done to see if some of these changes are already covered by ''JDime''.</t>
 <t tx="hasletpara.20131122093500.1836">This project will also test if there are any advantages in comparison on a check-in by check-in basis rather than simply comparing the most recent check-in for two branches against each other. Again this will be done by examining if the total amount of conflicts can be reduced. Some of the conflicts will also be manually examined to see if they are simpler or more simply resolved using this process. This could identify if the maintenance of the version control system could be simplified.</t>
-<t tx="hasletpara.20131126100506.1825"></t>
-<t tx="hasletpara.20131126100506.1826">(cached) paranhaslett.20130826181255.3074
-Diff...
-  NOTES
-- @others+ @others
-?        +
-+ 
-+ Git tutorial
-+ http://www.vogella.com/articles/Git/article.html</t>
-<t tx="hasletpara.20131126100506.1827">NOTES
-@others
-
-Git tutorial
-http://www.vogella.com/articles/Git/article.html</t>
-<t tx="hasletpara.20131126100506.1828">NOTES
-@others</t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>
@@ -821,21 +793,5 @@ Friday</t>
   connect eclispe to repo at home
   submit code to repo
 </t>
-<t tx="paranhaslett.20131122184051.1887"></t>
-<t tx="paranhaslett.20131122184051.1888">(cached) paranhaslett.20130826181255.3074
-Diff...
-  NOTES
-- @others
-?        -
-+ @others- 
-- Git tutorial
-- http://www.vogella.com/articles/Git/article.html</t>
-<t tx="paranhaslett.20131122184051.1889">NOTES
-@others</t>
-<t tx="paranhaslett.20131122184051.1890">NOTES
-@others
-
-Git tutorial
-http://www.vogella.com/articles/Git/article.html</t>
 </tnodes>
 </leo_file>
