@@ -174,7 +174,11 @@ Design patterns are another way which has been used to identify the best code fo
 %@-node:hasletpara.20130910094414.1581:Model Driven Development
 %@+node:hasletpara.20130910094414.1583:Mviews
 \subsection{MViews}
+<<<<<<< HEAD
 MViews as described by Grundy is a way to have multiple different views of the code\cite{Grundy1993}. This is of interest to us because we want to be able to maintain two different refactored versions of the code. The way that this thesis differs from the work done by Grundy is instead of using a centralised database to store common information we are interested in maintaining two self-contained views.
+=======
+MViews as described by Grundy is a way to have multiple different views of the code\cite{Grundy1993}. This is of interest to us because we want to be able to maintain two different refactored versions of the code. The way that this thesis differs from the work done by Grundy is instead of using a centralised database to store common information we are interested in maintaining two self-contained views.
+>>>>>>> 68b868ef9440f9acb111141d0f84f75d567da8e7
 %@nonl
 %@-node:hasletpara.20130910094414.1583:Mviews
 %@+node:hasletpara.20131105141303.1629:reuse
@@ -193,7 +197,7 @@ A way to maintain divergent code that is currently being used is version control
 %@-node:hasletpara.20130905084546.1653:Related Work
 %@+node:hasletpara.20130905084546.1652:Proposed Approach
 \section{Proposed Approach}
-The ability to represent similar functionality in two different ways could allow developers to refactor for different purposes. However when creating different views or branches merging becomes difficult. By making use of the functional relationships that already exist in JDime and GIT we hope to reduce merge conflicts.  
+The ability to represent similar functionality in two different ways could allow developers to refactor for different purposes. However when creating different views or branches merging becomes difficult. By making use of the functional relationships that already exist in JDime and GIT we hope to reduce merge conflicts. 
 
 %@<<Implemenatation>>
 %@+node:hasletpara.20131122093500.1838:<<Implemenatation>>
@@ -209,6 +213,7 @@ The intention of this thesis is to make merging between two diverging branches s
 
 \end{enumerate}
 
+<<<<<<< HEAD
 There are a number of small blocks of code which may be of importance to only one view.  An example is code that is used solely for debugging. If these can be marked as not needing to be merged it could prevent some merge conflicts. There are a couple of ways in which we may be able to deal with these blocks of code.
 
 The first way is to allow the programmer to use annotations in the source code. This would indicate to the source control system that the code is not relevant to other views and should not be merged.
@@ -216,6 +221,15 @@ The first way is to allow the programmer to use annotations in the source code. 
 The second way is to have two branches to represent all the information necessary for an independent view of the source code.  The first branch would contain only the source code which you are willing to share. The second branch would contain, in addition to this, all the blocks of source code which are private.  According to Chacon at the moment the staging area in GIT uses the staging area to allow files to be marked as ready to merge or not \cite{Chacon2009}. This however is on a file basis rather than based on segments of source code.
 
 Annotations could also be used to indicate code that is functionally the same but refactored differently. We will investigate using an annotation consisting of a unique key between each functionally equivalent item. Having two branches, as mentioned above, may provide us with some less obtrusive options but this will need to be investigated.
+=======
+There are a number of small blocks of code which may be of importance to only one view. An example is code that is used solely for debugging. If these can be marked as not needing to be merged it could prevent some merge conflicts. There are a couple of ways in which we may be able to these blocks of code.
+
+The first way is to allow the programmer to use annotations in the source code. This would indicate to the source control system that the code is not relevant to other views and should not be merged.
+
+The second way is to have two branches to represent all the information necessary for an independent view of the source code. The first branch would contain only the source code which you are willing to share. The second branch would contain in addition to this all the blocks of source code which are private. According to Chacon at the moment the staging area in GIT uses the staging area to allow files to be marked as ready to merge \cite{Chacon2009}. This however is on a file basis rather than based on segments of source code.
+
+Annotations could also be used to indicate code that is functionally the same but refactored differently. We will investigate using an annotation consisting of a unique key between each functionally equivalent item. Having two branches, as mentioned above, may provide us with some less obtrusive options but this will need to be investigated.
+>>>>>>> 68b868ef9440f9acb111141d0f84f75d567da8e7
 
 There is already some refactoring aware merge tools that have been researched. An example would be the ''JDime'' system proposed by Apel \cite{Apel2011}. Most of these however, are general purpose and have been created as difference or merge tools that can be plugged into various version control systems. What this could mean is that a refactoring aware merge is only done on the head.
 
@@ -223,7 +237,7 @@ There is already some refactoring aware merge tools that have been researched. A
 \includegraphics[scale=0.5]{git-diag2}
 \end{center}
 
-By combining the functionality of JDime with GIT we aim to use a refactoring based merge between subsequent submissions.  Instead of the refactoring aware merge happening between 'Branch 1 Head' and 'Branch 2 Head' we will investigate refactoring aware merges between each of the neighbouring nodes. An example would be doing a refactoring aware merge between 'Base' and '1.1'.  As the changes are smaller we expect decreased conflicts when merging.  This however means that we will do multiple refactoring-aware merges before getting a result.
+By combining the functionality of JDime with GIT we aim to use a refactoring based merge between subsequent submissions. Instead of the refactoring aware merge happening between 'Branch 1 Head' and 'Branch 2 Head' we will investigate refactoring aware merges between each of the neighbouring nodes. An example would be doing a refactoring aware merge between 'Base' and '1.1'. As the changes are smaller we expect decreased conflicts when merging. This however means that we will do multiple refactoring-aware merges before getting a result.
 %@nonl
 %@-node:hasletpara.20131122093500.1838:<<Implemenatation>>
 %@nl
@@ -232,9 +246,13 @@ By combining the functionality of JDime with GIT we aim to use a refactoring bas
 %@+node:hasletpara.20131122093500.1837:<<Testing>>
 \subsection{Testing}
 
-For each of the intended changes the number of conflicts will be tested. The dataset we intend to use is the same one as used by Apel et al.so that we can compare how efficient the solution is with JDime on its own \cite{Apel2011}. Some of the conflicts will also be manually examined to see if they are simpler or more simply resolved using the intended changes. 
+For each of the intended changes the number of conflicts will be tested. The dataset we intend to use is the same one as used by Apel et al. so that we can compare how efficient the solution is with JDime on its own \cite{Apel2011}. Some of the conflicts will also be manually examined to see if they are simpler or more simply resolved using the intended changes. 
 
+<<<<<<< HEAD
 Because we will often be doing multiple smaller refactoring based merges timing is also going to be an issue. With this in mind we will also be timing the intended changes both independently and together. These will be compared with timings from JDime and text based merges.
+=======
+Because we will often be doing multiple smaller refactoring based merges timing is also going to be an issue. With this in mind we will also be timing the intended changes both independently and together. These will be compared with timings from JDime and text based merges.
+>>>>>>> 68b868ef9440f9acb111141d0f84f75d567da8e7
 %@nonl
 %@-node:hasletpara.20131122093500.1837:<<Testing>>
 %@nl
@@ -250,7 +268,6 @@ Because we will often be doing multiple smaller refactoring based merges timing 
 %@nonl
 %@-node:hasletpara.20130905084546.1649:<<bibliography>>
 %@nl
-
 \end{document}
 %@-node:hasletpara.20130905084546.1629:@shadow ./fmpp/Tex/Proposal.tex
 %@-leo
