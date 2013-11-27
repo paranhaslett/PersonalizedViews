@@ -1,3 +1,5 @@
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Thesis LaTeX Template - THESIS CLASS FILE
 %
@@ -25,9 +27,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
-\ProvidesClass{Thesis}
-              [2007/22/02 v1.0
-   LaTeX document class]
+\ProvidesClass{Thesis}[2007/22/02 v1.0 LaTeX document class]
 \def\baseclass{book}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{\baseclass}}
 \def\@checkoptions#1#2{
@@ -83,6 +83,7 @@
                         {   9pt}  % foot height
                         { 0.3in}  % foot sep
 %----------------------------------------------------------------------------------------
+
 \raggedbottom
 \setlength{\topskip}{1\topskip \@plus 5\p@}
 \doublehyphendemerits=10000       % No consecutive line hyphens.
@@ -182,15 +183,15 @@
 %	defined as \examname above so you cite it as \examname
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Thesis Title} % Your thesis title - this is used in the title and abstract
+\thesistitle{Maintaining differently refactored views in Java} % Your thesis title - this is used in the title and abstract
 %-------------------------------------------------  
-\supervisor{Dr. James \textsc{Smith}} % You supervisor's name - this is used in the title page
+\supervisor{Dr. David \textsc{Pearce}} % You supervisor's name - this is used in the title page
 %-------------------------------------------------   
 \examiner{} % Your examiner's name - this is not currently used anywhere in the template, cite it with \examname if you want it
 %-------------------------------------------------   
-\degree{Doctor of Philosophy} % Your degree name - this is currently used in the title page and abstract
+\degree{Masters of Science} % Your degree name - this is currently used in the title page and abstract
 %-------------------------------------------------   
-\authors{John \textsc{Smith}} % Your name - this is used in the title page and abstract
+\authors{Paran \textsc{Haslett}} % Your name - this is used in the title page and abstract
 %-------------------------------------------------   
 \addresses{} % Your address - this is not currently used anywhere in the template, cite it with \addressnames if you want it
 %-------------------------------------------------   
@@ -198,21 +199,21 @@
 %-------------------------------------------------   
 \keywords{} % Keywords for your thesis - this is not currently used anywhere in the template, cite it with \keywordnames if you want it
 %-------------------------------------------------   
-\university{\texorpdfstring{\href{http://www.university.com} % Your university's URL
-                {University Name}} % Your university's name - this is currently used in the title page
-                {University Name}}
+\university{\texorpdfstring{\href{http://www.victoria.ac.nz/} % Your university's URL
+                {Victoria University of Wellington}} % Your university's name - this is currently used in the title page
+                {Victoria University of Wellington}}
 %-------------------------------------------------   
-\UNIVERSITY{\texorpdfstring{\href{University Web Site URL Here (include http://)} % Your university's URL
-                {UNIVERSITY NAME (IN BLOCK CAPITALS)}} % Your university's name in capitals - this is currently used in the abstract page
-                {UNIVERSITY NAME (IN BLOCK CAPITALS)}}
+\UNIVERSITY{\texorpdfstring{\href{http://www.victoria.ac.nz/)} % Your university's URL
+                {VICTORIA UNIVERSITY OF WELLINGTON)}} % Your university's name in capitals - this is currently used in the abstract page
+                {VICTORIA UNIVERSITY OF WELLINGTON}}
 %-------------------------------------------------                
 \department{\texorpdfstring{\href{Department or School Web Site URL Here (include http://)} % Your department's URL
-                {Department or School Name}} % Your department's name - used in the title page and abstract
-                {Department or School Name}}
+                {School of Engineering and Computer Science}} % Your department's name - used in the title page and abstract
+                {School of Engineering and Computer Science}}
 %-------------------------------------------------                
 \DEPARTMENT{\texorpdfstring{\href{Department or School Web Site URL Here (include http://)} % Your department's URL
-                {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
-                {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}}
+                {SCHOOL OF ENGINEERING AND COMPUTER SCIENCE)}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
+                {SCHOOL OF ENGINEERING AND COMPUTER SCIENCE)}}
 %-------------------------------------------------                
 \group{\texorpdfstring{\href{Research Group Web Site URL Here (include http://)} % Your research group's URL
                 {Research Group Name}} % Your research group's name - this is currently used in the title page 
@@ -229,7 +230,7 @@
 \FACULTY{\texorpdfstring{\href{Faculty Web Site URL Here (include http://)} % Your faculty's URL
                 {FACULTY NAME (IN BLOCK CAPITALS)}} % Your faculty's name in capitals - this is not currently used anywhere in the template, cite it with \FACNAME if you want it
                 {FACULTY NAME (IN BLOCK CAPITALS)}}
-%----------------------------------------------------------------------------------------    
+%----------------------------------------------------------------------------------------
 
 % The default title page, this is not used in this www.latextemplates.com version            
 \renewcommand\maketitle{
@@ -286,6 +287,7 @@
   \global\let\and\relax
   \cleardoublepage
 }
+
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE DESIGN
 %----------------------------------------------------------------------------------------
@@ -312,6 +314,7 @@
   \end{center}
 }
 %----------------------------------------------------------------------------------------
+
 {
   \vfil\vfil\vfil\null
   \cleardoublepage

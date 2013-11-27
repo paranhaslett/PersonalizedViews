@@ -1,5 +1,5 @@
 #--unknown-language--@+leo-ver=4-thin
-#--unknown-language--@+node:hasletpara.20131128093200.1921:@shadow ./fmpp/Templates/format.rst
+#--unknown-language--@+node:hasletpara.20131128093200.1921:@shadow ./notes/format.rst
 #--unknown-language--@@language rest
 #--unknown-language--@+others
 #--unknown-language--@+node:hasletpara.20131128093200.1939:@rst
@@ -250,5 +250,5 @@ How it works in action
 #--unknown-language--@-node:hasletpara.20131128093200.1939:@rst
 #--unknown-language--@-others
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1921:@shadow ./fmpp/Templates/format.rst
+#--unknown-language--@-node:hasletpara.20131128093200.1921:@shadow ./notes/format.rst
 #--unknown-language--@-leo
