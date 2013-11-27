@@ -39,25 +39,6 @@ expanded="paranhaslett.20130826181255.2963,paranhaslett.20130826181255.2964,"><v
 expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal.tex</vh></v>
 </v>
 <v t="paranhaslett.20130826181255.3074" a="E"><vh>Notes</vh>
-<v t="hasletpara.20131122093500.1836"><vh>testing on checkins</vh></v>
-<v t="hasletpara.20131122093500.1835"><vh>Variable names</vh></v>
-<v t="hasletpara.20131122093500.1834"><vh>planned method of test</vh></v>
-<v t="hasletpara.20131122093500.1833"><vh>merge git and Jdime</vh></v>
-<v t="hasletpara.20131122093500.1832"><vh>leverage JDime</vh></v>
-<v t="hasletpara.20131122093500.1831"><vh>seperate branch</vh></v>
-<v t="hasletpara.20131122093500.1830"><vh>annotations</vh></v>
-<v t="hasletpara.20131115102112.1759"><vh>Proposed Approach</vh></v>
-<v t="hasletpara.20130905084546.1651"><vh>Background</vh></v>
-<v t="hasletpara.20130909092051.1567"><vh>The Solution</vh></v>
-<v t="hasletpara.20131112095537.1645"><vh>old refactoring stuff</vh></v>
-<v t="hasletpara.20131112095537.1646"><vh>old differences in understanding code</vh></v>
-<v t="hasletpara.20130905084546.1654"><vh>Other Background</vh>
-<v t="hasletpara.20130909092051.1590"><vh>Keeping on the same page</vh></v>
-<v t="hasletpara.20130909092051.1568"><vh>Previous solutions</vh></v>
-<v t="hasletpara.20130905084546.1665"><vh>Other Tools</vh></v>
-</v>
-<v t="hasletpara.20130909092051.1589"><vh>IP</vh></v>
-<v t="hasletpara.20130905084546.1663"><vh>Differeces in creating code</vh></v>
 <v t="paranhaslett.20130826181255.3103"><vh>Expirements</vh>
 <v t="paranhaslett.20130826181255.3104"><vh>Download Mviews SNART</vh></v>
 <v t="paranhaslett.20130826181255.3105"><vh>Set it up with eclipse plugins</vh></v>
@@ -85,6 +66,71 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 <v t="paranhaslett.20130826181255.3114"></v>
 <v t="paranhaslett.20130826181255.3118"></v>
 </v>
+<v t="paranhaslett.20130826181255.3147"><vh>Programming</vh>
+<v t="paranhaslett.20130826181255.3148"><vh>xml</vh>
+<v t="paranhaslett.20130826181255.3149"><vh>xml of the model</vh></v>
+<v t="paranhaslett.20130826181255.3150"><vh>xml containing the file (which may be the same as above</vh></v>
+</v>
+</v>
+<v t="paranhaslett.20130827232850.1595"><vh>To do</vh>
+<v t="paranhaslett.20131022191134.1801"><vh>Plan</vh>
+<v t="paranhaslett.20131022191134.1802"><vh>Tonight</vh></v>
+<v t="paranhaslett.20131022191134.1803"><vh>Tommorrow</vh></v>
+</v>
+</v>
+<v t="paranhaslett.20130826181255.3148"></v>
+<v t="paranhaslett.20130826181255.3149"></v>
+<v t="paranhaslett.20130826181255.3150"></v>
+<v t="paranhaslett.20131022191134.1801"></v>
+</v>
+<v t="paranhaslett.20130826181255.3057"><vh>Structures</vh>
+<v t="paranhaslett.20130826181255.3058"><vh>Tab</vh></v>
+<v t="paranhaslett.20130826181255.3059"><vh>Menu</vh></v>
+<v t="paranhaslett.20130826181255.3060"><vh>Tag</vh></v>
+<v t="paranhaslett.20130826181255.3061"><vh>Node</vh></v>
+</v>
+<v t="paranhaslett.20130826181255.3062"><vh>Web Pages</vh>
+<v t="hasletpara.20131121100256.1776"><vh>Data</vh>
+<v t="hasletpara.20131121100256.1777"><vh>@shadow ./fmpp/data/tabbedPages.csv</vh></v>
+</v>
+<v t="hasletpara.20130905134207.1647"><vh>@shadow ./create.sh</vh></v>
+<v t="hasletpara.20131121100256.1774"><vh>@shadow ./config.fmpp</vh></v>
+<v t="paranhaslett.20130826181255.3063"><vh>Personal Uni Home</vh>
+<v t="hasletpara.20130905131851.1629"><vh>@shadow ./config.fmpp</vh></v>
+<v t="hasletpara.20130905134207.1629"><vh>@shadow ./fmpp/public_html/generic.html</vh></v>
+</v>
+<v t="paranhaslett.20130826181255.3068"><vh>Ema Wiki</vh>
+<v t="paranhaslett.20130826181255.3069"><vh>@shadow ../../Dropbox/PersonalWiki/Study.txt</vh></v>
+<v t="paranhaslett.20130826181255.3070" a="E"
+expanded="paranhaslett.20130826181255.2964,"><vh>@shadow ../../Dropbox/PersonalWiki/Thesis.txt</vh></v>
+<v t="paranhaslett.20130826181255.3073"
+expanded="paranhaslett.20130826181255.3074,"><vh>@shadow ../../Dropbox/PersonalWiki/Study_Notes.txt</vh></v>
+<v t="paranhaslett.20130826181255.3151" a="E"><vh>@shadow ../../Dropbox/PersonalWiki/Structures.txt</vh></v>
+</v>
+<v t="paranhaslett.20130826181255.3157" a="E"><vh>Grad Wiki</vh>
+<v t="paranhaslett.20130826181255.3158" a="E"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
+</v>
+</v>
+<v t="hasletpara.20131127121911.1852"><vh>ScratchPad</vh>
+<v t="hasletpara.20131122093500.1836"><vh>testing on checkins</vh></v>
+<v t="hasletpara.20131122093500.1835"><vh>Variable names</vh></v>
+<v t="hasletpara.20131122093500.1834"><vh>planned method of test</vh></v>
+<v t="hasletpara.20131122093500.1833"><vh>merge git and Jdime</vh></v>
+<v t="hasletpara.20131122093500.1832"><vh>leverage JDime</vh></v>
+<v t="hasletpara.20131122093500.1831"><vh>seperate branch</vh></v>
+<v t="hasletpara.20131122093500.1830"><vh>annotations</vh></v>
+<v t="hasletpara.20131115102112.1759"><vh>Proposed Approach</vh></v>
+<v t="hasletpara.20130905084546.1651"><vh>Background</vh></v>
+<v t="hasletpara.20130909092051.1567"><vh>The Solution</vh></v>
+<v t="hasletpara.20131112095537.1645"><vh>old refactoring stuff</vh></v>
+<v t="hasletpara.20131112095537.1646"><vh>old differences in understanding code</vh></v>
+<v t="hasletpara.20130905084546.1654"><vh>Other Background</vh>
+<v t="hasletpara.20130909092051.1590"><vh>Keeping on the same page</vh></v>
+<v t="hasletpara.20130909092051.1568"><vh>Previous solutions</vh></v>
+<v t="hasletpara.20130905084546.1665"><vh>Other Tools</vh></v>
+</v>
+<v t="hasletpara.20130909092051.1589"><vh>IP</vh></v>
+<v t="hasletpara.20130905084546.1663"><vh>Differeces in creating code</vh></v>
 <v t="paranhaslett.20130826181255.3120"><vh>Papers being read</vh>
 <v t="paranhaslett.20130826181255.3121"><vh>Code Source Mining</vh>
 <v t="hasletpara.20130902092846.1747"><vh>Article: FRUIt</vh></v>
@@ -123,18 +169,8 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 </v>
 <v t="paranhaslett.20130826181255.3146"><vh>Article: Building Usage Contexts During Program Comprehension</vh></v>
 </v>
-<v t="paranhaslett.20130826181255.3147"><vh>Programming</vh>
-<v t="paranhaslett.20130826181255.3148" a="E"><vh>xml</vh>
-<v t="paranhaslett.20130826181255.3149"><vh>xml of the model</vh></v>
-<v t="paranhaslett.20130826181255.3150"><vh>xml containing the file (which may be the same as above</vh></v>
-</v>
-</v>
-<v t="paranhaslett.20130827232850.1595"><vh>To do</vh>
-<v t="paranhaslett.20131022191134.1801" a="E"><vh>Plan</vh>
-<v t="paranhaslett.20131022191134.1802"><vh>Tonight</vh></v>
-<v t="paranhaslett.20131022191134.1803"><vh>Tommorrow</vh></v>
-</v>
-</v>
+<v t="hasletpara.20131122093500.1829"><vh>how to maintain functional equilvilence</vh></v>
+<v t="hasletpara.20131127121911.1853"><vh>newHeadline</vh>
 <v t="paranhaslett.20130826181255.3121"></v>
 <v t="hasletpara.20130902092846.1747"></v>
 <v t="paranhaslett.20130826181255.3122"></v>
@@ -147,45 +183,9 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 <v t="paranhaslett.20130826181255.3139"></v>
 <v t="paranhaslett.20130826181255.3142"></v>
 <v t="paranhaslett.20130826181255.3146"></v>
-<v t="paranhaslett.20130826181255.3148" a="E"></v>
-<v t="paranhaslett.20130826181255.3149"></v>
-<v t="paranhaslett.20130826181255.3150"></v>
-<v t="paranhaslett.20131022191134.1801" a="E"></v>
-<v t="paranhaslett.20131022191134.1802"></v>
-<v t="paranhaslett.20131022191134.1803"></v>
-<v t="hasletpara.20131122093500.1829"><vh>how to maintain functional equilvilence</vh></v>
-</v>
-<v t="paranhaslett.20130826181255.3057"><vh>Structures</vh>
-<v t="paranhaslett.20130826181255.3058"><vh>Tab</vh></v>
-<v t="paranhaslett.20130826181255.3059"><vh>Menu</vh></v>
-<v t="paranhaslett.20130826181255.3060"><vh>Tag</vh></v>
-<v t="paranhaslett.20130826181255.3061"><vh>Node</vh></v>
-</v>
-<v t="paranhaslett.20130826181255.3062"><vh>Web Pages</vh>
-<v t="hasletpara.20131121100256.1776"><vh>Data</vh>
-<v t="hasletpara.20131121100256.1777"><vh>@shadow ./fmpp/data/tabbedPages.csv</vh></v>
-</v>
-<v t="hasletpara.20130905134207.1647"><vh>@shadow ./create.sh</vh></v>
-<v t="hasletpara.20131121100256.1774"><vh>@shadow ./config.fmpp</vh></v>
-<v t="paranhaslett.20130826181255.3063"><vh>Personal Uni Home</vh>
-<v t="hasletpara.20130905131851.1629"><vh>@shadow ./config.fmpp</vh></v>
-<v t="hasletpara.20130905134207.1629"><vh>@shadow ./fmpp/public_html/generic.html</vh></v>
-</v>
-<v t="paranhaslett.20130826181255.3068"><vh>Ema Wiki</vh>
-<v t="paranhaslett.20130826181255.3069"><vh>@shadow ../../Dropbox/PersonalWiki/Study.txt</vh></v>
-<v t="paranhaslett.20130826181255.3070" a="E"
-expanded="paranhaslett.20130826181255.2964,"><vh>@shadow ../../Dropbox/PersonalWiki/Thesis.txt</vh></v>
-<v t="paranhaslett.20130826181255.3073"
-expanded="paranhaslett.20130826181255.3074,paranhaslett.20130826181255.3148,paranhaslett.20131022191134.1801,"><vh>@shadow ../../Dropbox/PersonalWiki/Study_Notes.txt</vh></v>
-<v t="paranhaslett.20130826181255.3151" a="E"><vh>@shadow ../../Dropbox/PersonalWiki/Structures.txt</vh></v>
-</v>
-<v t="paranhaslett.20130826181255.3157" a="E"><vh>Grad Wiki</vh>
-<v t="paranhaslett.20130826181255.3158" a="E"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
 </v>
 </v>
 </v>
-<<<<<<< HEAD
-=======
 <v t="paranhaslett.20131122184051.1887" a="E"><vh>Recovered Nodes</vh>
 <v t="paranhaslett.20131122184051.1888"><vh>Recovered node "Notes from xStudy_Notes.txt</vh>
 <v t="paranhaslett.20131122184051.1889"><vh>old:Notes</vh></v>
@@ -204,7 +204,12 @@ expanded="paranhaslett.20130826181255.3074,paranhaslett.20130826181255.3148,para
 <v t="paranhaslett.20131126202038.1914"><vh>new:Notes</vh></v>
 </v>
 </v>
->>>>>>> 68b868ef9440f9acb111141d0f84f75d567da8e7
+<v t="hasletpara.20131127121911.1848" a="E"><vh>Recovered Nodes</vh>
+<v t="hasletpara.20131127121911.1849"><vh>Recovered node "Notes from xStudy_Notes.txt</vh>
+<v t="hasletpara.20131127121911.1850"><vh>old:Notes</vh></v>
+<v t="hasletpara.20131127121911.1851"><vh>new:Notes</vh></v>
+</v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="hasletpara.20130828093505.1608">http://en.wikipedia.org/wiki/Compare%2B%2B
@@ -540,6 +545,40 @@ How it works in action</t>
 This paper will test the view that being able to automatically discern and manually mark items as being related between two will reduce the amount of conflicts that occur. Initially the automatic marking all comments as being irrelevant will be tested to see if it reduces the merge conflicts. The results will be compared against the ''JDime'' system without any additional features. As things progress this could give us a clearer indication about what things could be manually marked as being equivalent.</t>
 <t tx="hasletpara.20131122093500.1835">One of the things that will be investigated is if the changing of variable or method names is possible. This is going to be a challenge as if the method is or variable is not private or local the use of it could be spread over a number of files. For this reason initially only private methods, private variables and local variables will be considered. Investigation needs to be done to see if some of these changes are already covered by ''JDime''.</t>
 <t tx="hasletpara.20131122093500.1836">This project will also test if there are any advantages in comparison on a check-in by check-in basis rather than simply comparing the most recent check-in for two branches against each other. Again this will be done by examining if the total amount of conflicts can be reduced. Some of the conflicts will also be manually examined to see if they are simpler or more simply resolved using this process. This could identify if the maintenance of the version control system could be simplified.</t>
+<t tx="hasletpara.20131126100506.1825"></t>
+<t tx="hasletpara.20131126100506.1826">(cached) paranhaslett.20130826181255.3074
+Diff...
+  NOTES
+- @others+ @others
+?        +
++ 
++ Git tutorial
++ http://www.vogella.com/articles/Git/article.html</t>
+<t tx="hasletpara.20131126100506.1827">NOTES
+@others
+
+Git tutorial
+http://www.vogella.com/articles/Git/article.html</t>
+<t tx="hasletpara.20131126100506.1828">NOTES
+@others</t>
+<t tx="hasletpara.20131127121911.1848"></t>
+<t tx="hasletpara.20131127121911.1849">(cached) paranhaslett.20130826181255.3074
+Diff...
+  NOTES
+- @others+ @others
+?        +
++ 
++ Git tutorial
++ http://www.vogella.com/articles/Git/article.html</t>
+<t tx="hasletpara.20131127121911.1850">NOTES
+@others
+
+Git tutorial
+http://www.vogella.com/articles/Git/article.html</t>
+<t tx="hasletpara.20131127121911.1851">NOTES
+@others</t>
+<t tx="hasletpara.20131127121911.1852"></t>
+<t tx="hasletpara.20131127121911.1853"></t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>
@@ -559,10 +598,7 @@ Menu content
 <t tx="paranhaslett.20130826181255.3063"></t>
 <t tx="paranhaslett.20130826181255.3068"></t>
 <t tx="paranhaslett.20130826181255.3074">NOTES
-@others
-
-Git tutorial
-http://www.vogella.com/articles/Git/article.html</t>
+@others</t>
 <t tx="paranhaslett.20130826181255.3103">
 @others
 </t>
@@ -817,8 +853,6 @@ Friday</t>
   connect eclispe to repo at home
   submit code to repo
 </t>
-<<<<<<< HEAD
-=======
 <t tx="paranhaslett.20131122184051.1887"></t>
 <t tx="paranhaslett.20131122184051.1888">(cached) paranhaslett.20130826181255.3074
 Diff...
@@ -851,6 +885,5 @@ Diff...
 
 Git tutorial
 http://www.vogella.com/articles/Git/article.html</t>
->>>>>>> 68b868ef9440f9acb111141d0f84f75d567da8e7
 </tnodes>
 </leo_file>
