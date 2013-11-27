@@ -11,107 +11,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="paranhaslett.20130826181255.2958" a="E"><vh>Thesis</vh>
-<v t="paranhaslett.20130826181255.2959" a="E"><vh>Documents</vh>
-<v t="hasletpara.20131121100256.1778" a="E"><vh>format for thesis</vh>
-<v t="hasletpara.20131121100256.1789"><vh>&lt;&lt;Front part&gt;&gt;</vh>
-<v t="hasletpara.20131121100256.1786"><vh>&lt;&lt;Title Page&gt;&gt;</vh>
-<v t="hasletpara.20131121100256.1779"><vh>&lt;&lt;header&gt;&gt;</vh></v>
-<v t="hasletpara.20131121100256.1780"><vh>&lt;&lt;title&gt;&gt;</vh></v>
-<v t="hasletpara.20131121100256.1781"><vh>&lt;&lt;author&gt;&gt;</vh></v>
-<v t="hasletpara.20131121100256.1782"><vh>&lt;&lt;Supervisors&gt;&gt;</vh></v>
-<v t="hasletpara.20131121100256.1783"><vh>&lt;&lt;Date&gt;&gt;</vh></v>
-<v t="hasletpara.20131121100256.1784"><vh>&lt;&lt;towards&gt;&gt;</vh></v>
-</v>
-<v t="hasletpara.20131121100256.1785"><vh>&lt;&lt;Abstract&gt;&gt;</vh></v>
-</v>
-<v t="hasletpara.20131121100256.1788"><vh>&lt;&lt;Introduction&gt;&gt;</vh></v>
-<v t="hasletpara.20131121100256.1790"><vh>&lt;&lt;Background&gt;&gt;</vh></v>
-<v t="hasletpara.20131121100256.1791"><vh>&lt;&lt;How it was implemented&gt;&gt;</vh></v>
-<v t="hasletpara.20131121100256.1792"><vh>&lt;&lt;How UI was implemented&gt;&gt;</vh></v>
-<v t="hasletpara.20131121100256.1793"><vh>&lt;&lt;Evaluation&gt;&gt;</vh></v>
-<v t="hasletpara.20131121100256.1794" a="E"><vh>&lt;&lt;Conclusion&gt;&gt;</vh>
-<v t="hasletpara.20131121100256.1795"><vh>&lt;&lt;Recommendations&gt;&gt;</vh></v>
-</v>
-</v>
-<v t="paranhaslett.20130826181255.2960" a="E"
-expanded="paranhaslett.20130826181255.2963,paranhaslett.20130826181255.2964,"><vh>@shadow ./fmpp/Tex/Thesis.tex</vh></v>
-<v t="hasletpara.20130905084546.1629" a="E"
-expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal.tex</vh></v>
-</v>
-<v t="paranhaslett.20130826181255.3074" a="E"><vh>Notes</vh>
-<v t="paranhaslett.20130826181255.3103"><vh>Expirements</vh>
-<v t="paranhaslett.20130826181255.3104"><vh>Download Mviews SNART</vh></v>
-<v t="paranhaslett.20130826181255.3105"><vh>Set it up with eclipse plugins</vh></v>
-<v t="paranhaslett.20130826181255.3106"><vh>download TA-RE</vh></v>
-<v t="paranhaslett.20130826181255.3107"><vh>Set up an expirment with GIT</vh>
-<v t="paranhaslett.20130826181255.3115"><vh>Code equivlency</vh></v>
-</v>
-</v>
-<v t="paranhaslett.20130826181255.3109"><vh>Ideas</vh>
-<v t="paranhaslett.20130826181255.3110"><vh>Preserving a structure during change</vh>
-<v t="paranhaslett.20130826181255.3111"><vh>1) by reatining a before and after of an entry</vh></v>
-<v t="paranhaslett.20130826181255.3112"><vh>2) by placing an id beside an entry</vh></v>
-<v t="paranhaslett.20130826181255.3113"><vh>3) by taking note of Java syntax and treating it as the units of exchange</vh></v>
-<v t="paranhaslett.20130826181255.3114"><vh>4) depends on the structure preserved</vh></v>
-</v>
-<v t="paranhaslett.20130826181255.3115"></v>
-<v t="paranhaslett.20130826181255.3116"><vh>Ordering</vh></v>
-<v t="paranhaslett.20130826181255.3117"><vh>2 views relationship</vh>
-<v t="paranhaslett.20130826181255.3118"><vh>need a way to display differing views of the same base data</vh></v>
-</v>
-<v t="paranhaslett.20130826181255.3119"><vh>Differences in function ordering</vh></v>
-<v t="paranhaslett.20130826181255.3111"></v>
-<v t="paranhaslett.20130826181255.3112"></v>
-<v t="paranhaslett.20130826181255.3113"></v>
-<v t="paranhaslett.20130826181255.3114"></v>
-<v t="paranhaslett.20130826181255.3118"></v>
-</v>
-<v t="paranhaslett.20130826181255.3147"><vh>Programming</vh>
-<v t="paranhaslett.20130826181255.3148"><vh>xml</vh>
-<v t="paranhaslett.20130826181255.3149"><vh>xml of the model</vh></v>
-<v t="paranhaslett.20130826181255.3150"><vh>xml containing the file (which may be the same as above</vh></v>
-</v>
-</v>
-<v t="paranhaslett.20130827232850.1595"><vh>To do</vh>
-<v t="paranhaslett.20131022191134.1801"><vh>Plan</vh>
-<v t="paranhaslett.20131022191134.1802"><vh>Tonight</vh></v>
-<v t="paranhaslett.20131022191134.1803"><vh>Tommorrow</vh></v>
-</v>
-</v>
-<v t="paranhaslett.20130826181255.3148"></v>
-<v t="paranhaslett.20130826181255.3149"></v>
-<v t="paranhaslett.20130826181255.3150"></v>
-<v t="paranhaslett.20131022191134.1801"></v>
-</v>
-<v t="paranhaslett.20130826181255.3057"><vh>Structures</vh>
-<v t="paranhaslett.20130826181255.3058"><vh>Tab</vh></v>
-<v t="paranhaslett.20130826181255.3059"><vh>Menu</vh></v>
-<v t="paranhaslett.20130826181255.3060"><vh>Tag</vh></v>
-<v t="paranhaslett.20130826181255.3061"><vh>Node</vh></v>
-</v>
-<v t="paranhaslett.20130826181255.3062"><vh>Web Pages</vh>
-<v t="hasletpara.20131121100256.1776"><vh>Data</vh>
-<v t="hasletpara.20131121100256.1777"><vh>@shadow ./fmpp/data/tabbedPages.csv</vh></v>
-</v>
-<v t="hasletpara.20130905134207.1647"><vh>@shadow ./create.sh</vh></v>
-<v t="hasletpara.20131121100256.1774"><vh>@shadow ./config.fmpp</vh></v>
-<v t="paranhaslett.20130826181255.3063"><vh>Personal Uni Home</vh>
-<v t="hasletpara.20130905131851.1629"><vh>@shadow ./config.fmpp</vh></v>
-<v t="hasletpara.20130905134207.1629"><vh>@shadow ./fmpp/public_html/generic.html</vh></v>
-</v>
-<v t="paranhaslett.20130826181255.3068"><vh>Ema Wiki</vh>
-<v t="paranhaslett.20130826181255.3069"><vh>@shadow ../../Dropbox/PersonalWiki/Study.txt</vh></v>
-<v t="paranhaslett.20130826181255.3070" a="E"
-expanded="paranhaslett.20130826181255.2964,"><vh>@shadow ../../Dropbox/PersonalWiki/Thesis.txt</vh></v>
-<v t="paranhaslett.20130826181255.3073"
-expanded="paranhaslett.20130826181255.3074,"><vh>@shadow ../../Dropbox/PersonalWiki/Study_Notes.txt</vh></v>
-<v t="paranhaslett.20130826181255.3151" a="E"><vh>@shadow ../../Dropbox/PersonalWiki/Structures.txt</vh></v>
-</v>
-<v t="paranhaslett.20130826181255.3157" a="E"><vh>Grad Wiki</vh>
-<v t="paranhaslett.20130826181255.3158" a="E"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
-</v>
-</v>
-<v t="hasletpara.20131127121911.1852"><vh>ScratchPad</vh>
+<v t="hasletpara.20131127121911.1852" a="E"><vh>ScratchPad</vh>
 <v t="hasletpara.20131122093500.1836"><vh>testing on checkins</vh></v>
 <v t="hasletpara.20131122093500.1835"><vh>Variable names</vh></v>
 <v t="hasletpara.20131122093500.1834"><vh>planned method of test</vh></v>
@@ -185,29 +85,99 @@ expanded="paranhaslett.20130826181255.3074,"><vh>@shadow ../../Dropbox/PersonalW
 <v t="paranhaslett.20130826181255.3146"></v>
 </v>
 </v>
+<v t="paranhaslett.20130826181255.2959" a="E"><vh>Documents</vh>
+<v t="hasletpara.20131128093200.1957" a="E"><vh>Proposal</vh>
+<v t="hasletpara.20130905084546.1629"
+expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal.tex</vh></v>
 </v>
-<v t="paranhaslett.20131122184051.1887" a="E"><vh>Recovered Nodes</vh>
-<v t="paranhaslett.20131122184051.1888"><vh>Recovered node "Notes from xStudy_Notes.txt</vh>
-<v t="paranhaslett.20131122184051.1889"><vh>old:Notes</vh></v>
-<v t="paranhaslett.20131122184051.1890"><vh>new:Notes</vh></v>
+<v t="hasletpara.20131128093200.1956" a="E"><vh>Thesis</vh>
+<v t="hasletpara.20131128093200.1958" a="E"><vh>Templates</vh>
+<v t="hasletpara.20131128093200.1921"
+expanded="hasletpara.20131128093200.1954,"><vh>@shadow ./fmpp/Templates/format.rst</vh></v>
 </v>
-</v>
-<v t="hasletpara.20131126100506.1825" a="E"><vh>Recovered Nodes</vh>
-<v t="hasletpara.20131126100506.1826"><vh>Recovered node "Notes from xStudy_Notes.txt</vh>
-<v t="hasletpara.20131126100506.1827"><vh>old:Notes</vh></v>
-<v t="hasletpara.20131126100506.1828"><vh>new:Notes</vh></v>
-</v>
-</v>
-<v t="paranhaslett.20131126202038.1911" a="E"><vh>Recovered Nodes</vh>
-<v t="paranhaslett.20131126202038.1912"><vh>Recovered node "Notes from xStudy_Notes.txt</vh>
-<v t="paranhaslett.20131126202038.1913"><vh>old:Notes</vh></v>
-<v t="paranhaslett.20131126202038.1914"><vh>new:Notes</vh></v>
+<v t="paranhaslett.20130826181255.2960"
+expanded="paranhaslett.20130826181255.2963,paranhaslett.20130826181255.2964,"><vh>@shadow ./fmpp/Tex/oldThesis.tex</vh></v>
+<v t="hasletpara.20131128093200.1860"
+expanded="hasletpara.20131128093200.1863,hasletpara.20131128093200.1864,hasletpara.20131128093200.1865,hasletpara.20131128093200.1866,hasletpara.20131128093200.1873,hasletpara.20131128093200.1883,"><vh>@shadow ./fmpp/Tex/Thesis.tex</vh></v>
 </v>
 </v>
-<v t="hasletpara.20131127121911.1848" a="E"><vh>Recovered Nodes</vh>
-<v t="hasletpara.20131127121911.1849"><vh>Recovered node "Notes from xStudy_Notes.txt</vh>
-<v t="hasletpara.20131127121911.1850"><vh>old:Notes</vh></v>
-<v t="hasletpara.20131127121911.1851"><vh>new:Notes</vh></v>
+<v t="paranhaslett.20130826181255.3074" a="E"><vh>Notes</vh>
+<v t="paranhaslett.20130826181255.3103" a="E"><vh>Expirements</vh>
+<v t="hasletpara.20131128093200.1832"><vh>Reproduce Jdimes results with Jgit</vh></v>
+<v t="paranhaslett.20130826181255.3104"><vh>Download Mviews SNART</vh></v>
+<v t="paranhaslett.20130826181255.3105"><vh>Set it up with eclipse plugins</vh></v>
+<v t="paranhaslett.20130826181255.3106"><vh>download TA-RE</vh></v>
+<v t="paranhaslett.20130826181255.3107"><vh>Set up an expirment with GIT</vh>
+<v t="paranhaslett.20130826181255.3115"><vh>Code equivlency</vh></v>
+</v>
+</v>
+<v t="paranhaslett.20130826181255.3109"><vh>Ideas</vh>
+<v t="paranhaslett.20130826181255.3110"><vh>Preserving a structure during change</vh>
+<v t="paranhaslett.20130826181255.3111"><vh>1) by reatining a before and after of an entry</vh></v>
+<v t="paranhaslett.20130826181255.3112"><vh>2) by placing an id beside an entry</vh></v>
+<v t="paranhaslett.20130826181255.3113"><vh>3) by taking note of Java syntax and treating it as the units of exchange</vh></v>
+<v t="paranhaslett.20130826181255.3114"><vh>4) depends on the structure preserved</vh></v>
+</v>
+<v t="paranhaslett.20130826181255.3115"></v>
+<v t="paranhaslett.20130826181255.3116"><vh>Ordering</vh></v>
+<v t="paranhaslett.20130826181255.3117"><vh>2 views relationship</vh>
+<v t="paranhaslett.20130826181255.3118"><vh>need a way to display differing views of the same base data</vh></v>
+</v>
+<v t="paranhaslett.20130826181255.3119"><vh>Differences in function ordering</vh></v>
+<v t="paranhaslett.20130826181255.3111"></v>
+<v t="paranhaslett.20130826181255.3112"></v>
+<v t="paranhaslett.20130826181255.3113"></v>
+<v t="paranhaslett.20130826181255.3114"></v>
+<v t="paranhaslett.20130826181255.3118"></v>
+</v>
+<v t="paranhaslett.20130826181255.3147"><vh>Programming</vh>
+<v t="paranhaslett.20130826181255.3148"><vh>xml</vh>
+<v t="paranhaslett.20130826181255.3149"><vh>xml of the model</vh></v>
+<v t="paranhaslett.20130826181255.3150"><vh>xml containing the file (which may be the same as above</vh></v>
+</v>
+</v>
+<v t="paranhaslett.20130827232850.1595"><vh>To do</vh>
+<v t="paranhaslett.20131022191134.1801"><vh>Plan</vh>
+<v t="paranhaslett.20131022191134.1802"><vh>Tonight</vh></v>
+<v t="paranhaslett.20131022191134.1803"><vh>Tommorrow</vh></v>
+</v>
+</v>
+<v t="paranhaslett.20130826181255.3148"></v>
+<v t="paranhaslett.20131022191134.1801"></v>
+<v t="paranhaslett.20130826181255.3149"></v>
+<v t="paranhaslett.20130826181255.3150"></v>
+<v t="paranhaslett.20131022191134.1802"></v>
+<v t="paranhaslett.20131022191134.1803"></v>
+</v>
+<v t="paranhaslett.20130826181255.3057"><vh>Structures</vh>
+<v t="paranhaslett.20130826181255.3058"><vh>Tab</vh></v>
+<v t="paranhaslett.20130826181255.3059"><vh>Menu</vh></v>
+<v t="paranhaslett.20130826181255.3060"><vh>Tag</vh></v>
+<v t="paranhaslett.20130826181255.3061"><vh>Node</vh></v>
+</v>
+<v t="paranhaslett.20130826181255.3062"><vh>Web Pages</vh>
+<v t="hasletpara.20131127144906.1860"><vh>Fmpp</vh>
+<v t="hasletpara.20131121100256.1776"><vh>Data</vh>
+<v t="hasletpara.20131121100256.1777"><vh>@shadow ./fmpp/data/tabbedPages.csv</vh></v>
+</v>
+<v t="hasletpara.20130905134207.1647"><vh>@shadow ./create.sh</vh></v>
+<v t="hasletpara.20131121100256.1774"><vh>@shadow ./config.fmpp</vh></v>
+</v>
+<v t="paranhaslett.20130826181255.3063" a="E"><vh>Personal Uni Home</vh>
+<v t="hasletpara.20130905131851.1629"><vh>@shadow ./config.fmpp</vh></v>
+<v t="hasletpara.20130905134207.1629"><vh>@shadow ./fmpp/public_html/generic.html</vh></v>
+</v>
+<v t="paranhaslett.20130826181255.3068" a="E"><vh>Ema Wiki</vh>
+<v t="paranhaslett.20130826181255.3069"><vh>@shadow ../../Dropbox/PersonalWiki/Study.txt</vh></v>
+<v t="paranhaslett.20130826181255.3070" a="E"
+expanded="paranhaslett.20130826181255.2964,"><vh>@shadow ../../Dropbox/PersonalWiki/Thesis.txt</vh></v>
+<v t="paranhaslett.20130826181255.3073"
+expanded="paranhaslett.20130826181255.3074,paranhaslett.20130826181255.3103,"><vh>@shadow ../../Dropbox/PersonalWiki/Study_Notes.txt</vh></v>
+<v t="paranhaslett.20130826181255.3151" a="E"><vh>@shadow ../../Dropbox/PersonalWiki/Structures.txt</vh></v>
+</v>
+<v t="paranhaslett.20130826181255.3157"><vh>Grad Wiki</vh>
+<v t="paranhaslett.20130826181255.3158" a="E"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
+</v>
 </v>
 </v>
 </vnodes>
@@ -349,192 +319,6 @@ initially as a diff tool for GIT
 initially dealing with code comments that may not need to be transfered
 @c</t>
 <t tx="hasletpara.20131121100256.1776"></t>
-<t tx="hasletpara.20131121100256.1778">&lt;&lt;Front part&gt;&gt;
-
-&lt;&lt;Introduction&gt;&gt;
-
-&lt;&lt;Background&gt;&gt;
-
-&lt;&lt;How it was implemented&gt;&gt;
-
-&lt;&lt;How UI was implemented&gt;&gt;
-
-&lt;&lt;Evaluation&gt;&gt;
-
-&lt;&lt;Conclusion&gt;&gt;
-
-</t>
-<t tx="hasletpara.20131121100256.1779">VICTORIA UNIVERSITY OF WELLINGTON
-
-Te Whare Wananga o te ¯ Upoko o te Ika a M ¯ aui ¯
-
-School of Engineering and Computer Science
-
-Te Kura Matai P ¯ ukaha, P ¯ urorohiko ¯
-
-PO Box 600
-
-Wellington
-
-New Zealand</t>
-<t tx="hasletpara.20131121100256.1780">Chat by Searching</t>
-<t tx="hasletpara.20131121100256.1781">Alexandre Sawczuk da Silva</t>
-<t tx="hasletpara.20131121100256.1782">
-Supervisors: Xiaoying Gao, Peter Andreae</t>
-<t tx="hasletpara.20131121100256.1783">October 17, 2013</t>
-<t tx="hasletpara.20131121100256.1784">Submitted in partial fulﬁlment of the requirements for
-
-Bachelor of Engineering — Software Engineering.</t>
-<t tx="hasletpara.20131121100256.1785">
-Chatbots, which are computer programs that have conversations with users,
-
-are a well-established technology. However, the conversational ability of the typ-
-ical chatbot is greatly restricted, since it does not have access to external sources
-
-of information. The objective of this project was to investigate how the per-
-formance of a chatbot could be improved by connecting it with a knowledge
-
-source that could be used during its interactions with users. A new chatbot, Wal-
-lace, was created by extending Alice to incorporate knowledge from Wikipedia
-
-into its conversations. Mechanisms were designed and developed to retrieve
-
-Wikipedia pages, parse them, and select suitable sentences for the conversation.
-
-A user evaluation was conducted on the prototype, which showed that Wallace
-
-was generally more effective at providing factual answers to questions denoting
-
-an informational need than Alice. Participants also expressed that Wallace was
-
-more speciﬁc and more entertaining than Alice. This project identiﬁed several
-
-directions for future development, especially involving human-computer inter-
-action and artiﬁcial intelligence.</t>
-<t tx="hasletpara.20131121100256.1786">&lt;&lt;header&gt;&gt;
-
-&lt;&lt;title&gt;&gt;
-
-&lt;&lt;author&gt;&gt;
-
-&lt;&lt;Supervisors&gt;&gt;
-
-&lt;&lt;Date&gt;&gt;
-
-&lt;&lt;towards&gt;&gt;
-
-</t>
-<t tx="hasletpara.20131121100256.1788">
-1.1 Project Objectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1</t>
-<t tx="hasletpara.20131121100256.1789">&lt;&lt;Title Page&gt;&gt;
-
-&lt;&lt;Abstract&gt;&gt;
-
-Acknowledgements
-
-Contents
-
-List of Figures
-</t>
-<t tx="hasletpara.20131121100256.1790">
-2.1 History of Chatbots . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
-
-2.2 Educational Chatbots . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
-
-2.3 Chatbots for Bulletin Boards . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
-
-2.4 Chatbots with Emotions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
-
-2.5 Commercial Chatbots . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
-
-2.6 Proﬁle-building Chatbots . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
-
-2.7 Chatbots with Learning Capabilities . . . . . . . . . . . . . . . . . . . . . . . . 6
-
-
-General overview
-
-understanding of definitions
-
-Benefits
-
-How to do it / model it tjink about it
-
-types of
-
-tools that could help
-
-summary</t>
-<t tx="hasletpara.20131121100256.1791">3 Development of Chatbot Functionality 7
-
-3.1 Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
-
-3.2 System Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
-
-3.2.1 Chosen Technologies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
-
-3.2.2 The Existing Alice Framework . . . . . . . . . . . . . . . . . . . . . . . 9
-
-3.2.3 System Architecture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
-
-3.2.4 Enhancing the Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
-
-3.3 Integrating Search to Wallace . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
-
-3.3.1 Triggering the Search Behaviour . . . . . . . . . . . . . . . . . . . . . . 12
-
-3.3.2 Parsing a Wikipedia Page . . . . . . . . . . . . . . . . . . . . . . . . . . 13
-
-3.3.3 Simple Sentence Selection Approach . . . . . . . . . . . . . . . . . . . . 14
-
-3.3.4 Sophisticated Sentence Selection Approach . . . . . . . . . . . . . . . . 14
-
-3.3.5 Handling Follow-up Interaction . . . . . . . . . . . . . . . . . . . . . . 15
-
-3.4 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
-
-Design and implemenattion
-
-libraries used
-
-each of the compoments
-
-difficulties and problems</t>
-<t tx="hasletpara.20131121100256.1792">4 Development of the User Interface 19
-
-4.1 User Interface Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
-
-4.2 User Interface Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
-
-4.3 Initial SWT Implementation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
-
-4.4 Final JavaFX Implementation . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
-
-
-How it works in action</t>
-<t tx="hasletpara.20131121100256.1793">5 Formative System Evaluation 23
-
-5.1 Evaluation Design and Execution . . . . . . . . . . . . . . . . . . . . . . . . . . 23
-
-5.1.1 Conversational Tasks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
-
-5.1.2 System Performance Questions . . . . . . . . . . . . . . . . . . . . . . . 24
-
-5.1.3 Reviewing the Log . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
-
-5.2 Analysis of Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
-
-5.2.1 Quantitative Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
-
-5.2.2 Qualitative Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
-
-</t>
-<t tx="hasletpara.20131121100256.1794">6 Conclusions and Future Work 31
-
-&lt;&lt;Recommendations&gt;&gt;
-</t>
-<t tx="hasletpara.20131121100256.1795">
-6.1 Recommendations for Future Work . . . . . . . . . . . . . . . . . . . . . . . . . 32</t>
 <t tx="hasletpara.20131122093500.1829">Being able to provide manual instructions and hints about how the source control should treat set blocks of code needs investigation. If a record is kept of conflicting items that are marked as being functionally equivalent they do not need to be included in a merge. The simplest of these would be comments that have been noted as being functionally irrelevant. If there is a conflict with the comment in one branch with a line of code in another branch, there could be an indication about which should be preferred. Another reason to mark something as functionally irrelevant might be if there is throw-away code that you do not want propagated over your whole version control system.</t>
 <t tx="hasletpara.20131122093500.1830">One way of identifying functionally equivalent code would be to use annotations in the source file as indicators. A unique key would possibly be needed if the block of code was functionally equivalent to differing code in other branches. A different annotation may need to be used to indicate that items such as code for debugging purposes, throwaway code or comments specific to a view are not merged. The benefit of this is that it can eliminate unnecessary merging when either the code has been marked as having same intention or if the code is irrelevant in other branches.</t>
 <t tx="hasletpara.20131122093500.1831">A way to keep track of irrelevant code would be to create a third branch which only pulls down the changes and is never used to commit changes. Although this would be suitable for the situation where there was throwaway code, comments or debugging it would be harder to maintain without additional tooling. It would also be harder to manually identify equivalent code segments that do not need to be merged.</t>
@@ -545,40 +329,13 @@ How it works in action</t>
 This paper will test the view that being able to automatically discern and manually mark items as being related between two will reduce the amount of conflicts that occur. Initially the automatic marking all comments as being irrelevant will be tested to see if it reduces the merge conflicts. The results will be compared against the ''JDime'' system without any additional features. As things progress this could give us a clearer indication about what things could be manually marked as being equivalent.</t>
 <t tx="hasletpara.20131122093500.1835">One of the things that will be investigated is if the changing of variable or method names is possible. This is going to be a challenge as if the method is or variable is not private or local the use of it could be spread over a number of files. For this reason initially only private methods, private variables and local variables will be considered. Investigation needs to be done to see if some of these changes are already covered by ''JDime''.</t>
 <t tx="hasletpara.20131122093500.1836">This project will also test if there are any advantages in comparison on a check-in by check-in basis rather than simply comparing the most recent check-in for two branches against each other. Again this will be done by examining if the total amount of conflicts can be reduced. Some of the conflicts will also be manually examined to see if they are simpler or more simply resolved using this process. This could identify if the maintenance of the version control system could be simplified.</t>
-<t tx="hasletpara.20131126100506.1825"></t>
-<t tx="hasletpara.20131126100506.1826">(cached) paranhaslett.20130826181255.3074
-Diff...
-  NOTES
-- @others+ @others
-?        +
-+ 
-+ Git tutorial
-+ http://www.vogella.com/articles/Git/article.html</t>
-<t tx="hasletpara.20131126100506.1827">NOTES
-@others
-
-Git tutorial
-http://www.vogella.com/articles/Git/article.html</t>
-<t tx="hasletpara.20131126100506.1828">NOTES
-@others</t>
-<t tx="hasletpara.20131127121911.1848"></t>
-<t tx="hasletpara.20131127121911.1849">(cached) paranhaslett.20130826181255.3074
-Diff...
-  NOTES
-- @others+ @others
-?        +
-+ 
-+ Git tutorial
-+ http://www.vogella.com/articles/Git/article.html</t>
-<t tx="hasletpara.20131127121911.1850">NOTES
-@others
-
-Git tutorial
-http://www.vogella.com/articles/Git/article.html</t>
-<t tx="hasletpara.20131127121911.1851">NOTES
-@others</t>
 <t tx="hasletpara.20131127121911.1852"></t>
 <t tx="hasletpara.20131127121911.1853"></t>
+<t tx="hasletpara.20131127144906.1860"></t>
+<t tx="hasletpara.20131128093200.1832"></t>
+<t tx="hasletpara.20131128093200.1956"></t>
+<t tx="hasletpara.20131128093200.1957"></t>
+<t tx="hasletpara.20131128093200.1958"></t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>
@@ -853,37 +610,5 @@ Friday</t>
   connect eclispe to repo at home
   submit code to repo
 </t>
-<t tx="paranhaslett.20131122184051.1887"></t>
-<t tx="paranhaslett.20131122184051.1888">(cached) paranhaslett.20130826181255.3074
-Diff...
-  NOTES
-- @others
-?        -
-+ @others- 
-- Git tutorial
-- http://www.vogella.com/articles/Git/article.html</t>
-<t tx="paranhaslett.20131122184051.1889">NOTES
-@others</t>
-<t tx="paranhaslett.20131122184051.1890">NOTES
-@others
-
-Git tutorial
-http://www.vogella.com/articles/Git/article.html</t>
-<t tx="paranhaslett.20131126202038.1911"></t>
-<t tx="paranhaslett.20131126202038.1912">(cached) paranhaslett.20130826181255.3074
-Diff...
-  NOTES
-- @others
-?        -
-+ @others- 
-- Git tutorial
-- http://www.vogella.com/articles/Git/article.html</t>
-<t tx="paranhaslett.20131126202038.1913">NOTES
-@others</t>
-<t tx="paranhaslett.20131126202038.1914">NOTES
-@others
-
-Git tutorial
-http://www.vogella.com/articles/Git/article.html</t>
 </tnodes>
 </leo_file>

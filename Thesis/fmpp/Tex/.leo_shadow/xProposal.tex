@@ -175,7 +175,6 @@ Design patterns are another way which has been used to identify the best code fo
 %@-node:hasletpara.20130910094414.1581:Model Driven Development
 %@+node:hasletpara.20130910094414.1583:Mviews
 \subsection{MViews}
-
 MViews as described by Grundy is a way to have multiple different views of the code\cite{Grundy1993}. This is of interest to us because we want to be able to maintain two different refactored versions of the code. The way that this thesis differs from the work done by Grundy is instead of using a centralised database to store common information we are interested in maintaining two self-contained views.
 %@nonl
 %@-node:hasletpara.20130910094414.1583:Mviews
@@ -211,7 +210,6 @@ The intention of this thesis is to make merging between two diverging branches s
 
 \end{enumerate}
 
-
 There are a number of small blocks of code which may be of importance to only one view.  An example is code that is used solely for debugging. If these can be marked as not needing to be merged it could prevent some merge conflicts. There are a couple of ways in which we may be able to deal with these blocks of code.
 
 The first way is to allow the programmer to use annotations in the source code. This would indicate to the source control system that the code is not relevant to other views and should not be merged.
@@ -238,7 +236,6 @@ By combining the functionality of JDime with GIT we aim to use a refactoring bas
 For each of the intended changes the number of conflicts will be tested. The dataset we intend to use is the same one as used by Apel et al. so that we can compare how efficient the solution is with JDime on its own \cite{Apel2011}. Some of the conflicts will also be manually examined to see if they are simpler or more simply resolved using the intended changes. 
 
 Because we will often be doing multiple smaller refactoring based merges timing is also going to be an issue. With this in mind we will also be timing the intended changes both independently and together. These will be compared with timings from JDime and text based merges.
-
 %@nonl
 %@-node:hasletpara.20131122093500.1837:<<Testing>>
 %@nl
