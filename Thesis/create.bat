@@ -1,4 +1,7 @@
-@echo on
+@echo off
 cd C:\Users\Paran\Documents\Study\Thesis
+del /s /q out
 fmpp
-texworks .\out\Tex\Proposal.tex
+xcopy /S copy\* out
+cd out\Tex
+texworks main.tex
