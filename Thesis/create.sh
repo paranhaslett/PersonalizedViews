@@ -1,6 +1,16 @@
 #!/bin/csh
-fmpp.sh
-texworks ./out/Tex/Proposal.tex
-cp ./out/public_html/* ~/public_html/
+cd ~/Study/Thesis
+rm -r out
+setenv JAVA_HOME /usr/pkg/java/sun-7
+~/Applications/fmpp_0.9.14/bin/fmpp
+pwd
+cp -r copy/* out
+cd out
+cp ./public_html/* ~/public_html/
 chmod 604 ~/public_html/*
+cd Tex
+ln ../../../Bibtex/Thesis.bib
+texworks ./main.tex
+
+
 

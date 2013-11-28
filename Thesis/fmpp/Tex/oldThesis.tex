@@ -1,0 +1,37 @@
+\documentclass[12pt]{CRPITStyle} 
+%\usepackage{epsfig} % Packages to use if you wish
+%\usepackage{lscape} % 
+\usepackage[authoryear]{natbib}
+\usepackage{graphicx}
+\renewcommand{\cite}{\citep}
+\pagestyle{empty}
+\thispagestyle{empty}
+\hyphenation{roddick}
+\begin{document}
+
+\title{Thesis Proposal}
+\author{Paran D Haslett (300274241)}
+\affiliation{School of Engineering and Computer Science\\
+Room C168C\\
+Cotton Building\\
+Victoria University of Wellington\\
+Gate 6, Kelburn Parade\\
+Wellington, \\
+Email :~{\tt Paran.Haslett@ecs.vuw.ac.nz}}
+\maketitle
+
+\begin{abstract}
+When collaborating on a project there are times where having your own personal notes, comments about a file are necessary for your own personal understanding.  Sometimes these notes and structures are unique to you and either cannot or should not be used for public consumption. 
+\end{abstract}
+\vspace{.1in}
+
+\noindent {\em Keywords :  Refactoring, Multiple Views, Source Control} 
+
+\section{Why}
+A common issue with a development project is the development of similar code repeatedly.  This is repetitive boring and eventually soul destroying for programmers who where employed under the belief they would be be involved with something cool and new. There is a lot of common code between two Java servlets even if their function is vastly different. What usually happens is a whole lot of copy and paste producing a giant ball of mud.  Multiple developers working on a particular project speed the process to chaos as it gets hard to see the difference between design and the repeatedly copied code.  On top of this different programmers have different perspectives and concerns.  What is required from programmers is not only the ability to design and code well but to be able to fully understand how their peers are going to code.  There have been many attempts to relieve this issue but these have only further diversified points of view.  If one programmer is a champion of AOP and another a firm believer about design patterns be prepared for a holy war over methodologies.  What is really required is the ability for a programmer to be able to view and edit the code in a way that suits themselves without influencing others view of an issue. 
+
+\bibliography{nosql}{}
+\bibliographystyle{agsm}
+
+\end{document}
+
