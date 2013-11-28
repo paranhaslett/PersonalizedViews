@@ -1,9 +1,9 @@
 #--unknown-language--@+leo-ver=4-thin
-#--unknown-language--@+node:hasletpara.20131128093200.1959:@shadow ./fmpp/Tex/Thesis.cls
+#--unknown-language--@+node:hasletpara.20131129101631.1875:@shadow ./notes/Tex/Thesis.cls
 #--unknown-language--@@language latex
 
 #--unknown-language--@<<Comment>>
-#--unknown-language--@+node:hasletpara.20131128093200.1966:<<Comment>>
+#--unknown-language--@+node:hasletpara.20131129101631.1876:<<Comment>>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Thesis LaTeX Template - THESIS CLASS FILE
@@ -31,11 +31,11 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1966:<<Comment>>
+#--unknown-language--@-node:hasletpara.20131129101631.1876:<<Comment>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<Settings>>
-#--unknown-language--@+node:hasletpara.20131128093200.1985:<<Settings>>
+#--unknown-language--@+node:hasletpara.20131129101631.1877:<<Settings>>
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
 \ProvidesClass{Thesis}[2007/22/02 v1.0 LaTeX document class]
 \def\baseclass{book}
@@ -81,11 +81,11 @@
 
 \RequirePackage[utf8]{inputenc} % Allows the use of international characters (e.g. Umlauts)
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1985:<<Settings>>
+#--unknown-language--@-node:hasletpara.20131129101631.1877:<<Settings>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<Margins>>
-#--unknown-language--@+node:hasletpara.20131128093200.1961:<<Margins>>
+#--unknown-language--@+node:hasletpara.20131129101631.1878:<<Margins>>
 %----------------------------------------------------------------------------------------
 %	MARGINS
 %----------------------------------------------------------------------------------------
@@ -98,11 +98,11 @@
                         {   9pt}  % foot height
                         { 0.3in}  % foot sep
 %----------------------------------------------------------------------------------------
-#--unknown-language--@-node:hasletpara.20131128093200.1961:<<Margins>>
+#--unknown-language--@-node:hasletpara.20131129101631.1878:<<Margins>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<Commands>>
-#--unknown-language--@+node:hasletpara.20131128093200.1986:<<Commands>>
+#--unknown-language--@+node:hasletpara.20131129101631.1879:<<Commands>>
 \raggedbottom
 \setlength{\topskip}{1\topskip \@plus 5\p@}
 \doublehyphendemerits=10000       % No consecutive line hyphens.
@@ -194,11 +194,11 @@
 \newcommand*{\subject}[1]{\def\subjectname{#1}}
 \newcommand*{\keywords}[1]{\def\keywordnames{#1}}
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1986:<<Commands>>
+#--unknown-language--@-node:hasletpara.20131129101631.1879:<<Commands>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<document variables>>
-#--unknown-language--@+node:hasletpara.20131128093200.1962:<<document variables>>
+#--unknown-language--@+node:hasletpara.20131129101631.1880:<<document variables>>
 %----------------------------------------------------------------------------------------
 %	DOCUMENT VARIABLES
 %	Fill in the lines below to update the thesis template
@@ -256,11 +256,11 @@
                 {FACULTY NAME (IN BLOCK CAPITALS)}}
 %----------------------------------------------------------------------------------------
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1962:<<document variables>>
+#--unknown-language--@-node:hasletpara.20131129101631.1880:<<document variables>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<default title>>
-#--unknown-language--@+node:hasletpara.20131128093200.1987:<<default title>>
+#--unknown-language--@+node:hasletpara.20131129101631.1881:<<default title>>
 % The default title page, this is not used in this www.latextemplates.com version            
 \renewcommand\maketitle{
   \btypeout{Title Page}
@@ -317,11 +317,11 @@
   \cleardoublepage
 }
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1987:<<default title>>
+#--unknown-language--@-node:hasletpara.20131129101631.1881:<<default title>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<abstract page design>>
-#--unknown-language--@+node:hasletpara.20131128093200.1964:<<abstract page design>>
+#--unknown-language--@+node:hasletpara.20131129101631.1882:<<abstract page design>>
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE DESIGN
 %----------------------------------------------------------------------------------------
@@ -349,11 +349,11 @@
 }
 %----------------------------------------------------------------------------------------
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1964:<<abstract page design>>
+#--unknown-language--@-node:hasletpara.20131129101631.1882:<<abstract page design>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<other pages>>
-#--unknown-language--@+node:hasletpara.20131128093200.1988:<<other pages>>
+#--unknown-language--@+node:hasletpara.20131129101631.1883:<<other pages>>
 {
   \vfil\vfil\vfil\null
   \cleardoublepage
@@ -480,7 +480,7 @@
   \@mainmatterfalse}
 \endinput
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1988:<<other pages>>
+#--unknown-language--@-node:hasletpara.20131129101631.1883:<<other pages>>
 #--unknown-language--@nl
-#--unknown-language--@-node:hasletpara.20131128093200.1959:@shadow ./fmpp/Tex/Thesis.cls
+#--unknown-language--@-node:hasletpara.20131129101631.1875:@shadow ./notes/Tex/Thesis.cls
 #--unknown-language--@-leo

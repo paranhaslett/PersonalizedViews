@@ -11,15 +11,21 @@
 <find_panel_settings/>
 <vnodes>
 <v t="paranhaslett.20130826181255.2958" a="E"><vh>Thesis</vh>
-<v t="hasletpara.20131128093200.1990" a="E"><vh>ScratchPad</vh>
-<v t="hasletpara.20131128093200.1969" a="E"><vh>Old</vh>
+<v t="hasletpara.20131128093200.1990"><vh>ScratchPad</vh>
+<v t="hasletpara.20131128093200.1969"><vh>Old</vh>
+<v t="hasletpara.20131129101631.1874"><vh>Templates</vh>
+<v t="hasletpara.20131129101631.1875" a="E"><vh>@shadow ./notes/Tex/Thesis.cls</vh></v>
+<v t="hasletpara.20131129101631.1884"
+expanded="hasletpara.20131129101631.1886,"><vh>@shadow ./notes/Tex/main.tex</vh></v>
+<v t="hasletpara.20131129101631.1899"
+expanded="hasletpara.20131129101631.1915,"><vh>@shadow ./notes/format.rst</vh></v>
+</v>
 <v t="paranhaslett.20130826181255.2960"
 expanded="paranhaslett.20130826181255.2963,paranhaslett.20130826181255.2964,"><vh>@shadow ./notes/Tex/oldThesis.tex</vh></v>
 <v t="hasletpara.20131128093200.1860"
 expanded="hasletpara.20131128093200.1863,hasletpara.20131128093200.1864,hasletpara.20131128093200.1865,hasletpara.20131128093200.1866,hasletpara.20131128093200.1873,hasletpara.20131128093200.1883,"><vh>@shadow ./notes/Tex/Thesis.tex</vh></v>
 </v>
-<v t="hasletpara.20131127121911.1852" a="E"
-expanded="paranhaslett.20130826181255.3120,"><vh>@shadow ./notes/ScratchPad.rst</vh></v>
+<v t="hasletpara.20131127121911.1852" a="E"><vh>@shadow ./notes/ScratchPad.rst</vh></v>
 <v t="paranhaslett.20130826181255.3074"><vh>Notes</vh>
 <v t="paranhaslett.20130826181255.3103" a="E"><vh>Expirements</vh>
 <v t="hasletpara.20131128093200.1832"><vh>Reproduce Jdimes results with Jgit</vh></v>
@@ -78,20 +84,14 @@ expanded="paranhaslett.20130826181255.3120,"><vh>@shadow ./notes/ScratchPad.rst<
 <v t="paranhaslett.20130826181255.2959" a="E"><vh>Documents</vh>
 <v t="hasletpara.20131128093200.1957" a="E"><vh>Proposal</vh>
 <v t="hasletpara.20130905084546.1629" a="E"
-expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal.tex</vh></v>
+expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal/Proposal.tex</vh></v>
 </v>
 <v t="hasletpara.20131128093200.1956" a="E"><vh>Thesis</vh>
-<v t="hasletpara.20131128093200.1958" a="E"><vh>Templates</vh>
-<v t="hasletpara.20131128093200.1959" a="E"><vh>@shadow ./fmpp/Tex/Thesis.cls</vh></v>
-<v t="hasletpara.20131128093200.1967"
-expanded="hasletpara.20131128093200.1980,"><vh>@shadow ./fmpp/Tex/main.tex</vh></v>
-<v t="hasletpara.20131128093200.1921"
-expanded="hasletpara.20131128093200.1954,"><vh>@shadow ./notes/format.rst</vh></v>
+<v t="hasletpara.20131129101631.1917" a="E"><vh>@shadow ./fmpp/Tex/Thesis/thes.tex</vh></v>
 </v>
 </v>
-</v>
-<v t="paranhaslett.20130826181255.3062"><vh>Web Pages</vh>
-<v t="hasletpara.20131127144906.1860"><vh>Fmpp</vh>
+<v t="paranhaslett.20130826181255.3062" a="E"><vh>Web Pages</vh>
+<v t="hasletpara.20131127144906.1860" a="E"><vh>Fmpp</vh>
 <v t="hasletpara.20131121100256.1776"><vh>Data</vh>
 <v t="hasletpara.20131121100256.1777"><vh>@shadow ./fmpp/data/tabbedPages.csv</vh></v>
 </v>
@@ -111,8 +111,7 @@ expanded="paranhaslett.20130826181255.3103,"><vh>@shadow ../../Dropbox/PersonalW
 <v t="paranhaslett.20130826181255.3151" a="E"><vh>@shadow ../../Dropbox/PersonalWiki/Structures.txt</vh></v>
 </v>
 <v t="paranhaslett.20130826181255.3157"><vh>Grad Wiki</vh>
-<v t="paranhaslett.20130826181255.3158" a="E"
-expanded="paranhaslett.20130826181255.3120,"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
+<v t="paranhaslett.20130826181255.3158" a="E"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
 </v>
 </v>
 </v>
@@ -123,9 +122,9 @@ expanded="paranhaslett.20130826181255.3120,"><vh>@shadow ./fmpp/GradWiki/Wiki.tx
 <t tx="hasletpara.20131128093200.1832"></t>
 <t tx="hasletpara.20131128093200.1956"></t>
 <t tx="hasletpara.20131128093200.1957"></t>
-<t tx="hasletpara.20131128093200.1958"></t>
 <t tx="hasletpara.20131128093200.1969"></t>
 <t tx="hasletpara.20131128093200.1990"></t>
+<t tx="hasletpara.20131129101631.1874"></t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>

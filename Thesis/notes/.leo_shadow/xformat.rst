@@ -1,17 +1,17 @@
 #--unknown-language--@+leo-ver=4-thin
-#--unknown-language--@+node:hasletpara.20131128093200.1921:@shadow ./notes/format.rst
+#--unknown-language--@+node:hasletpara.20131129101631.1899:@shadow ./notes/format.rst
 #--unknown-language--@@language rest
 #--unknown-language--@+others
-#--unknown-language--@+node:hasletpara.20131128093200.1939:@rst
+#--unknown-language--@+node:hasletpara.20131129101631.1900:@rst
 Structure for thesis
 --------------------
 
 #--unknown-language--@<<Front part>>
-#--unknown-language--@+node:hasletpara.20131128093200.1940:<<Front part>>
+#--unknown-language--@+node:hasletpara.20131129101631.1901:<<Front part>>
 #--unknown-language--@<<Title Page>>
-#--unknown-language--@+node:hasletpara.20131128093200.1941:<<Title Page>>
+#--unknown-language--@+node:hasletpara.20131129101631.1902:<<Title Page>>
 #--unknown-language--@<<header>>
-#--unknown-language--@+node:hasletpara.20131128093200.1942:<<header>>
+#--unknown-language--@+node:hasletpara.20131129101631.1903:<<header>>
 VICTORIA UNIVERSITY OF WELLINGTON
 
 Te Whare Wananga o te ¯ Upoko o te Ika a M ¯ aui ¯
@@ -26,52 +26,52 @@ Wellington
 
 New Zealand
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1942:<<header>>
+#--unknown-language--@-node:hasletpara.20131129101631.1903:<<header>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<title>>
-#--unknown-language--@+node:hasletpara.20131128093200.1943:<<title>>
+#--unknown-language--@+node:hasletpara.20131129101631.1904:<<title>>
 Chat by Searching
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1943:<<title>>
+#--unknown-language--@-node:hasletpara.20131129101631.1904:<<title>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<author>>
-#--unknown-language--@+node:hasletpara.20131128093200.1944:<<author>>
+#--unknown-language--@+node:hasletpara.20131129101631.1905:<<author>>
 Alexandre Sawczuk da Silva
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1944:<<author>>
+#--unknown-language--@-node:hasletpara.20131129101631.1905:<<author>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<Supervisors>>
-#--unknown-language--@+node:hasletpara.20131128093200.1945:<<Supervisors>>
+#--unknown-language--@+node:hasletpara.20131129101631.1906:<<Supervisors>>
 
 Supervisors: Xiaoying Gao, Peter Andreae
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1945:<<Supervisors>>
+#--unknown-language--@-node:hasletpara.20131129101631.1906:<<Supervisors>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<Date>>
-#--unknown-language--@+node:hasletpara.20131128093200.1946:<<Date>>
+#--unknown-language--@+node:hasletpara.20131129101631.1907:<<Date>>
 October 17, 2013
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1946:<<Date>>
+#--unknown-language--@-node:hasletpara.20131129101631.1907:<<Date>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<towards>>
-#--unknown-language--@+node:hasletpara.20131128093200.1947:<<towards>>
+#--unknown-language--@+node:hasletpara.20131129101631.1908:<<towards>>
 Submitted in partial fulﬁlment of the requirements for
 
 Bachelor of Engineering — Software Engineering.
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1947:<<towards>>
+#--unknown-language--@-node:hasletpara.20131129101631.1908:<<towards>>
 #--unknown-language--@nl
 
-#--unknown-language--@-node:hasletpara.20131128093200.1941:<<Title Page>>
+#--unknown-language--@-node:hasletpara.20131129101631.1902:<<Title Page>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<Abstract>>
-#--unknown-language--@+node:hasletpara.20131128093200.1948:<<Abstract>>
+#--unknown-language--@+node:hasletpara.20131129101631.1909:<<Abstract>>
 
 Chatbots, which are computer programs that have conversations with users,
 
@@ -99,7 +99,7 @@ more speciﬁc and more entertaining than Alice. This project identiﬁed severa
 directions for future development, especially involving human-computer inter-
 action and artiﬁcial intelligence.
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1948:<<Abstract>>
+#--unknown-language--@-node:hasletpara.20131129101631.1909:<<Abstract>>
 #--unknown-language--@nl
 
 Acknowledgements
@@ -107,19 +107,19 @@ Acknowledgements
 Contents
 
 List of Figures
-#--unknown-language--@-node:hasletpara.20131128093200.1940:<<Front part>>
+#--unknown-language--@-node:hasletpara.20131129101631.1901:<<Front part>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<Introduction>>
-#--unknown-language--@+node:hasletpara.20131128093200.1949:<<Introduction>>
+#--unknown-language--@+node:hasletpara.20131129101631.1910:<<Introduction>>
 
 1.1 Project Objectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1949:<<Introduction>>
+#--unknown-language--@-node:hasletpara.20131129101631.1910:<<Introduction>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<Background>>
-#--unknown-language--@+node:hasletpara.20131128093200.1950:<<Background>>
+#--unknown-language--@+node:hasletpara.20131129101631.1911:<<Background>>
 
 2.1 History of Chatbots . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
 
@@ -150,11 +150,11 @@ tools that could help
 
 summary
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1950:<<Background>>
+#--unknown-language--@-node:hasletpara.20131129101631.1911:<<Background>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<How it was implemented>>
-#--unknown-language--@+node:hasletpara.20131128093200.1951:<<How it was implemented>>
+#--unknown-language--@+node:hasletpara.20131129101631.1912:<<How it was implemented>>
 3 Development of Chatbot Functionality 7
 
 3.1 Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
@@ -191,11 +191,11 @@ each of the compoments
 
 difficulties and problems
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1951:<<How it was implemented>>
+#--unknown-language--@-node:hasletpara.20131129101631.1912:<<How it was implemented>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<How UI was implemented>>
-#--unknown-language--@+node:hasletpara.20131128093200.1952:<<How UI was implemented>>
+#--unknown-language--@+node:hasletpara.20131129101631.1913:<<How UI was implemented>>
 4 Development of the User Interface 19
 
 4.1 User Interface Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
@@ -209,11 +209,11 @@ difficulties and problems
 
 How it works in action
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1952:<<How UI was implemented>>
+#--unknown-language--@-node:hasletpara.20131129101631.1913:<<How UI was implemented>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<Evaluation>>
-#--unknown-language--@+node:hasletpara.20131128093200.1953:<<Evaluation>>
+#--unknown-language--@+node:hasletpara.20131129101631.1914:<<Evaluation>>
 5 Formative System Evaluation 23
 
 5.1 Evaluation Design and Execution . . . . . . . . . . . . . . . . . . . . . . . . . . 23
@@ -230,25 +230,25 @@ How it works in action
 
 5.2.2 Qualitative Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
 
-#--unknown-language--@-node:hasletpara.20131128093200.1953:<<Evaluation>>
+#--unknown-language--@-node:hasletpara.20131129101631.1914:<<Evaluation>>
 #--unknown-language--@nl
 
 #--unknown-language--@<<Conclusion>>
-#--unknown-language--@+node:hasletpara.20131128093200.1954:<<Conclusion>>
+#--unknown-language--@+node:hasletpara.20131129101631.1915:<<Conclusion>>
 6 Conclusions and Future Work 31
 
 #--unknown-language--@<<Recommendations>>
-#--unknown-language--@+node:hasletpara.20131128093200.1955:<<Recommendations>>
+#--unknown-language--@+node:hasletpara.20131129101631.1916:<<Recommendations>>
 
 6.1 Recommendations for Future Work . . . . . . . . . . . . . . . . . . . . . . . . . 32
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1955:<<Recommendations>>
+#--unknown-language--@-node:hasletpara.20131129101631.1916:<<Recommendations>>
 #--unknown-language--@nl
-#--unknown-language--@-node:hasletpara.20131128093200.1954:<<Conclusion>>
+#--unknown-language--@-node:hasletpara.20131129101631.1915:<<Conclusion>>
 #--unknown-language--@nl
 
-#--unknown-language--@-node:hasletpara.20131128093200.1939:@rst
+#--unknown-language--@-node:hasletpara.20131129101631.1900:@rst
 #--unknown-language--@-others
 #--unknown-language--@nonl
-#--unknown-language--@-node:hasletpara.20131128093200.1921:@shadow ./notes/format.rst
+#--unknown-language--@-node:hasletpara.20131129101631.1899:@shadow ./notes/format.rst
 #--unknown-language--@-leo

@@ -8,9 +8,8 @@ cp -r copy/* out
 cd out
 cp ./public_html/* ~/public_html/
 chmod 604 ~/public_html/*
-cd Tex
-ln ../../../Bibtex/Thesis.bib
-texworks ./main.tex
+cd Tex/Proposal
+ln ../../../../Bibtex/Thesis.bib
 
 
 
