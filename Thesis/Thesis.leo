@@ -104,8 +104,7 @@ expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpa
 </v>
 <v t="paranhaslett.20130826181255.3068" a="E"><vh>Ema Wiki</vh>
 <v t="paranhaslett.20130826181255.3069"><vh>@shadow ../../Dropbox/PersonalWiki/Study.txt</vh></v>
-<v t="paranhaslett.20130826181255.3070" a="E"
-expanded="paranhaslett.20130826181255.2964,"><vh>@shadow ../../Dropbox/PersonalWiki/Thesis.txt</vh></v>
+<v t="paranhaslett.20130826181255.3070"><vh>@shadow ../../Dropbox/PersonalWiki/Thesis.txt</vh></v>
 <v t="paranhaslett.20130826181255.3073"
 expanded="paranhaslett.20130826181255.3103,"><vh>@shadow ../../Dropbox/PersonalWiki/Study_Notes.txt</vh></v>
 <v t="paranhaslett.20130826181255.3151" a="E"><vh>@shadow ../../Dropbox/PersonalWiki/Structures.txt</vh></v>
