@@ -25,9 +25,9 @@ expanded="paranhaslett.20130826181255.2963,paranhaslett.20130826181255.2964,"><v
 <v t="hasletpara.20131128093200.1860"
 expanded="hasletpara.20131128093200.1863,hasletpara.20131128093200.1864,hasletpara.20131128093200.1865,hasletpara.20131128093200.1866,hasletpara.20131128093200.1873,hasletpara.20131128093200.1883,"><vh>@shadow ./notes/Tex/Thesis.tex</vh></v>
 </v>
-<v t="hasletpara.20131127121911.1852" a="E"><vh>@shadow ./notes/ScratchPad.rst</vh></v>
+<v t="hasletpara.20131127121911.1852"><vh>@shadow ./notes/ScratchPad.rst</vh></v>
 <v t="paranhaslett.20130826181255.3074"><vh>Notes</vh>
-<v t="paranhaslett.20130826181255.3103" a="E"><vh>Expirements</vh>
+<v t="paranhaslett.20130826181255.3103"><vh>Expirements</vh>
 <v t="hasletpara.20131128093200.1832"><vh>Reproduce Jdimes results with Jgit</vh></v>
 <v t="paranhaslett.20130826181255.3104"><vh>Download Mviews SNART</vh></v>
 <v t="paranhaslett.20130826181255.3105"><vh>Set it up with eclipse plugins</vh></v>
@@ -81,33 +81,33 @@ expanded="hasletpara.20131128093200.1863,hasletpara.20131128093200.1864,hasletpa
 <v t="paranhaslett.20130826181255.3061"><vh>Node</vh></v>
 </v>
 </v>
-<v t="paranhaslett.20130826181255.2959" a="E"><vh>Documents</vh>
-<v t="hasletpara.20131128093200.1957" a="E"><vh>Proposal</vh>
-<v t="hasletpara.20130905084546.1629" a="E"
+<v t="paranhaslett.20130826181255.2959"><vh>Documents</vh>
+<v t="hasletpara.20131128093200.1957"><vh>Proposal</vh>
+<v t="hasletpara.20130905084546.1629"
 expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal/Proposal.tex</vh></v>
 </v>
-<v t="hasletpara.20131128093200.1956" a="E"><vh>Thesis</vh>
-<v t="hasletpara.20131129101631.1917" a="E"><vh>@shadow ./fmpp/Tex/Thesis/thes.tex</vh></v>
+<v t="hasletpara.20131128093200.1956"><vh>Thesis</vh>
+<v t="hasletpara.20131129101631.1917"><vh>@shadow ./fmpp/Tex/Thesis/thes.tex</vh></v>
 </v>
 </v>
-<v t="paranhaslett.20130826181255.3062" a="E"><vh>Web Pages</vh>
-<v t="hasletpara.20131127144906.1860" a="E"><vh>Fmpp</vh>
+<v t="paranhaslett.20130826181255.3062"><vh>Web Pages</vh>
+<v t="hasletpara.20131127144906.1860"><vh>Fmpp</vh>
 <v t="hasletpara.20131121100256.1776"><vh>Data</vh>
 <v t="hasletpara.20131121100256.1777"><vh>@shadow ./fmpp/data/tabbedPages.csv</vh></v>
 </v>
 <v t="hasletpara.20130905134207.1647"><vh>@shadow ./create.sh</vh></v>
 <v t="hasletpara.20131121100256.1774"><vh>@shadow ./config.fmpp</vh></v>
 </v>
-<v t="paranhaslett.20130826181255.3063" a="E"><vh>Personal Uni Home</vh>
+<v t="paranhaslett.20130826181255.3063"><vh>Personal Uni Home</vh>
 <v t="hasletpara.20130905131851.1629"><vh>@shadow ./config.fmpp</vh></v>
 <v t="hasletpara.20130905134207.1629"><vh>@shadow ./fmpp/public_html/generic.html</vh></v>
 </v>
-<v t="paranhaslett.20130826181255.3068" a="E"><vh>Ema Wiki</vh>
+<v t="paranhaslett.20130826181255.3068"><vh>Ema Wiki</vh>
 <v t="paranhaslett.20130826181255.3069"><vh>@shadow ../../Dropbox/PersonalWiki/Study.txt</vh></v>
-<v t="paranhaslett.20130826181255.3070"><vh>@shadow ../../Dropbox/PersonalWiki/Thesis.txt</vh></v>
-<v t="paranhaslett.20130826181255.3073"
-expanded="paranhaslett.20130826181255.3103,"><vh>@shadow ../../Dropbox/PersonalWiki/Study_Notes.txt</vh></v>
-<v t="paranhaslett.20130826181255.3151" a="E"><vh>@shadow ../../Dropbox/PersonalWiki/Structures.txt</vh></v>
+<v t="paranhaslett.20130826181255.3070"
+expanded="paranhaslett.20130826181255.2964,"><vh>@shadow ../../Dropbox/PersonalWiki/Thesis.txt</vh></v>
+<v t="paranhaslett.20130826181255.3073"><vh>@shadow ../../Dropbox/PersonalWiki/Study_Notes.txt</vh></v>
+<v t="paranhaslett.20130826181255.3151"><vh>@shadow ../../Dropbox/PersonalWiki/Structures.txt</vh></v>
 </v>
 <v t="paranhaslett.20130826181255.3157"><vh>Grad Wiki</vh>
 <v t="paranhaslett.20130826181255.3158" a="E"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
@@ -143,7 +143,10 @@ Menu content
 <t tx="paranhaslett.20130826181255.3063"></t>
 <t tx="paranhaslett.20130826181255.3068"></t>
 <t tx="paranhaslett.20130826181255.3074">NOTES
-@others</t>
+@others
+
+Git tutorial
+http://www.vogella.com/articles/Git/article.html</t>
 <t tx="paranhaslett.20130826181255.3103">
 @others
 </t>
