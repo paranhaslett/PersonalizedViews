@@ -1,0 +1,17 @@
+Chapters
+========
+
+<pre>
+% individual chapters included here
+
+\include{Chapters/thesis-introduction}
+\include{Chapters/thestyle}
+\include{Chapters/library}
+\include{Chapters/binding}
+\include{Chapters/lipsum}
+\include{Chapters/testing}
+\include{Chapters/thesis-conclusion}
+</pre>
+
+* {testing}
+

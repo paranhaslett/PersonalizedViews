@@ -55,20 +55,18 @@ expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpa
 <v t="hasletpara.20130905134207.1629"><vh>@shadow ./fmpp/public_html/generic.html</vh></v>
 </v>
 <v t="paranhaslett.20130826181255.3068" a="E"><vh>Ema Wiki</vh>
+<v t="hasletpara.20131202100421.2146" a="E"><vh>Chapters</vh>
+<v t="hasletpara.20131202100421.2144" a="E"><vh>@shadow ./fmpp/ema/Testing.txt</vh></v>
+</v>
 <v t="paranhaslett.20130826181255.3069"><vh>@shadow ./fmpp/ema/Study.txt</vh></v>
 <v t="paranhaslett.20130826181255.3070"><vh>@shadow ./fmpp/ema/Thesis.txt</vh></v>
-<v t="hasletpara.20131202100421.2136" a="EO"><vh>@shadow ./fmpp/ema/Index.txt</vh>
-<v t="hasletpara.20131202100421.2128"><vh>&lt;&lt;chapters&gt;&gt;</vh></v>
-</v>
-<v t="hasletpara.20131202100421.2139" a="EO"><vh>@shadow ./fmpp/ema/Chapters.txt</vh>
-<v t="hasletpara.20131202100421.2140"><vh>&lt;&lt;chapters&gt;&gt;</vh></v>
-</v>
+<v t="hasletpara.20131202100421.2139"><vh>@shadow ./fmpp/ema/Chapters.txt</vh></v>
 <v t="paranhaslett.20130826181255.3073"
 expanded="paranhaslett.20130826181255.3074,paranhaslett.20130826181255.3103,paranhaslett.20130826181255.3109,paranhaslett.20130826181255.3110,paranhaslett.20130826181255.3148,"><vh>@shadow ./fmpp/ema/Study_Notes.txt</vh></v>
-<v t="paranhaslett.20130826181255.3151" a="E"
+<v t="paranhaslett.20130826181255.3151"
 expanded="paranhaslett.20130826181255.3057,"><vh>@shadow ./fmpp/ema/Structures.txt</vh></v>
 </v>
-<v t="paranhaslett.20130826181255.3157" a="E"><vh>Grad Wiki</vh>
+<v t="paranhaslett.20130826181255.3157"><vh>Grad Wiki</vh>
 <v t="paranhaslett.20130826181255.3158" a="E"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
 </v>
 </v>
@@ -82,32 +80,8 @@ expanded="paranhaslett.20130826181255.3057,"><vh>@shadow ./fmpp/ema/Structures.t
 <t tx="hasletpara.20131128093200.1969"></t>
 <t tx="hasletpara.20131128093200.1990"></t>
 <t tx="hasletpara.20131129101631.1874"></t>
-<t tx="hasletpara.20131202100421.2128">% individual chapters included here
-
-\include{Chapters/thesis-introduction}
-\include{Chapters/thestyle}
-\include{Chapters/library}
-\include{Chapters/binding}
-\include{Chapters/lipsum}
-\include{Chapters/testing}
-\include{Chapters/thesis-conclusion}</t>
 <t tx="hasletpara.20131202100421.2132"></t>
-<t tx="hasletpara.20131202100421.2136">@color
-@language html
-&lt;pre&gt;
-@others
-&lt;/pre&gt;
-</t>
-<t tx="hasletpara.20131202100421.2139">@color
-@language html
-@others
-
-</t>
-<t tx="hasletpara.20131202100421.2140">Chapters
-========
-
-{testing}
-</t>
+<t tx="hasletpara.20131202100421.2146"></t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>

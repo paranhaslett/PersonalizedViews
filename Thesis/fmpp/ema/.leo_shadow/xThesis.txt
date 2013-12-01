@@ -4,13 +4,12 @@
 #@@language md
 #@+others
 #@-others
-
 Thesis
 ======
-
 * {Abstract}
-* {Index}
+* {Introduction}
 * {Chapters}
+* {Conclusion}
 #@nonl
 #@-node:paranhaslett.20130826181255.3070:@shadow ./fmpp/ema/Thesis.txt
 #@-leo

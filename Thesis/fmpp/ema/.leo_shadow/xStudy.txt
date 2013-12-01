@@ -4,7 +4,6 @@
 #@@language md
 Study
 =====
-
 * {Thesis}
 * {Study Notes}
 * {Structures}
