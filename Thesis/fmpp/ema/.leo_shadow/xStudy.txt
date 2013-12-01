@@ -1,0 +1,13 @@
+#@+leo-ver=4-thin
+#@+node:paranhaslett.20130826181255.3069:@shadow ./fmpp/ema/Study.txt
+#@@color
+#@@language md
+Study
+=====
+
+* {Thesis}
+* {Study Notes}
+* {Structures}
+* {Ideas}
+#@-node:paranhaslett.20130826181255.3069:@shadow ./fmpp/ema/Study.txt
+#@-leo
