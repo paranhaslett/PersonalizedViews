@@ -1,5 +1,5 @@
 #@+leo-ver=4-thin
-#@+node:paranhaslett.20130826181255.3073:@shadow ./fmpp/ema/Study_Notes.txt
+#@+node:paranhaslett.20130826181255.3073:@shadow ./fmpp/ema/T_Notes.txt
 #@@color
 #@@language md
 #@+others
@@ -151,19 +151,6 @@ suffix 1 1 + or 1.1.add;
 #@-others
 
 #@-node:paranhaslett.20130826181255.3109:Ideas
-#@+node:paranhaslett.20130827232850.1595:To do
-To Do
------
-
-* get eclipse to update
-* setup jdime
-* compile jdime
-* setup jgit
-* test Jdime with jgit
-
-
-
-#@-node:paranhaslett.20130827232850.1595:To do
 #@+node:paranhaslett.20130826181255.3148:xml
 XML
 ---
@@ -181,5 +168,5 @@ XML
 #@nonl
 #@-node:paranhaslett.20130826181255.3074:Notes
 #@-others
-#@-node:paranhaslett.20130826181255.3073:@shadow ./fmpp/ema/Study_Notes.txt
+#@-node:paranhaslett.20130826181255.3073:@shadow ./fmpp/ema/T_Notes.txt
 #@-leo

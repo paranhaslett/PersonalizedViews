@@ -1,0 +1,21 @@
+#@+leo-ver=4-thin
+#@+node:hasletpara.20131202100421.2178:@shadow ./fmpp/ema/T_To_Do.txt
+#@@color
+#@@language md
+#@+others
+#@+node:paranhaslett.20130827232850.1595:To do
+To Do
+=====
+
+* get eclipse to update
+* setup jdime
+* compile jdime
+* setup jgit
+* test Jdime with jgit
+
+
+
+#@-node:paranhaslett.20130827232850.1595:To do
+#@-others
+#@-node:hasletpara.20131202100421.2178:@shadow ./fmpp/ema/T_To_Do.txt
+#@-leo

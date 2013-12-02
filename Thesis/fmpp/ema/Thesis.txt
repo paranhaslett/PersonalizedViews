@@ -1,6 +1,0 @@
-Thesis
-======
-* {Abstract}
-* {Introduction}
-* {Chapters}
-* {Conclusion}

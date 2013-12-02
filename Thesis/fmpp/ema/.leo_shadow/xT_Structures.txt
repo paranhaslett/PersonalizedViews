@@ -1,5 +1,5 @@
 #@+leo-ver=4-thin
-#@+node:paranhaslett.20130826181255.3151:@shadow ./fmpp/ema/Structures.txt
+#@+node:paranhaslett.20130826181255.3151:@shadow ./fmpp/ema/T_Structures.txt
 #@@color
 #@@language md
 #@+others
@@ -35,5 +35,5 @@ Menu content
 #@nonl
 #@-node:paranhaslett.20130826181255.3057:Structures
 #@-others
-#@-node:paranhaslett.20130826181255.3151:@shadow ./fmpp/ema/Structures.txt
+#@-node:paranhaslett.20130826181255.3151:@shadow ./fmpp/ema/T_Structures.txt
 #@-leo

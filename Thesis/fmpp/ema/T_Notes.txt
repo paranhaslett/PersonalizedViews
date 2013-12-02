@@ -103,17 +103,6 @@ infix 1 + 1 or 1.add(1);
 prefix + 1 1 or add(1,1)
 suffix 1 1 + or 1.1.add;
 
-To Do
------
-
-* get eclipse to update
-* setup jdime
-* compile jdime
-* setup jgit
-* test Jdime with jgit
-
-
-
 XML
 ---
 ###xml of the model

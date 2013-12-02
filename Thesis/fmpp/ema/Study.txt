@@ -1,6 +1,0 @@
-Study
-=====
-* {Thesis}
-* {Study Notes}
-* {Structures}
-* {Ideas}
