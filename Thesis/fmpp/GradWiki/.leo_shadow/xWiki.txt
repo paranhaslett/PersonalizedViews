@@ -12,7 +12,7 @@ Adapting the viewed structure of Java code on a case by case basis for individua
 #@-node:paranhaslett.20130826181255.3159:Research Interests
 #@+node:paranhaslett.20130826181255.3120:Papers being read
 ---+++ Papers I am currently reading
-#@-node:paranhaslett.20130826181255.3120:Papers being read
+#@+others
 #@+node:paranhaslett.20130826181255.3121:Code Source Mining
 ---++++ Code Source Mining
 #@-node:paranhaslett.20130826181255.3121:Code Source Mining
@@ -227,6 +227,8 @@ This is also by John Grundy of Mviews Fame
 #@+node:paranhaslett.20130826181255.3146:Article: Building Usage Contexts During Program Comprehension
 ---++++++ Article: Building Usage Contexts During Program Comprehension
 #@-node:paranhaslett.20130826181255.3146:Article: Building Usage Contexts During Program Comprehension
+#@-others
+#@-node:paranhaslett.20130826181255.3120:Papers being read
 #@+node:paranhaslett.20130826181255.3187:Git Repo
 ---+++ Git Repo (mostly for experimentation)
 

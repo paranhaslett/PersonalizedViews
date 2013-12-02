@@ -26,7 +26,7 @@ expanded="paranhaslett.20130826181255.2963,paranhaslett.20130826181255.2964,"><v
 expanded="hasletpara.20131128093200.1863,hasletpara.20131128093200.1864,hasletpara.20131128093200.1865,hasletpara.20131128093200.1866,hasletpara.20131128093200.1873,hasletpara.20131128093200.1883,"><vh>@shadow ./notes/Tex/Thesis.tex</vh></v>
 </v>
 <v t="hasletpara.20131127121911.1852" a="E"
-expanded="hasletpara.20131128093200.1989,"><vh>@shadow ./notes/ScratchPad.rst</vh></v>
+expanded="hasletpara.20131128093200.1989,paranhaslett.20130826181255.3120,"><vh>@shadow ./notes/ScratchPad.rst</vh></v>
 </v>
 <v t="paranhaslett.20130826181255.2959" a="E"><vh>Documents</vh>
 <v t="hasletpara.20131128093200.1957"><vh>Proposal</vh>
@@ -43,25 +43,26 @@ expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpa
 </v>
 </v>
 <v t="paranhaslett.20130826181255.3062" a="E"><vh>Web Pages</vh>
-<v t="hasletpara.20131127144906.1860"><vh>Fmpp</vh>
+<v t="hasletpara.20131127144906.1860" a="E"><vh>Fmpp</vh>
 <v t="hasletpara.20131121100256.1776"><vh>Data</vh>
 <v t="hasletpara.20131121100256.1777"><vh>@shadow ./fmpp/data/tabbedPages.csv</vh></v>
 </v>
 <v t="hasletpara.20130905134207.1647"><vh>@shadow ./create.sh</vh></v>
 <v t="hasletpara.20131121100256.1774"><vh>@shadow ./config.fmpp</vh></v>
 </v>
-<v t="paranhaslett.20130826181255.3063"><vh>Personal Uni Home</vh>
+<v t="paranhaslett.20130826181255.3063" a="E"><vh>Personal Uni Home</vh>
 <v t="hasletpara.20130905131851.1629"><vh>@shadow ./config.fmpp</vh></v>
-<v t="hasletpara.20130905134207.1629"><vh>@shadow ./fmpp/public_html/generic.html</vh></v>
+<v t="hasletpara.20130905134207.1629" a="E"
+expanded="hasletpara.20130905134207.1633,"><vh>@shadow ./fmpp/public_html/generic.html</vh></v>
 </v>
-<v t="paranhaslett.20130826181255.3068" a="E"><vh>Ema Wiki</vh>
+<v t="paranhaslett.20130826181255.3068"><vh>Ema Wiki</vh>
 <v t="paranhaslett.20130826181255.3069"><vh>@shadow ./fmpp/ema/T_Study.txt</vh></v>
 <v t="paranhaslett.20130826181255.3073"
-expanded="paranhaslett.20130826181255.3074,paranhaslett.20130826181255.3103,paranhaslett.20130826181255.3110,paranhaslett.20130826181255.3148,"><vh>@shadow ./fmpp/ema/T_Notes.txt</vh></v>
+expanded="paranhaslett.20130826181255.3074,paranhaslett.20130826181255.3103,paranhaslett.20130826181255.3110,"><vh>@shadow ./fmpp/ema/T_Notes.txt</vh></v>
 <v t="hasletpara.20131202100421.2178"><vh>@shadow ./fmpp/ema/T_To_Do.txt</vh></v>
 <v t="paranhaslett.20130826181255.3151"
 expanded="paranhaslett.20130826181255.3057,"><vh>@shadow ./fmpp/ema/T_Structures.txt</vh></v>
-<v t="hasletpara.20131202100421.2203" a="E"><vh>Thesis</vh>
+<v t="hasletpara.20131202100421.2203"><vh>Thesis</vh>
 <v t="paranhaslett.20130826181255.3070"><vh>@shadow ./fmpp/ema/T_Thesis.txt</vh></v>
 <v t="hasletpara.20131202100421.2139" a="E"><vh>@shadow ./fmpp/ema/T_Chapters.txt</vh></v>
 <v t="hasletpara.20131202100421.2146"><vh>Chapters</vh>
@@ -71,8 +72,9 @@ expanded="paranhaslett.20130826181255.3057,"><vh>@shadow ./fmpp/ema/T_Structures
 </v>
 </v>
 </v>
-<v t="paranhaslett.20130826181255.3157"><vh>Grad Wiki</vh>
-<v t="paranhaslett.20130826181255.3158" a="E"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
+<v t="paranhaslett.20130826181255.3157" a="E"><vh>Grad Wiki</vh>
+<v t="paranhaslett.20130826181255.3158" a="E"
+expanded="paranhaslett.20130826181255.3120,"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
 </v>
 </v>
 </v>
