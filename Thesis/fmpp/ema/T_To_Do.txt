@@ -1,13 +1,15 @@
 To Do
 =====
 
-* get eclipse to update
-
 * setup jdime
 
-* compile jdime
+* figure out how jdime is setup
 
 * setup jgit
+
+* figure out how to integrate jdime with jgit
+
+* do a write up
 
 * test Jdime with jgit
 
