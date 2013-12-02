@@ -8,9 +8,13 @@ To Do
 =====
 
 * get eclipse to update
+
 * setup jdime
+
 * compile jdime
+
 * setup jgit
+
 * test Jdime with jgit
 
 
