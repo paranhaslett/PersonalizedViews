@@ -4,9 +4,9 @@
 #@@language md
 Study
 =====
-* {T Thesis}
-* {T Notes}
-* {T Structures}
-* {T To Do}
+* [Thesis](ema:T Thesis)
+* [Notes](ema:T Notes)
+* [Structures](ema:T Structures)
+* [To Do](ema:T To Do)
 #@-node:paranhaslett.20130826181255.3069:@shadow ./fmpp/ema/T_Study.txt
 #@-leo

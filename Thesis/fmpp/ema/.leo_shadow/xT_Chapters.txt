@@ -24,7 +24,7 @@ Chapters
 
 #@+others
 #@+node:hasletpara.20131202100421.2200:testing
-* {T testing}
+* [Testing](T testing)
 #@nonl
 #@-node:hasletpara.20131202100421.2200:testing
 #@-others
