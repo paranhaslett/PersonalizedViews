@@ -11,7 +11,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="paranhaslett.20130826181255.2958" a="E"><vh>Thesis</vh>
-<v t="hasletpara.20131128093200.1990" a="E"><vh>ScratchPad</vh>
+<v t="hasletpara.20131128093200.1990"><vh>ScratchPad</vh>
 <v t="hasletpara.20131128093200.1969"><vh>Old</vh>
 <v t="hasletpara.20131129101631.1874"><vh>Templates</vh>
 <v t="hasletpara.20131129101631.1875" a="E"><vh>@shadow ./notes/Tex/Thesis.cls</vh></v>
@@ -28,12 +28,13 @@ expanded="hasletpara.20131128093200.1863,hasletpara.20131128093200.1864,hasletpa
 <v t="hasletpara.20131127121911.1852"
 expanded="hasletpara.20131128093200.1989,paranhaslett.20130826181255.3120,"><vh>@shadow ./notes/ScratchPad.rst</vh></v>
 </v>
-<v t="paranhaslett.20130826181255.2959"><vh>Documents</vh>
+<v t="paranhaslett.20130826181255.2959" a="E"><vh>Documents</vh>
 <v t="hasletpara.20131128093200.1957"><vh>Proposal</vh>
 <v t="hasletpara.20130905084546.1629"
 expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal/Proposal.tex</vh></v>
 </v>
 <v t="hasletpara.20131128093200.1956" a="E"><vh>Thesis</vh>
+<v t="paranhaslett.20131205091806.1894"><vh>Da Plan</vh></v>
 <v t="hasletpara.20131129101631.1917"><vh>@shadow ./fmpp/Tex/Thesis/thes.tex</vh></v>
 <v t="hasletpara.20131202100421.2130"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/thesis-introduction.tex</vh></v>
 <v t="hasletpara.20131202100421.2132"><vh>Chapters</vh>
@@ -97,5 +98,15 @@ expanded="paranhaslett.20130826181255.3120,"><vh>@shadow ./fmpp/GradWiki/Wiki.tx
 <t tx="paranhaslett.20130826181255.3063"></t>
 <t tx="paranhaslett.20130826181255.3068"></t>
 <t tx="paranhaslett.20130826181255.3157"></t>
+<t tx="paranhaslett.20131205091806.1894">What we are going to do is
+do what Apel has done again
+figure out how jgit works
+add tuned sort to jgit 
+run it over the files
+
+aslo add some for of equivilancy
+
+
+it already ignores comments</t>
 </tnodes>
 </leo_file>

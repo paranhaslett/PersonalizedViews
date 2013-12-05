@@ -1,9 +1,9 @@
 To Do
 =====
 
-* setup jdime
-
 * figure out how jdime is setup
+
+* figure out why we get no output...
 
 * setup jgit
 
