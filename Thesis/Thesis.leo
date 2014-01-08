@@ -37,8 +37,11 @@ expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpa
 <v t="paranhaslett.20131205091806.1894"><vh>Da Plan</vh></v>
 <v t="hasletpara.20131129101631.1917"><vh>@shadow ./fmpp/Tex/Thesis/thes.tex</vh></v>
 <v t="hasletpara.20131202100421.2130"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/thesis-introduction.tex</vh></v>
-<v t="hasletpara.20131202100421.2132"><vh>Chapters</vh>
+<v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
 <v t="hasletpara.20131202100421.2134"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/testing.tex</vh></v>
+<v t="hasletpara.20140109094355.1829"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/differentViews.tex</vh></v>
+<v t="hasletpara.20140109094355.1831"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/git.tex</vh></v>
+<v t="hasletpara.20140109094355.1833"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/merging.tex</vh></v>
 </v>
 <v t="hasletpara.20131202100421.2131"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/thesis-conclusion.tex</vh></v>
 </v>
@@ -98,13 +101,19 @@ expanded="paranhaslett.20130826181255.3120,"><vh>@shadow ./fmpp/GradWiki/Wiki.tx
 <t tx="paranhaslett.20130826181255.3063"></t>
 <t tx="paranhaslett.20130826181255.3068"></t>
 <t tx="paranhaslett.20130826181255.3157"></t>
-<t tx="paranhaslett.20131205091806.1894">What we are going to do is
+<t tx="paranhaslett.20131205091806.1894">
+
+
+What has already been dome by Apel is to i
+
+
+What we are going to do is
 do what Apel has done again
 figure out how jgit works
 add tuned sort to jgit 
 run it over the files
 
-aslo add some for of equivilancy
+aslo add some stufffor of equivilancy
 
 
 it already ignores comments (prove this using tests)
