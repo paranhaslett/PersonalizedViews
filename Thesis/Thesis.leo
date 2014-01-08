@@ -107,6 +107,7 @@ run it over the files
 aslo add some for of equivilancy
 
 
-it already ignores comments</t>
+it already ignores comments (prove this using tests)
+</t>
 </tnodes>
 </leo_file>
