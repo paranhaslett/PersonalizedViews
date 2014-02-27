@@ -34,13 +34,17 @@ expanded="hasletpara.20131128093200.1989,paranhaslett.20130826181255.3120,"><vh>
 expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal/Proposal.tex</vh></v>
 </v>
 <v t="hasletpara.20131128093200.1956" a="E"><vh>Thesis</vh>
-<v t="paranhaslett.20131205091806.1894"><vh>Da Plan</vh></v>
+<v t="paranhaslett.20131205091806.1894" a="E"><vh>Da Plan</vh>
+<v t="hasletpara.20140227093334.1831"><vh>To normalise or not to normalise that is the question</vh></v>
+<v t="hasletpara.20140227093334.1830"><vh>To detect code moves</vh></v>
+</v>
 <v t="hasletpara.20131129101631.1917" a="E"><vh>@shadow ./fmpp/Tex/Thesis/thes.tex</vh></v>
 <v t="hasletpara.20131202100421.2130"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/thesis-introduction.tex</vh></v>
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
 <v t="hasletpara.20131202100421.2134"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/testing.tex</vh></v>
 <v t="hasletpara.20140109094355.1829"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/differentViews.tex</vh></v>
 <v t="hasletpara.20140109094355.1831"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/git.tex</vh></v>
+<v t="hasletpara.20140227093334.1832"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/ordering.tex</vh></v>
 <v t="hasletpara.20140109094355.1833"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/merging.tex</vh></v>
 </v>
 <v t="hasletpara.20131202100421.2131"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/thesis-conclusion.tex</vh></v>
@@ -69,9 +73,9 @@ expanded="paranhaslett.20130826181255.3057,"><vh>@shadow ./fmpp/ema/T_Structures
 <v t="hasletpara.20131202100421.2203" a="E"><vh>Thesis</vh>
 <v t="paranhaslett.20130826181255.3070"><vh>@shadow ./fmpp/ema/T_Thesis.txt</vh></v>
 <v t="hasletpara.20131202100421.2139" a="E"><vh>@shadow ./fmpp/ema/T_Chapters.txt</vh></v>
-<v t="hasletpara.20131202100421.2146"><vh>Chapters</vh>
-<v t="hasletpara.20131202100421.2155"><vh>@shadow ./fmpp/ema/T_Intro.txt</vh></v>
-<v t="hasletpara.20131202100421.2144"><vh>@shadow ./fmpp/ema/T_Testing.txt</vh></v>
+<v t="hasletpara.20131202100421.2146" a="E"><vh>Chapters</vh>
+<v t="hasletpara.20131202100421.2155" a="E"><vh>@shadow ./fmpp/ema/T_Intro.txt</vh></v>
+<v t="hasletpara.20131202100421.2144" a="E"><vh>@shadow ./fmpp/ema/T_Testing.txt</vh></v>
 <v t="hasletpara.20131202100421.2151"><vh>@shadow ./fmpp/ema/T_Conclusion.txt</vh></v>
 </v>
 </v>
@@ -94,6 +98,15 @@ expanded="paranhaslett.20130826181255.3120,"><vh>@shadow ./fmpp/GradWiki/Wiki.tx
 <t tx="hasletpara.20131202100421.2132"></t>
 <t tx="hasletpara.20131202100421.2146"></t>
 <t tx="hasletpara.20131202100421.2203"></t>
+<t tx="hasletpara.20140227093334.1830">Do the deletes make any change to the code?
+Do the inserts make any change to the code?</t>
+<t tx="hasletpara.20140227093334.1831">
+I think that I am going to have to put all the changes in the merge
+need to figure out wher the top diff is inacted so that the file can be checked for the following
+
+Is it Java?
+what line number region are we comparing
+have we got all the changesets</t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>
@@ -117,6 +130,12 @@ aslo add some stufffor of equivilancy
 
 
 it already ignores comments (prove this using tests)
+
+
+
+ 
+
+
 </t>
 </tnodes>
 </leo_file>

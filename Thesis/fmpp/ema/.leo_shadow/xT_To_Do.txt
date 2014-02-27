@@ -11,10 +11,6 @@ To Do
 
 * figure out why we get no output...
 
-* setup jgit
-
-* figure out how to integrate jdime with jgit
-
 * do a write up
 
 * test Jdime with jgit
