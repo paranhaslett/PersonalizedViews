@@ -1,7 +1,7 @@
 #!/bin/bash
-cd ~/Study/Thesis
+cd ~/Documents/Study/Thesis
 rm -r out
-set JAVA_HOME=/usr/pkg/java/sun-7
+export JAVA_HOME=/usr/lib/jvm/default-java/
 ~/Applications/fmpp_0.9.14/bin/fmpp
 cp -r copy/* out
 cd out
