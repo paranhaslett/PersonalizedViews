@@ -30,8 +30,8 @@ expanded="hasletpara.20131128093200.1989,paranhaslett.20130826181255.3120,"><vh>
 </v>
 <v t="paranhaslett.20130826181255.2959" a="E"><vh>Documents</vh>
 <v t="hasletpara.20131128093200.1957"><vh>Proposal</vh>
-<v t="hasletpara.20130905084546.1629"
-expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal/Proposal.tex</vh></v>
+<v t="hasletpara.20130905084546.1629" a="E"
+expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal/Proposal.tex</vh></v>
 </v>
 <v t="hasletpara.20131128093200.1956" a="E"><vh>Thesis</vh>
 <v t="paranhaslett.20131205091806.1894" a="E"><vh>Da Plan</vh>
@@ -43,7 +43,7 @@ expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpa
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
 <v t="hasletpara.20131202100421.2134"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/testing.tex</vh></v>
 <v t="hasletpara.20140109094355.1829"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/differentViews.tex</vh></v>
-<v t="hasletpara.20140109094355.1831"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/git.tex</vh></v>
+<v t="hasletpara.20140109094355.1831" a="E"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/git.tex</vh></v>
 <v t="hasletpara.20140227093334.1832"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/ordering.tex</vh></v>
 <v t="hasletpara.20140109094355.1833"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/merging.tex</vh></v>
 </v>
@@ -70,7 +70,7 @@ expanded="paranhaslett.20130826181255.3074,paranhaslett.20130826181255.3103,para
 <v t="hasletpara.20131202100421.2178" a="E"><vh>@shadow ./fmpp/ema/T_To_Do.txt</vh></v>
 <v t="paranhaslett.20130826181255.3151"
 expanded="paranhaslett.20130826181255.3057,"><vh>@shadow ./fmpp/ema/T_Structures.txt</vh></v>
-<v t="hasletpara.20131202100421.2203" a="E"><vh>Thesis</vh>
+<v t="hasletpara.20131202100421.2203"><vh>Thesis</vh>
 <v t="paranhaslett.20130826181255.3070"><vh>@shadow ./fmpp/ema/T_Thesis.txt</vh></v>
 <v t="hasletpara.20131202100421.2139" a="E"><vh>@shadow ./fmpp/ema/T_Chapters.txt</vh></v>
 <v t="hasletpara.20131202100421.2146" a="E"><vh>Chapters</vh>

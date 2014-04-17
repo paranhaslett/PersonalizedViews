@@ -1,5 +1,7 @@
 
-\chapter{Using git}
+Using git
+=========
+
 Git is a repository which is usually used mostly for software development.
 A repository is a way to keep old revisions of a document backed up so that if you ever need to revist a previous revision you can always access it.
 Repositories also allow people to work on the same document at the same time.
@@ -11,7 +13,9 @@ If it is not possible for those changes to co-exist then there is a \"merge conf
 An example of a merge conflict is if any two changes on the document overlap with different values.
 Before any merging can be done all of the changes need to be determined 
 
-\section{Longest Common Subsequence}
+Longest Common Subsequence
+==========================
+
 One method of discovering what has changed is to find the longest common subseqeunce (LCS).
 An example of finding the longest common subsequence is:
 
@@ -33,51 +37,19 @@ A longest common subsequence would be
 \end{verbatim}
 The letters that are missing from the LCS differ between the sentances.
 
-\section{Git difference strategies}
+Git difference strategies
+=========================
+
 Git uses the following algorithms to find the LCS.
-\subsection{Myers}
-\subsection{Patience}
-\subsection{Histogram}
 
-\section{The problem with longest common subsequence}
-There is still a problem with longest common subsequence. It does not notice changes of order in a document.  For example if we were to take the following two sentances:
+Myers
+=====
 
-\begin{verbatim}
+Patience
+========
 
-\"The quick brown fox jumps over the lazy dog\"
+Histogram
+=========
 
-\"The lazy brown dog jumps over the quick fox\"
-
-\end{verbatim}
-
-The longest common subsequence of this would be
-
-\begin{verbatim}
-\"The \",\" brown \",\"o\",\" jumps over the \",\"o\"
-\end{verbatim}
-
-Without further analysing the changes it is possible to conclude that instead of swapping certain words that:
-
-\begin{verbatim}
-\"quick\" transforms into \"lazy\"
-\"f\" transforms into \"d\"
-\"x\" transforms into \"g\"
-\"lazy d\" transforms into \"quick f\"
-\"g\" transforms into \"x\"
-\end{verbatim}
-
-What this thesis aims to do is to more accurately portray these changes.
-In order to do this we require some information about the structure of the document.
-For the above example if the computer was aware that the sentance was structured into words rather than characters the result would have been slighty different.
-
-\begin{verbatim}
-\"The \",?,\" brown \",?,\"jumps \", \"over \", \"the \",?,?
-\end{verbatim}
-
-...
-
-
-
-  
 
 
