@@ -1,10 +1,10 @@
 #@+leo-ver=4-thin
 #@+node:hasletpara.20130905134207.1647:@shadow ./create.sh
 #@@language shell
-#!/bin/csh
-cd ~/Study/Thesis
+#!/bin/bash
+cd ~/Documents/Study/Thesis
 rm -r out
-setenv JAVA_HOME /usr/pkg/java/sun-7
+export JAVA_HOME=/usr/lib/jvm/default-java/
 ~/Applications/fmpp_0.9.14/bin/fmpp
 cp -r copy/* out
 cd out

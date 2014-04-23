@@ -19,7 +19,7 @@ Before any merging can be done all of the changes need to be determined
 %@+node:paran.20140417080136.1984:<<Longest common subsequence>>
 \section{Longest Common Subsequence}
 One method of discovering what has changed is to find the longest common subseqeunce (LCS).
-An example of finding the longest common subsequence is:
+A simplified example of finding the longest common subsequence is:
 
 Imagine we have have two similar sentances that we want to compare with each other.  
 We would like to know what is the same and what is different.
@@ -46,18 +46,26 @@ The letters that are missing from the LCS differ between the sentances.
 %@+node:paran.20140417080136.1980:<<Git difference strategies>>
 \section{Git difference strategies}
 Git uses the following algorithms to find the LCS.
+
 %@<<Myers>>
 %@+node:paran.20140417080136.1981:<<Myers>>
 \subsection{Myers}
-%@nonl
+
 %@-node:paran.20140417080136.1981:<<Myers>>
 %@nl
+
 %@<<Patience>>
 %@+node:paran.20140417080136.1982:<<Patience>>
 \subsection{Patience}
-%@nonl
+
+%@+at
+% fron the patience game
+% need references
+%@-at
+%@@c 
 %@-node:paran.20140417080136.1982:<<Patience>>
 %@nl
+
 %@<<Histogram>>
 %@+node:paran.20140417080136.1983:<<Histogram>>
 \subsection{Histogram}
@@ -104,7 +112,18 @@ For the above example if the computer was aware that the sentance was structured
 \"The \",?,\" brown \",?,\"jumps \", \"over \", \"the \",?,?
 \end{verbatim}
 
-...
+in this situation in becomes easier to recognise that words have been swapped by comparing each of the changes with each other.  
+
+\begin{verbatim}
+\"quick \" transforms into \"lazy \" matches \"lazy\" transforms into \"quick\"
+\"fox \" tranforms into \"dog\" matches \"dog\" transforms into \"fox\" 
+\end{verbatim}
+
+The English language is also far too complex to notice anything that is more basic than a word for word swap.
+There are words and sentences that have similar meanings but are spelt and structured differently.
+
+ 
+ 
 
 
 
@@ -112,6 +131,25 @@ For the above example if the computer was aware that the sentance was structured
 %@nonl
 %@-node:paran.20140417080136.1985:<<The problem with LCS>>
 %@nl
+
+%@<<How diffs use LCS>>
+%@+node:paran.20140421082221.1912:<<How diffs use LCS>>
+\section{How most difference tools use LCS}
+The above is a simplified illustration of how general LCS works.
+How most difference tools use LCS is quite.
+Most difference tools rather than comparing on a character by character difference compares line of text with each other.
+
+%@+at
+% Remember to say something white space
+% and regular expression differences
+% 
+%@-at
+%@@c
+%@nonl
+%@-node:paran.20140421082221.1912:<<How diffs use LCS>>
+%@nl
+ 
+ 
 
 
 %@-node:hasletpara.20140109094355.1831:@shadow ./fmpp/Tex/Thesis/Chapters/git.tex

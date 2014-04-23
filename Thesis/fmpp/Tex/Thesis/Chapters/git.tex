@@ -13,7 +13,7 @@ Before any merging can be done all of the changes need to be determined
 
 \section{Longest Common Subsequence}
 One method of discovering what has changed is to find the longest common subseqeunce (LCS).
-An example of finding the longest common subsequence is:
+A simplified example of finding the longest common subsequence is:
 
 Imagine we have have two similar sentances that we want to compare with each other.  
 We would like to know what is the same and what is different.
@@ -35,8 +35,15 @@ The letters that are missing from the LCS differ between the sentances.
 
 \section{Git difference strategies}
 Git uses the following algorithms to find the LCS.
+
 \subsection{Myers}
+
+
 \subsection{Patience}
+
+% fron the patience game
+% need references
+
 \subsection{Histogram}
 
 \section{The problem with longest common subsequence}
@@ -74,10 +81,32 @@ For the above example if the computer was aware that the sentance was structured
 \"The \",?,\" brown \",?,\"jumps \", \"over \", \"the \",?,?
 \end{verbatim}
 
-...
+in this situation in becomes easier to recognise that words have been swapped by comparing each of the changes with each other.  
+
+\begin{verbatim}
+\"quick \" transforms into \"lazy \" matches \"lazy\" transforms into \"quick\"
+\"fox \" tranforms into \"dog\" matches \"dog\" transforms into \"fox\" 
+\end{verbatim}
+
+The English language is also far too complex to notice anything that is more basic than a word for word swap.
+There are words and sentences that have similar meanings but are spelt and structured differently.
+
+ 
+ 
 
 
 
   
+
+\section{How most difference tools use LCS}
+The above is a simplified illustration of how general LCS works.
+How most difference tools use LCS is quite.
+Most difference tools rather than comparing on a character by character difference compares line of text with each other.
+
+% Remember to say something white space
+% and regular expression differences
+% 
+ 
+ 
 
 

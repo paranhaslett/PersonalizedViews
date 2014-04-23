@@ -37,13 +37,14 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 <v t="paranhaslett.20131205091806.1894" a="E"><vh>Da Plan</vh>
 <v t="hasletpara.20140227093334.1831"><vh>To normalise or not to normalise that is the question</vh></v>
 <v t="hasletpara.20140227093334.1830"><vh>To detect code moves</vh></v>
+<v t="paran.20140423092515.1913"><vh>Datsets</vh></v>
 </v>
 <v t="hasletpara.20131129101631.1917" a="E"><vh>@shadow ./fmpp/Tex/Thesis/thes.tex</vh></v>
 <v t="hasletpara.20131202100421.2130"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/thesis-introduction.tex</vh></v>
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
 <v t="hasletpara.20131202100421.2134"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/testing.tex</vh></v>
 <v t="hasletpara.20140109094355.1829"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/differentViews.tex</vh></v>
-<v t="hasletpara.20140109094355.1831" a="E"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/git.tex</vh></v>
+<v t="hasletpara.20140109094355.1831"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/git.tex</vh></v>
 <v t="hasletpara.20140227093334.1832"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/ordering.tex</vh></v>
 <v t="hasletpara.20140109094355.1833"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/merging.tex</vh></v>
 </v>
@@ -107,6 +108,17 @@ need to figure out wher the top diff is inacted so that the file can be checked 
 Is it Java?
 what line number region are we comparing
 have we got all the changesets</t>
+<t tx="paran.20140423092515.1913">Possible datasets
+&lt;A HREF="https://github.com/clojure/clojure" &gt;clojure/clojure · GitHub&lt;/A&gt;
+A lisp like language written in Java and targeting the JVM
+&lt;A HREF="https://github.com/rzwitserloot/lombok" &gt;rzwitserloot/lombok · GitHub&lt;/A&gt;
+A Java library that uses annotations to simplfy commonly written code
+&lt;A HREF="https://github.com/maandree/jpp" &gt;maandree/jpp · GitHub&lt;/A&gt;
+A preprocessor for java
+&lt;A HREF="https://github.com/klangner/ast-java"&gt;klangner/ast-java · GitHub&lt;/A&gt;
+parses and represents java as an AST
+&lt;A HREF="https://github.com/antlr/antlr4"&gt;antlr/antlr4 · GitHub&lt;/A&gt;
+A parser for any language you have language definition for</t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>
@@ -131,9 +143,11 @@ aslo add some stufffor of equivilancy
 
 it already ignores comments (prove this using tests)
 
+does not retain the original order for disordered sections of code
 
 
- 
+
+
 
 
 </t>
