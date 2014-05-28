@@ -5,10 +5,8 @@ Chapters
 % individual chapters included here
 
 \include{Chapters/thesis-introduction}
-\include{Chapters/differentViews}
-\include{Chapters/git}
-\include{Chapters/merging}
-\include{Chapters/testing}
+\include{Chapters/Background}
+\include{Chapters/theTool}
 \include{Chapters/thesis-conclusion}
 </pre>
 

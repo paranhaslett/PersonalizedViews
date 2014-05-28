@@ -29,7 +29,7 @@ expanded="hasletpara.20131128093200.1863,hasletpara.20131128093200.1864,hasletpa
 expanded="hasletpara.20131128093200.1989,paranhaslett.20130826181255.3120,"><vh>@shadow ./notes/ScratchPad.rst</vh></v>
 </v>
 <v t="paranhaslett.20130826181255.2959" a="E"><vh>Documents</vh>
-<v t="hasletpara.20131128093200.1957" a="E"><vh>Proposal</vh>
+<v t="hasletpara.20131128093200.1957"><vh>Proposal</vh>
 <v t="hasletpara.20130905084546.1629" a="E"
 expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal/Proposal.tex</vh></v>
 </v>
@@ -39,22 +39,23 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 <v t="hasletpara.20140227093334.1830"><vh>To detect code moves</vh></v>
 <v t="paran.20140423092515.1913"><vh>Datsets</vh></v>
 </v>
-<v t="hasletpara.20131129101631.1917" a="E"><vh>@shadow ./fmpp/Tex/Thesis/thes.tex</vh></v>
+<v t="hasletpara.20131129101631.1917"><vh>@shadow ./fmpp/Tex/Thesis/thes.tex</vh></v>
 <v t="hasletpara.20131202100421.2130"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/thesis-introduction.tex</vh></v>
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
 <v t="hasletpara.20131202100421.2134"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/testing.tex</vh></v>
+<v t="paran.20140515173914.6982" a="E"
+expanded="paran.20140516082812.1952,"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/Background.tex</vh></v>
 <v t="hasletpara.20140109094355.1829"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/differentViews.tex</vh></v>
-<v t="paran.20140501082248.1919"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/JDime.tex</vh></v>
-<v t="hasletpara.20140109094355.1831"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/git.tex</vh></v>
+<v t="paran.20140514103950.1918" a="E"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/theTool.tex</vh></v>
 <v t="hasletpara.20140227093334.1832"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/ordering.tex</vh></v>
 <v t="hasletpara.20140109094355.1833"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/merging.tex</vh></v>
 </v>
 <v t="hasletpara.20131202100421.2131"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/thesis-conclusion.tex</vh></v>
 </v>
 </v>
-<v t="paranhaslett.20130826181255.3062" a="E"><vh>Web Pages</vh>
+<v t="paranhaslett.20130826181255.3062"><vh>Web Pages</vh>
 <v t="hasletpara.20131127144906.1860" a="E"><vh>Fmpp</vh>
-<v t="hasletpara.20131121100256.1776"><vh>Data</vh>
+<v t="hasletpara.20131121100256.1776" a="E"><vh>Data</vh>
 <v t="hasletpara.20131121100256.1777"><vh>@shadow ./fmpp/data/tabbedPages.csv</vh></v>
 </v>
 <v t="hasletpara.20130905134207.1647"><vh>@shadow ./create.sh</vh></v>
@@ -104,11 +105,11 @@ expanded="paranhaslett.20130826181255.3120,"><vh>@shadow ./fmpp/GradWiki/Wiki.tx
 Do the inserts make any change to the code?</t>
 <t tx="hasletpara.20140227093334.1831">
 I think that I am going to have to put all the changes in the merge
-need to figure out wher the top diff is inacted so that the file can be checked for the following
+need to figure out where the top diff is enacted so that the file can be checked for the following
 
 Is it Java?
 what line number region are we comparing
-have we got all the changesets</t>
+have we got all the change-sets</t>
 <t tx="paran.20140423092515.1913">Possible datasets
 &lt;A HREF="https://github.com/clojure/clojure" &gt;clojure/clojure · GitHub&lt;/A&gt;
 A lisp like language written in Java and targeting the JVM
@@ -130,7 +131,7 @@ A parser for any language you have language definition for</t>
 <t tx="paranhaslett.20131205091806.1894">
 
 
-What has already been dome by Apel is to i
+What has already been done by Apel is to i
 
 
 What we are going to do is
@@ -139,7 +140,7 @@ figure out how jgit works
 add tuned sort to jgit 
 run it over the files
 
-aslo add some stufffor of equivilancy
+aslo add some stuff for of equivilancy
 
 
 it already ignores comments (prove this using tests)

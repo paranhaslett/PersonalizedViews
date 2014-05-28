@@ -1,20 +1,6 @@
 
 \chapter{Introduction}\label{C:intro}
-The \textsf{vuwthesis} style attempts to do 2 things:
-\begin{enumerate}
-\item produce the correct front pages -- explained in Chapter \ref{C:ex};
-\item meet the library requirement for the deposit of theses -- explained in Chapter \ref{C:lib}.
-\end{enumerate}
 
-We try to set the front pages up after the fashion of the example on p58
-of the 2002 PhD handbook. (Available at
-\url{http://www2.vuw.ac.nz/home/publications/phd_handbook.pdf}, March
-2003).
+% Shorterned for of your dreams and aspirations
 
-I assume that you are using \textsf{report.sty} or, preferably,
-\textsf{book.sty}. The book style has things like \verb+\frontmatter+
-defined, which make life a little easier. 
-
-Although the style alters the margins, and so on,  if you'd prefer to do
-something else then feel free to set them all yourself. In this case you
-will probably want to look at the \textsf{layout} package.
+There are some issues that arise in Software Development when code diverges from a point. Whenever there are multiple developers changing functionality or refactoring the source code needs to be reconciled. Version source control provides a way of doing this by either preventing conflicting code being altered or allowing the code to be merged.  A lot of version control systems use a comparison of differences to allow two different revisions of source code to be merged.  The comparison often involves the use of an algorithm that resolves the longest common subsequence.  This works well for source code that has a set order. It is possible for compiled source code to act in the same manner even when some of the source code is in a different order.  Another way of saying this is that although the source code is in a different order it is still functionally equivalent.  This thesis explores a way of allowing a version source control system to detect when the source code has been reordered.  In order to do this the source code needs to be divided into understandable sections.  When each of these sections for each revison are compared it is possible to determine if a section has been moved.  This enhances what can be detected when examining the difference between two files.  
