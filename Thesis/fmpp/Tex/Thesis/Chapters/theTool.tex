@@ -1,0 +1,36 @@
+
+
+\chapter{Refactoring Differences Tool}
+
+
+When two people refactor the the code that they are able to hold thier own individaul refactoring with minmal change when they are merged.
+
+% example
+
+to have less merge conflicts when merging code 
+
+to better be able to detect differences
+
+The tool that has been written not only examines the text differences between two files but also any Java differences. In order to resolve some of the difficulties with JDime and  the text only merge in GIT information about which line numbers are retained after the first text merge.  In JDime these are ignored and the AST is relied upon to hold all the information.  The change set has been taken from the original GIT based diff contains the start and end of the change in both files and what type of change it is (insert delete or modify).  By reusing these line numbers it is possible to figure out which AST items these changes affect. This is done loading the file into the JastAddJ parser to get an AST tree. The line numbers for each item in the tree are then comparing line numbers from the change
+
+\section{How it works}
+
+The refactoring difference tool first works out which text has changed using the same method as git.
+The change sets found in using the git histogram comparison are then evaluated.
+The reason for this is that some of the items of text could be in a differing order but still be a valid java program
+.
+% Comment and white-space are also examined as they could give some indication 
+% of where code has been moved from or too
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
