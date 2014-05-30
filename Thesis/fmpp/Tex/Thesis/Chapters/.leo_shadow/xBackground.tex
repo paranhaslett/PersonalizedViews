@@ -6,27 +6,72 @@
 
 \section{Version Control Systems}
 %@<<VersionControlSystems>>
-%@+node:paran.20140516082812.1939:<<VersionControlSystems>>
+%@+node:paran.20140528183434.1974:<<VersionControlSystems>>
+%@<<overview>>
+%@+node:paran.20140528183434.2052:<<overview>>
+\subsection{What is version control and why should we use it}
+%@<<Reasons for using version control>>
+%@+node:paran.20140530135904.1945:<<Reasons for using version control>>
+Version control systems are a way of managing different revisons or versions of documents.    
+
+
 There are a number of reasons why we might want to use a version control system.
 
-Version control systems are a way to keep old revisions of a document backed up so that if you ever need to revisit a previous revision you can always access it.
-Repositories also allow people to work on the same document at the same time.
-Most version control systems work better on plain text documents such as such as source code written in a plain text programming language.
-Version control is a way to maintain divergent code.
-
-
-\subsection{Before version control}
-%@<<Dawn of Time>>
-%@+node:paran.20140515173914.6999:<<Dawn of Time>>
-Before version control the only way to keep a backup of a file was to copy the code and save it into a different file on the file system.
-In \"Pro Git\" Caldon makes the observation that if you have no source control the best that you can do is to manually back up items on the file system under folders with a specific date so that you can go back and visit a previous revision.  A problem that source code revision addresses is that when a backup is made many files are duplicated verbatim.  The needlessly duplicated files waste file resources.
+%@<<backups>>
+%@+node:paran.20140530135904.1948:<<backups>>
+When used by a single person to manage their documents these revisions could simply be backups or contain expirmental ideas. A previous revision can always be revisted at a later date and changed. If there is something significant about a particular revision it can be labeled with a tag.  
 %@nonl
-%@-node:paran.20140515173914.6999:<<Dawn of Time>>
+%@-node:paran.20140530135904.1948:<<backups>>
 %@nl
 
-\subsection{Revision Control System (RCS)}
+%@<<branching>>
+%@+node:paran.20140530135904.1950:<<branching>>
+It is also possible to maintain two sets of documents for different purposes.
+
+Version control is a way to maintain divergent code.
+It is possible to branch certain documents
+tags
+%@nonl
+%@-node:paran.20140530135904.1950:<<branching>>
+%@nl
+
+%@<<collaboration>>
+%@+node:paran.20140530135904.1949:<<collaboration>>
+The real power of a version control system is its ablity to manage documents that are being changed by multiple people.  In a multiple person systems it is possible to have individual revisions that contain each persons embelishments. The version control system then manages the way these emblishments are introduced and combined. This allows multiple people to work on the same document. In some circumstaces it allows them to work on the document at the same time.
+
+This is the main difference between a version control system and a content management system.  It might be possible for a content management system to hold previous revisions but  a version control systems can manage how those different versions or revisons can be combined.  A version control system allows people with different ideas to collaborate on a single document.
+%@nonl
+%@-node:paran.20140530135904.1949:<<collaboration>>
+%@nl
+
+%@<<associating metadata>>
+%@+node:paran.20140530135904.1951:<<associating metadata>>
+logging
+%@nonl
+%@-node:paran.20140530135904.1951:<<associating metadata>>
+%@nl
+
+
+Version control systems work better on plain text documents such as such as source code written in a plain text programming language.
+%@-node:paran.20140530135904.1945:<<Reasons for using version control>>
+%@nl
+
+\subsection{Dealing with conflicts}
+%@<<LockvsMerge>>
+%@+node:paran.20140529075353.1935:<<LockvsMerge>>
+When two people are working within the same environment there is a need to interact with each other.
+There is competition for the resources for each of them to successfully do their work.
+It is similar in a computer system when two people are dealing with the same set of documents and files.
+There is always the risk that they will attempt to change the same document at the same time.
+This causes a conflict about how the document should be changed.
+There are a few ways of dealing with these conflicts.
+
+\subsubsection{Locking}
 %@<<RCS>>
-%@+node:paran.20140515173914.6995:<<RCS>>
+%@+node:paran.20140528183434.2054:<<RCS>>
+We could preemptively require that that the document is only able to be used by one person at a time and that the other person has to wait. The advantage of this is that the document is always in a consistent state. The disadvantage of this is if one person retains the document for extended periods of time it cannot be changed by anybody else. Furthermore the resulting document may be barely recognisable as the original if extensive work is done on it. If the two parties are changing distinctly different parts of the document or change the document in the same way this restriction is unnescessary.
+
+
 RCS was one of the original versioning systems 
 
 Instead of keeping multiple copies of the file that had changed it kept the original file and any of the subsequent change sets.
@@ -40,19 +85,26 @@ This ensured that the checked out file could only be edited by one person at a t
 This is a limitation which would not suit companies that have many developers working on the same source code.  
 There has to be a lot of communication and agreement about who is working on what.
 %@nonl
-%@-node:paran.20140515173914.6995:<<RCS>>
+%@-node:paran.20140528183434.2054:<<RCS>>
 %@nl
-
-\subsection{Merging two documents}
+\subsubsection{Smaller structured units}
+%@<<reduction>>
+%@+node:paran.20140529174111.1936:<<reduction>>
+Another way to reduce the conflicts is to split it inot smaller units.  The advantage of this is that if you are using locking as above you could avoid some of the unesscary restrictions. If we go back to the illustration of two people working on the same set of documents.  If instead of one person having sole possession of a document at a time that person only has posssesion of the page or pages they are changing. As those pages are smaller in size than the whole document they are likely to retain them for shorter periods.
+%@nonl
+%@-node:paran.20140529174111.1936:<<reduction>>
+%@nl
+\subsubsection{Merging two documents}
 %@<<Merging>>
-%@+node:paran.20140515173914.6994:<<Merging>>
+%@+node:paran.20140528183434.2055:<<Merging>>
+Finally we could allow both parties to change the document and try to figure out what the problems are afterward.  This resolution of anything that remains a conflict is known as a merge.
 
 If not regularly merged is is possible for the source code to diverge greatly and it becomes harder and harder to reconcile.
  According to Bertino it is possible to keep a smaller more easily deployed repository by evaluating what is necessary and what is unnecessary \cite{Bertino2012}. Although Bertino refers to unnecessary files this premise may also be applicable for the smaller blocks of code we are interested in. This suggests that maintaining a record about what is relevant and what is irrelevant may have some benefit. Version control still can have merge conflict issues. These issues have a far greater chance of occurring if there is a dramatic change such as refactoring
  
 \subsubsection{Manual Merging}
 %@<<Manual Merging>>
-%@+node:paran.20140522084554.1932:<<Manual Merging>>
+%@+node:paran.20140528183434.2056:<<Manual Merging>>
 
 
 %@+at
@@ -60,12 +112,12 @@ If not regularly merged is is possible for the source code to diverge greatly an
 %@-at
 %@@c
 %@nonl
-%@-node:paran.20140522084554.1932:<<Manual Merging>>
+%@-node:paran.20140528183434.2056:<<Manual Merging>>
 %@nl
 
 \subsubsection{Automatic Merging}
 %@<<Automatic Merging>>
-%@+node:paran.20140522084554.1933:<<Automatic Merging>>
+%@+node:paran.20140528183434.2057:<<Automatic Merging>>
 If there is a three way merge it is possible for the computer to calculate the merge independently provided that there are no merge conflicts.
 To do 3 way merging requires 3 different revisions are required, the changes you have made, the changes made by others, and the revision that is common to them both.
 
@@ -78,24 +130,35 @@ To do 3 way merging requires 3 different revisions are required, the changes you
 %@-at
 %@@c
 %@nonl
-%@-node:paran.20140522084554.1933:<<Automatic Merging>>
+%@-node:paran.20140528183434.2057:<<Automatic Merging>>
 %@nl
-%@-node:paran.20140515173914.6994:<<Merging>>
+%@-node:paran.20140528183434.2055:<<Merging>>
+%@nl
+%@-node:paran.20140529075353.1935:<<LockvsMerge>>
 %@nl
 
-\subsection{Centralised version control}
+\subsection{Architecture}
+%@<<architecture>>
+%@+node:paran.20140530135904.1946:<<architecture>>
+\subsubsection{Centralised version control}
 %@<<Centralised Version control>>
-%@+node:paran.20140515173914.6993:<<Centralised Version control>>
+%@+node:paran.20140528183434.2058:<<Centralised Version control>>
 Still had the model of a central repository everyone needed to consistent
 similar to RCS in that you could still check the file out but it was not as necessary to lock the file
 it was possible to look at the differences between the files and then automatically merge when it was possible
+
+centralised systems have better support for locking  
+
+examples of centalised systems
+
+RCS, CVS, SVN, Clearcase
 %@nonl
-%@-node:paran.20140515173914.6993:<<Centralised Version control>>
+%@-node:paran.20140528183434.2058:<<Centralised Version control>>
 %@nl
 
-\subsection{Distributed version control}
+\subsubsection{Distributed version control}
 %@<<Distributed Version control>>
-%@+node:paran.20140515173914.6992:<<Distributed Version control>>
+%@+node:paran.20140528183434.2059:<<Distributed Version control>>
 The need to be connected to a central system solved a lot of issues but often had a large overhead.  
 
 %@+at 
@@ -104,10 +167,15 @@ The need to be connected to a central system solved a lot of issues but often ha
 %@-at
 %@@c 
 
+The benefits and costs of distributed systems have long been discussed
+
+examples of distributed version control
+GIT, Mecurial, Bazaar
+
 
 \subsubsection{Using git}
 %@<<Git>>
-%@+node:paran.20140515173914.6991:<<Git>>
+%@+node:paran.20140528183434.2060:<<Git>>
 Git is a repository which is used mostly for software development.
 
 This is done by combining all the changes to a document in a process called merging. 
@@ -120,18 +188,37 @@ Before any merging can be done all of the changes need to be determined
 
 In GIT there are a number of changes recorded for a file differences,  A file could be added, deleted, moved, copied, or modified.  The same is not true of changes within the file with only insert, delete, and modify being available.
 %@nonl
-%@-node:paran.20140515173914.6991:<<Git>>
+%@-node:paran.20140528183434.2060:<<Git>>
 %@nl
 %@nonl
-%@-node:paran.20140515173914.6992:<<Distributed Version control>>
+%@-node:paran.20140528183434.2059:<<Distributed Version control>>
 %@nl
 %@nonl
-%@-node:paran.20140516082812.1939:<<VersionControlSystems>>
+%@-node:paran.20140530135904.1946:<<architecture>>
+%@nl
+%@-node:paran.20140528183434.2052:<<overview>>
+%@nl
+
+%@<<history>>
+%@+node:paran.20140528183434.2061:<<history>>
+\subsection{Before version control}
+%@<<Dawn of Time>>
+%@+node:paran.20140528183434.2053:<<Dawn of Time>>
+Before version control the only way to keep a backup of a file was to copy the code and save it into a different file on the file system.
+In \"Pro Git\" Caldon makes the observation that if you have no source control the best that you can do is to manually back up items on the file system under folders with a specific date so that you can go back and visit a previous revision.  A problem that source code revision addresses is that when a backup is made many files are duplicated verbatim.  The needlessly duplicated files waste file resources.
+%@nonl
+%@-node:paran.20140528183434.2053:<<Dawn of Time>>
+%@nl
+%@nonl
+%@-node:paran.20140528183434.2061:<<history>>
+%@nl
+%@nonl
+%@-node:paran.20140528183434.1974:<<VersionControlSystems>>
 %@nl
 
 \section{Longest Common Subsequence}
 %@<<LCS>>
-%@+node:paran.20140516082812.1952:<<LCS>>
+%@+node:paran.20140528183434.2009:<<LCS>>
 There are a number of issues in computer science that can be resolved by a longest common subsequence algorithm.
 It is very good at finding the differences between two different sets of ordered information.
 
@@ -142,7 +229,7 @@ It is very good at finding the differences between two different sets of ordered
 
 \subsection{Example}
 %@<<Example of Longest common subsequence>>
-%@+node:paran.20140516082812.1953:<<Example of Longest common subsequence>>
+%@+node:paran.20140528183434.2010:<<Example of Longest common subsequence>>
 One method of discovering what has changed is to find the longest common subsequence (LCS).
 A simplified example of finding the longest common subsequence is:
 
@@ -165,24 +252,24 @@ A longest common subsequence would be
 The letters that are missing from the LCS differ between the sentences.
 It is possible for a comparison to have multiple LCSs.
 %@nonl
-%@-node:paran.20140516082812.1953:<<Example of Longest common subsequence>>
+%@-node:paran.20140528183434.2010:<<Example of Longest common subsequence>>
 %@nl
 
 \subsection{Difference strategies}
 %@<<Git difference strategies>>
-%@+node:paran.20140516082812.1954:<<Git difference strategies>>
+%@+node:paran.20140528183434.2011:<<Git difference strategies>>
 There are a number of ways that the longest common subsequences
 Git uses the following algorithms to find the LCS.
 
 %@<<Myers>>
-%@+node:paran.20140516082812.1955:<<Myers>>
+%@+node:paran.20140528183434.2012:<<Myers>>
 \subsection{Myers}
 
-%@-node:paran.20140516082812.1955:<<Myers>>
+%@-node:paran.20140528183434.2012:<<Myers>>
 %@nl
 
 %@<<Patience>>
-%@+node:paran.20140516082812.1956:<<Patience>>
+%@+node:paran.20140528183434.2013:<<Patience>>
 \subsection{Patience}
 The patience algorithm instead of figuring out the longest common subsequence directly uses the longest increasing subsequence.
 when this is used with line numbers form source code the longest common subsequence can be established.
@@ -197,23 +284,23 @@ Before the act
 % need references
 %@-at
 %@@c 
-%@-node:paran.20140516082812.1956:<<Patience>>
+%@-node:paran.20140528183434.2013:<<Patience>>
 %@nl
 
 %@<<Histogram>>
-%@+node:paran.20140516082812.1957:<<Histogram>>
+%@+node:paran.20140528183434.2014:<<Histogram>>
 \subsection{Histogram}
 A Histogram difference strategy is very similar to a patience algorithm
 Instead of looking at just the unique lines between any two subsets however it can examine lines that there are multiple copies of 
 %@nonl
-%@-node:paran.20140516082812.1957:<<Histogram>>
+%@-node:paran.20140528183434.2014:<<Histogram>>
 %@nl
-%@-node:paran.20140516082812.1954:<<Git difference strategies>>
+%@-node:paran.20140528183434.2011:<<Git difference strategies>>
 %@nl
 
 \subsection{The problem with LCS}
 %@<<The problem with LCS>>
-%@+node:paran.20140516082812.1958:<<The problem with LCS>>
+%@+node:paran.20140528183434.2015:<<The problem with LCS>>
 \section{The problem with longest common subsequence}
 There is still a problem with longest common subsequence. It does not notice changes of order in a document.  For example if we were to take the following two sentences:
 
@@ -259,12 +346,12 @@ in this situation in becomes easier to recognize that words have been swapped by
 The English language is also far too complex to notice anything that is more basic than a word for word swap.
 There are words and sentences that have similar meanings but are spelled and structured differently.
 %@nonl
-%@-node:paran.20140516082812.1958:<<The problem with LCS>>
+%@-node:paran.20140528183434.2015:<<The problem with LCS>>
 %@nl
 
 \subsection{How LCS is used in differencing tools}
 %@<<How diffs use LCS>>
-%@+node:paran.20140516082812.1959:<<How diffs use LCS>>
+%@+node:paran.20140528183434.2016:<<How diffs use LCS>>
 \section{How most difference tools use LCS}
 The above is a simplified illustration of how general LCS works.
 How most difference tools use LCS is quite different.
@@ -280,32 +367,32 @@ This has an impact on the hash codes for each line as the hash code needs to be 
 %@-at
 %@@c
 %@nonl
-%@-node:paran.20140516082812.1959:<<How diffs use LCS>>
+%@-node:paran.20140528183434.2016:<<How diffs use LCS>>
 %@nl
  
  
 
 
-%@-node:paran.20140516082812.1952:<<LCS>>
+%@-node:paran.20140528183434.2009:<<LCS>>
 %@nl
 
 \section{JDime}
 %@<<JDime>>
-%@+node:paran.20140516082812.1942:<<JDime>>
+%@+node:paran.20140528183434.2021:<<JDime>>
 Part of the inspiration for this tool come from JDime
 
 
 
 %@<<What Jdime can be used for>>
-%@+node:paran.20140516082812.1943:<<What Jdime can be used for>>
+%@+node:paran.20140528183434.2022:<<What Jdime can be used for>>
 JDime is useful for merging two different change sets. 
 JDime can be used to compare two different sets of Java source codes which have been refactored and to produce a copy common to them both.  
 %@nonl
-%@-node:paran.20140516082812.1943:<<What Jdime can be used for>>
+%@-node:paran.20140528183434.2022:<<What Jdime can be used for>>
 %@nl
 
 %@<<How Jdime works>>
-%@+node:paran.20140516082812.1961:<<How Jdime works>>
+%@+node:paran.20140528183434.2023:<<How Jdime works>>
 JDime instead of testing against a source code repository test against files in the system under the base, left and right directories.
 While this may be useful in quickly being able to show what JDime is able to achieve it requires that the inputs need to be previously extracted from a repository into the file system.
 
@@ -313,11 +400,11 @@ Before doing any calculations, Jdime runs a regular text merge over the source c
 If the regular text merge has conflicts then JDime determines if sections of the source code need to be in a particular order or could be in any order.
 What then happens depends on if order is required in the section of code JDime is examining.
 %@nonl
-%@-node:paran.20140516082812.1961:<<How Jdime works>>
+%@-node:paran.20140528183434.2023:<<How Jdime works>>
 %@nl
 
 %@<<Testing Jdimes suitability>>
-%@+node:paran.20140516082812.1962:<<Testing Jdimes suitability>>
+%@+node:paran.20140528183434.2024:<<Testing Jdimes suitability>>
 In order to examine how Jdime works a test handler was written.
 The test handler sets up some java source code to be used by JDime in base, left and right directories.
 In order to test JDime it is necessary to cause the initial text comparison to incorrectly label as a conflict.
@@ -325,7 +412,7 @@ A way to get a lot of text conflicts between two pieces of code that are equival
 Although the methods are in different order the programs are still \"functionally equivalent\".
 The order of the methods where scrambled in files in the base, left and right directories.
 %@nonl
-%@-node:paran.20140516082812.1962:<<Testing Jdimes suitability>>
+%@-node:paran.20140528183434.2024:<<Testing Jdimes suitability>>
 %@nl
 
 
@@ -340,7 +427,7 @@ The order of the methods where scrambled in files in the base, left and right di
 
 
 
-%@-node:paran.20140516082812.1942:<<JDime>>
+%@-node:paran.20140528183434.2021:<<JDime>>
 %@nl
  
  

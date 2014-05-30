@@ -29,7 +29,7 @@ expanded="hasletpara.20131128093200.1863,hasletpara.20131128093200.1864,hasletpa
 expanded="hasletpara.20131128093200.1989,paranhaslett.20130826181255.3120,"><vh>@shadow ./notes/ScratchPad.rst</vh></v>
 </v>
 <v t="paranhaslett.20130826181255.2959" a="E"><vh>Documents</vh>
-<v t="hasletpara.20131128093200.1957"><vh>Proposal</vh>
+<v t="hasletpara.20131128093200.1957" a="E"><vh>Proposal</vh>
 <v t="hasletpara.20130905084546.1629" a="E"
 expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal/Proposal.tex</vh></v>
 </v>
@@ -44,9 +44,10 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
 <v t="hasletpara.20131202100421.2134"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/testing.tex</vh></v>
 <v t="paran.20140515173914.6982" a="E"
-expanded="paran.20140516082812.1952,"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/Background.tex</vh></v>
+expanded="paran.20140528183434.1974,paran.20140528183434.2052,"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/Background.tex</vh></v>
 <v t="hasletpara.20140109094355.1829"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/differentViews.tex</vh></v>
-<v t="paran.20140514103950.1918" a="E"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/theTool.tex</vh></v>
+<v t="paran.20140514103950.1918" a="E"
+expanded="paran.20140528114850.1932,paran.20140530091126.1942,"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/theTool.tex</vh></v>
 <v t="hasletpara.20140227093334.1832"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/ordering.tex</vh></v>
 <v t="hasletpara.20140109094355.1833"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/merging.tex</vh></v>
 </v>

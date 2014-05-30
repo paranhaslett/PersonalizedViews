@@ -1,19 +1,41 @@
 \chapter{Background}
 
 \section{Version Control Systems}
+\subsection{What is version control and why should we use it}
+Version control systems are a way of managing different revisons or versions of documents.    
+
+
 There are a number of reasons why we might want to use a version control system.
 
-Version control systems are a way to keep old revisions of a document backed up so that if you ever need to revisit a previous revision you can always access it.
-Repositories also allow people to work on the same document at the same time.
-Most version control systems work better on plain text documents such as such as source code written in a plain text programming language.
+When used by a single person to manage their documents these revisions could simply be backups or contain expirmental ideas. A previous revision can always be revisted at a later date and changed. If there is something significant about a particular revision it can be labeled with a tag.  
+
+It is also possible to maintain two sets of documents for different purposes.
+
 Version control is a way to maintain divergent code.
+It is possible to branch certain documents
+tags
+
+The real power of a version control system is its ablity to manage documents that are being changed by multiple people.  In a multiple person systems it is possible to have individual revisions that contain each persons embelishments. The version control system then manages the way these emblishments are introduced and combined. This allows multiple people to work on the same document. In some circumstaces it allows them to work on the document at the same time.
+
+This is the main difference between a version control system and a content management system.  It might be possible for a content management system to hold previous revisions but  a version control systems can manage how those different versions or revisons can be combined.  A version control system allows people with different ideas to collaborate on a single document.
+
+logging
 
 
-\subsection{Before version control}
-Before version control the only way to keep a backup of a file was to copy the code and save it into a different file on the file system.
-In \"Pro Git\" Caldon makes the observation that if you have no source control the best that you can do is to manually back up items on the file system under folders with a specific date so that you can go back and visit a previous revision.  A problem that source code revision addresses is that when a backup is made many files are duplicated verbatim.  The needlessly duplicated files waste file resources.
+Version control systems work better on plain text documents such as such as source code written in a plain text programming language.
 
-\subsection{Revision Control System (RCS)}
+\subsection{Dealing with conflicts}
+When two people are working within the same environment there is a need to interact with each other.
+There is competition for the resources for each of them to successfully do their work.
+It is similar in a computer system when two people are dealing with the same set of documents and files.
+There is always the risk that they will attempt to change the same document at the same time.
+This causes a conflict about how the document should be changed.
+There are a few ways of dealing with these conflicts.
+
+\subsubsection{Locking}
+We could preemptively require that that the document is only able to be used by one person at a time and that the other person has to wait. The advantage of this is that the document is always in a consistent state. The disadvantage of this is if one person retains the document for extended periods of time it cannot be changed by anybody else. Furthermore the resulting document may be barely recognisable as the original if extensive work is done on it. If the two parties are changing distinctly different parts of the document or change the document in the same way this restriction is unnescessary.
+
+
 RCS was one of the original versioning systems 
 
 Instead of keeping multiple copies of the file that had changed it kept the original file and any of the subsequent change sets.
@@ -26,8 +48,10 @@ This ensured that the checked out file could only be edited by one person at a t
 
 This is a limitation which would not suit companies that have many developers working on the same source code.  
 There has to be a lot of communication and agreement about who is working on what.
-
-\subsection{Merging two documents}
+\subsubsection{Smaller structured units}
+Another way to reduce the conflicts is to split it inot smaller units.  The advantage of this is that if you are using locking as above you could avoid some of the unesscary restrictions. If we go back to the illustration of two people working on the same set of documents.  If instead of one person having sole possession of a document at a time that person only has posssesion of the page or pages they are changing. As those pages are smaller in size than the whole document they are likely to retain them for shorter periods.
+\subsubsection{Merging two documents}
+Finally we could allow both parties to change the document and try to figure out what the problems are afterward.  This resolution of anything that remains a conflict is known as a merge.
 
 If not regularly merged is is possible for the source code to diverge greatly and it becomes harder and harder to reconcile.
  According to Bertino it is possible to keep a smaller more easily deployed repository by evaluating what is necessary and what is unnecessary \cite{Bertino2012}. Although Bertino refers to unnecessary files this premise may also be applicable for the smaller blocks of code we are interested in. This suggests that maintaining a record about what is relevant and what is irrelevant may have some benefit. Version control still can have merge conflict issues. These issues have a far greater chance of occurring if there is a dramatic change such as refactoring
@@ -47,15 +71,27 @@ To do 3 way merging requires 3 different revisions are required, the changes you
 % if there is a change in others code but not yours
 % 
 
-\subsection{Centralised version control}
+\subsection{Architecture}
+\subsubsection{Centralised version control}
 Still had the model of a central repository everyone needed to consistent
 similar to RCS in that you could still check the file out but it was not as necessary to lock the file
 it was possible to look at the differences between the files and then automatically merge when it was possible
 
-\subsection{Distributed version control}
+centralised systems have better support for locking  
+
+examples of centalised systems
+
+RCS, CVS, SVN, Clearcase
+
+\subsubsection{Distributed version control}
 The need to be connected to a central system solved a lot of issues but often had a large overhead.  
 
 % mobile access
+
+The benefits and costs of distributed systems have long been discussed
+
+examples of distributed version control
+GIT, Mecurial, Bazaar
 
 
 \subsubsection{Using git}
@@ -70,6 +106,10 @@ An example of a merge conflict is if any two changes on the document overlap wit
 Before any merging can be done all of the changes need to be determined
 
 In GIT there are a number of changes recorded for a file differences,  A file could be added, deleted, moved, copied, or modified.  The same is not true of changes within the file with only insert, delete, and modify being available.
+
+\subsection{Before version control}
+Before version control the only way to keep a backup of a file was to copy the code and save it into a different file on the file system.
+In \"Pro Git\" Caldon makes the observation that if you have no source control the best that you can do is to manually back up items on the file system under folders with a specific date so that you can go back and visit a previous revision.  A problem that source code revision addresses is that when a backup is made many files are duplicated verbatim.  The needlessly duplicated files waste file resources.
 
 \section{Longest Common Subsequence}
 There are a number of issues in computer science that can be resolved by a longest common subsequence algorithm.
