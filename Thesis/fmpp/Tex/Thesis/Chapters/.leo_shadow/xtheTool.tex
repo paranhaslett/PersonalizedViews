@@ -1,126 +1,109 @@
 %@+leo-ver=4-thin
-%@+node:paran.20140514103950.1918:@shadow ./fmpp/Tex/Thesis/Chapters/theTool.tex
+%@+node:paran.20140514103950.1918:@shadow theTool.tex
 %@@color
 %@@language latex
 
-
 \chapter{Refactoring Differences Tool}
+\section{The aims for the tool}
+%@<<dreams and aspriations>>
+%@+node:paran.20140528114850.1932:<<dreams and aspriations>>
+We want to have views that can have different but equivalent refactoring
+This is so that people working on the same project can freely refactor with minimal interference to others
+When two people refactor the the code that they are able to hold their own individual refactoring with minimal change when they are merged.
+Imagine a situation where you are working jointly on a project with someone else and they refactor the code in order to add some additional functionality.  You also need to refactor the code to do your work but both of the changes are different because they clarify different aspects of the source code. 
 
+At the moment when someone attempts to check-in their changes there is a major conflict.  This is because a refactoring often makes a large amount of global changes to the source code.  One of these changes which is not catered for by current version control systems is the change of order.  The first person to check-in their code will have no issue as the version control system assumes that all the changes are simply a new revision.  When the second person attempts to reconcile their view there is the possibility of having many conflicts.  A lot of these conflicts will be with refactored code which although works the same has a different structure.
 
-%@<<dreams and asproiations>>
-%@+node:paran.20140528114850.1932:<<dreams and asproiations>>
-%@<<refactoring>>
-%@+node:paran.20140530091126.1942:<<refactoring>>
-\subsection{Refactoring}
-A common concern with coding is the need to periodically refactor the code. According to Fowler et al. the main time for refactoring is when new functionality is added \cite{Fowler1999}. Similarly according to Kerievsky some of the motivations for refactoring include adding more code and understanding existing code \cite{Kerievsky2004}. As adding more functionality is one of the motivations for refactoring let us consider what happens in a multi-developer environment. Two developers could have different views on what is considered an appropriate refactoring. This is especially true if they need to add different functionality from each other. 
+Often a new project or sub-project is set-up in a new branch. If there is some refactoring before any changes are made when the code is re-merged with the original project (often called the trunk project) both the changes and the refactored code are checked in.
 
-A simple example is illustrated as follows:
-\begin{verbatim}
-public TempConv() {
-  %@  <<tempConv>>
-  %@+node:paran.20140530091126.1943:<<tempConv>>
-  Scanner keyboard = new Scanner(System.in);
-  System.out.println("Enter the temperature in Celsius");
-  int celsius = keyboard.nextInt();
-  System.out.println("Degrees Fahrenheit is approx " + (celsius * 2 + 30) );
-  keyboard.close();
-  %@nonl
-  %@-node:paran.20140530091126.1943:<<tempConv>>
-  %@nl
-}
-\end{verbatim}
+\begin{center}
+\includegraphics[scale=0.5]{refactorCheckIn}
+\end{center}
 
-Refactoring this code depends on what functionality you need to add. One developer may recognize that conversion from Celsius may be used several times throughout the code and so extract the calculations as a separate method as follows:
-
-\begin{verbatim}
-public TempConv() {
-  %@  <<tempConv2>>
-  %@+node:paran.20140530091126.1944:<<tempConv2>>
-  Scanner keyboard = new Scanner(System.in);
-  System.out.println("Enter the temperature in Celsius");
-  int celsius = keyboard.nextInt();
-  System.out.println("Degrees Fahrenheit is approx " + celsiusToFahrenheit(celsius));
-  keyboard.close();
-  %@nonl
-  %@-node:paran.20140530091126.1944:<<tempConv2>>
-  %@nl
-}
-
-public int celsiusToFahrenheit(int celsius){
-  %@  <<celsiusToFahrenheit>>
-  %@+node:paran.20140530091126.1945:<<celsiusToFahrenheit>>
-  return celsius * 2 + 30;
-  %@nonl
-  %@-node:paran.20140530091126.1945:<<celsiusToFahrenheit>>
-  %@nl
-}
-\end{verbatim}
-
-This change, in spite of producing the same output as the first, provides a number of advantages. Firstly if other programs need to convert from Celsius to Fahrenheit the new method can easily be reused. Secondly since the calculation is a crude estimation it becomes a lot clearer where the code needs to be changed to improve the formula. The ability to add a method that clearly indicates that the calculation is from Celsius to Fahrenheit helps with the readability of the code. There are also disadvantages to doing this refactoring however. If we do not care about conversion between Celsius and Fahrenheit the refactoring simply adds to the amount of code we need to wade through before understanding what the code does. An alternate way of refactoring is as follows:
-
-\begin{verbatim}
-public TempConv(){
-  %@  <<tempConv3>>
-  %@+node:paran.20140530091126.1946:<<tempConv3>>
-  Scanner keyboard = new Scanner(System.in);
-  System.out.println("Enter the temperature in Celsius");
-  int celsius = keyboard.nextInt();
-  int celsiusToFahrenheit = celsius *2 + 30;
-  System.out.println("Degrees Fahrenheit is approx " + celsiusToFahrenheit);
-  keyboard.close();
-  %@nonl
-  %@-node:paran.20140530091126.1946:<<tempConv3>>
-  %@nl
-}
-\end{verbatim}
-
-While this again expresses the same functionality as the code above it has not created a new method to do so. This has some of the same advantages. It separates and identifies the formula to convert between Celsius and Fahrenheit. It also uses less code to express this separation than forming a new method. It does not expose the conversion formula outside this method to be used by other calculations however.
-
-As the value of a particular refactoring appears to depend on what is trying to be achieved it is very hard to claim that one refactoring is better than another. It depends entirely on the wider context of the intention for the refactoring, in this case the level of access required for the approximation to convert Celsius to Fahrenheit.
-
-Although this was a simple example it is easy to imagine a case where a much larger refactoring process is undertaken. In such circumstances a merge becomes difficult. 
-%@-node:paran.20140530091126.1942:<<refactoring>>
-%@nl
-
-
-When two people refactor the the code that they are able to hold thier own individaul refactoring with minmal change when they are merged.
-Imagine  a situation where you are working jointly on a project with someone else and they refactor the code in order to add some additional functionality.  You also need to refactor the code to do your work but both of the changes are different because they clarify different aspects of the source code.  At the moment when someone attempts to checkin thier changes there is a major conflict.  This is because a refactoring often makes a large amount of global changes to the source code.  One of these changes which is not catered for by current version control systems is the change of order.  The first person to check-in their code will have no issue as the version control system assumes that all the changes are simply a new revison.  When the second person attempts to reconcile their view there is the possibility of having many conflicts.  A lot of these conflicts will be with refactored code which although works the same 
-
-what happens if you have a project where there are periodic checkins for each development milestone.   
+When there is a large change on a separate branch it could be the case that there are multiple check-ins to keep other parts up to date and ensure that there is not too much divergence.  Currently if you have a project where there are periodic check-ins for each development milestone there will be a large impact each time there is a commit. This is because the refactoring for the large refactored project is imposed upon the repository each time it is checked in.   
 
 %@+at 
 % example
 %@-at
 %@@c
 
+%@+at 
+% find an example of a workplace situation where refactoring interferes with 
+% others
+%@-at
+%@@c
+
 to have less merge conflicts when merging code 
 
 to better be able to detect differences
-%@nonl
-%@-node:paran.20140528114850.1932:<<dreams and asproiations>>
+
+We want to have views that can have different but equivalent refactoring
+This is so that people working on the same project can freely refactor with minimal interference to others
+
+%@-node:paran.20140528114850.1932:<<dreams and aspriations>>
 %@nl
+\section{What the tool does}
+%@<<What the tool does>>
+%@+node:paran.20140605081907.1971:<<What the tool does>>
+The tool that has been written not only examines the text differences between two files but also any Java differences. In order to resolve some of the limitations with JDime and the text only merge in GIT information about which line numbers are retained after the first text merge.  In JDime these are ignored and the AST is relied upon to hold all the information.  The change set has been taken from the original GIT based diff contains the start and end of the change in both files and what type of change it is (insert delete or modify).  By reusing these line numbers it is possible to figure out which AST items these changes affect. This is done loading the file into the JastAddJ parser to get an AST tree. The line numbers for each item in the tree are then comparing line numbers from the change
 
-The tool that has been written not only examines the text differences between two files but also any Java differences. In order to resolve some of the difficulties with JDime and  the text only merge in GIT information about which line numbers are retained after the first text merge.  In JDime these are ignored and the AST is relied upon to hold all the information.  The change set has been taken from the original GIT based diff contains the start and end of the change in both files and what type of change it is (insert delete or modify).  By reusing these line numbers it is possible to figure out which AST items these changes affect. This is done loading the file into the JastAddJ parser to get an AST tree. The line numbers for each item in the tree are then comparing line numbers from the change
-
+%@+at
+% insert diagram of how it finds the asts that are within the change set
+% 
+% enhamnces git by adding moves and to a limited extent copies and renames
+%@-at
+%@@c
+%@nonl
+%@-node:paran.20140605081907.1971:<<What the tool does>>
+%@nl
+\section{How the tool works}
 %@<<How it works>>
 %@+node:paran.20140514132312.1919:<<How it works>>
 \section{How it works}
 
 The refactoring difference tool first works out which text has changed using the same method as git.
 The change sets found in using the git histogram comparison are then evaluated.
-The reason for this is that some of the items of text could be in a differing order but still be a valid java program
-.
-%@+at
-% Comment and white-space are also examined as they could give some indication 
-% of where code has been moved from or too
-%@-at
-%@@c
+The reason for this is that some of the items of text could be in a differing order but still be a valid Java program
+
+Comment and white-space are also examined as they could give some indication of where code has been moved from or too
 
  
 %@nonl
 %@-node:paran.20140514132312.1919:<<How it works>>
 %@nl
-
+\section{Design decisions}
+%@<<design decisons>>
+%@+node:paran.20140605081907.1972:<<design decisons>>
+%@+at
+% comments
+% whitespace
+% the drill down using line numbers
+% comparing ASTs
+% the matcher and how using a score works
+% finding the best match
+% 
+% why does it do it for the whole repository
+% 
+% 
+% note: we might want to use some literate programming here
+%@-at
+%@@c
+%@nonl
+%@-node:paran.20140605081907.1972:<<design decisons>>
+%@nl
+\section{Limitations of the tool}
+%@<<limitations>>
+%@+node:paran.20140605081907.1993:<<limitations>>
+%@+at
+% because it drills down only on the changes it is harder to investigate any 
+% change that has causes side effects in unchanged code.  It is not often that 
+% a side effect will be purposely placed in the code as it reflects bad design 
+% decisions.  This may however be an issue with bugs
+%@-at
+%@@c
+%@nonl
+%@-node:paran.20140605081907.1993:<<limitations>>
+%@nl
 
 
  
@@ -131,5 +114,5 @@ The reason for this is that some of the items of text could be in a differing or
 
 
 
-%@-node:paran.20140514103950.1918:@shadow ./fmpp/Tex/Thesis/Chapters/theTool.tex
+%@-node:paran.20140514103950.1918:@shadow theTool.tex
 %@-leo

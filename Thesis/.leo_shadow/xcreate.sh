@@ -12,6 +12,9 @@ cp ./public_html/* ~/public_html/
 chmod 604 ~/public_html/*
 cd Tex/Proposal
 ln ../../../../Bibtex/Thesis.bib
+cd ../Thesis
+ln ../../../../Bibtex/Thesis.bib
+
 
 
 

@@ -11,7 +11,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="paranhaslett.20130826181255.2958" a="E"><vh>Thesis</vh>
-<v t="hasletpara.20131128093200.1990"><vh>ScratchPad</vh>
+<v t="hasletpara.20131128093200.1990" a="E"><vh>ScratchPad</vh>
 <v t="hasletpara.20131128093200.1969"><vh>Old</vh>
 <v t="hasletpara.20131129101631.1874"><vh>Templates</vh>
 <v t="hasletpara.20131129101631.1875" a="E"><vh>@shadow ./notes/Tex/Thesis.cls</vh></v>
@@ -29,29 +29,54 @@ expanded="hasletpara.20131128093200.1863,hasletpara.20131128093200.1864,hasletpa
 expanded="hasletpara.20131128093200.1989,paranhaslett.20130826181255.3120,"><vh>@shadow ./notes/ScratchPad.rst</vh></v>
 </v>
 <v t="paranhaslett.20130826181255.2959" a="E"><vh>Documents</vh>
-<v t="hasletpara.20131128093200.1957" a="E"><vh>Proposal</vh>
+<v t="hasletpara.20131128093200.1957"><vh>Proposal</vh>
 <v t="hasletpara.20130905084546.1629" a="E"
-expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1667,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal/Proposal.tex</vh></v>
+expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal/Proposal.tex</vh></v>
 </v>
 <v t="hasletpara.20131128093200.1956" a="E"><vh>Thesis</vh>
+<v t="paran.20140605091816.1979" a="E"><vh>Code</vh>
+<v t="paran.20140605091816.1980" a="E"><vh>Study</vh>
+<v t="paran.20140605091816.1981" a="E"><vh>Refactor Category</vh>
+<v t="paran.20140605091816.1982" a="E"><vh>@shadow Main.java</vh></v>
+</v>
+</v>
+</v>
+<v t="paran.20140603095349.1947"><vh>Outline</vh>
+<v t="paran.20140604132703.2057" a="E"><vh>&lt;&lt;Background&gt;&gt;</vh>
+<v t="paran.20140604132703.2058" a="E"><vh>&lt;&lt;VersionControlSystems&gt;&gt;</vh>
+<v t="paran.20140604132703.2059"><vh>&lt;&lt;Reasons for using version control&gt;&gt;</vh></v>
+<v t="paran.20140604132703.2064"><vh>&lt;&lt;LockvsMerge&gt;&gt;</vh></v>
+<v t="paran.20140604132703.2070"><vh>&lt;&lt;architecture&gt;&gt;</vh></v>
+</v>
+<v t="paran.20140604132703.2074"><vh>&lt;&lt;GitHub&gt;&gt;</vh></v>
+<v t="paran.20140604132703.2075"><vh>&lt;&lt;LCS&gt;&gt;</vh></v>
+<v t="paran.20140604132703.2083"><vh>&lt;&lt;Refactoring&gt;&gt;</vh></v>
+<v t="paran.20140604132703.2088"><vh>&lt;&lt;JDime&gt;&gt;</vh>
+<v t="paran.20140604132703.2089"><vh>&lt;&lt;What Jdime can be used for&gt;&gt;</vh></v>
+<v t="paran.20140604132703.2090"><vh>&lt;&lt;How Jdime works&gt;&gt;</vh></v>
+<v t="paran.20140604132703.2091"><vh>&lt;&lt;Testing Jdimes suitability&gt;&gt;</vh></v>
+<v t="paran.20140604132703.2092"><vh>&lt;&lt;Conclusion&gt;&gt;</vh></v>
+</v>
+</v>
+</v>
+<v t="paran.20140605091816.1990" a="E"><vh>Thesis</vh>
 <v t="paranhaslett.20131205091806.1894" a="E"><vh>Da Plan</vh>
 <v t="hasletpara.20140227093334.1831"><vh>To normalise or not to normalise that is the question</vh></v>
 <v t="hasletpara.20140227093334.1830"><vh>To detect code moves</vh></v>
 <v t="paran.20140423092515.1913"><vh>Datsets</vh></v>
 </v>
-<v t="hasletpara.20131129101631.1917"><vh>@shadow ./fmpp/Tex/Thesis/thes.tex</vh></v>
-<v t="hasletpara.20131202100421.2130"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/thesis-introduction.tex</vh></v>
+<v t="paran.20140605091816.1995"><vh>@shadow thes.tex</vh></v>
+<v t="hasletpara.20131202100421.2130"><vh>@shadow Chapters/thesis-introduction.tex</vh></v>
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
-<v t="hasletpara.20131202100421.2134"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/testing.tex</vh></v>
+<v t="hasletpara.20131202100421.2134"><vh>@shadow testing.tex</vh></v>
 <v t="paran.20140515173914.6982" a="E"
-expanded="paran.20140528183434.1974,paran.20140528183434.2052,"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/Background.tex</vh></v>
-<v t="hasletpara.20140109094355.1829"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/differentViews.tex</vh></v>
-<v t="paran.20140514103950.1918" a="E"
-expanded="paran.20140528114850.1932,paran.20140530091126.1942,"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/theTool.tex</vh></v>
-<v t="hasletpara.20140227093334.1832"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/ordering.tex</vh></v>
-<v t="hasletpara.20140109094355.1833"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/merging.tex</vh></v>
+expanded="paran.20140528183434.1974,paran.20140530135904.1945,paran.20140528183434.2009,paran.20140528183434.2021,"><vh>@shadow Background.tex</vh></v>
+<v t="paran.20140514103950.1918" a="E"><vh>@shadow theTool.tex</vh></v>
+<v t="paran.20140605081907.1988"><vh>@shadow expirimentalResults.tex</vh></v>
+<v t="paran.20140605081907.1978"><vh>@shadow futureWork.tex</vh></v>
 </v>
-<v t="hasletpara.20131202100421.2131"><vh>@shadow ./fmpp/Tex/Thesis/Chapters/thesis-conclusion.tex</vh></v>
+<v t="hasletpara.20131202100421.2131"><vh>@shadow Chapters/thesis-conclusion.tex</vh></v>
+</v>
 </v>
 </v>
 <v t="paranhaslett.20130826181255.3062"><vh>Web Pages</vh>
@@ -96,10 +121,22 @@ expanded="paranhaslett.20130826181255.3120,"><vh>@shadow ./fmpp/GradWiki/Wiki.tx
 <t tx="hasletpara.20131127144906.1860"></t>
 <t tx="hasletpara.20131128093200.1956"></t>
 <t tx="hasletpara.20131128093200.1957"></t>
-<t tx="hasletpara.20131128093200.1969"></t>
+<t tx="hasletpara.20131128093200.1969">RCS was one of the original versioning systems 
+
+Instead of keeping multiple copies of the file that had changed it kept the original file and any of the subsequent change sets.
+This meant that any revision could be revisited and changed.
+
+By recording both the original file and the change sets the amount of disk space used was reduced. 
+differed form sccs because it used backwards revision rather than forward revisions
+
+It allowed a small amount of collaboration by locking files that had been checked out.
+This ensured that the checked out file could only be edited by one person at a time.
+
+This is a limitation which would not suit companies that have many developers working on the same source code.  
+There has to be a lot of communication and agreement about who is working on what.</t>
 <t tx="hasletpara.20131128093200.1990"></t>
 <t tx="hasletpara.20131129101631.1874"></t>
-<t tx="hasletpara.20131202100421.2132"></t>
+<t tx="hasletpara.20131202100421.2132">@path Chapters</t>
 <t tx="hasletpara.20131202100421.2146"></t>
 <t tx="hasletpara.20131202100421.2203"></t>
 <t tx="hasletpara.20140227093334.1830">Do the deletes make any change to the code?
@@ -115,13 +152,110 @@ have we got all the change-sets</t>
 &lt;A HREF="https://github.com/clojure/clojure" &gt;clojure/clojure · GitHub&lt;/A&gt;
 A lisp like language written in Java and targeting the JVM
 &lt;A HREF="https://github.com/rzwitserloot/lombok" &gt;rzwitserloot/lombok · GitHub&lt;/A&gt;
-A Java library that uses annotations to simplfy commonly written code
+A Java library that uses annotations to simplify commonly written code
 &lt;A HREF="https://github.com/maandree/jpp" &gt;maandree/jpp · GitHub&lt;/A&gt;
-A preprocessor for java
+A preprocessor for Java
 &lt;A HREF="https://github.com/klangner/ast-java"&gt;klangner/ast-java · GitHub&lt;/A&gt;
-parses and represents java as an AST
+parses and represents Java as an AST
 &lt;A HREF="https://github.com/antlr/antlr4"&gt;antlr/antlr4 · GitHub&lt;/A&gt;
 A parser for any language you have language definition for</t>
+<t tx="paran.20140603095349.1947">Outline
+ Background
+  &lt;&lt;Background&gt;&gt;</t>
+<t tx="paran.20140604132703.2057">Present some of the background needed to understand the tool.  This background includes an introduction to version control, merging, along with what refactoring is and how it dramatically can change the source code.   We will then look at the issues with the current Longest Common subsquence method of determining differences. Finally we will look at JDime that has some form of managing two copies of the same program that have been refactored differently. We will look inot Jdimes shortcomings for refactoring aware version control  
+
+ Version Control Systems
+  &lt;&lt;VersionControlSystems&gt;&gt;
+
+ Collaborating online
+  &lt;&lt;GitHub&gt;&gt;
+
+ Longest Common Subsequence
+  &lt;&lt;LCS&gt;&gt;
+
+ Refactoring
+  &lt;&lt;Refactoring&gt;&gt;
+
+ JDime
+  &lt;&lt;JDime&gt;&gt;
+ 
+ 
+
+
+</t>
+<t tx="paran.20140604132703.2058">Introduce what version control is and how it can be used. Show how it is different to other revision-like systems. Explain some of the features and differences between different types of version control. Finally talk about the history of version control and how it is changed.
+
+What is version control and why should we use it
+&lt;&lt;Reasons for using version control&gt;&gt;
+
+Dealing with conflicts
+&lt;&lt;LockvsMerge&gt;&gt;
+
+Architecture
+&lt;&lt;architecture&gt;&gt;
+
+</t>
+<t tx="paran.20140604132703.2059">Explain that it can be used for backups braching associating matadata to a change and collaboration with examples
+
+
+</t>
+<t tx="paran.20140604132703.2064">Go through the methods of dealing with conflicts including locking and merging
+
+Locking
+
+ Explain what locking is and how it works
+
+Smaller structured units
+ Talk about using smaller items of granuality than a file or file based locking
+ 
+Merging two documents
+ Describe merging of two documents and how a 3 way merge can be done automatically.
+</t>
+<t tx="paran.20140604132703.2070">Explain the difference between centrailised and distributed version control systems </t>
+<t tx="paran.20140604132703.2074">Describe how github provides more collaboration and how because of this finding better ways to merge code becomes important  
+
+put down the number of collaborators for a particular project</t>
+<t tx="paran.20140604132703.2075">Describe the longest common subsequence algorithm and the issue that it attemts to resolve. Point out the reordering issues it has difficulty with.
+ 
+ 
+
+
+</t>
+<t tx="paran.20140604132703.2083">Describe refactoring with examples.  Potential global changes can have a large impact upon the code. 
+</t>
+<t tx="paran.20140604132703.2088">Describe JDime and explain how it is not suitable
+
+&lt;&lt;What Jdime can be used for&gt;&gt;
+
+&lt;&lt;How Jdime works&gt;&gt;
+
+&lt;&lt;Testing Jdimes suitability&gt;&gt;
+
+&lt;&lt;Conclusion&gt;&gt;
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+</t>
+<t tx="paran.20140604132703.2089">Explain what Jdime is</t>
+<t tx="paran.20140604132703.2090">Explain How Jdime works</t>
+<t tx="paran.20140604132703.2091">go through the test to show that the methods are not outputted in order
+
+</t>
+<t tx="paran.20140604132703.2092">Come to the conclusion it  </t>
+<t tx="paran.20140605091816.1979"></t>
+<t tx="paran.20140605091816.1980">@path /home/paran/Documents/workspaces/Study/</t>
+<t tx="paran.20140605091816.1981">@path JavaViews/src/com/paranhaslett/refactorcategory/</t>
+<t tx="paran.20140605091816.1990">@path ./fmpp/Tex/Thesis</t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>
@@ -129,7 +263,12 @@ A parser for any language you have language definition for</t>
 <t tx="paranhaslett.20130826181255.3063"></t>
 <t tx="paranhaslett.20130826181255.3068"></t>
 <t tx="paranhaslett.20130826181255.3157"></t>
-<t tx="paranhaslett.20131205091806.1894">
+<t tx="paranhaslett.20131205091806.1894">add Diagrams to background on git
+do research and add references
+fix program
+
+normalization
+
 
 
 What has already been done by Apel is to i
@@ -137,11 +276,11 @@ What has already been done by Apel is to i
 
 What we are going to do is
 do what Apel has done again
-figure out how jgit works
-add tuned sort to jgit 
+figure out how JGit works
+add tuned sort to JGit 
 run it over the files
 
-aslo add some stuff for of equivilancy
+also add some stuff for of equivalence
 
 
 it already ignores comments (prove this using tests)

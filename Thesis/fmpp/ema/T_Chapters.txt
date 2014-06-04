@@ -7,6 +7,8 @@ Chapters
 \include{Chapters/thesis-introduction}
 \include{Chapters/Background}
 \include{Chapters/theTool}
+\include{Chapters/expirimentalResults}
+\include{Chapters/futureWork}
 \include{Chapters/thesis-conclusion}
 </pre>
 
