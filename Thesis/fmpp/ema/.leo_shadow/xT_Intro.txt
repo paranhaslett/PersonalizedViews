@@ -14,7 +14,9 @@ Introduction
 \chapter{Introduction}\label{C:intro}
 
 #@+at
-# Shorterned for of your dreams and aspirations
+# Shorterned form of your dreams and aspirations
+# may want to include some stuff about github and refactoring here as is 
+# speaks about how mecessay it is to have a good merge
 #@-at
 #@@c
 

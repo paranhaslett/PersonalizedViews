@@ -11,7 +11,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="paranhaslett.20130826181255.2958" a="E"><vh>Thesis</vh>
-<v t="hasletpara.20131128093200.1990" a="E"><vh>ScratchPad</vh>
+<v t="hasletpara.20131128093200.1990"><vh>ScratchPad</vh>
 <v t="hasletpara.20131128093200.1969"><vh>Old</vh>
 <v t="hasletpara.20131129101631.1874"><vh>Templates</vh>
 <v t="hasletpara.20131129101631.1875" a="E"><vh>@shadow ./notes/Tex/Thesis.cls</vh></v>
@@ -25,19 +25,23 @@ expanded="paranhaslett.20130826181255.2963,paranhaslett.20130826181255.2964,"><v
 <v t="hasletpara.20131128093200.1860"
 expanded="hasletpara.20131128093200.1863,hasletpara.20131128093200.1864,hasletpara.20131128093200.1865,hasletpara.20131128093200.1866,hasletpara.20131128093200.1873,hasletpara.20131128093200.1883,"><vh>@shadow ./notes/Tex/Thesis.tex</vh></v>
 </v>
-<v t="hasletpara.20131127121911.1852"
-expanded="hasletpara.20131128093200.1989,paranhaslett.20130826181255.3120,"><vh>@shadow ./notes/ScratchPad.rst</vh></v>
+<v t="hasletpara.20131127121911.1852" a="E"
+expanded="hasletpara.20131128093200.1989,paranhaslett.20130826181255.3120,paranhaslett.20130826181255.3139,"><vh>@shadow ./notes/ScratchPad.rst</vh></v>
 </v>
 <v t="paranhaslett.20130826181255.2959" a="E"><vh>Documents</vh>
 <v t="hasletpara.20131128093200.1957"><vh>Proposal</vh>
 <v t="hasletpara.20130905084546.1629" a="E"
-expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal/Proposal.tex</vh></v>
+expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal/Proposal.tex</vh></v>
 </v>
 <v t="hasletpara.20131128093200.1956" a="E"><vh>Thesis</vh>
-<v t="paran.20140605091816.1979" a="E"><vh>Code</vh>
+<v t="paran.20140605091816.1979"><vh>Code</vh>
 <v t="paran.20140605091816.1980" a="E"><vh>Study</vh>
 <v t="paran.20140605091816.1981" a="E"><vh>Refactor Category</vh>
-<v t="paran.20140605091816.1982" a="E"><vh>@shadow Main.java</vh></v>
+<v t="paran.20140605091816.1998" a="E"><vh>Strategies</vh>
+<v t="paran.20140605091816.1999" a="E"
+expanded="paran.20140605091816.2001,"><vh>@file TextDrillDown.java</vh></v>
+</v>
+<v t="paran.20140605091816.1982"><vh>@shadow Main.java</vh></v>
 </v>
 </v>
 </v>
@@ -60,7 +64,7 @@ expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpa
 </v>
 </v>
 <v t="paran.20140605091816.1990" a="E"><vh>Thesis</vh>
-<v t="paranhaslett.20131205091806.1894" a="E"><vh>Da Plan</vh>
+<v t="paranhaslett.20131205091806.1894"><vh>Da Plan</vh>
 <v t="hasletpara.20140227093334.1831"><vh>To normalise or not to normalise that is the question</vh></v>
 <v t="hasletpara.20140227093334.1830"><vh>To detect code moves</vh></v>
 <v t="paran.20140423092515.1913"><vh>Datsets</vh></v>
@@ -69,9 +73,10 @@ expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpa
 <v t="hasletpara.20131202100421.2130"><vh>@shadow Chapters/thesis-introduction.tex</vh></v>
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
 <v t="hasletpara.20131202100421.2134"><vh>@shadow testing.tex</vh></v>
-<v t="paran.20140515173914.6982" a="E"
-expanded="paran.20140528183434.1974,paran.20140530135904.1945,paran.20140528183434.2009,paran.20140528183434.2021,"><vh>@shadow Background.tex</vh></v>
-<v t="paran.20140514103950.1918" a="E"><vh>@shadow theTool.tex</vh></v>
+<v t="paran.20140515173914.6982"
+expanded="paran.20140530135904.1945,paran.20140529075353.1935,paran.20140528183434.2055,paran.20140530135904.1946,paran.20140528183434.2059,paran.20140528183434.2009,paran.20140530135904.1958,paran.20140528183434.2021,paran.20140604093616.2026,"><vh>@shadow Background.tex</vh></v>
+<v t="paran.20140514103950.1918" a="E"
+expanded="paran.20140528114850.1932,paran.20140606104644.2422,paran.20140605081907.1971,paran.20140514132312.1919,paran.20140605081907.1972,"><vh>@shadow theTool.tex</vh></v>
 <v t="paran.20140605081907.1988"><vh>@shadow expirimentalResults.tex</vh></v>
 <v t="paran.20140605081907.1978"><vh>@shadow futureWork.tex</vh></v>
 </v>
@@ -111,7 +116,7 @@ expanded="paranhaslett.20130826181255.3057,"><vh>@shadow ./fmpp/ema/T_Structures
 </v>
 <v t="paranhaslett.20130826181255.3157"><vh>Grad Wiki</vh>
 <v t="paranhaslett.20130826181255.3158" a="E"
-expanded="paranhaslett.20130826181255.3120,"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
+expanded="paranhaslett.20130826181255.3120,paranhaslett.20130826181255.3139,"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
 </v>
 </v>
 </v>
@@ -256,6 +261,7 @@ put down the number of collaborators for a particular project</t>
 <t tx="paran.20140605091816.1980">@path /home/paran/Documents/workspaces/Study/</t>
 <t tx="paran.20140605091816.1981">@path JavaViews/src/com/paranhaslett/refactorcategory/</t>
 <t tx="paran.20140605091816.1990">@path ./fmpp/Tex/Thesis</t>
+<t tx="paran.20140605091816.1998">@path strategy</t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>
