@@ -1,56 +1,67 @@
 \chapter{Background}
 
+% As my thesis is about maintaining differently refactored branchs within a 
+% version control sytem
+
+
 \section{Version Control Systems}
-\subsection{What is version control and why should we use it}
-Version control systems are a way of managing different revisions or versions of plain text documents. Most commonly a version control system is used to maintain source code written for a plain text programming language.  There are a number of reasons why we might want to use a version control system.
+Version control systems are a way of managing different revisions (or versions). Most commonly, a version control system is used to maintain source code written for a plain text programming language (e.g. Java, C, etc).  There are a number of reasons why we might want to use a version control system. It can be used to refer to previous revisions, to maintain a revision that has an expirimental feature, to associate additional documentation about a feature and to collaborate with mutiple developers on the same project.
 
-When a version control system is used by a single person to manage their documents the revisions could simply be backups.
 
-Before version control the only way to keep a backup of a file was to copy the code and save it into a different file on the file system.
-In \"Pro Git\" Chacon observes that if you have no source control the best that you can do is to manually back up items on the file system under folders with a specific date so that you can go back and visit a previous revision \cite{Chacon}.  A problem that source code revision addresses is that when a backup is made many files are duplicated verbatim.  The needlessly duplicated files waste file resources.
+\begin{description}
 
- A previous revision can always be revised at a later date and changed. If there is something significant about a particular revision it can be labelled with a tag. A tag assigns a name to all the files in the revision you are interested in so that you can more easily revisit the code at a certain point.  This is helpful if a software package has a number of released versions.  If you need to go back and revisit a particular release it becomes a lot easier if you have tagged the code at that point with the release name or identification.
+  \item [Revist revisions using tagging.]   
+    A version control system can be used by a single person to manage different revisions of their program. A previous revision can always be revisited at a later date and changed. If there is something significant about a particular revision it can be labelled with a emph{tag}. A tag assigns a name to all the files in the revision you are interested in so that you can more easily revisit the code at a certain point.  This is helpful if a software package has a number of released versions.  If you need to go back and revisit a particular release it becomes a lot easier if you have tagged the code at that point with the release name or identification.
+   
+   
 
-It is also possible to maintain two sets of documents for different purposes. This is useful if you have a project that has two or more potential uses. It is also valuable if there are some experimental feature which you want to explore but want to maintain the original. A version control system can keep these multiple interests separate by putting them on different branches.  It is still possible to easily switch between branches depending on which project you want to make changes to.  A good use of this feature is if you have a software project that you have written on behalf two different companies but each of them would like their own unique customisations on top of the base product.  By making two copies of the base product and having a record of when it was divided the branches can later be recombined to include some or all of the features that have been introduced. 
+  
+  \item [Use branching for expirimental features.] 
+  It is also possible to maintain mutliple revisions of all the files in a project. This is useful if there is an experimental feature which you want to explore but want to maintain the original project. A version control system can keep these multiple interests separate by putting them on different \emph{branches}.  It is still possible to easily switch between the different branches depending on which project you want to make changes to.  A good use of this feature is if you have a software project that you have written on behalf two different companies but each of them would like their own unique customisations on top of the base product.  By making two copies of the base product and having a record of when it was divided the branches can later be recombined to include some or all of the features that have been introduced.
 
-% add a diagram to explain branching
+  \begin{figure}[h]
+  \begin{center}
+  \includegraphics[scale=1]{branching}
+  \end{center}
+   \caption{A project that has been split into two branches}
+  \end{figure}
 
-Another useful feature of version control is the ability to record meta-information beside a change or a set of changes to a document.  The reason this is useful is that you can specify what the change was for.  Instead of updating individual documents you could specify that changes over multiple documents were done for a single reason.  For instance if you had a number of documents that had an address written in them and that address changes.  Once the change has been made is possible in most version control systems to write a message when the documents are checked in.  In some version control systems this message is required to check-in any set of documents.
 
-The reason this is useful is at a later date if queries are made about what a certain change to a document was for.  Since there is a message beside all the documents about the reason for a particular change it becomes easier to figure out the reason for the individual change we are interested in. If following the example above we were to examine a document and wonder why the address changed we could examine the check in with that change and see the message that the person changing it wrote.
+  \item [Attach documentation to a feature.]    
+  Another useful feature of version control is the ability to record meta-information beside a change or a set of changes to a document.  The reason this is useful is that you can specify what the change was for.  Instead of updating individual documents you could specify that changes over multiple documents were done for a single reason.  For instance if you had a number of documents that had an address written in them and that address changes.  Once the change has been made is possible in most version control systems to write a message when the documents are checked in.  In some version control systems this message is required to check-in any set of documents.  The reason this is useful is at a later date if queries are made about what a certain change to a document was for.  Since there is a message beside all the documents about the reason for a particular change it becomes easier to figure out the reason for the individual change we are interested in. If following the example above we were to examine a document and wonder why the address changed we could examine the check in with that change and see the message that the person changing it wrote.
 
-When used on source code in tandem with an issue tracking system the message can contain the identification number for the bug being fixed or feature being added.  This means that anybody who is examining the revision to see the reasoning for the change has access to a lot more information via the issue tracking system.
+  When used on source code in tandem with an issue tracking system the message can contain the identification number for the bug being fixed or feature being added.  This means that anybody who is examining the revision to see the reasoning for the change has access to a lot more information via the issue tracking system.
 
-% show screen-shot of Bugzilla
-% 
-% show the commands for adding a comment to git with the Bugzilla number
-% 
-% show how we can get the Bugzilla number back
+  % show screen-shot of Bugzilla
+  % 
+  % show the commands for adding a comment to git with the Bugzilla number
+  % 
+  % show how we can get the Bugzilla number back
 
-The real power of a version control system is its ability to manage documents that are being changed by multiple people.  In a multiple person systems it is possible to have individual revisions that contain each persons changes. The version control system then manages the way these changes are combined into a composite product. This allows multiple people to work on the same document. In some circumstances it allows them to work on the document at the same time.
+  \item [Collaborate with multiple developers.]
+  The real power of a version control system is its ability to manage documents that are being changed by multiple people.  In a multiple person systems it is possible to have individual revisions that contain each persons changes. The version control system then manages the way these changes are combined into a composite product. This allows multiple people to work on the same document. In some circumstances it allows them to work on the document at the same time.   A version control system allows people with different ideas to collaborate on a single document.
 
-This is the main difference between a version control system and a content management system.  It might be possible for a content management system to hold previous revisions but a version control systems can manage how those different versions or revisions can be combined.  A version control system allows people with different ideas to collaborate on a single document.
+  In order to manage to the different version or revisions version control systems work better on plain text documents. One of the main uses for a version control system is to maintain source code written in a plain text programming language, such as Java or C.
 
-In order to manage to the different version or revisions version control systems work better on plain text documents. One of the main uses for a version control system is to maintain source code written in a plain text programming language.
+\end{description}
 
 
 
 \subsection{Dealing with conflicts}
-When two people are working within the same environment there is a need to interact with each other.
-There is competition for the resources for each of them to successfully do their work.
-It is similar in a computer system when two people are dealing with the same set of documents and files.
-There is always the risk that they will attempt to change the same document at the same time.
-This can cause a conflict about how the document should be changed.
+When people work within the same environment there is a need to interact with each other.
+There is competition for access to the source code for each of them to successfully do their work.
+There is the risk that they will attempt to change the same block of source code at the same time.
+If different changes are made to the same block of source code there is a conflict about what the final can cause a conflict about how the final should be changed.
 There are a few ways of dealing with these conflicts.
 
 \subsubsection{Locking}
-We could pre-emptively require that the document is only able to be used by one person at a time and that the other person has to wait. The advantage of this is that the document is always in a consistent state. The disadvantage of this is if one person retains the document for extended periods of time it cannot be changed by anybody else. Furthermore the resulting document may be barely recognisable as the original if extensive work is done on it. If the two parties are changing distinctly different parts of the document or change the document in the same way this restriction is unnecessary.
+One approach is to require that the file is only able to be used by one person at a time and that anyone else has to wait. The advantage of this is that the file is always in a consistent state. The disadvantage of this is if one person retains the document for extended periods of time it cannot be changed by anybody else. If a lot of work has been done on the document before it is unlocked for others to edit it.Furthermore the resulting document may be barely recognisable as the original if extensive work is done on it. If the two parties are changing distinctly different parts of the document or change the document in the same way this restriction is unnecessary.
 
 This is how one of the original versioning systems, RCS ensured that the document stayed consistent. Tichy has explained why he considers locking in a version control system to be a good idea in the design for RCS\cite{Tichy1982}
 
 \subsubsection{Smaller structured units}
-Another way to reduce the conflicts is to split it into smaller units.  The advantage of this is that if you are using locking as above you could avoid some unnecessary restrictions. If we go back to the illustration of two people working on the same set of documents.  If instead of one person having sole possession of a document at a time that person only has possession of the page or pages they are changing. As those pages are smaller than the whole document they are likely to retain them for shorter periods.
-\subsubsection{Merging two documents}
+Another way to reduce conflicts is to split the programming code into smaller units.  The advantage of this is that if you are using locking you minimise the risk that similar. If we go back to the illustration of two people working on the same set of documents.  If instead of one person having sole possession of a document at a time that person only has possession of the page or pages they are changing. As those pages are smaller than the whole document they are likely to retain them for shorter periods.
+\subsubsection{Merging documents}
 Finally we could allow both parties to change the document and try to figure out what the problems are afterwards.  This resolution of anything that remains a conflict is known as a merge.
 
 If not regularly merged is possible for the source code to diverge greatly and it becomes harder and harder to reconcile.
@@ -80,51 +91,35 @@ To do 3 way merging requires 3 different revisions are required, the changes you
 % 
 
 \subsection{Architecture}
-\subsubsection{Centralised version control}
-Still had the model of a central repository everyone needed to consistent
-similar to RCS in that you could still check the file out but it was not as necessary to lock the file
-it was possible to look at the differences between the files and then automatically merge when it was possible
+\begin{description}
 
-centralised systems have better support for locking  
+  \item [Centralised version control] 
+  In a centralised version repository all the changes are made to one location.  This means that only one place needs to be checked in order to access the most up-to-date source code. The need to be connected to a central system solved a lot of issues but often had a large overhead.  In some centralised system it required a specialist to be involved just to look after the server and ensure that merges were done correctly.
+  % Still had the model of a central repository everyone needed to consistent  
+  % similar to RCS in that you could still check the file out but it was not 
+  % as necessary to lock the file  it was possible to look at the differences 
+  % between the files and then automatically merge when it was possible  
+  % centralised systems have better support for locking.
+  % 
+  % 
+  %  examples of centralised systems
+  % RCS, CVS, SVN, Clearcase
+  % 
+  % difference between centalised version controls
 
-examples of centralised systems
+  According to \cite{Bertino2012} centralised version control systems...
+  \item [Distributed version control] 
+    
 
-RCS, CVS, SVN, Clearcase
+  @% mobile access  % @c  % The benefits and costs of distributed systems have long been discussed  %   % examples of distributed version control  % GIT, Mercurial, Bazaar
 
-% difference between centalised version controls
+  difference between git and mecurial reference
+  \item [Online version contol systems]  
+  Whilst is is possible for a measure of collaboration just by using git on it own it requires that you have some method of obtaining the seperate branches on one machine before they can be merged.  One way of doing this within a company is to set up a git server.  This might suitable for projects that are closed source and have a select group of people who work on the source code.  For larger projects that have has programmers in different parts of the world a publicly accessible git server that is on the web may be a better solution.    
+  % the reason i achieve included this here is because the amount of   % interaction in git means that merge needs to be better  % add a screen shot to show the number of forks an users of a large project\end{description}
 
-\subsubsection{Distributed version control}
-The need to be connected to a central system solved a lot of issues but often had a large overhead.  
-
-% mobile access
-
-The benefits and costs of distributed systems have long been discussed
-
-examples of distributed version control
-GIT, Mercurial, Bazaar
-
-% difference between git and mecurial reference
-
-\subsubsection{Using git}
-Git is a repository which is used mostly for software development.
-
-This is done by combining all the changes to a document in a process called merging. 
-In order to merge, any change an editor makes needs to be recorded and compared against the changes made by other editors.
-If it is possible for those changes to co-exist then the changes will be made.
-An example of changes that are considered to be able to co-exist is if all editors change a different part of the document.
-If it is not possible for those changes to co-exist then there is a \"merge conflict\".
-An example of a merge conflict is if any two changes on the document overlap with different values.
-Before any merging can be done all of the changes need to be determined
-
-In GIT there are a number of changes recorded for a file differences,  A file could be added, deleted, moved, copied, or modified.  The same is not true of changes within the file with only insert, delete, and modify being available.
-
-
-\section{Collaborating using GitHub and BitBucket}
-Whist is is possible for a measure of collaboration just by using git on it own it requires that you have some method of obtaining the seperate branches on one machine before they can be merged.  One way of doing this within a company is to set up a git server.  This might suitable for projects that are closed source and have a select group of people who work on the source code.  For larger projects that have has programmers in different parts of the world a publicly accessible git server that is on the web may be a better solution.  
-
-% the reason i achieve included this here is because the amount of interaction 
-% in git means that merge needs to be better
-% add a screen shot to show the number of forks an users of a large project
+  
+\end{description}
 
 \section{Longest Common Subsequence}
 There are a number of issues in computer science that can be resolved by a longest common subsequence algorithm.
@@ -136,34 +131,87 @@ It is very good at finding the differences between two different sets of ordered
 One method of discovering what has changed is to find the longest common subsequence (LCS).
 A simplified example of finding the longest common subsequence is:
 
-Imagine we have have two similar sentences that we want to compare with each other.  
+Imagine we have have two similar sets of java source code that we want to compare with each other.  
 We would like to know what is the same and what is different.
-A longest common subsequence for the sentences would contain a list of all the characters that are the same and in the same order
-So for the following sentences
+A longest common subsequence for the source would contain a list of all the lines that are the same and in the same order.
 
-\begin{verbatim}
+The first listing is as follows:
 
-"The quick brown fox jumps over the lazy dog"
+\begin{lstlisting}
+public class SampleLCS { 
 
-"The rapid brown fox vaults the lazy dog"
+  public static double area(double radius){
+    return Math.PI * square(radius);
+  }
+  
+ public static void main(String[] args){
+   System.out.println(area(3));
+ }
+ 
+ public static double square(double num){
+   return num * num;
+ }
+}
 
-\end{verbatim}
-A longest common subsequence would be
-\begin{verbatim}
-"The ","i"," brown fox ","v"," the lazy dog"
-\end{verbatim}
-The letters that are missing from the LCS differ between the sentences.
-It is possible for a comparison to have multiple LCSs.
+\end{lstlisting}
 
-\subsection{Difference strategies}
+In the second listing the order of a number of methods has changed but the way the code works has not been changed.
+
+\begin{lstlisting}
+public class SampleLCS {
+
+ public static void main(String[] args){
+   System.out.println(area(3));
+ }
+ 
+ public static double square(double num){
+   return num * num;
+ }
+ 
+ public static double area(double radius){
+   return Math.PI * square(radius);
+ }
+}
+
+\end{lstlisting}
+
+A listing containing only the common lines in the same order between both listings follows.  If this is the longest listing possible it is known as the longest common subsequence.  
+
+\begin{lstlisting}
+public class SampleLCS { 
+
+  public static double area(double radius){
+    return Math.PI * square(radius);
+  }
+  
+}
+
+\end{lstlisting}
+
+It is possible to have more than one longest common subsequence if there are multiple listings of common lines that have the same number of lines in common and have the maximum number of lines that match.  For instance the following listing is also a longest common subsequence of the above example.
+
+\begin{lstlisting}
+public class SampleLCS {
+
+ public static void main(String[] args){
+   System.out.println(area(3));
+ }
+ 
+}
+\end{lstlisting}
+
+As there are possibly multiple longest common subsequences identifying the longest common subsequence that is going to be most useful becomes difficult.
+
+\subsection{Methods of calculating LCS}
 There are a number of ways that the longest common subsequence is calculated. The algorithms used in JGit for example are the the Myers, Patience and Histogram algorithms.
 
 \subsection{Myers}
-The Myers algorithm was discovered by Eugene Myers who claimed that finding the minimal differences between any two documents was the equivalent to finding the shortest or longest path in a graph \cite{Myers1986}.
+The Myers algorithm was discovered by Eugene Myers who claimed that finding the minimal differences between any two documents was the equivalent to finding the shortest or longest path in a graph \cite{Myers1986}. 
 
 \subsection{Patience}
 The patience algorithm instead of figuring out the longest common subsequence directly uses the longest increasing subsequence.
-when this is used with line numbers form source code the longest common subsequence can be established.
+When this is used with line numbers from the source code the longest common subsequence can be established.
+By examining only unique lines present in both copies of source code it is comparing. it ignores items that are repeated multiple times as they produce longest common subsequence could give a sub-optimal result.
 
 bran Cohen
 
@@ -178,56 +226,17 @@ A Histogram difference strategy is very similar to a patience algorithm
 Instead of looking at just the unique lines between any two subsets however it can examine lines that there are multiple copies of 
 
 \subsection{The problem with LCS}
-There is still a problem with longest common subsequence. It does not notice changes of order in a document.  For example if we were to take the following two sentences:
+There is still a problem with longest common subsequence. It does not notice changes of order in a document.  For the example we have been looking at two methods have swapped positions.  The program still behaves in the same manner when it is run.  It is unnecessary to make any changes to this code in order to get them to behave the same way. Diff tools that solely use the longest common subsequence do not take different ordered items into account even if they can be considered equivalent.
 
-% change this to diagrams
-
-\begin{verbatim}
-
-"The quick brown fox jumps over the lazy dog"
-
-"The lazy brown dog jumps over the quick fox"
-
-\end{verbatim}
-
-The longest common subsequence of this would be
-
-\begin{verbatim}
-"The \"," brown ","o"," jumps over the ","o"
-\end{verbatim}
-
-Without further analysing the changes it is possible to conclude that instead of swapping certain words that:
-
-\begin{verbatim}
-"quick" transforms into "lazy"
-"f" transforms into "d"
-\"x\" transforms into \"g\"
-\"lazy d\" transforms into \"quick f\"
-\"g\" transforms into \"x\"
-\end{verbatim}
-
-What this thesis aims to do is to more accurately portray these changes.
-In order to do this we require some information about the structure of the document.
-For the above example if the computer was aware that the sentence was structured into words rather than characters the result would have been slightly different.
-
-\begin{verbatim}
-\"The \",?,\" brown \",?,\"jumps \", \"over \", \"the \",?,?
-\end{verbatim}
-
-in this situation in becomes easier to recognise that words have been swapped by comparing each of the changes with each other.  
-
-\begin{verbatim}
-\"quick \" transforms into \"lazy \" matches \"lazy\" transforms into \"quick\"
-\"fox \" transforms into \"dog\" matches \"dog\" transforms into \"fox\" 
-\end{verbatim}
-
-The English language is also far too complex to notice anything that is more basic than a word for word swap.
-There are words and sentences that have similar meanings but are spelled and structured differently.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=.5]{lcsDiff}
+\end{center}
+ \caption{A graphical diff tool showing differences with two equivalent blocks of source code}
+\end{figure}
+if 
 
 \subsection{How LCS is used in differencing tools}
-The above is a simplified illustration of how general LCS works.
-How most difference tools use LCS is quite different.
-Most difference tools rather than comparing on a character by character difference compares line of text with each other.
 Often to speed up the differencing process each line is assigned a hash code depending on its contents. 
 This means that the differencing tool can work much faster as it does not need to compare each character in the line but can compare hash codes instead.
 In the source code for many programming languages the white space is not relevant so many diff tools have the option of ignoring the white-space and only comparing the code.
@@ -236,6 +245,7 @@ This has an impact on the hash codes for each line as the hash code needs to be 
 % and regular expression differences
 % 
  
+
 \section{Refactoring}
 
 A common concern with coding is the need to periodically refactor the code. Refactoring does not involve changing any of features the source code or change how the compiled program functions. Refactoring simply reorganises the source code so that it is easier to read and add changes. According to Fowler et al. the main time for refactoring is when new functionality is added \cite{Fowler1999}. Similarly according to Kerievsky some of the motivations for refactoring include adding more code and understanding existing code \cite{Kerievsky2004}. As adding more functionality is one of the motivations for refactoring let us consider what happens in a multi-developer environment. Two developers could have different views on what is considered an appropriate refactoring. This is especially true if they need to add different functionality from each other. 
@@ -305,6 +315,7 @@ If the regular text merge has conflicts then JDime parses the file into an abstr
 What then happens depends on if order is required in the section of code JDime is examining.
 
 \subsection{Testing Jdimes suitability}
+
 The work of Apel and Les{\ss}nich has mostly been done in Java.  There are a few exceptions including the linear programming libraries that need to be created.  As we are attempting to combine some of their work with Git it was decided to use JGit rather than the C implementation of Git. As the Java implementation may run a bit slower then in order to get a good timing test running we need to run redo the tests of JDime using JGit instead. 
 
 Also the tests that Le{\ss}nich did on JDime were from files rather than from a repository. It is necessary to set the files back up in the original repository structure to get a adequate baseline.
@@ -348,7 +359,7 @@ It is about this point in analysis that you begin to second guess yourself.  For
 
 If it detects an unordered section it does not preserve the order of the output.
 
-\subsection{Conclusion}
+\subsection{Resons why Jdime cannot currently be used to create seperate views}
 The aim of this paper is to be able to maintain two views of Java that although having a different format function in the same manner.  Although this tool sounds like it would be able to help achieve those aims there are a few reasons why it cannot be used without changes.
 
 The first issue is that as explained above that the resulting code could be in a totally different order to any of the versions combined to create it.

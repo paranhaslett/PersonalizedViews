@@ -652,6 +652,9 @@ Being able to provide manual instructions and hints about how the source control
 #--unknown-language--@-others
 #--unknown-language--@-node:hasletpara.20131128093200.1989:@rst
 #--unknown-language--@-others
+
+Before modern version control systems developers would often keep a revison of a file by copying it was to copy the code and save it into a different file on the file system.
+In "Pro Git" Chacon observes that if you have no source control the best that you can do is to manually back up items on the file system under folders with a specific date so that you can go back and visit a previous revision \cite{Chacon}.  A problem that source code revision addresses is that when a backup is made many files are duplicated verbatim.  The needlessly duplicated files waste file resources.
 #--unknown-language--@nonl
 #--unknown-language--@-node:hasletpara.20131127121911.1852:@shadow ./notes/ScratchPad.rst
 #--unknown-language--@-leo

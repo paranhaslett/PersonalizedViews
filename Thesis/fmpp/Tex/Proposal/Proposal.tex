@@ -87,6 +87,7 @@ Kerievsky also relates a tale about how the lack of knowledge of patterns making
 \subsection{Working on large projects with multiple developers}
 Perry claimed that there are not adequate tools to use with projects with multiple developers \cite{Perry2001}. Whilst a lot of differences between two different versions of source code can be already merged by source control, refactoring often involves larger structural changes. According to Freese these larger changes can lead to merge problems if a traditional text difference approach is used \cite{freese2007operation}. Digg et al. have identified that merging after refactoring causes problems with some SCM systems and tools that are more aware of semantic changes are necessary \cite{Dig2008}. This has lead to the development of smarter merge technology being used to compare code. The simplest of these being hunting for regular expressions so that white-space is not a factor during merging. This is already a feature on many merge tools. Some more complicated examples of these are presented by Le{\ss}enich and Apel who both identify in addition to text based merging both structured and semi-structured approaches to merging \cite{LeBenich2012} \cite{Apel2011}. Although Le{\ss}enich briefly talks about using Git with a semi structured merge they have named ``JDime'' there are some interesting features of a distributed version control system that have not been explored.
 
+
 \begin{center}
 \includegraphics[scale=0.5]{git-diag}
 \end{center}

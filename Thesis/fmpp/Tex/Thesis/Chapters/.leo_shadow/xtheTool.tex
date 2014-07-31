@@ -5,6 +5,7 @@
 
 \chapter{Refactoring Differences Tool}
 
+
 \section{The aims for the tool}
 %@<<dreams and aspriations>>
 %@+node:paran.20140528114850.1932:<<dreams and aspriations>>
@@ -65,6 +66,8 @@ The difficulty lies in the fact that not only the functionality that you have ad
 %@+node:paran.20140606104644.2423:<<mutiple checkins>>
 When there is a large change on a separate branch it could be the case that there are multiple check-ins to keep other parts up to date and ensure that there is not too much divergence.  Currently if you have a project where there are periodic check-ins for each development milestone there will be a large impact each time there is a commit. This is because the refactoring for the large refactored project is imposed upon the repository each time it is checked in.
 
+One of the ways this can be dealt with is by creating seperate branches for different projects however this has some issues with merging when working on two or more projects symaltaniously.  In order to minimise the amount of divergence it is avisable to merge each of the branches with the trunk often.  If there has been global refactoring changes introduced by one project being merged the merge will be worse for any of the remaining branches when they are checked in.  Instead of having an issue merging at the check-in level we now have an issue at the merging of branches.  As these changes will occur less often than checking in the code the code will possibly have more divergence.  This divergence is likely to cause more rather than less merge issues at the expense of having to merge less often.
+
 %@+at 
 % find an example of a workplace situation where refactoring interferes with
 % others
@@ -74,16 +77,39 @@ When there is a large change on a separate branch it could be the case that ther
 %@-node:paran.20140606104644.2423:<<mutiple checkins>>
 %@nl
 
-
 One of these changes which is not catered for by current version control systems is the change of order.  The first person to check-in their code will have no issue as the version control system assumes that all the changes are simply a new revision.  When the second person attempts to reconcile their view there is the possibility of having unnecessary conflicts.  A lot of these conflicts will be with refactored code which although works the same has a different structure.
 %@nonl
 %@-node:paran.20140606104644.2422:<<the problem>>
 %@nl
 
+\subsection{Private refactored views}
+%@<<private refactored views>>
+%@+node:paran.20140723095158.2027:<<private refactored views>>
+In a project with multiple developers situations may arise where you need to make a change to the structure of the source code that you do not want impact other developers.  Maintaining your own independently ordered view of the source code could be valuable in these circumstances. 
+
+An example of this if you are working on a subproject in which you need to refactor. In some conditions refactoring is only required to simplify the code to implement a small change as opposed to cleaning up the entire code base.  This partial refactoring is likely if the code base is large. According to Melina et. al. \cite{Milea2014} refactoring is a challenge when the code base is large. By definition refactoring does not any functionality but changes the source code. This means that the code previous to being partially refactored is equivalent to the code after the partial refactoring.
+
+
+%@+at
+% as Refactoring does not change it other programmers could needlessly be 
+% impacted by the refactoring changes.. If
+%@-at
+%@@c
+
+%@+at
+% 
+% There are also other reason for having a view that is independantly
+% 
+%@-at
+%@@c
+%@nonl
+%@-node:paran.20140723095158.2027:<<private refactored views>>
+%@nl
+
 \subsection{How we would like to address the problem}
 %@<<what we want to do>>
 %@+node:paran.20140606093936.2005:<<what we want to do>>
-We want to be able to maintain views or separate branches that can have different but equivalent refactoring.  When these branches are merged we want to make sure that the equivalent refactored code is not migrated to the view we are merging into.
+We want to be able to maintain private views or separate branches that can have different but equivalent refactoring.  When these branches are merged we want to make sure that any equivalent refactored code is not migrated to the view we are merging into.
 This is so that people working on the same project can freely refactor with minimal interference to others
 When two people refactor the code that they are able to hold their own individual refactoring with minimal change when they are merged.
 This also means that there will be less unnecessary merge conflicts when merging code.
@@ -95,6 +121,7 @@ This is so that people working on the same project can freely refactor with mini
 %@nonl
 %@-node:paran.20140606093936.2005:<<what we want to do>>
 %@nl
+
 
 
 
@@ -187,6 +214,10 @@ The reason for this is that some items of text could be in a differing order but
 
 In order to resolve some limitations with JDime and the text only merge in GIT information about which line numbers are retained after the first text merge.  In JDime these are ignored and the AST is relied upon to hold all the information.  The change set has been taken from the original GIT based diff contains the start and end of the change in both files and what type of change it is (insert delete or modify).  By reusing these line numbers it is possible to figure out which AST items these changes affect. This is done loading the file into the JastAddJ parser to get an AST tree. The line numbers for each item in the tree are then comparing line numbers from the change.
 
+There is a problem with using JastAddJ to do this. Some ASTs do not contain an equivalent position in the code.  This could be because they are generated by the parser to reflect parts of the Java languge that are infered rather than directly mentioned in the code.  An example of this would be the use of super in the constructor.  Even if it is not written in the code for every constructor has a super. Likewise all methods mentioned in a interface have a public type even if is not in the code.
+
+To get aound this problem we have needed to record the previous valid position for a Java command as both the start and end of the AST that had no line numbers assigned to it.  This means that the infered AST is in the right position but is not represented by a block of source code.
+
 %@+at
 % after finished drill down we have a record of the same changes as JGit
 % except now we also have the ASTs
@@ -202,13 +233,17 @@ In order to resolve some limitations with JDime and the text only merge in GIT i
 % explain how we limit matching just to the parent of the thing being matched
 %@-at
 %@@c
+
+Rather than comparing everything with each other to determine matchs it is more efficient to match just the items that are under the same AST structure.  This means that it is more likely that we get a match that is going to be relivant and valid.  An example of this is matching methods. If the methods are under the same container (a class) they may be legally swapped without causing issues.  If the method has been moved to an inner class from an outer one however it becomes more complicated and we cannot guarantee that the code is equivalent.     
 %@nonl
 %@-node:paran.20140606104644.2015:<<using a matcher>>
 %@nl
 
 %@<<how it checks comments>>
 %@+node:paran.20140606104644.2014:<<how it checks comments>>
-Comment and white-space are also examined separately as they could give some indication of where code has been moved from or to.
+Comment and white-space are also examined separately as they also could give some indication of where code has been moved from or to.
+Before being checked to find matches unnecessary white-space is identified and recorded.
+Any text that remains is examined to determine if its is a comment.  Because of the way im using the position in the code to identify ASTs there are circumstances when parts of the java programming language are identified as being surplus text. These have already been identified and represented as an AST Node. By identifying comments we can eliminate any of the items falsely recorded as comments.
 
 %@+at 
 % Comments and white-space cannot be shown in the AST tree so they need to be
@@ -239,6 +274,7 @@ Comment and white-space are also examined separately as they could give some ind
 %@-at
 %@@c
 
+\section{Limitations of the tool}
 
 %@<<drilldown>>
 %@+node:paran.20140606104644.2019:<<drilldown>>
