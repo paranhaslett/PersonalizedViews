@@ -4,11 +4,7 @@
 %@@language latex
 \chapter{Background}
 
-%@+at
-% As my thesis is about maintaining differently refactored branchs within a 
-% version control sytem
-%@-at
-%@@c
+As this thesis is about maintaining differently refactored branchs within a version control system refactoring what follows is some background concerning version control systems and how they determine if a change has occured in source code.  We will also cover refactoring before looking at JDime which is an existing tool that reconciles differently refactored views and reduces merge conflicts. 
 
 
 \section{Version Control Systems}
@@ -16,7 +12,7 @@
 %@+node:paran.20140528183434.1974:<<VersionControlSystems>>
 %@<<Reasons for using version control>>
 %@+node:paran.20140530135904.1945:<<Reasons for using version control>>
-Version control systems are a way of managing different revisions (or versions). Most commonly, a version control system is used to maintain source code written for a plain text programming language (e.g. Java, C, etc).  There are a number of reasons why we might want to use a version control system. It can be used to refer to previous revisions, to maintain a revision that has an expirimental feature, to associate additional documentation about a feature and to collaborate with mutiple developers on the same project.
+Version control systems are a way of managing different revisions (or versions). Version control systems can be used to keep revisions of files that are in any format. Most commonly they are used to maintain source code written for a plain text programming language (e.g. Java, C, etc).   There are a number of reasons why we might want to use a version control system. It can be used to refer to previous revisions, to maintain a revision that has an expirimental feature, to associate additional documentation about a feature or to collaborate with mutiple developers who are on the same programming project.
 
 
 \begin{description}
@@ -357,12 +353,10 @@ There is still a problem with longest common subsequence. It does not notice cha
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[scale=.5]{lcsDiff}
+\includegraphics[scale=.25]{lcsDiff}
 \end{center}
  \caption{A graphical diff tool showing differences with two equivalent blocks of source code}
 \end{figure}
-if 
-%@nonl
 %@-node:paran.20140528183434.2015:<<The problem with LCS>>
 %@nl
 
@@ -467,7 +461,7 @@ Although this was a simple example it is easy to imagine a case where a much lar
 \section{JDime}
 %@<<JDime>>
 %@+node:paran.20140528183434.2021:<<JDime>>
-Part of the inspiration for this tool come from JDime
+Part of the inspiration for this tool come from JDime. If there is a conflict in a text based merge JDime provides a way for some refactored content to be merged.  
 
 \subsection{What Jdime can be used for}
 %@<<What Jdime can be used for>>
@@ -494,7 +488,7 @@ What then happens depends on if order is required in the section of code JDime i
 %@<<Testing Jdimes suitability>>
 %@+node:paran.20140528183434.2024:<<Testing Jdimes suitability>>
 
-The work of Apel and Les{\ss}nich has mostly been done in Java.  There are a few exceptions including the linear programming libraries that need to be created.  As we are attempting to combine some of their work with Git it was decided to use JGit rather than the C implementation of Git. As the Java implementation may run a bit slower then in order to get a good timing test running we need to run redo the tests of JDime using JGit instead. 
+Jdime has been written mostly in Java by Apel and Les{\ss}nich \cite{Apel2012} .  There are a few exceptions including the linear programming libraries that need to be created.  As we are attempting to combine some of their work with Git it was decided to use JGit rather than the C implementation of Git. As the Java implementation may run a bit slower then in order to get a good timing test running we need to run redo the tests of JDime using JGit instead. 
 
 Also the tests that Le{\ss}nich did on JDime were from files rather than from a repository. It is necessary to set the files back up in the original repository structure to get a adequate baseline.
 
@@ -509,7 +503,7 @@ Each directory needs a full copy of the source code for that revision
 This means that the necessary Java source code to be used by JDime in base, left and right directories.
 
 
-In order to test if JDime is better than a text based merge we need to attempt to try something that would incorrectly cause a conflict in a text based merge.
+In order to show how JDime performs extra refactoring based merging we need to attempt to try something that would incorrectly cause a conflict in a text based merge.  The reason that this is necessary is that if there are no conflicts in a text based merge the refactoring aware portion of JDime will not be run.  This saves the overhead of loading the program into an AST in the event that the initial text merge has no conflicts. 
 One way to get a lot of text conflicts between two pieces of code that are equivalent when they run is to change the order of the methods.
 Although the methods are in different order the programs are still \"functionally equivalent\".
 In order to examine how JDime works and test its suitability a test handler was written.
@@ -543,7 +537,7 @@ If it detects an unordered section it does not preserve the order of the output.
 \subsection{Resons why Jdime cannot currently be used to create seperate views}
 %@<<Conclusion>>
 %@+node:paran.20140604093616.2026:<<Conclusion>>
-The aim of this paper is to be able to maintain two views of Java that although having a different format function in the same manner.  Although this tool sounds like it would be able to help achieve those aims there are a few reasons why it cannot be used without changes.
+The aim of this thesis is to be able to maintain two views of Java that although having a different format function in the same manner.  Although this tool sounds like it would be able to help achieve those aims there are a few reasons why it cannot be used without changes.
 
 %@<<first issue>>
 %@+node:paran.20140605091816.2391:<<first issue>>
@@ -581,6 +575,14 @@ The final concern is that after JDime does the initial comparision of text and f
 
 
 %@-node:paran.20140528183434.2021:<<JDime>>
+%@nl
+
+\section{Other refactoring aware versioning tools}
+%@<<oravt>>
+%@+node:paran.20140731220748.2056:<<oravt>>
+JDime is not the only tool that can be used to address refactor aware version control.  Ekman and Asklund \cite{Ekman2004} introduced a plugin for eclipse that recorded information about refactoring in to version control so that it was eaiser to recognise where refactoring took place.  They did this in a very similar manner as Apel and Le{\ss}nich when they developed JDime.  Both make use of ASTs to record information about any refactoring that took place.  Freese \cite{Freese2006} also developed a tool that was very similar written in Object-Z. Despite this interest in refactoring aware merges however the idea of keeping separate branchs as consistant as possible has not been discussed.
+%@nonl
+%@-node:paran.20140731220748.2056:<<oravt>>
 %@nl
  
  
