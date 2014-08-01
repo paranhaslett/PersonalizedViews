@@ -139,12 +139,20 @@ Any text that remains is examined to determine if its is a comment.  Because of 
 %@-at
 %@@c
 
-\section{Limitations of the tool}
+%@<<compares changes>>
+%@+node:paran.20140801074838.2011:<<compares changes>>
+There are a number of design differences between JDime and the categorisation tool.  Instead of doing a text comparison first and only proceeding to analyse the program using an AST if there are conflicts the categorisation tool examines all files that have a difference in them.  Although this takes longer and is more memory intensive there are some advantages to this. The main advantage is related to the concept of keeping branches as consistant as possible whenever there is a change. An example of this advatantage is if a merge was done using an ordinary text comparison and therse is a non functional change to only one revision. Examples of a non functional change could include reordering methods or inserting a comment.  As the changes were only done to one of the revisions there is no conflict and JDime only does a text based merge.  During this text based merge, in addition to any of the changes to fuctionality that we want, we get the non functional changes that change the source code without changing the programs behaviour. By examining all changes irrespective of if the text has conflicts means that the categoristation tool can determine if change that would not affect the behavior of a program is occuring.
+
+%@-node:paran.20140801074838.2011:<<compares changes>>
+%@nl
 
 %@<<drilldown>>
 %@+node:paran.20140606104644.2019:<<drilldown>>
-the tool is based on changes not based on conflicts like JDime is.
-the drill down using line numbers
+As there is a cost overhead with testing all the changes rather than just the conflicting ones the categorisation tool needs to be efficient in how it tests changes.  Assuming that changes occur in select areas within the file there are portions of the file that have not been changed.  We have developed a method that spends a smaller amount time in  within the portions that have already been idenfied as not contitaining changes.  Like JDime we initially do a text based merge.  The text based merge we use however uses the histogram merge in JGit.  This allows us to use information from the text based merge when we analyse the AST tree.  The information used is the ranges of line numbers and operations identified by the histogarm merge.  The line numbers are matched to the position information stored in each AST node using the following method.
+
+The root of the AST is identified as the AST node we need to start at. 
+We only begin any analysis if the AST node resides completely within a block of text changes.
+If there are any seperate blocks of changes that occur between the start position of the AST node and the end position of the AST node then we recursively examine the AST nodes children.
 %@nonl
 %@-node:paran.20140606104644.2019:<<drilldown>>
 %@nl
