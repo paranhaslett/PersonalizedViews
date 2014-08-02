@@ -4,7 +4,7 @@
 %@@language latex
 \chapter{Background}
 
-As this thesis is about maintaining differently refactored branchs within a version control system refactoring what follows is some background concerning version control systems and how they determine if a change has occured in source code.  We will also cover refactoring before looking at JDime which is an existing tool that reconciles differently refactored views and reduces merge conflicts. 
+As this thesis is about maintaining differently refactored branchs within a version control system refactoring what follows is some background concerning version control systems and how they determine if a change has occured in source code.  We will also cover refactoring before looking more closely at JDime. JDime is an existing tool that reconciles differently refactored views and reduces merge conflicts. 
 
 
 \section{Version Control Systems}
@@ -64,7 +64,7 @@ Version control systems are a way of managing different revisions (or versions).
   \item [Collaborate with multiple developers.]
   %@  <<collaboration>>
   %@+node:paran.20140530135904.1949:<<collaboration>>
-  The real power of a version control system is its ability to manage documents that are being changed by multiple people.  In a multiple person systems it is possible to have individual revisions that contain each persons changes. The version control system then manages the way these changes are combined into a composite product. This allows multiple people to work on the same document. In some circumstances it allows them to work on the document at the same time.   A version control system allows people with different ideas to collaborate on a single document.
+  Version control systems make it possible to have individual revisions that contain each persons changes. The version control system then manages the way these changes are merged into a composite product. Bertino \cite{Bertino2012} descibes the ability to merge the work of multiple people as being a powerful colabrative tool. This allows multiple people to work on the same document. In some circumstances it allows them to work on the document at the same time.   A version control system allows people with different ideas to collaborate on a single document.
 
   In order to manage to the different version or revisions version control systems work better on plain text documents. One of the main uses for a version control system is to maintain source code written in a plain text programming language, such as Java or C.
   %@nonl
@@ -174,11 +174,10 @@ To do 3 way merging requires 3 different revisions are required, the changes you
   % RCS, CVS, SVN, Clearcase
   % 
   % difference between centalised version controls
+  % According to \cite{Bertino2012} centralised version control systems...
   %@-at
   %@@c
 
-  According to \cite{Bertino2012} centralised version control systems...
-  %@nonl
   %@-node:paran.20140528183434.2058:<<Centralised Version control>>
   %@nl
   \item [Distributed version control] 
@@ -215,7 +214,7 @@ To do 3 way merging requires 3 different revisions are required, the changes you
 \section{Longest Common Subsequence}
 %@<<LCS>>
 %@+node:paran.20140528183434.2009:<<LCS>>
-There are a number of issues in computer science that can be resolved by a longest common subsequence algorithm.
+The longest common subsequence problem isThere are a number of issues in computer science that can be resolved by a longest common subsequence algorithm.
 It is very good at finding the differences between two different sets of ordered information.
 
 %@+at
@@ -306,7 +305,7 @@ As there are possibly multiple longest common subsequences identifying the longe
 \subsection{Methods of calculating LCS}
 %@<<Git difference strategies>>
 %@+node:paran.20140528183434.2011:<<Git difference strategies>>
-There are a number of ways that the longest common subsequence is calculated. The algorithms used in JGit for example are the the Myers, Patience and Histogram algorithms.
+According to Arslan \cite{Arslan2010} there are many algorithms that solve longest common subsequence problem. The algorithms used in JGit for example are the the Myers, Patience and Histogram algorithms.
 
 %@<<Myers>>
 %@+node:paran.20140528183434.2012:<<Myers>>
