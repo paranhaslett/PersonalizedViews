@@ -1,9 +1,9 @@
 
 \chapter{Refactor categories tool}
-I order to prove that having individual refactored views would provide some useful results we created a refator categories tool. The refactor categories tool examines the differences between files and arranges them into a greater variety of categories than used by version control systems or merge and diff tools.  In addition to being able to detect instances of delete, insert and modify the refactor categories tool can also detect instances where the code has been relocated and to some extent renamed.  It also can differentiate between changes to comments, white-space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and instances where it does not. Although it does not detect more complex differences beyond this we intend to show that it is possible 
+In order to prove that having individual refactored views would provide some useful results we created a refator categories tool. The refactor categories tool examines the differences between files and arranges them into a greater variety of categories than used by version control systems or merge and diff tools.  In addition to being able to detect instances of delete, insert and modify the refactor categories tool can also detect instances where the code has been relocated and to some extent renamed.  It also can differentiate between changes to comments, white-space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and some instances where it does not. Although it does not detect more complex differences beyond this we intend to show that changes exist in real world software projects that have no impact on how the project behaviour.
 
 \section{What the tool does}
-% answer what it does
+% answer what it does and how
 
 By checking to see if an insert at one point matches a delete at another point it is possible to detect to see if the code block has moved. In order to determine if the move is one that has no impact the matches are only counted if a match can be found within the same container.  If methods have been shifted within a class they will be evaluated to determine if there is a suitable match.  If a method is shifted from one class to an inner class however it no longer exists in the same container.  In this circumstance it is less likely that the changes have produced source code that behaves in the same manner.
 
@@ -16,9 +16,7 @@ The refactor categories tool first does a cursory examination of the text differ
 
 
 \section{Design decisions}
-% answer why it does stuff
-
-% answer how does stuff
+% answer how does stuff and why
 
 % insert diagram of how it finds the ASTs that are within the change set
 % 
