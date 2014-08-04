@@ -11,7 +11,94 @@
 <find_panel_settings/>
 <vnodes>
 <v t="paranhaslett.20130826181255.2958" a="E"><vh>Thesis</vh>
-<v t="hasletpara.20131128093200.1990" a="E"><vh>ScratchPad</vh>
+<v t="paran.20140803142459.2009"><vh>Plan debug</vh>
+<v t="paran.20140803142459.2010" a="E"><vh>1st Test Case</vh>
+<v t="paran.20140803142459.2048" a="E"><vh>Comments</vh>
+<v t="paran.20140803142459.2051"><vh>Delete</vh></v>
+<v t="paran.20140803142459.2052"><vh>Insert</vh></v>
+<v t="paran.20140803142459.2053"><vh>Modify</vh></v>
+</v>
+<v t="paran.20140803142459.2049" a="E"><vh>Whitespace</vh>
+<v t="paran.20140803142459.2050"><vh>Modify</vh></v>
+</v>
+<v t="paran.20140803142459.2055" a="E"><vh>Java</vh>
+<v t="paran.20140803142459.2056"><vh>Delete</vh></v>
+<v t="paran.20140803142459.2057"><vh>Insert</vh></v>
+<v t="paran.20140803142459.2058"><vh>Modify</vh></v>
+<v t="paran.20140803142459.2060"><vh>Move</vh></v>
+<v t="paran.20140803142459.2061"><vh>Renamed</vh></v>
+<v t="paran.20140803142459.2059"><vh>Equivilent</vh></v>
+</v>
+</v>
+<v t="paran.20140803142459.2011"><vh>2nd Test Case</vh>
+<v t="paran.20140803142459.2062" a="E"><vh>Comment</vh>
+<v t="paran.20140803142459.2063"><vh>Delete</vh></v>
+<v t="paran.20140803142459.2064"><vh>Modify</vh></v>
+</v>
+<v t="paran.20140803142459.2065" a="E"><vh>Whitespace</vh>
+<v t="paran.20140803142459.2066"><vh>Modify</vh></v>
+</v>
+<v t="paran.20140803142459.2067" a="E"><vh>Java</vh>
+<v t="paran.20140803142459.2068"><vh>Delete</vh></v>
+<v t="paran.20140803142459.2069"><vh>Insert</vh></v>
+<v t="paran.20140803142459.2070"><vh>Modify</vh></v>
+<v t="paran.20140803142459.2071"><vh>Renamed</vh></v>
+<v t="paran.20140803142459.2072"><vh>Equivlent</vh></v>
+</v>
+</v>
+<v t="paran.20140803142459.2012"><vh>3rd Test Case</vh>
+<v t="paran.20140803142459.2073" a="E"><vh>Comment</vh>
+<v t="paran.20140803142459.2076"><vh>Delete</vh></v>
+<v t="paran.20140803142459.2077"><vh>Modify</vh></v>
+</v>
+<v t="paran.20140803142459.2074" a="E"><vh>Whitespace</vh>
+<v t="paran.20140803142459.2078"><vh>Modify</vh></v>
+</v>
+<v t="paran.20140803142459.2075" a="E"><vh>Java</vh>
+<v t="paran.20140803142459.2079"><vh>Delete</vh></v>
+<v t="paran.20140803142459.2080"><vh>Insert</vh></v>
+<v t="paran.20140803142459.2081"><vh>Modify</vh></v>
+<v t="paran.20140803142459.2082"><vh>Renamed</vh></v>
+<v t="paran.20140803142459.2083"><vh>Equivlent</vh></v>
+</v>
+</v>
+<v t="paran.20140803142459.2013"><vh>4th Test Case</vh>
+<v t="paran.20140803142459.2085" a="E"><vh>Comment</vh>
+<v t="paran.20140803142459.2088"><vh>Delete</vh></v>
+<v t="paran.20140803142459.2089"><vh>Insert</vh></v>
+<v t="paran.20140803142459.2091"><vh>Modify</vh></v>
+</v>
+<v t="paran.20140803142459.2086" a="E"><vh>Whitespace</vh>
+<v t="paran.20140803142459.2092"><vh>Modify</vh></v>
+</v>
+<v t="paran.20140803142459.2087" a="E"><vh>Java</vh>
+<v t="paran.20140803142459.2093"><vh>Delete</vh></v>
+<v t="paran.20140803142459.2094"><vh>Insert</vh></v>
+<v t="paran.20140803142459.2095"><vh>Modify</vh></v>
+<v t="paran.20140803142459.2096"><vh>renamed</vh></v>
+<v t="paran.20140803142459.2097"><vh>Equivalent</vh></v>
+</v>
+</v>
+<v t="paran.20140803142459.2014"><vh>5th Test Case</vh>
+<v t="paran.20140803142459.2018" a="E"><vh>Comment</vh>
+<v t="paran.20140803142459.2021"><vh>Delete</vh></v>
+<v t="paran.20140803142459.2022"><vh>Insert</vh></v>
+<v t="paran.20140803142459.2023"><vh>Modify</vh></v>
+</v>
+<v t="paran.20140803142459.2019" a="E"><vh>Whitespace</vh>
+<v t="paran.20140803142459.2024"><vh>Modify</vh></v>
+<v t="paran.20140803142459.2026"><vh>Equivalent</vh></v>
+</v>
+<v t="paran.20140803142459.2020" a="E"><vh>Java</vh>
+<v t="paran.20140803142459.2027"><vh>Delete</vh></v>
+<v t="paran.20140803142459.2028"><vh>Insert</vh></v>
+<v t="paran.20140803142459.2029"><vh>Modify</vh></v>
+<v t="paran.20140803142459.2030"><vh>MOve</vh></v>
+<v t="paran.20140803142459.2031"><vh>Renamed</vh></v>
+</v>
+</v>
+</v>
+<v t="hasletpara.20131128093200.1990"><vh>ScratchPad</vh>
 <v t="hasletpara.20131128093200.1969" a="E"><vh>Old</vh>
 <v t="paran.20140723095158.2026"><vh>lcs</vh></v>
 <v t="paran.20140618094449.2025"><vh>&lt;&lt;Git&gt;&gt;</vh></v>
@@ -33,7 +120,7 @@ expanded="hasletpara.20131128093200.1989,paranhaslett.20130826181255.3120,paranh
 <v t="paranhaslett.20130826181255.2959" a="E"><vh>Documents</vh>
 <v t="hasletpara.20131128093200.1957"><vh>Proposal</vh>
 <v t="hasletpara.20130905084546.1629" a="E"
-expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpara.20130905084546.1653,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal/Proposal.tex</vh></v>
+expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1662,hasletpara.20130905084546.1652,"><vh>@shadow ./fmpp/Tex/Proposal/Proposal.tex</vh></v>
 </v>
 <v t="hasletpara.20131128093200.1956" a="E"><vh>Thesis</vh>
 <v t="paran.20140603095349.1947"><vh>Outline</vh>
@@ -311,6 +398,1293 @@ in this situation in becomes easier to recognise that words have been swapped by
 
 The English language is also far too complex to notice anything that is more basic than a word for word swap.
 There are words and sentences that have similar meanings but are spelled and structured differently.</t>
+<t tx="paran.20140803142459.2009">
+
+REFACTOR CATEGORIES:COMMENT:DELETE
+-----Refactored Bean:/BeanDifferShould.java:(180245, 184321)-----
+
+	
+&gt;&gt;&gt;&gt;&gt;Simplified Diff:/BeanDifferShould.java:(155668, 155669)&gt;&gt;&gt;&gt;&gt;
+) 
+------------------------------------
+-----Introduced flue:/MapDifferTest.java:(647210, 651266)-----
+
+		
+&gt;&gt;&gt;&gt;&gt;Improved interg:/MapDifferTest.java:(663642, 679938)&gt;&gt;&gt;&gt;&gt;
+
+
+		// this part is needed to reproduce a special error case where the parent node got added as its own
+		// child and caused an infinite loop. this wouldn't happen if the parent node didn't have any changes
+		
+------------------------------------
+-----Cleaned up Opti:/Options.java:(200741, 204801)-----
+
+
+
+&gt;&gt;&gt;&gt;&gt;Added more JRub:/Options.java:(217139, 237572)&gt;&gt;&gt;&gt;&gt;
+
+
+    /**
+     * The brief option.
+     */
+    
+------------------------------------
+Git diff =0  Refactor Categories =13
+
+REFACTOR CATEGORIES:COMMENT:INSERT
+-----More migration :/Block.java:(94245, 102408)-----
+
+        // this.tokens = new TokenList(blk);
+        
+&gt;&gt;&gt;&gt;&gt;Further integra:/Block.java:(77884, 81928)&gt;&gt;&gt;&gt;&gt;
+
+        
+------------------------------------
+-----Added debugging:/Options.java:(262186, 282628)-----
+
+
+    /**
+     * Whether to blather.
+     */
+    
+&gt;&gt;&gt;&gt;&gt;Removed Ant fil:/Options.java:(262179, 266241)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+-----Continued work :/Options.java:(139309, 159748)-----
+
+
+    /**
+     * Whether to show the version.
+     */
+    
+&gt;&gt;&gt;&gt;&gt;More work on th:/Options.java:(139308, 143361)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+Git diff =0  Refactor Categories =4
+
+REFACTOR CATEGORIES:COMMENT:MODIFY
+-----Added another t:/Main.java:(438273, 438276)-----
+				
+&gt;&gt;&gt;&gt;&gt;More little twe:/Main.java:(438273, 442372)&gt;&gt;&gt;&gt;&gt;
+				// FIXME: get this working!!
+				
+------------------------------------
+-----Added another t:/TypeAnalysis.java:(995329, 1003523)-----
+			// This is a fall back, since it is permitted to perform an array
+			// load / store on the null type.
+			
+&gt;&gt;&gt;&gt;&gt;More little twe:/TypeAnalysis.java:(991233, 991235)&gt;&gt;&gt;&gt;&gt;
+			
+------------------------------------
+-----More little twe:/ClassFileReader.java:(5562369, 5562371)-----
+			
+&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/ClassFileReader.java:(5562369, 5562371)&gt;&gt;&gt;&gt;&gt;
+			
+------------------------------------
+Git diff =0  Refactor Categories =3348
+
+REFACTOR CATEGORIES:WHITESPACE:MODIFY
+-----Updated ClassFi:/ClassFileReader.java:(4087809, 4087810)-----
+		
+&gt;&gt;&gt;&gt;&gt;ClassFileReader:/ClassFileReader.java:(4034561, 4038657)&gt;&gt;&gt;&gt;&gt;
+
+	
+------------------------------------
+-----Working on the :/JKitValidTests.java:(98341, 106496)-----
+
+
+
+&gt;&gt;&gt;&gt;&gt;Added the JKit :/JKitValidTests.java:(98337, 102400)&gt;&gt;&gt;&gt;&gt;
+
+
+------------------------------------
+-----Working on the :/JKitValidTests.java:(135197, 143360)-----
+
+
+
+&gt;&gt;&gt;&gt;&gt;Added the JKit :/JKitValidTests.java:(98337, 102400)&gt;&gt;&gt;&gt;&gt;
+
+
+------------------------------------
+Git diff =0  Refactor Categories =283
+
+REFACTOR CATEGORIES:WHITESPACE:EQUIVALENT
+-----Cleaned up code:/Options.java:(40989, 45057)-----
+
+
+
+&gt;&gt;&gt;&gt;&gt;Began integrati:/Options.java:(36865, 40961)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+-----Code cleanup, a:/FileDiff.java:(28711, 32769)-----
+
+
+
+&gt;&gt;&gt;&gt;&gt;Updated to work:/FileDiff.java:(28673, 32769)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+-----Updated to work:/JavaFileDiff.java:(40986, 45057)-----
+
+
+
+&gt;&gt;&gt;&gt;&gt;Cleaned up code:/JavaFileDiff.java:(53249, 57345)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+Git diff =0  Refactor Categories =3
+
+REFACTOR CATEGORIES:JAVA:DELETE
+-----Minor bug fix f:/TypeAnalysis.java:(1884183, 1884191)-----
+code.type
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1880082, 1880090)&gt;&gt;&gt;&gt;&gt;
+code.type
+------------------------------------
+-----Minor bug fixes:/TypeAnalysis.java:(2768902, 2768940)-----
+"expected type " + t1 + ", found type "
+&gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(2756666, 2756681)&gt;&gt;&gt;&gt;&gt;
+"expected type "
+------------------------------------
+-----Minor bug fixes:/TypeAnalysis.java:(2768944, 2768945)-----
+t2
+&gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(2760712, 2760713)&gt;&gt;&gt;&gt;&gt;
+t1
+------------------------------------
+Git diff =0  Refactor Categories =2133
+
+REFACTOR CATEGORIES:JAVA:INSERT
+-----Minor bug fix f:/TypeAnalysis.java:(1884199, 1884202)-----
+orig
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1880097, 1880101)&gt;&gt;&gt;&gt;&gt;
+index
+------------------------------------
+-----Minor bug fixes:/TypeAnalysis.java:(2768902, 2768940)-----
+"expected type " + t1 + ", found type "
+&gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(2756666, 2756681)&gt;&gt;&gt;&gt;&gt;
+"expected type "
+------------------------------------
+-----Minor bug fixes:/TypeAnalysis.java:(2768944, 2768945)-----
+t2
+&gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(2760712, 2760713)&gt;&gt;&gt;&gt;&gt;
+t1
+------------------------------------
+Git diff =0  Refactor Categories =1821
+
+GIT DIFF:JAVA:MODIFY
+====================================
+-----Added another t:/Main.java:(438273, 442369)-----
+				new ClassFileVerifier().apply(cf);				
+	
+&gt;&gt;&gt;&gt;&gt;More little twe:/Main.java:(438273, 446465)&gt;&gt;&gt;&gt;&gt;
+				// FIXME: get this working!!
+				new TypeAnalysis().apply(cf);				
+	
+------------------------------------
+-----Added another t:/TypeAnalysis.java:(995329, 1007617)-----
+			// This is a fall back, since it is permitted to perform an array
+			// load / store on the null type.
+			store.push(JvmTypes.T_VOID);
+	
+&gt;&gt;&gt;&gt;&gt;More little twe:/TypeAnalysis.java:(991233, 999425)&gt;&gt;&gt;&gt;&gt;
+			throw new VerificationException(method, index, store,
+					"arrayload expected array type");
+	
+------------------------------------
+-----More little twe:/ClassFileReader.java:(5513217, 5517313)-----
+		JvmType owner = null;
+	
+&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/ClassFileReader.java:(5513217, 5517313)&gt;&gt;&gt;&gt;&gt;
+		JvmType.Clazz owner = null;
+	
+------------------------------------
+
+REFACTOR CATEGORIES:JAVA:MODIFY
+-----Added another t:/Main.java:(438277, 438299)-----
+new ClassFileVerifier()
+&gt;&gt;&gt;&gt;&gt;More little twe:/Main.java:(442373, 442390)&gt;&gt;&gt;&gt;&gt;
+new TypeAnalysis()
+------------------------------------
+-----Added another t:/Main.java:(438307, 438308)-----
+cf
+&gt;&gt;&gt;&gt;&gt;More little twe:/Main.java:(442398, 442399)&gt;&gt;&gt;&gt;&gt;
+cf
+------------------------------------
+-----Added another t:/TypeAnalysis.java:(1003524, 1003551)-----
+store.push(JvmTypes.T_VOID);
+&gt;&gt;&gt;&gt;&gt;More little twe:/TypeAnalysis.java:(991236, 995366)&gt;&gt;&gt;&gt;&gt;
+throw new VerificationException(method, index, store,
+					"arrayload expected array type");
+------------------------------------
+Git diff =12224  Refactor Categories =6855
+
+REFACTOR CATEGORIES:JAVA:MOVE
+-----Minor bug fix f:/TypeAnalysis.java:(1884178, 1884181)-----
+type
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1880092, 1880095)&gt;&gt;&gt;&gt;&gt;
+type
+------------------------------------
+-----Midstream on re:/StatementListDiffer.java:(159825, 159832)-----
+delStart
+&gt;&gt;&gt;&gt;&gt;Refactored Type:/StatementListDiffer.java:(159815, 159822)&gt;&gt;&gt;&gt;&gt;
+delStart
+------------------------------------
+-----Midstream on re:/StatementListDiffer.java:(172116, 172123)-----
+delStart
+&gt;&gt;&gt;&gt;&gt;Refactored Type:/StatementListDiffer.java:(172106, 172113)&gt;&gt;&gt;&gt;&gt;
+delStart
+------------------------------------
+Git diff =0  Refactor Categories =33
+
+REFACTOR CATEGORIES:JAVA:RENAMED
+-----More little twe:/ClassFileReader.java:(5562372, 5562433)-----
+String ownerString = getString(read_u2(read_u2(index, 0), 0));
+&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/ClassFileReader.java:(5562372, 5566519)&gt;&gt;&gt;&gt;&gt;
+owner = parseClassDescriptor("L"
+					+ getString(read_u2(read_u2(index, 0), 0)) + ";");
+------------------------------------
+-----More little twe:/TypeAnalysis.java:(1069059, 1069100)-----
+checkIsSubtype(code.type,type,index,orig);
+&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/TypeAnalysis.java:(1069059, 1093635)&gt;&gt;&gt;&gt;&gt;
+if(type instanceof JvmType.Array || type instanceof JvmType.Null) {
+			JvmType.Array arrType = (JvmType.Array) type;
+			checkIsSubtype(code.type,arrType,index,orig);			 			
+		} else {
+			throw new VerificationException(method, index, orig,
+					"arrayload expected array type");
+		}
+------------------------------------
+-----Minor bug fix f:/TypeAnalysis.java:(970759, 970819)-----
+type instanceof JvmType.Array || type instanceof JvmType.Null
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(970758, 970786)&gt;&gt;&gt;&gt;&gt;
+type instanceof JvmType.Array
+------------------------------------
+Git diff =0  Refactor Categories =5338
+
+REFACTOR CATEGORIES:JAVA:EQUIVALENT
+-----More little twe:/TypeAnalysis.java:(970753, 974849)-----
+		if (type instanceof JvmType.Array) {
+	
+&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/TypeAnalysis.java:(970753, 974849)&gt;&gt;&gt;&gt;&gt;
+		if (type instanceof JvmType.Array || type instanceof JvmType.Null) {
+	
+------------------------------------
+-----Minor bug fix f:/TypeAnalysis.java:(1069057, 1073153)-----
+		if(type instanceof JvmType.Array || type instanceof JvmType.Null) {
+	
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1069057, 1073153)&gt;&gt;&gt;&gt;&gt;
+		if(type instanceof JvmType.Array) {
+	
+------------------------------------
+-----Minor bug fix f:/TypeAnalysis.java:(1708033, 1712129)-----
+		if (!(type instanceof JvmType.Array || type instanceof JvmType.Null)) {
+	
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1708033, 1712129)&gt;&gt;&gt;&gt;&gt;
+		if (!(type instanceof JvmType.Array)) {
+	
+------------------------------------
+Git diff =0  Refactor Categories =1211
+</t>
+<t tx="paran.20140803142459.2010"></t>
+<t tx="paran.20140803142459.2011"></t>
+<t tx="paran.20140803142459.2012"></t>
+<t tx="paran.20140803142459.2013"></t>
+<t tx="paran.20140803142459.2014"></t>
+<t tx="paran.20140803142459.2018"></t>
+<t tx="paran.20140803142459.2019"></t>
+<t tx="paran.20140803142459.2020"></t>
+<t tx="paran.20140803142459.2021">REFACTOR CATEGORIES:COMMENT:DELETE
+-----Refactored Bean:/BeanDifferShould.java:(180245, 184321)-----
+
+	
+&gt;&gt;&gt;&gt;&gt;Simplified Diff:/BeanDifferShould.java:(155668, 155669)&gt;&gt;&gt;&gt;&gt;
+) 
+------------------------------------
+-----Introduced flue:/MapDifferTest.java:(647210, 651266)-----
+
+		
+&gt;&gt;&gt;&gt;&gt;Improved interg:/MapDifferTest.java:(663642, 679938)&gt;&gt;&gt;&gt;&gt;
+
+
+		// this part is needed to reproduce a special error case where the parent node got added as its own
+		// child and caused an infinite loop. this wouldn't happen if the parent node didn't have any changes
+		
+------------------------------------
+-----Cleaned up Opti:/Options.java:(200741, 204801)-----
+
+
+
+&gt;&gt;&gt;&gt;&gt;Added more JRub:/Options.java:(217139, 237572)&gt;&gt;&gt;&gt;&gt;
+
+
+    /**
+     * The brief option.
+     */
+    
+------------------------------------
+Git diff =0  Refactor Categories =13</t>
+<t tx="paran.20140803142459.2022">REFACTOR CATEGORIES:COMMENT:INSERT
+-----More migration :/Block.java:(94245, 102408)-----
+
+        // this.tokens = new TokenList(blk);
+        
+&gt;&gt;&gt;&gt;&gt;Further integra:/Block.java:(77884, 81928)&gt;&gt;&gt;&gt;&gt;
+
+        
+------------------------------------
+-----Added debugging:/Options.java:(262186, 282628)-----
+
+
+    /**
+     * Whether to blather.
+     */
+    
+&gt;&gt;&gt;&gt;&gt;Removed Ant fil:/Options.java:(262179, 266241)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+-----Continued work :/Options.java:(139309, 159748)-----
+
+
+    /**
+     * Whether to show the version.
+     */
+    
+&gt;&gt;&gt;&gt;&gt;More work on th:/Options.java:(139308, 143361)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+Git diff =0  Refactor Categories =4</t>
+<t tx="paran.20140803142459.2023">REFACTOR CATEGORIES:COMMENT:MODIFY
+-----Added another t:/Main.java:(438273, 438276)-----
+				
+&gt;&gt;&gt;&gt;&gt;More little twe:/Main.java:(438273, 442372)&gt;&gt;&gt;&gt;&gt;
+				// FIXME: get this working!!
+				
+------------------------------------
+-----Added another t:/TypeAnalysis.java:(995329, 1003523)-----
+			// This is a fall back, since it is permitted to perform an array
+			// load / store on the null type.
+			
+&gt;&gt;&gt;&gt;&gt;More little twe:/TypeAnalysis.java:(991233, 991235)&gt;&gt;&gt;&gt;&gt;
+			
+------------------------------------
+-----More little twe:/ClassFileReader.java:(5562369, 5562371)-----
+			
+&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/ClassFileReader.java:(5562369, 5562371)&gt;&gt;&gt;&gt;&gt;
+			
+------------------------------------
+Git diff =0  Refactor Categories =3348</t>
+<t tx="paran.20140803142459.2024">REFACTOR CATEGORIES:WHITESPACE:MODIFY
+-----Updated ClassFi:/ClassFileReader.java:(4087809, 4087810)-----
+		
+&gt;&gt;&gt;&gt;&gt;ClassFileReader:/ClassFileReader.java:(4034561, 4038657)&gt;&gt;&gt;&gt;&gt;
+
+	
+------------------------------------
+-----Working on the :/JKitValidTests.java:(98341, 106496)-----
+
+
+
+&gt;&gt;&gt;&gt;&gt;Added the JKit :/JKitValidTests.java:(98337, 102400)&gt;&gt;&gt;&gt;&gt;
+
+
+------------------------------------
+-----Working on the :/JKitValidTests.java:(135197, 143360)-----
+
+
+
+&gt;&gt;&gt;&gt;&gt;Added the JKit :/JKitValidTests.java:(98337, 102400)&gt;&gt;&gt;&gt;&gt;
+
+
+------------------------------------
+Git diff =0  Refactor Categories =283</t>
+<t tx="paran.20140803142459.2026">REFACTOR CATEGORIES:WHITESPACE:EQUIVALENT
+-----Cleaned up code:/Options.java:(40989, 45057)-----
+
+
+
+&gt;&gt;&gt;&gt;&gt;Began integrati:/Options.java:(36865, 40961)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+-----Code cleanup, a:/FileDiff.java:(28711, 32769)-----
+
+
+
+&gt;&gt;&gt;&gt;&gt;Updated to work:/FileDiff.java:(28673, 32769)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+-----Updated to work:/JavaFileDiff.java:(40986, 45057)-----
+
+
+
+&gt;&gt;&gt;&gt;&gt;Cleaned up code:/JavaFileDiff.java:(53249, 57345)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+Git diff =0  Refactor Categories =3</t>
+<t tx="paran.20140803142459.2027">REFACTOR CATEGORIES:JAVA:DELETE
+-----Minor bug fix f:/TypeAnalysis.java:(1884183, 1884191)-----
+code.type
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1880082, 1880090)&gt;&gt;&gt;&gt;&gt;
+code.type
+------------------------------------
+-----Minor bug fixes:/TypeAnalysis.java:(2768902, 2768940)-----
+"expected type " + t1 + ", found type "
+&gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(2756666, 2756681)&gt;&gt;&gt;&gt;&gt;
+"expected type "
+------------------------------------
+-----Minor bug fixes:/TypeAnalysis.java:(2768944, 2768945)-----
+t2
+&gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(2760712, 2760713)&gt;&gt;&gt;&gt;&gt;
+t1
+------------------------------------
+Git diff =0  Refactor Categories =2133</t>
+<t tx="paran.20140803142459.2028">REFACTOR CATEGORIES:JAVA:INSERT
+-----Minor bug fix f:/TypeAnalysis.java:(1884199, 1884202)-----
+orig
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1880097, 1880101)&gt;&gt;&gt;&gt;&gt;
+index
+------------------------------------
+-----Minor bug fixes:/TypeAnalysis.java:(2768902, 2768940)-----
+"expected type " + t1 + ", found type "
+&gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(2756666, 2756681)&gt;&gt;&gt;&gt;&gt;
+"expected type "
+------------------------------------
+-----Minor bug fixes:/TypeAnalysis.java:(2768944, 2768945)-----
+t2
+&gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(2760712, 2760713)&gt;&gt;&gt;&gt;&gt;
+t1
+------------------------------------
+Git diff =0  Refactor Categories =1821</t>
+<t tx="paran.20140803142459.2029">
+
+REFACTOR CATEGORIES:JAVA:MODIFY
+-----Added another t:/Main.java:(438277, 438299)-----
+new ClassFileVerifier()
+&gt;&gt;&gt;&gt;&gt;More little twe:/Main.java:(442373, 442390)&gt;&gt;&gt;&gt;&gt;
+new TypeAnalysis()
+------------------------------------
+-----Added another t:/Main.java:(438307, 438308)-----
+cf
+&gt;&gt;&gt;&gt;&gt;More little twe:/Main.java:(442398, 442399)&gt;&gt;&gt;&gt;&gt;
+cf
+------------------------------------
+-----Added another t:/TypeAnalysis.java:(1003524, 1003551)-----
+store.push(JvmTypes.T_VOID);
+&gt;&gt;&gt;&gt;&gt;More little twe:/TypeAnalysis.java:(991236, 995366)&gt;&gt;&gt;&gt;&gt;
+throw new VerificationException(method, index, store,
+					"arrayload expected array type");
+------------------------------------
+Git diff =12224  Refactor Categories =6855</t>
+<t tx="paran.20140803142459.2030">REFACTOR CATEGORIES:JAVA:MOVE
+-----Minor bug fix f:/TypeAnalysis.java:(1884178, 1884181)-----
+type
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1880092, 1880095)&gt;&gt;&gt;&gt;&gt;
+type
+------------------------------------
+-----Midstream on re:/StatementListDiffer.java:(159825, 159832)-----
+delStart
+&gt;&gt;&gt;&gt;&gt;Refactored Type:/StatementListDiffer.java:(159815, 159822)&gt;&gt;&gt;&gt;&gt;
+delStart
+------------------------------------
+-----Midstream on re:/StatementListDiffer.java:(172116, 172123)-----
+delStart
+&gt;&gt;&gt;&gt;&gt;Refactored Type:/StatementListDiffer.java:(172106, 172113)&gt;&gt;&gt;&gt;&gt;
+delStart
+------------------------------------
+Git diff =0  Refactor Categories =33</t>
+<t tx="paran.20140803142459.2031">REFACTOR CATEGORIES:JAVA:RENAMED
+-----More little twe:/ClassFileReader.java:(5562372, 5562433)-----
+String ownerString = getString(read_u2(read_u2(index, 0), 0));
+&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/ClassFileReader.java:(5562372, 5566519)&gt;&gt;&gt;&gt;&gt;
+owner = parseClassDescriptor("L"
+					+ getString(read_u2(read_u2(index, 0), 0)) + ";");
+------------------------------------
+-----More little twe:/TypeAnalysis.java:(1069059, 1069100)-----
+checkIsSubtype(code.type,type,index,orig);
+&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/TypeAnalysis.java:(1069059, 1093635)&gt;&gt;&gt;&gt;&gt;
+if(type instanceof JvmType.Array || type instanceof JvmType.Null) {
+			JvmType.Array arrType = (JvmType.Array) type;
+			checkIsSubtype(code.type,arrType,index,orig);			 			
+		} else {
+			throw new VerificationException(method, index, orig,
+					"arrayload expected array type");
+		}
+------------------------------------
+-----Minor bug fix f:/TypeAnalysis.java:(970759, 970819)-----
+type instanceof JvmType.Array || type instanceof JvmType.Null
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(970758, 970786)&gt;&gt;&gt;&gt;&gt;
+type instanceof JvmType.Array
+------------------------------------
+Git diff =0  Refactor Categories =5338
+
+REFACTOR CATEGORIES:JAVA:EQUIVALENT
+-----More little twe:/TypeAnalysis.java:(970753, 974849)-----
+		if (type instanceof JvmType.Array) {
+	
+&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/TypeAnalysis.java:(970753, 974849)&gt;&gt;&gt;&gt;&gt;
+		if (type instanceof JvmType.Array || type instanceof JvmType.Null) {
+	
+------------------------------------
+-----Minor bug fix f:/TypeAnalysis.java:(1069057, 1073153)-----
+		if(type instanceof JvmType.Array || type instanceof JvmType.Null) {
+	
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1069057, 1073153)&gt;&gt;&gt;&gt;&gt;
+		if(type instanceof JvmType.Array) {
+	
+------------------------------------
+-----Minor bug fix f:/TypeAnalysis.java:(1708033, 1712129)-----
+		if (!(type instanceof JvmType.Array || type instanceof JvmType.Null)) {
+	
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1708033, 1712129)&gt;&gt;&gt;&gt;&gt;
+		if (!(type instanceof JvmType.Array)) {
+	
+------------------------------------
+Git diff =0  Refactor Categories =1211</t>
+<t tx="paran.20140803142459.2048"></t>
+<t tx="paran.20140803142459.2049"></t>
+<t tx="paran.20140803142459.2050">REFACTOR CATEGORIES:WHITESPACE:MODIFY
+-----More little twe:/TypeAnalysis.java:(1069101, 1073153)-----
+		
+	
+&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/TypeAnalysis.java:(1093636, 1097729)&gt;&gt;&gt;&gt;&gt;
+
+	
+------------------------------------
+-----Minor bug fix f:/TypeAnalysis.java:(1884205, 1888257)-----
+
+	
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1880065, 1880066)&gt;&gt;&gt;&gt;&gt;
+		
+------------------------------------
+-----Another bug fix:/ClassFileReader.java:(3551236, 3555329)-----
+
+	
+&gt;&gt;&gt;&gt;&gt;Added some miss:/ClassFileReader.java:(3420171, 3424259)&gt;&gt;&gt;&gt;&gt;
+ 			
+			
+------------------------------------
+Git diff =0  Refactor Categories =13</t>
+<t tx="paran.20140803142459.2051">REFACTOR CATEGORIES:COMMENT:DELETE
+-----Added another t:/Main.java:(438273, 438276)-----
+				
+&gt;&gt;&gt;&gt;&gt;More little twe:/Main.java:(438273, 442372)&gt;&gt;&gt;&gt;&gt;
+				// FIXME: get this working!!
+				
+------------------------------------
+-----Added another t:/Main.java:(438273, 438276)-----
+				
+&gt;&gt;&gt;&gt;&gt;More little twe:/Main.java:(438273, 442372)&gt;&gt;&gt;&gt;&gt;
+				// FIXME: get this working!!
+				
+------------------------------------
+-----Yet another bug:/ClassFileReader.java:(3047425, 3047427)-----
+			
+&gt;&gt;&gt;&gt;&gt;Another bug fix:/ClassFileReader.java:(2969601, 2973699)&gt;&gt;&gt;&gt;&gt;
+			// skip attribute for now
+			
+------------------------------------
+Git diff =0  Refactor Categories =10</t>
+<t tx="paran.20140803142459.2052">REFACTOR CATEGORIES:COMMENT:INSERT
+-----Added another t:/TypeAnalysis.java:(995329, 1003523)-----
+			// This is a fall back, since it is permitted to perform an array
+			// load / store on the null type.
+			
+&gt;&gt;&gt;&gt;&gt;More little twe:/TypeAnalysis.java:(991233, 991235)&gt;&gt;&gt;&gt;&gt;
+			
+------------------------------------
+-----Added another t:/TypeAnalysis.java:(995329, 1003523)-----
+			// This is a fall back, since it is permitted to perform an array
+			// load / store on the null type.
+			
+&gt;&gt;&gt;&gt;&gt;More little twe:/TypeAnalysis.java:(991233, 991235)&gt;&gt;&gt;&gt;&gt;
+			
+------------------------------------
+-----Minor bug fix f:/TypeAnalysis.java:(1880065, 1884162)-----
+		// TODO: I'm slightly unsure whether or not this is a good idea!
+		
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1880065, 1880066)&gt;&gt;&gt;&gt;&gt;
+		
+------------------------------------
+Git diff =0  Refactor Categories =5</t>
+<t tx="paran.20140803142459.2053">REFACTOR CATEGORIES:COMMENT:MODIFY
+-----Minor bug fix f:/TypeAnalysis.java:(970755, 970758)-----
+if (
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(970755, 970757)&gt;&gt;&gt;&gt;&gt;
+if(
+------------------------------------
+-----Minor bug fixes:/Code.java:(155649, 159745)-----
+ * This represents the Code attribute from the JVM Specification.
+ 
+&gt;&gt;&gt;&gt;&gt;Added classfile:/Code.java:(163841, 167937)&gt;&gt;&gt;&gt;&gt;
+ * This represents the Code attribute from the JVM Spec.
+ 
+------------------------------------
+-----Minor bug fixes:/JKitValidTests.java:(368645, 368678)-----
+new ClassFileVerifier().apply(cf);
+&gt;&gt;&gt;&gt;&gt;Added classfile:/JKitValidTests.java:(364545, 372737)&gt;&gt;&gt;&gt;&gt;
+				// FIXME: get this working!!
+				// new TypeAnalysis().apply(cf);
+	
+------------------------------------
+Git diff =0  Refactor Categories =95</t>
+<t tx="paran.20140803142459.2055"></t>
+<t tx="paran.20140803142459.2056">REFACTOR CATEGORIES:JAVA:DELETE
+-----Minor bug fix f:/TypeAnalysis.java:(1884183, 1884191)-----
+code.type
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1880082, 1880090)&gt;&gt;&gt;&gt;&gt;
+code.type
+------------------------------------
+-----Minor bug fixes:/TypeAnalysis.java:(2768902, 2768940)-----
+"expected type " + t1 + ", found type "
+&gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(2756666, 2756681)&gt;&gt;&gt;&gt;&gt;
+"expected type "
+------------------------------------
+-----Minor bug fixes:/TypeAnalysis.java:(2768944, 2768945)-----
+t2
+&gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(2760712, 2760713)&gt;&gt;&gt;&gt;&gt;
+t1
+------------------------------------
+Git diff =0  Refactor Categories =106</t>
+<t tx="paran.20140803142459.2057">REFACTOR CATEGORIES:JAVA:INSERT
+-----Minor bug fix f:/TypeAnalysis.java:(1884199, 1884202)-----
+orig
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1880097, 1880101)&gt;&gt;&gt;&gt;&gt;
+index
+------------------------------------
+-----Minor bug fixes:/TypeAnalysis.java:(2768902, 2768940)-----
+"expected type " + t1 + ", found type "
+&gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(2756666, 2756681)&gt;&gt;&gt;&gt;&gt;
+"expected type "
+------------------------------------
+-----Minor bug fixes:/TypeAnalysis.java:(2768944, 2768945)-----
+t2
+&gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(2760712, 2760713)&gt;&gt;&gt;&gt;&gt;
+t1
+------------------------------------
+Git diff =0  Refactor Categories =10</t>
+<t tx="paran.20140803142459.2058">REFACTOR CATEGORIES:JAVA:MODIFY
+-----Added another t:/Main.java:(438277, 438299)-----
+new ClassFileVerifier()
+&gt;&gt;&gt;&gt;&gt;More little twe:/Main.java:(442373, 442390)&gt;&gt;&gt;&gt;&gt;
+new TypeAnalysis()
+------------------------------------
+-----Added another t:/Main.java:(438307, 438308)-----
+cf
+&gt;&gt;&gt;&gt;&gt;More little twe:/Main.java:(442398, 442399)&gt;&gt;&gt;&gt;&gt;
+cf
+------------------------------------
+-----Added another t:/TypeAnalysis.java:(1003524, 1003551)-----
+store.push(JvmTypes.T_VOID);
+&gt;&gt;&gt;&gt;&gt;More little twe:/TypeAnalysis.java:(991236, 995366)&gt;&gt;&gt;&gt;&gt;
+throw new VerificationException(method, index, store,
+					"arrayload expected array type");
+------------------------------------
+Git diff =335  Refactor Categories =219
+</t>
+<t tx="paran.20140803142459.2059">REFACTOR CATEGORIES:JAVA:EQUIVALENT
+-----More little twe:/TypeAnalysis.java:(970753, 974849)-----
+		if (type instanceof JvmType.Array) {
+	
+&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/TypeAnalysis.java:(970753, 974849)&gt;&gt;&gt;&gt;&gt;
+		if (type instanceof JvmType.Array || type instanceof JvmType.Null) {
+	
+------------------------------------
+-----Minor bug fix f:/TypeAnalysis.java:(1069057, 1073153)-----
+		if(type instanceof JvmType.Array || type instanceof JvmType.Null) {
+	
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1069057, 1073153)&gt;&gt;&gt;&gt;&gt;
+		if(type instanceof JvmType.Array) {
+	
+------------------------------------
+-----Minor bug fix f:/TypeAnalysis.java:(1708033, 1712129)-----
+		if (!(type instanceof JvmType.Array || type instanceof JvmType.Null)) {
+	
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1708033, 1712129)&gt;&gt;&gt;&gt;&gt;
+		if (!(type instanceof JvmType.Array)) {
+	
+------------------------------------
+Git diff =0  Refactor Categories =54</t>
+<t tx="paran.20140803142459.2060">REFACTOR CATEGORIES:JAVA:MOVE
+-----Minor bug fix f:/TypeAnalysis.java:(1884178, 1884181)-----
+type
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1880092, 1880095)&gt;&gt;&gt;&gt;&gt;
+type
+------------------------------------
+Git diff =0  Refactor Categories =1
+</t>
+<t tx="paran.20140803142459.2061">REFACTOR CATEGORIES:JAVA:RENAMED
+-----More little twe:/ClassFileReader.java:(5562372, 5562433)-----
+String ownerString = getString(read_u2(read_u2(index, 0), 0));
+&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/ClassFileReader.java:(5562372, 5566519)&gt;&gt;&gt;&gt;&gt;
+owner = parseClassDescriptor("L"
+					+ getString(read_u2(read_u2(index, 0), 0)) + ";");
+------------------------------------
+-----More little twe:/TypeAnalysis.java:(1069059, 1069100)-----
+checkIsSubtype(code.type,type,index,orig);
+&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/TypeAnalysis.java:(1069059, 1093635)&gt;&gt;&gt;&gt;&gt;
+if(type instanceof JvmType.Array || type instanceof JvmType.Null) {
+			JvmType.Array arrType = (JvmType.Array) type;
+			checkIsSubtype(code.type,arrType,index,orig);			 			
+		} else {
+			throw new VerificationException(method, index, orig,
+					"arrayload expected array type");
+		}
+------------------------------------
+-----Minor bug fix f:/TypeAnalysis.java:(970759, 970819)-----
+type instanceof JvmType.Array || type instanceof JvmType.Null
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(970758, 970786)&gt;&gt;&gt;&gt;&gt;
+type instanceof JvmType.Array
+------------------------------------
+Git diff =0  Refactor Categories =57</t>
+<t tx="paran.20140803142459.2062"></t>
+<t tx="paran.20140803142459.2063">REFACTOR CATEGORIES:COMMENT:DELETE
+-----support for -s :/Program.java:(495646, 499713)-----
+
+	
+&gt;&gt;&gt;&gt;&gt;Update READM:/Program.java:(434206, 438273)&gt;&gt;&gt;&gt;&gt;
+ /* Do *NOT* use canonical path */
+	
+------------------------------------
+-----support for -s :/Program.java:(495646, 499713)-----
+
+	
+&gt;&gt;&gt;&gt;&gt;Update READM:/Program.java:(434206, 438273)&gt;&gt;&gt;&gt;&gt;
+ /* Do *NOT* use canonical path */
+	
+------------------------------------
+Git diff =0  Refactor Categories =2</t>
+<t tx="paran.20140803142459.2064">REFACTOR CATEGORIES:COMMENT:MODIFY
+-----mis:/Program.java:(126977, 131073)-----
+ * @author  Mattias Andrée, &lt;a href="mailto:maandree@member.fsf.org"&gt;maandree@member.fsf.org&lt;/a&gt;
+ 
+&gt;&gt;&gt;&gt;&gt;Update READM:/Program.java:(126977, 131073)&gt;&gt;&gt;&gt;&gt;
+ * @author  Mattias Andrée, &lt;a href="mailto:maandree+jpp@kth.se"&gt;maandree+jpp@kth.se&lt;/a&gt;
+ 
+------------------------------------
+-----m do:/Program.java:(102401, 106497)-----
+/* Compilers and preprocessors SHOULD NEVER use canonical paths. (except for maybe inclusing guarding) */
+
+
+&gt;&gt;&gt;&gt;&gt;Merge branch 'm:/Program.java:(102401, 106497)&gt;&gt;&gt;&gt;&gt;
+/* Compilers and preprocessors SHOULD NEVER use canonical paths. */
+
+
+------------------------------------
+-----support for -s :/Program.java:(311303, 331783)-----
+if (sFlag == null)
+			sFlag = arg;
+		    else
+		    {   err(1, "fatal", null, null, "Duplicate option: -s");
+			System.exit(-1); return;
+		    }
+&gt;&gt;&gt;&gt;&gt;Update READM:/Program.java:(290876, 294913)&gt;&gt;&gt;&gt;&gt;
+)
+	
+------------------------------------
+Git diff =0  Refactor Categories =4</t>
+<t tx="paran.20140803142459.2065"></t>
+<t tx="paran.20140803142459.2066">REFACTOR CATEGORIES:WHITESPACE:MODIFY
+-----ignore &lt;""&gt; dur:/Program.java:(901173, 905219)-----
+
+			
+&gt;&gt;&gt;&gt;&gt;portablilit:/Program.java:(876655, 880641)&gt;&gt;&gt;&gt;&gt;
+
+	
+------------------------------------
+-----test case + fix:/Program.java:(761891, 765958)-----
+
+		    
+&gt;&gt;&gt;&gt;&gt;der:/Program.java:(753705, 757761)&gt;&gt;&gt;&gt;&gt;
+
+	
+------------------------------------
+-----test case + fix:/Program.java:(765976, 770054)-----
+
+		    
+&gt;&gt;&gt;&gt;&gt;der:/Program.java:(753705, 757761)&gt;&gt;&gt;&gt;&gt;
+
+	
+------------------------------------
+Git diff =0  Refactor Categories =4</t>
+<t tx="paran.20140803142459.2067"></t>
+<t tx="paran.20140803142459.2068">REFACTOR CATEGORIES:JAVA:DELETE
+-----postprocessin:/Program.java:(782347, 782366)-----
+"echo '" + lineIndex
+&gt;&gt;&gt;&gt;&gt;javac make subs:/Program.java:(774155, 774163)&gt;&gt;&gt;&gt;&gt;
+lineIndex
+------------------------------------
+-----postprocessin:/Program.java:(782370, 782372)-----
+" "
+&gt;&gt;&gt;&gt;&gt;javac make subs:/Program.java:(774167, 774175)&gt;&gt;&gt;&gt;&gt;
+" echo '"
+------------------------------------
+Git diff =0  Refactor Categories =2</t>
+<t tx="paran.20140803142459.2069">REFACTOR CATEGORIES:JAVA:INSERT
+-----postprocessin:/Program.java:(782347, 782366)-----
+"echo '" + lineIndex
+&gt;&gt;&gt;&gt;&gt;javac make subs:/Program.java:(774155, 774163)&gt;&gt;&gt;&gt;&gt;
+lineIndex
+------------------------------------
+-----postprocessin:/Program.java:(782370, 782372)-----
+" "
+&gt;&gt;&gt;&gt;&gt;javac make subs:/Program.java:(774167, 774175)&gt;&gt;&gt;&gt;&gt;
+" echo '"
+------------------------------------
+Git diff =0  Refactor Categories =2</t>
+<t tx="paran.20140803142459.2070">
+REFACTOR CATEGORIES:JAVA:MODIFY
+-----ignore &lt;""&gt; dur:/Program.java:(901131, 901171)-----
+data.replace("&lt;\"\"&gt;", debug ? "" : "//")
+&gt;&gt;&gt;&gt;&gt;portablilit:/Program.java:(876555, 876653)&gt;&gt;&gt;&gt;&gt;
+data.replace("&lt;\"\"&gt;", "//").replace("'", "'\\''").replace("&lt;\"$", "'\"${").replace("$\"&gt;", "}\"'")
+------------------------------------
+-----portablilit:/Program.java:(614402, 626768)-----
+final String ucs = "\033[00;01;3" + colour + "mjpp\033[36m:\033[3" + colour + "m" + _type + "\033[36m:\033[00m"
+	                 + (_file == null ? "" : "\033[35m" + _file + "\033[36m:\033[00m")
+	                 + (_location == null ? "" : "\033[32m" + _location.replace(":", "\033[36m:\033[32m") + "\033[36m:\033[00m")
+	                 + _description.replace(":", "\033[36m:\033[34m") + "\033[00m";
+&gt;&gt;&gt;&gt;&gt;update dis:/Program.java:(614402, 626767)&gt;&gt;&gt;&gt;&gt;
+final String ucs = "\033[0;1;3" + colour + "mjpp\033[36m:\033[3" + colour + "m" + _type + "\033[36m:\033[21;39m"
+	                 + (_file == null ? "" : "\033[35m" + _file + "\033[36m:\033[39m")
+	                 + (_location == null ? "" : "\033[32m" + _location.replace(":", "\033[36m:\033[32m") + "\033[36m:\033[39m")
+	                 + _description.replace(":", "\033[36m:\033[34m") + "\033[0m";
+------------------------------------
+-----portablilit:/Program.java:(659476, 659484)-----
+"\033[02m
+&gt;&gt;&gt;&gt;&gt;update dis:/Program.java:(659476, 659483)&gt;&gt;&gt;&gt;&gt;
+"\033[2m
+------------------------------------
+Git diff =41  Refactor Categories =39</t>
+<t tx="paran.20140803142459.2071">REFACTOR CATEGORIES:JAVA:RENAMED
+-----fix make file +:/Program.java:(458758, 462863)-----
+if (sFlag.endsWith("/") == false)
+		sFlag += "/";
+&gt;&gt;&gt;&gt;&gt;improve makefil:/Program.java:(475137, 479233)&gt;&gt;&gt;&gt;&gt;
+		String _file = absolute(file).substring(sFlag.length());
+	
+------------------------------------
+-----test case + fix:/Program.java:(937986, 938014)-----
+String exec = output + ".sh";
+&gt;&gt;&gt;&gt;&gt;der:/Program.java:(909321, 909416)&gt;&gt;&gt;&gt;&gt;
+final ProcessBuilder procBuilder = new ProcessBuilder(("bash ./" + output + ".sh").split("\0"));
+------------------------------------
+-----der:/Program.java:(987141, 991233)-----
+public static void postprocess(final String input, final String output) throws Throwable
+ 
+&gt;&gt;&gt;&gt;&gt;postprocessin:/Program.java:(987141, 991233)&gt;&gt;&gt;&gt;&gt;
+public static void process(final String input, final String output) throws Throwable
+ 
+------------------------------------
+Git diff =0  Refactor Categories =11</t>
+<t tx="paran.20140803142459.2072">REFACTOR CATEGORIES:JAVA:EQUIVALENT
+-----test case + fix:/Program.java:(790529, 794625)-----
+			out.write((trim + line.substring(line.startsWith("#!") ? 0 : 1)).getBytes("UTF-8"));
+	
+&gt;&gt;&gt;&gt;&gt;der:/Program.java:(761857, 765953)&gt;&gt;&gt;&gt;&gt;
+			out.write(line.substring(1).getBytes("UTF-8"));
+	
+------------------------------------
+Git diff =0  Refactor Categories =1</t>
+<t tx="paran.20140803142459.2073"></t>
+<t tx="paran.20140803142459.2074"></t>
+<t tx="paran.20140803142459.2075"></t>
+<t tx="paran.20140803142459.2076">REFACTOR CATEGORIES:COMMENT:DELETE
+-----Project test wo:/JavaASTParser.java:(299009, 299010)-----
+		
+&gt;&gt;&gt;&gt;&gt;Package parse:/JavaASTParser.java:(299009, 303106)&gt;&gt;&gt;&gt;&gt;
+		// TODO Auto-generated method stub
+		
+------------------------------------
+-----Project test wo:/JavaASTParser.java:(299009, 299010)-----
+		
+&gt;&gt;&gt;&gt;&gt;Package parse:/JavaASTParser.java:(299009, 303106)&gt;&gt;&gt;&gt;&gt;
+		// TODO Auto-generated method stub
+		
+------------------------------------
+-----Package parse:/JavaASTParser.java:(221185, 221186)-----
+		
+&gt;&gt;&gt;&gt;&gt;Changes in pars:/JavaASTParser.java:(217089, 221186)&gt;&gt;&gt;&gt;&gt;
+		// TODO Auto-generated method stub
+		
+------------------------------------
+Git diff =0  Refactor Categories =4</t>
+<t tx="paran.20140803142459.2077">REFACTOR CATEGORIES:COMMENT:MODIFY
+-----Refactoring imp:/NodeImpl.java:(4097, 8193)-----
+package com.klangner.ast.impl;
+
+
+&gt;&gt;&gt;&gt;&gt;File is Compila:/NodeImpl.java:(4097, 8193)&gt;&gt;&gt;&gt;&gt;
+package com.klangner.ast.java;
+
+
+------------------------------------
+-----Refactoring imp:/NodeImpl.java:(32770, 32790)-----
+ublic class NodeImpl 
+&gt;&gt;&gt;&gt;&gt;File is Compila:/NodeImpl.java:(32770, 32783)&gt;&gt;&gt;&gt;&gt;
+lass NodeImpl 
+------------------------------------
+-----Datasets moved :/CountryImpl.java:(12314, 16385)-----
+{
+
+
+&gt;&gt;&gt;&gt;&gt;Module implemen:/CountryImpl.java:(12290, 12312)&gt;&gt;&gt;&gt;&gt;
+ublic class CountryImpl
+------------------------------------
+Git diff =0  Refactor Categories =17</t>
+<t tx="paran.20140803142459.2078">REFACTOR CATEGORIES:WHITESPACE:MODIFY
+-----Changes in pars:/JavaASTParserTest.java:(106497, 106498)-----
+		
+&gt;&gt;&gt;&gt;&gt;renamed maven p:/JavaASTParserTest.java:(122884, 131073)&gt;&gt;&gt;&gt;&gt;
+
+
+	
+------------------------------------
+Git diff =0  Refactor Categories =1</t>
+<t tx="paran.20140803142459.2079">REFACTOR CATEGORIES:JAVA:DELETE
+-----Refactoring imp:/NodeImpl.java:(32769, 32774)-----
+public
+&gt;&gt;&gt;&gt;&gt;File is Compila:/NodeImpl.java:(0, 0)&gt;&gt;&gt;&gt;&gt;
+JAVA:DELETE:Refactoring imp:/NodeImpl.java:(32769, 32774) to File is Compila:/NodeImpl.java:(0, 0)
+------------------------------------
+-----File is Compila:/ASTBuilder.java:(102403, 102413)-----
+currentNode
+&gt;&gt;&gt;&gt;&gt;Datasets moved :/ASTBuilder.java:(73731, 73738)&gt;&gt;&gt;&gt;&gt;
+rootNode
+------------------------------------
+-----File is Compila:/ASTBuilder.java:(102417, 102420)-----
+node
+&gt;&gt;&gt;&gt;&gt;Datasets moved :/ASTBuilder.java:(73742, 73781)&gt;&gt;&gt;&gt;&gt;
+new NodeImpl(ctx.Identifier().getText())
+------------------------------------
+Git diff =0  Refactor Categories =22</t>
+<t tx="paran.20140803142459.2080">REFACTOR CATEGORIES:JAVA:INSERT
+-----File is Compila:/ASTBuilder.java:(102403, 102413)-----
+currentNode
+&gt;&gt;&gt;&gt;&gt;Datasets moved :/ASTBuilder.java:(73731, 73738)&gt;&gt;&gt;&gt;&gt;
+rootNode
+------------------------------------
+-----File is Compila:/ASTBuilder.java:(102417, 102420)-----
+node
+&gt;&gt;&gt;&gt;&gt;Datasets moved :/ASTBuilder.java:(73742, 73781)&gt;&gt;&gt;&gt;&gt;
+new NodeImpl(ctx.Identifier().getText())
+------------------------------------
+-----Datasets moved :/CountryImpl.java:(12289, 12289)-----
+p
+&gt;&gt;&gt;&gt;&gt;Module implemen:/CountryImpl.java:(12313, 12317)&gt;&gt;&gt;&gt;&gt;
+.java
+------------------------------------
+Git diff =0  Refactor Categories =8</t>
+<t tx="paran.20140803142459.2081">REFACTOR CATEGORIES:JAVA:MODIFY
+-----New functions i:/JavaASTParser.java:(397319, 397384)-----
+INode node = parseModuleFile(file.getAbsolutePath(), packageName);
+&gt;&gt;&gt;&gt;&gt;updated after s:/JavaASTParser.java:(393223, 393275)&gt;&gt;&gt;&gt;&gt;
+INode node = parseModuleFile(file.getAbsolutePath());
+------------------------------------
+-----New functions i:/JavaASTParser.java:(417798, 417887)-----
+INode node = parseProjectDirectory(file.getAbsolutePath(), subPackageName+file.getName());
+&gt;&gt;&gt;&gt;&gt;updated after s:/JavaASTParser.java:(413702, 413788)&gt;&gt;&gt;&gt;&gt;
+INode node = parseProjectDirectory(file.getAbsolutePath(), packageName+file.getName());
+------------------------------------
+-----New functions i:/JavaASTParser.java:(458755, 458805)-----
+INode node = new ModuleImpl(fileName, packageName);
+&gt;&gt;&gt;&gt;&gt;updated after s:/JavaASTParser.java:(454659, 454696)&gt;&gt;&gt;&gt;&gt;
+INode node = new ModuleImpl(fileName);
+------------------------------------
+Git diff =85  Refactor Categories =36</t>
+<t tx="paran.20140803142459.2082">REFACTOR CATEGORIES:JAVA:RENAMED
+-----New functions i:/ModuleImpl.java:(28674, 28693)-----
+private String name;
+&gt;&gt;&gt;&gt;&gt;updated after s:/ModuleImpl.java:(28674, 36865)&gt;&gt;&gt;&gt;&gt;
+public ModuleImpl(String name) {
+		super(name);
+	
+------------------------------------
+-----New functions i:/JavaASTParser.java:(339971, 340006)-----
+String subPackageName = packageName;
+&gt;&gt;&gt;&gt;&gt;updated after s:/JavaASTParser.java:(339971, 348161)&gt;&gt;&gt;&gt;&gt;
+if(!packageName.isEmpty()){
+			packageName += ".";
+	
+------------------------------------
+-----updated after s:/NodeImpl.java:(77825, 81921)-----
+	public String getText() {
+	
+&gt;&gt;&gt;&gt;&gt;fixed project n:/NodeImpl.java:(77825, 81921)&gt;&gt;&gt;&gt;&gt;
+	public String getName() {
+	
+------------------------------------
+Git diff =0  Refactor Categories =31</t>
+<t tx="paran.20140803142459.2083">REFACTOR CATEGORIES:JAVA:EQUIVALENT
+-----New functions i:/ImportImpl.java:(28673, 81921)-----
+	public ImportImpl(String text) {
+		super(text);
+	}
+
+	@Override
+	public String getPackageName() {
+		String name = getText();
+		
+		int index = name.lastIndexOf('.');
+		if(index &gt;= 0){
+			name = name.substring(0, index);
+		}
+		return name;
+	
+&gt;&gt;&gt;&gt;&gt;updated after s:/ImportImpl.java:(28673, 36865)&gt;&gt;&gt;&gt;&gt;
+	public ImportImpl(String name) {
+		super(name);
+	
+------------------------------------
+-----updated after s:/ProjectParserTest.java:(188417, 192513)-----
+		if(node1.getText().equals("impl1")){
+	
+&gt;&gt;&gt;&gt;&gt;fixed project n:/ProjectParserTest.java:(188417, 192513)&gt;&gt;&gt;&gt;&gt;
+		if(node1.getName().equals("impl1")){
+	
+------------------------------------
+-----updated after s:/ProjectParserTest.java:(299009, 303105)-----
+		if(ast.getChild(0).getText().equals("impl2")){
+	
+&gt;&gt;&gt;&gt;&gt;fixed project n:/ProjectParserTest.java:(299009, 303105)&gt;&gt;&gt;&gt;&gt;
+		if(ast.getChild(0).getName().equals("impl2")){
+	
+------------------------------------
+Git diff =0  Refactor Categories =15</t>
+<t tx="paran.20140803142459.2085"></t>
+<t tx="paran.20140803142459.2086"></t>
+<t tx="paran.20140803142459.2087"></t>
+<t tx="paran.20140803142459.2088">REFACTOR CATEGORIES:COMMENT:DELETE
+-----Implemented a b:/NodePath.java:(733185, 733185)-----
+	
+&gt;&gt;&gt;&gt;&gt;Added more use-:/NodePath.java:(659457, 671745)&gt;&gt;&gt;&gt;&gt;
+	/**
+	 * @author Daniel Bechler
+	 */
+	
+------------------------------------
+-----Implemented a b:/NodePath.java:(733185, 733185)-----
+	
+&gt;&gt;&gt;&gt;&gt;Added more use-:/NodePath.java:(659457, 671745)&gt;&gt;&gt;&gt;&gt;
+	/**
+	 * @author Daniel Bechler
+	 */
+	
+------------------------------------
+-----Removed getChil:/DiffNode.java:(913409, 913409)-----
+	
+&gt;&gt;&gt;&gt;&gt;Fixed inclusion:/DiffNode.java:(917505, 929793)&gt;&gt;&gt;&gt;&gt;
+	/**
+	 * @return The child nodes of this node.
+	 */
+	
+------------------------------------
+Git diff =0  Refactor Categories =7</t>
+<t tx="paran.20140803142459.2089">REFACTOR CATEGORIES:COMMENT:INSERT
+-----Major refactori:/ObjectDifferIntegrationTests.java:(450641, 458753)-----
+
+		// final Configuration2 configuration = new Configuration2().withChildrenOfAddedNodes();
+
+
+&gt;&gt;&gt;&gt;&gt;Update README.m:/ObjectDifferIntegrationTests.java:(434262, 438273)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+-----Major refactori:/ObjectDifferIntegrationTests.java:(450641, 458753)-----
+
+		// final Configuration2 configuration = new Configuration2().withChildrenOfAddedNodes();
+
+
+&gt;&gt;&gt;&gt;&gt;Update README.m:/ObjectDifferIntegrationTests.java:(434262, 438273)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+-----Fixed issue #57:/CircularReferenceDetector.java:(110593, 126977)-----
+	/**
+	 * It would be better to use &lt;code&gt;java.util.Deque&lt;/code&gt; instead of the linked list, but that was first
+	 * introduced in Java 6 and would break compatibility with Java 5.
+	 */
+	
+&gt;&gt;&gt;&gt;&gt;Removed unneces:/CircularReferenceDetector.java:(110593, 110593)&gt;&gt;&gt;&gt;&gt;
+	
+------------------------------------
+Git diff =0  Refactor Categories =13</t>
+<t tx="paran.20140803142459.2091">REFACTOR CATEGORIES:COMMENT:MODIFY
+-----Made adjustment:/InclusionService.java:(385028, 385031)-----
+if (
+&gt;&gt;&gt;&gt;&gt;[maven-release-:/InclusionService.java:(393220, 393223)&gt;&gt;&gt;&gt;&gt;
+if (
+------------------------------------
+-----Made adjustment:/InclusionService.java:(385054, 389121)-----
+)
+	
+&gt;&gt;&gt;&gt;&gt;[maven-release-:/InclusionService.java:(397316, 405508)&gt;&gt;&gt;&gt;&gt;
+{
+				return true;
+			}
+------------------------------------
+-----Made adjustment:/InclusionService.java:(618497, 634882)-----
+//		else if (node.getParentNode() != null &amp;&amp; typeInclusions.get(node.getParentNode().getValueType()) == INCLUDED)
+//		{
+//			return true;
+//		}
+		
+&gt;&gt;&gt;&gt;&gt;[maven-release-:/InclusionService.java:(688131, 712707)&gt;&gt;&gt;&gt;&gt;
+if (node.getValueType() != null)
+		{
+			if (typeInclusions.get(node.getValueType()) == INCLUDED)
+			{
+				result.set(true);
+			}
+		}
+------------------------------------
+Git diff =0  Refactor Categories =1384</t>
+<t tx="paran.20140803142459.2092">REFACTOR CATEGORIES:WHITESPACE:MODIFY
+-----Repackaging..:/CanonicalAccessorExample.java:(86085, 90112)-----
+
+
+&gt;&gt;&gt;&gt;&gt;Removed unneces:/CanonicalAccessorExample.java:(90182, 94209)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+-----Repackaging..:/MapEntryValueAccessExample.java:(86057, 90112)-----
+
+
+&gt;&gt;&gt;&gt;&gt;Removed unneces:/MapEntryValueAccessExample.java:(90174, 94209)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+-----Reorganizing pa:/MapEntryValueAccessExample.java:(81978, 86016)-----
+
+
+&gt;&gt;&gt;&gt;&gt;Removed depende:/MapEntryValueAccessExample.java:(90168, 94209)&gt;&gt;&gt;&gt;&gt;
+
+
+
+------------------------------------
+Git diff =0  Refactor Categories =73</t>
+<t tx="paran.20140803142459.2093">REFACTOR CATEGORIES:JAVA:DELETE
+-----Polishing and i:/PropertyAccessException.java:(118820, 118844)-----
+final String propertyName
+&gt;&gt;&gt;&gt;&gt;Simplified Intr:/PropertyAccessException.java:(118817, 118837)&gt;&gt;&gt;&gt;&gt;
+final Throwable cause
+------------------------------------
+-----Polishing and i:/PropertyAccessException.java:(118847, 118871)-----
+final Class&lt;?&gt; targetType
+&gt;&gt;&gt;&gt;&gt;Simplified Intr:/PropertyAccessException.java:(118817, 118837)&gt;&gt;&gt;&gt;&gt;
+final Throwable cause
+------------------------------------
+-----Polishing and i:/PropertyAccessException.java:(118874, 118894)-----
+final Throwable cause
+&gt;&gt;&gt;&gt;&gt;Simplified Intr:/PropertyAccessException.java:(118817, 118837)&gt;&gt;&gt;&gt;&gt;
+final Throwable cause
+------------------------------------
+Git diff =0  Refactor Categories =583</t>
+<t tx="paran.20140803142459.2094">REFACTOR CATEGORIES:JAVA:INSERT
+-----Polishing and i:/PropertyAccessor.java:(528388, 528459)-----
+throw new PropertyReadException(propertyName, target.getClass(), cause);
+&gt;&gt;&gt;&gt;&gt;Simplified Intr:/PropertyAccessor.java:(528388, 528449)&gt;&gt;&gt;&gt;&gt;
+final PropertyReadException ex = new PropertyReadException(e);
+------------------------------------
+-----Polishing and i:/PropertyAccessor.java:(528388, 528459)-----
+throw new PropertyReadException(propertyName, target.getClass(), cause);
+&gt;&gt;&gt;&gt;&gt;Simplified Intr:/PropertyAccessor.java:(532484, 532516)&gt;&gt;&gt;&gt;&gt;
+ex.setPropertyName(propertyName);
+------------------------------------
+-----Polishing and i:/PropertyAccessor.java:(528388, 528459)-----
+throw new PropertyReadException(propertyName, target.getClass(), cause);
+&gt;&gt;&gt;&gt;&gt;Simplified Intr:/PropertyAccessor.java:(536580, 536615)&gt;&gt;&gt;&gt;&gt;
+ex.setTargetType(target.getClass());
+------------------------------------
+Git diff =0  Refactor Categories =550</t>
+<t tx="paran.20140803142459.2095">
+REFACTOR CATEGORIES:JAVA:MODIFY
+-----Polishing and i:/DefaultPropertyAccessExceptionHandler.java:(102402, 102486)-----
+Logger logger = LoggerFactory.getLogger(DefaultPropertyAccessExceptionHandler.class);
+&gt;&gt;&gt;&gt;&gt;Simplified Intr:/DefaultPropertyAccessExceptionHandler.java:(102402, 102507)&gt;&gt;&gt;&gt;&gt;
+private static final Logger logger = LoggerFactory.getLogger(DefaultPropertyAccessExceptionHandler.class);
+------------------------------------
+-----Polishing and i:/PropertyAccessException.java:(106498, 106531)-----
+private final String propertyName;
+&gt;&gt;&gt;&gt;&gt;Simplified Intr:/PropertyAccessException.java:(106498, 106525)&gt;&gt;&gt;&gt;&gt;
+private String propertyName;
+------------------------------------
+-----Polishing and i:/PropertyAccessException.java:(110614, 110615)-----
+?&gt;
+&gt;&gt;&gt;&gt;&gt;Simplified Intr:/PropertyAccessException.java:(110608, 110609)&gt;&gt;&gt;&gt;&gt;
+?&gt;
+------------------------------------
+Git diff =8219  Refactor Categories =4231</t>
+<t tx="paran.20140803142459.2096">REFACTOR CATEGORIES:JAVA:RENAMED
+-----Made adjustment:/InclusionService.java:(385032, 385053)-----
+isExcludedByPath(node)
+&gt;&gt;&gt;&gt;&gt;[maven-release-:/InclusionService.java:(393224, 393240)&gt;&gt;&gt;&gt;&gt;
+node.isExcluded()
+------------------------------------
+-----Made adjustment:/InclusionService.java:(610305, 614401)-----
+			return true;
+	
+&gt;&gt;&gt;&gt;&gt;[maven-release-:/InclusionService.java:(663553, 671745)&gt;&gt;&gt;&gt;&gt;
+						result.set(true);
+						visit.stop();
+	
+------------------------------------
+-----Made adjustment:/InclusionService.java:(634883, 634895)-----
+return false;
+&gt;&gt;&gt;&gt;&gt;[maven-release-:/InclusionService.java:(675841, 684037)&gt;&gt;&gt;&gt;&gt;
+				}
+			}
+		});
+------------------------------------
+Git diff =0  Refactor Categories =3814</t>
+<t tx="paran.20140803142459.2097">REFACTOR CATEGORIES:JAVA:EQUIVALENT
+-----Polishing and i:/PropertyAccessException.java:(131073, 139265)-----
+		this.propertyName = propertyName;
+		this.targetType = targetType;
+	
+&gt;&gt;&gt;&gt;&gt;Simplified Intr:/PropertyAccessException.java:(131073, 155649)&gt;&gt;&gt;&gt;&gt;
+	}
+
+	@Override
+	public String getMessage()
+	{
+		return String.format("Property '%s' on target of type %s.", propertyName, targetType);
+	
+------------------------------------
+-----Polishing and i:/PropertyAccessor.java:(696321, 700417)-----
+		}
+	
+&gt;&gt;&gt;&gt;&gt;Simplified Intr:/PropertyAccessor.java:(704513, 708609)&gt;&gt;&gt;&gt;&gt;
+
+	
+------------------------------------
+-----Polishing and i:/PropertyAccessor.java:(724993, 729089)-----
+		}
+	
+&gt;&gt;&gt;&gt;&gt;Simplified Intr:/PropertyAccessor.java:(733185, 737281)&gt;&gt;&gt;&gt;&gt;
+
+	
+------------------------------------
+Git diff =0  Refactor Categories =648</t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>
