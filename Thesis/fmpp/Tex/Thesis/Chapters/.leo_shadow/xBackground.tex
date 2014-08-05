@@ -4,45 +4,44 @@
 %@@language latex
 \chapter{Background}
 
-As this thesis is about maintaining differently refactored branchs within a version control system refactoring what follows is some background concerning version control systems and how they determine if a change has occured in source code.  We will also cover refactoring before looking more closely at JDime. JDime is an existing tool that reconciles differently refactored views and reduces merge conflicts. 
-
+As this thesis is about maintaining differently refactored branches within a version control system refactoring what follows is some background concerning version control systems and how they determine if a change has occurred in source code.  We will also cover refactoring before looking more closely at JDime and other tools that attempt to reduce merge conflicts caused by reafctoring.  
 
 \section{Version Control Systems}
 %@<<VersionControlSystems>>
 %@+node:paran.20140528183434.1974:<<VersionControlSystems>>
 %@<<Reasons for using version control>>
 %@+node:paran.20140530135904.1945:<<Reasons for using version control>>
-Version control systems are a way of managing different revisions (or versions). Version control systems can be used to keep revisions of files that are in any format. Most commonly they are used to maintain source code written for a plain text programming language (e.g. Java, C, etc).   There are a number of reasons why we might want to use a version control system. It can be used to refer to previous revisions, to maintain a revision that has an expirimental feature, to associate additional documentation about a feature or to collaborate with mutiple developers who are on the same programming project.
-
+Version control systems are a way of managing different revisions (or versions). Version control systems can be used to keep revisions of files that are in any format. Most commonly they are used for maintaining source code written for a plain text programming language (e.g. Java, C, etc.). There are a number of reasons why we might want to use a version control system. It can be used to refer to previous revisions, to maintain a revision that has an experimental feature, to associate additional documentation about a feature or to collaborate with multiple developers who are on the same programming project.
 
 \begin{description}
 
-  \item [Revist revisions using tagging.]   
+  \item [Revisit revisions using tagging.]
   %@  <<revisions>>
   %@+node:paran.20140530135904.1948:<<revisions>>
-    A version control system can be used by a single person to manage different revisions of their program. A previous revision can always be revisited at a later date and changed. If there is something significant about a particular revision it can be labelled with a emph{tag}. A tag assigns a name to all the files in the revision you are interested in so that you can more easily revisit the code at a certain point.  This is helpful if a software package has a number of released versions.  If you need to go back and revisit a particular release it becomes a lot easier if you have tagged the code at that point with the release name or identification.
+  A version control system can be used by a single person to manage different revisions of their program. A previous revision can always be revisited at a later date and changed. If there is something significant about a particular revision it can be labelled with a \emph{tag}. A tag assigns a name to all the files in the revision you are interested in so that you can more easily revisit the code at a certain point.  This is helpful if a software package has a number of released versions.  If you need to go back and revisit a particular release it becomes a lot easier if you have tagged the code at that point with the release name or identification.
    
    
 
   %@-node:paran.20140530135904.1948:<<revisions>>
   %@nl
   
-  \item [Use branching for expirimental features.] 
+  \item [Use branching for experimental features.] 
   %@  <<branching>>
   %@+node:paran.20140530135904.1950:<<branching>>
-  It is also possible to maintain mutliple revisions of all the files in a project. This is useful if there is an experimental feature which you want to explore but want to maintain the original project. A version control system can keep these multiple interests separate by putting them on different \emph{branches}.  It is still possible to easily switch between the different branches depending on which project you want to make changes to.  A good use of this feature is if you have a software project that you have written on behalf two different companies but each of them would like their own unique customisations on top of the base product.  By making two copies of the base product and having a record of when it was divided the branches can later be recombined to include some or all of the features that have been introduced.
+  It is also possible to maintain multiple revisions of all the files for a software project. This is useful if there is an experimental feature which you want to explore but want to maintain the original as a separate project. As shown in figure ~\ref{fig:bgBranches}a version control system can keep these multiple interests separate by putting them on different \emph{branches}.  It is still possible to easily switch between the different branches depending on which project you want to make changes to.  A good use of this feature is if you have a software project that you have written on behalf two different companies but each of them would like their own unique customisations on top of the base product.  By making two copies of the base product and having a record of when it was divided the branches can later be recombined to include some or all of the features that have been introduced.
 
   \begin{figure}[h]
-  \begin{center}
-  \includegraphics[scale=1]{branching}
-  \end{center}
+   \begin{center}
+    \includegraphics[scale=1]{branching}
+   \end{center}
    \caption{A project that has been split into two branches}
+   \label{fig:bgBranches}
   \end{figure}
-
+  %@nonl
   %@-node:paran.20140530135904.1950:<<branching>>
   %@nl
 
-  \item [Attach documentation to a feature.]    
+  \item [Attach documentation to a feature.]
   %@  <<associating metadata>>
   %@+node:paran.20140530135904.1951:<<associating metadata>>
   Another useful feature of version control is the ability to record meta-information beside a change or a set of changes to a document.  The reason this is useful is that you can specify what the change was for.  Instead of updating individual documents you could specify that changes over multiple documents were done for a single reason.  For instance if you had a number of documents that had an address written in them and that address changes.  Once the change has been made is possible in most version control systems to write a message when the documents are checked in.  In some version control systems this message is required to check-in any set of documents.  The reason this is useful is at a later date if queries are made about what a certain change to a document was for.  Since there is a message beside all the documents about the reason for a particular change it becomes easier to figure out the reason for the individual change we are interested in. If following the example above we were to examine a document and wonder why the address changed we could examine the check in with that change and see the message that the person changing it wrote.
@@ -50,11 +49,10 @@ Version control systems are a way of managing different revisions (or versions).
   When used on source code in tandem with an issue tracking system the message can contain the identification number for the bug being fixed or feature being added.  This means that anybody who is examining the revision to see the reasoning for the change has access to a lot more information via the issue tracking system.
 
   %@+at
-  % show screen-shot of Bugzilla
+  % show screen-shot of GitHub issue tracker
+  % show the commands for adding a comment to git with the Githunb number
   % 
-  % show the commands for adding a comment to git with the Bugzilla number
-  % 
-  % show how we can get the Bugzilla number back
+  % show how we can get the Git hub number back
   %@-at
   %@@c
   %@nonl

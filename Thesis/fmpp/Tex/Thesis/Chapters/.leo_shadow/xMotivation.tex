@@ -111,12 +111,15 @@ We want to be able to maintain private views or separate branches that can have 
   %@  <<personal comments>>
   %@+node:paran.20140804074630.2145:<<personal comments>>
   It would be possible to have comments that are not considered when doing a merge. This would be a benefit if there are comment that are specific to a branch and that are not necessary to share.  This would allow a programmer to keep a lot more personal notes.  The risk of having so many comments from others that it is hard to see the code is reduced. By being able to identify that a block of text comment is a new addition
-  %@nonl
   %@-node:paran.20140804074630.2145:<<personal comments>>
   %@nl
 
 \end{description}
 
+%@+at
+% Can it help with throwaway code or code uede for debugging
+%@-at
+%@@c
 
 When these branches are merged we want to make sure that any source code that is equivalent but refactored is not merged to the view we are merging into. Any source code that changes the behaviour however is considered in the merge.
 
