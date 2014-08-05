@@ -147,17 +147,17 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 <v t="hasletpara.20140227093334.1830"><vh>To detect code moves</vh></v>
 <v t="paran.20140423092515.1913"><vh>Datsets</vh></v>
 </v>
-<v t="paran.20140605091816.1995" a="E"><vh>@shadow thes.tex</vh></v>
+<v t="paran.20140605091816.1995"><vh>@shadow thes.tex</vh></v>
 <v t="paran.20140801074838.2010"><vh>@shadow thesis-acknowledge.tex</vh></v>
 <v t="hasletpara.20131202100421.2130" a="E"><vh>@shadow Chapters/thesis-introduction.tex</vh></v>
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
 <v t="hasletpara.20131202100421.2134"><vh>@shadow testing.tex</vh></v>
 <v t="paran.20140515173914.6982" a="E"
 expanded="paran.20140528183434.1974,paran.20140530135904.1945,paran.20140529075353.1935,paran.20140528183434.2055,paran.20140530135904.1946,paran.20140528183434.2009,paran.20140528183434.2011,paran.20140530135904.1958,paran.20140528183434.2021,paran.20140604093616.2026,"><vh>@shadow Background.tex</vh></v>
-<v t="paran.20140731220748.2032"
+<v t="paran.20140731220748.2032" a="E"
 expanded="paran.20140731220748.2034,paran.20140731220748.2038,paran.20140804074630.2143,"><vh>@shadow Motivation.tex</vh></v>
 <v t="paran.20140514103950.1918" a="E"
-expanded="paran.20140605081907.1971,paran.20140605081907.1972,"><vh>@shadow theTool.tex</vh></v>
+expanded="paran.20140605081907.1971,paran.20140805175513.2166,paran.20140605081907.1972,"><vh>@shadow theTool.tex</vh></v>
 <v t="paran.20140605081907.1988"><vh>@shadow expirimentalResults.tex</vh></v>
 <v t="paran.20140605081907.1978"><vh>@shadow futureWork.tex</vh></v>
 </v>
@@ -1695,29 +1695,6 @@ Git diff =0  Refactor Categories =648</t>
 <t tx="paranhaslett.20130826181255.3068"></t>
 <t tx="paranhaslett.20130826181255.3157"></t>
 <t tx="paranhaslett.20131205091806.1894">
-
-
-
-
-
-
-Section 3.2: this has some nice content, but also a lot of minor grammatical errors which make it difficult to read.  It needs a good proof-read to tidy it up and focus the writing.
-
-Section 4.1.  You need to give us more context.  For example, it says "the matches are only counted if a match can be found within the same container", but it's not clear what you mean by "container" here.  I'm thinking perhaps class, but I'm not certain.  Ok, so you go on to clarify this is a little in some sentences later on.  I would address this by, immediately after the sentence mentioning the word "container", saying something like "Here, a container is an enclosing scope within the source code, such as a class or method, etc"
-
-Section 4.2.  I have a hard time following the discussion here.  It is not at a high-level, and is somehow quite detailed.  I think you need to work hard on this section to extract the key ideas.  I think you should:
-
-1) Turn Section 4.2 into a discussion which specifically overviews how your tool works, called "Overview".  Don't discuss any design decisions at this stage, and also avoid talking about how you made your algorithm efficient.  Instead, focus on the important high-level ideas.  These include: turning the source program into an AST; attempting to reconcile the diff information with nodes in the AST, and how the text-based merge feeds into this.  Diagrams are a must here.
-
-2) Add Section 4.3 called "Performance".  In this section, discuss the various tricks you have done to make your algorithm more efficient.  Begin the section by arguing that you need to do this in order to handle the very large number of change sets encountered in a typical Git repository.
-
-3) Add Section 4.4, called "Design Decision" where you discuss some of the things you have at the beginning of your current Section 4.2.
-
-Ok, that'll do for now … see how you go and send more updates!!
-
-Cheers,
-
-Dave
 </t>
 </tnodes>
 </leo_file>
