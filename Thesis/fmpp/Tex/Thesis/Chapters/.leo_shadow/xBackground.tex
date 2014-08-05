@@ -28,7 +28,7 @@ Version control systems are a way of managing different revisions (or versions).
   \item [Use branching for experimental features.] 
   %@  <<branching>>
   %@+node:paran.20140530135904.1950:<<branching>>
-  It is also possible to maintain multiple revisions of all the files for a software project. This is useful if there is an experimental feature which you want to explore but want to maintain the original as a separate project. As shown in figure ~\ref{fig:bgBranches}a version control system can keep these multiple interests separate by putting them on different \emph{branches}.  It is still possible to easily switch between the different branches depending on which project you want to make changes to.  A good use of this feature is if you have a software project that you have written on behalf two different companies but each of them would like their own unique customisations on top of the base product.  By making two copies of the base product and having a record of when it was divided the branches can later be recombined to include some or all of the features that have been introduced.
+  It is also possible to maintain multiple revisions of all the files for a software project. This is useful if there is an experimental feature which you want to explore but want to maintain the original as a separate project. As shown in figure ~\ref{fig:bgBranches} a version control system can keep these multiple interests separate by putting them on different \emph{branches}.  It is still possible to easily switch between the different branches depending on which project you want to make changes to.  A good use of this feature is if you have a software project that you have written on behalf two different companies but each of them would like their own unique customisations on top of the base product.  By making two copies of the base product and having a record of when it was divided the branches can later be recombined to include some or all of the features that have been introduced.
 
   \begin{figure}[h]
    \begin{center}
@@ -44,17 +44,25 @@ Version control systems are a way of managing different revisions (or versions).
   \item [Attach documentation to a feature.]
   %@  <<associating metadata>>
   %@+node:paran.20140530135904.1951:<<associating metadata>>
-  Another useful feature of version control is the ability to record meta-information beside a change or a set of changes to a document.  The reason this is useful is that you can specify what the change was for.  Instead of updating individual documents you could specify that changes over multiple documents were done for a single reason.  For instance if you had a number of documents that had an address written in them and that address changes.  Once the change has been made is possible in most version control systems to write a message when the documents are checked in.  In some version control systems this message is required to check-in any set of documents.  The reason this is useful is at a later date if queries are made about what a certain change to a document was for.  Since there is a message beside all the documents about the reason for a particular change it becomes easier to figure out the reason for the individual change we are interested in. If following the example above we were to examine a document and wonder why the address changed we could examine the check in with that change and see the message that the person changing it wrote.
+  Another useful feature of version control is the ability to record meta information beside changes to a set of files.  The reason this is useful is that you can specify what the change was for.  It is possible to associate a change that has occurred over multiple files as being for the same reason.  Once the change has been made is possible in most version control systems to write a message when the documents are checked in.  In some version control systems this message is required to check-in any set of documents.  The reason this is useful is at a later date if queries are made about what a certain change to a document was for.  Since there is a message beside all the documents about the reason for a particular change it becomes easier to figure out the reason for the individual change we are interested in. If following the example above we were to examine a document and wonder why the address changed we could examine the check in with that change and see the message that the person changing it wrote.
 
-  When used on source code in tandem with an issue tracking system the message can contain the identification number for the bug being fixed or feature being added.  This means that anybody who is examining the revision to see the reasoning for the change has access to a lot more information via the issue tracking system.
+  \begin{figure}[h]
+   \begin{center}
+    \includegraphics[scale=.3]{bugtrack}
+   \end{center}
+   \caption{A issue that has been created in GitHub}
+   \label{fig:bgBugTrack}
+  \end{figure}
 
-  %@+at
-  % show screen-shot of GitHub issue tracker
-  % show the commands for adding a comment to git with the Githunb number
-  % 
-  % show how we can get the Git hub number back
-  %@-at
-  %@@c
+  When used on source code in tandem with an issue tracking system the message can contain the identification number for the bug being fixed or feature being added.  This means that anybody who is examining the revision to see the reasoning for the change has access to a lot more information via the issue tracking system. An example of this is the issue tracking ability that is built in to GitHub, an online version control system. In GitHub an issue can be created as shown in figure ~\ref{fig:bgBugTrack}. The issue tracker has also been linked with the messages that you need to write when you check in some files. If you include a hash sign followed by a number in the message you check in then GitHub updates the issue with that number as shown in figure ~\ref{fig:bgBugUpdate}.
+
+  \begin{figure}[h]
+   \begin{center}
+    \includegraphics[scale=.3]{bugupdate}
+   \end{center}
+   \caption{The issue has been updated from a commit message}
+   \label{fig:bgBugUpdate}
+  \end{figure}
   %@nonl
   %@-node:paran.20140530135904.1951:<<associating metadata>>
   %@nl
@@ -62,9 +70,9 @@ Version control systems are a way of managing different revisions (or versions).
   \item [Collaborate with multiple developers.]
   %@  <<collaboration>>
   %@+node:paran.20140530135904.1949:<<collaboration>>
-  Version control systems make it possible to have individual revisions that contain each persons changes. The version control system then manages the way these changes are merged into a composite product. Bertino \cite{Bertino2012} descibes the ability to merge the work of multiple people as being a powerful colabrative tool. This allows multiple people to work on the same document. In some circumstances it allows them to work on the document at the same time.   A version control system allows people with different ideas to collaborate on a single document.
+  Version control systems make it possible to have individual revisions that contain each persons changes. The version control system then manages the way these changes are merged into a composite product. Bertino \cite{Bertino2012} describes the ability to merge the work of multiple people as being a powerful collaborative tool. A version control system allows multiple people to work on the same document. In some circumstances it allows them to work on the document at the same time.  A version control system allows people with different ideas to collaborate on a single document.
 
-  In order to manage to the different version or revisions version control systems work better on plain text documents. One of the main uses for a version control system is to maintain source code written in a plain text programming language, such as Java or C.
+  In order to manage the different version or revisions version control systems work better on plain text documents. One of the main uses for a version control system is to maintain source code written in a plain text programming language, such as Java or C.
   %@nonl
   %@-node:paran.20140530135904.1949:<<collaboration>>
   %@nl
@@ -78,18 +86,16 @@ Version control systems are a way of managing different revisions (or versions).
 \subsection{Dealing with conflicts}
 %@<<LockvsMerge>>
 %@+node:paran.20140529075353.1935:<<LockvsMerge>>
-When people work within the same environment there is a need to interact with each other.
-There is competition for access to the source code for each of them to successfully do their work.
+When people work on the same softawre project there is a need to interact with each other.
+If they require the same source code then there is competition to access that file for each of them to successfully do their work.
 There is the risk that they will attempt to change the same block of source code at the same time.
-If different changes are made to the same block of source code there is a conflict about what the final can cause a conflict about how the final should be changed.
+If different changes are made to the same block of source code then they have a \emph{merge conflict} and need to figure out how to combine the changes manually.
 There are a few ways of dealing with these conflicts.
 
 \subsubsection{Locking}
 %@<<locking>>
 %@+node:paran.20140530135904.1952:<<locking>>
-One approach is to require that the file is only able to be used by one person at a time and that anyone else has to wait. The advantage of this is that the file is always in a consistent state. The disadvantage of this is if one person retains the document for extended periods of time it cannot be changed by anybody else. If a lot of work has been done on the document before it is unlocked for others to edit it.Furthermore the resulting document may be barely recognisable as the original if extensive work is done on it. If the two parties are changing distinctly different parts of the document or change the document in the same way this restriction is unnecessary.
-
-This is how one of the original versioning systems, RCS ensured that the document stayed consistent. Tichy has explained why he considers locking in a version control system to be a good idea in the design for RCS\cite{Tichy1982}
+One approach is to require that the file is only able to be used by one person at a time and that anyone else has to wait. This method avoids the need to resolve any conflict.  The advantage of locking a file like this is that the file is always in a consistent state. This is how one of the original version control systems, RCS ensured that the document stayed consistent. Tichy has explained why he considers locking in a version control system to be a good idea in the design for RCS\cite{Tichy1982} The disadvantage is if one person retains the document for extended periods of time, it cannot be changed by anybody else. If a lot of work has been done on the document before it is unlocked for others to edit it. Furthermore the resulting document may be barely recognisable as the original if extensive work is done on it. If the two parties change distinctly different parts of the file, or both independantly make exactly the same changes this restriction is unnecessary. 
 
 %@-node:paran.20140530135904.1952:<<locking>>
 %@nl
