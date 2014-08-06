@@ -53,12 +53,9 @@ As we are testing the complete revision history for several projects there is a 
 
 \begin{description}
   \item [By setting object references back to null when they are no longer used.]
-
-  Once the differemoving the asts once they have been used
+  Once a difference has been detected we attempt to remove any of the information we are not going to use in the future.  This should help the garbage collecter free up memory. We do this by setting the AST nodes recorded against a difference to null once the difference has been discovered. 
   \item [By not analying AST node that did not have a text based change.] 
-  % i.e the drill down speeds up performanace as you only need to analyase
-
-  By ignoring AST nodes and any of their child nodes that do not have a text based change comparing all the AST nodes can be avoided.  This will also help to speed 
+  By ignoring AST nodes and any of their child nodes that do not have a text based change comparing all the AST nodes can be avoided.  This will also help to speed up anaylisis as these nodes do not need to be analysed to see if they match.
   \item [By comparing only succsseive changes.] 
   There are a greater amount of changes if we compare the head against a very old revision. By checking against successive we reduce the number of changes. This also could mean that we need to parse less files.
   \item [matching within only the required scope.]  
