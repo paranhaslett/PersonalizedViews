@@ -55,39 +55,30 @@ Version control systems are a way of managing different revisions (or versions).
 
 
 \subsection{Dealing with conflicts}
-When people work on the same softawre project there is a need to interact with each other.
+When people work on the same software project there is a need to interact with each other.
 If they require the same source code then there is competition to access that file for each of them to successfully do their work.
 There is the risk that they will attempt to change the same block of source code at the same time.
 If different changes are made to the same block of source code then they have a \emph{merge conflict} and need to figure out how to combine the changes manually.
 There are a few ways of dealing with these conflicts.
 
 \subsubsection{Locking}
-One approach is to require that the file is only able to be used by one person at a time and that anyone else has to wait. This method avoids the need to resolve any conflict.  The advantage of locking a file like this is that the file is always in a consistent state. This is how one of the original version control systems, RCS ensured that the document stayed consistent. Tichy has explained why he considers locking in a version control system to be a good idea in the design for RCS\cite{Tichy1982} The disadvantage is if one person retains the document for extended periods of time, it cannot be changed by anybody else. If a lot of work has been done on the document before it is unlocked for others to edit it. Furthermore the resulting document may be barely recognisable as the original if extensive work is done on it. If the two parties change distinctly different parts of the file, or both independantly make exactly the same changes this restriction is unnecessary. 
-
+One approach is to require that the file is only able to be used by one person at a time and that anyone else has to wait. This method avoids the need to resolve any conflict.  The advantage of locking a file like this is that the file is always in a consistent state. This is how one of the original version control systems, RCS ensured that the document stayed consistent. Tichy has explained why he considers locking in a version control system to be a good idea in the design for RCS\cite{Tichy1982} The disadvantage is if one person retains the document for extended periods of time, it cannot be changed by anybody else. If a lot of work has been done on the document before it is unlocked for others to edit it. Furthermore the resulting document may be barely recognisable as the original if extensive work is done on it. If the two parties change distinctly different parts of the file, or both independently make exactly the same changes this restriction is unnecessary. 
 \subsubsection{Smaller structured units}
 Another way to reduce conflicts is to split the programming code into smaller units.  The advantage of this is that if you are using locking you minimise the risk that similar. If we go back to the illustration of two people working on the same set of documents.  If instead of one person having sole possession of a document at a time that person only has possession of the page or pages they are changing. As those pages are smaller than the whole document they are likely to retain them for shorter periods.
 \subsubsection{Merging documents}
-Finally we could allow both parties to change the document and try to figure out what the problems are afterwards.  This resolution of anything that remains a conflict is known as a merge.
+Finally we could allow both parties to change the document and try to figure out what the problems are afterwards.  This resolution of anything that remains a problem is known as a \emph{merge conflict}. This occurs whenever the computer cannot automatically process a merge.  The merge then needs to be sorted out manually.
 
 If not regularly merged is possible for the source code to diverge greatly and it becomes harder and harder to reconcile.
- According to Bertino it is possible to keep a smaller more easily deployed repository by evaluating what is necessary and what is unnecessary \cite{Bertino2012}. Although Bertino refers to unnecessary files this premise may also be applicable for the smaller blocks of code we are interested in. This suggests that maintaining a record about what is relevant and what is irrelevant may have some benefit. Version control still can have problems with merge conflicts. These issues have a far greater chance of occurring if there is a dramatic change such as refactoring
+ According to Bertino it is possible to keep a smaller more easily deployed repository by evaluating what is necessary and what is unnecessary \cite{Bertino2012}. Although Bertino refers to unnecessary files this premise may also be applicable for the smaller blocks of code we are interested in. This suggests that maintaining a record about what is relevant and what is irrelevant may have some benefit. Version control still can have problems with merge conflicts. These issues have a far greater chance of occurring if there is a dramatic change such as refactoring.
  
 \subsubsection{Manual Merging}
+If you have two files you want to merge but no common starting point for them both you will need to manually merge any differences.  The computer has no record about what the original file looked like so it can not determine which changes were intended.  Features that they have in common will not need to be affected however a decision needs to be made about any differences by the devlopers responsible for those changes.
 
-
-% Manual merge Example
-% 
-% if you have two document you want to merge but no record of a starting point 
-% for them both you will need to manually merge any differences as the 
-% computer has no record about what the original document looked like.  
-% features that they have in common will not need to be affected however a 
-% decision needs to be made about any differences.
-% 
 % insert diagram
 
 \subsubsection{Automatic Merging}
 If there is a three way merge it is possible for the computer to calculate the merge independently provided that there are no merge conflicts.
-To do 3 way merging requires 3 different revisions are required, the changes you have made, the changes made by others, and the revision that is common to them both.
+To do three way merging requires three different revisions are required, the original revision, the revision containing changes we have made and the revision containing changes made by other developers. By comparing the differences between our revison and the original one it is possible to determine which changes we have made.  If we compare the changes made by other developers to the original the changes that they have made can be determined.  If we attempt to update our code by merging other peoples changes and a change only occurs in our code then that change is retained.  If we attempt to update our code by merging other peoples changes and a change only occur in the other persons code the the change is inserted into our code. Only if a different change is made in both your revison and others revison to the same area in the code from the original that a merge conflict can occur. 
 
 
 % Diagram showing that how merging could be done automatically
@@ -99,44 +90,34 @@ To do 3 way merging requires 3 different revisions are required, the changes you
 \begin{description}
 
   \item [Centralised version control] 
-  In a centralised version repository all the changes are made to one location.  This means that only one place needs to be checked in order to access the most up-to-date source code. The need to be connected to a central system solved a lot of issues but often had a large overhead.  In some centralised system it required a specialist to be involved just to look after the server and ensure that merges were done correctly.
-  % Still had the model of a central repository everyone needed to consistent  
-  % similar to RCS in that you could still check the file out but it was not 
-  % as necessary to lock the file  it was possible to look at the differences 
-  % between the files and then automatically merge when it was possible  
-  % centralised systems have better support for locking.
-  % 
-  % 
-  %  examples of centralised systems
-  % RCS, CVS, SVN, Clearcase
-  % 
-  % difference between centalised version controls
-  % According to \cite{Bertino2012} centralised version control systems...
+  In a centralised version system all the changes are made to one location.  This is refered to a a centralised repository. Having a cenralised repository means that only one place needs to be checked in order to access the most up-to-date and agreed upon source code. The need to be connected to a central system solved a lot of issues but often had a large overhead.  In some centralised system it required a specialist to be involved just to look after the server and ensure that merges were done correctly. However according to Chacon \cite{Chacon2009} this single point of mangement has some adavantages as it is possible to manage what developers had access to. According to ChaconA \cite{Chacon2009} and Bertino \cite{Bertino2012} the main flaw with centralised version control systems is that they have a single point of failure. If anything goes wrong with the server you could lose all your work.
 
   \item [Distributed version control] 
-    
+  According to Chacon \cite{Chacon2009} and Bertino \cite{Bertino2012} this is like having a complete copy of a repository present on every computer that has access to that project
 
-  % % mobile access  % @c  % The benefits and costs of distributed systems 
-  % have long been discussed  %   % examples of distributed version control  % 
-  % GIT, Mercurial, Bazaar
-  % 
-  % difference between git and mecurial reference
+  An advantage to having a complete copy of a project from the repository is that it is possible to make changes to the program remotely.  You are also able to select which changes others have made you want to incorporate into your personal copy. 
   \item [Online version contol systems]  
-  Whilst is is possible for a measure of collaboration just by using git on it own it requires that you have some method of obtaining the seperate branches on one machine before they can be merged.  One way of doing this within a company is to set up a git server.  This might suitable for projects that are closed source and have a select group of people who work on the source code.  For larger projects that have has programmers in different parts of the world a publicly accessible git server that is on the web may be a better solution.    
-  % the reason i achieve included this here is because the amount of   % interaction in git means that merge needs to be better  % add a screen shot to show the number of forks an users of a large project\end{description}
+  Whilst is is possible for a measure of collaboration just by using git on it own it requires that you have some method of obtaining the seperate branches on one machine before they can be merged.  One way of doing this within a company is to set up a git server.  This might suitable for projects that are closed source and have a select group of people who work on the source code.  For larger projects that have has programmers in different parts of the world a publicly accessible git server that is on the web may be a better solution. A good example of this it GitHub.  GitHub provide a way for many developers in different parts of the world to change source code for an open source project.  It is possible that the developers for a particular project have not even met in real life or even know about each other. Figure ~\ref{fig:bgUsage} shows the amount of activity that there has been on the JGit. It shows that there are 74 contributers to the source code and 3245 indididual changes over 20 branches. With such a large development team the potential to have conflicting changes must be high. Having many seperate branches may indicate that merges often need to happen. This one example could indicate the need for good merge tools that can reconcile conflicts even if the developers have little contact with each other.
+
+  \begin{figure}[h]
+   \begin{center}
+    \includegraphics[scale=.4]{githubUsage}
+   \end{center}
+   \caption{The number of contributers to the JGit project}
+   \label{fig:bgUsage}
+  \end{figure}
+
 
   
 \end{description}
 
 \section{Longest Common Subsequence}
-The longest common subsequence problem isThere are a number of issues in computer science that can be resolved by a longest common subsequence algorithm.
-It is very good at finding the differences between two different sets of ordered information.
-
+According to Balcan \cite{Balcan}The longest common subsequence problem is attempting to find the maximum number of common items in two strings when the strings are examined from left to right. A subsquenece doe not need to be in a single contiguos block however. Algorithms that solve the longest common subsequnce can determine the differences between two lists by working out what is the same.   
 % look into other uses for LCS
 
 \subsection{Example}
-One method of discovering what has changed is to find the longest common subsequence (LCS).
-A simplified example of finding the longest common subsequence is:
+
+An example of finding the longest common subsequence is:
 
 Imagine we have have two similar sets of java source code that we want to compare with each other.  
 We would like to know what is the same and what is different.
@@ -210,27 +191,26 @@ public class SampleLCS {
 As there are possibly multiple longest common subsequences identifying the longest common subsequence that is going to be most useful becomes difficult.
 
 \subsection{Methods of calculating LCS}
-According to Arslan \cite{Arslan2010} there are many algorithms that solve longest common subsequence problem. The algorithms used in JGit for example are the the Myers, Patience and Histogram algorithms.
+According to Arslan \cite{Arslan2010} there are many algorithms that solve longest common subsequence problem. As is it possible for there to be multiple correct solutions to a LCS problem a reason for having a different algorithm may be to find the LCS that make the most intuitive sense. The algorithms used in JGit for example are the the Myers, Patience and Histogram algorithms.
 
 \subsection{Myers}
-The Myers algorithm was discovered by Eugene Myers who claimed that finding the minimal differences between any two documents was the equivalent to finding the shortest or longest path in a graph \cite{Myers1986}. 
+The Myers algorithm was discovered by Eugene Myers who claimed that finding the minimal differences between any two documents was the equivalent to finding the shortest or longest path in a graph \cite{Myers1986}. This is achived 
 
 \subsection{Patience}
 The patience algorithm instead of figuring out the longest common subsequence directly uses the longest increasing subsequence.
 When this is used with line numbers from the source code the longest common subsequence can be established.
-By examining only unique lines present in both copies of source code it is comparing. it ignores items that are repeated multiple times as they produce longest common subsequence could give a sub-optimal result.
-
-bran Cohen
-
-because of the way a patience 
-
-Before the act
+By examining only unique lines present in both copies of source code it is comparing it ignores items that are repeated multiple times.  as they produce longest common subsequence could give a sub-optimal result.
+As Bram Cohen has pointed out in his blog there are instances where a LCS algorthm can return results that are not as helpful to a developer as they could be.  Instaed of noticing that a method has been inserted it is possible for a LCS algorithm to return that the closing brace of one method followed by another method without the closing brace has changed instead.  
+% bran Cohen
+% 
+% because of the way a patience
+% 
+% Before the act
 % from the patience game
 % need references
 
 \subsection{Histogram}
-A Histogram difference strategy is very similar to a patience algorithm
-Instead of looking at just the unique lines between any two subsets however it can examine lines that there are multiple copies of 
+According to comments in the source code a histogram alorithm claims to be equivalnet to a patience sort in some circumstances but provides a better result for when there are multiple copies of some items being merged. Before determing a LCS the 
 
 \subsection{The problem with LCS}
 There is still a problem with longest common subsequence. It does not notice changes of order in a document.  For the example we have been looking at two methods have swapped positions.  The program still behaves in the same manner when it is run.  It is unnecessary to make any changes to this code in order to get them to behave the same way. Diff tools that solely use the longest common subsequence do not take different ordered items into account even if they can be considered equivalent.
