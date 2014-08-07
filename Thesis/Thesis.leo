@@ -152,7 +152,7 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 <v t="hasletpara.20131202100421.2130"><vh>@shadow Chapters/thesis-introduction.tex</vh></v>
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
 <v t="hasletpara.20131202100421.2134"><vh>@shadow testing.tex</vh></v>
-<v t="paran.20140515173914.6982"
+<v t="paran.20140515173914.6982" a="E"
 expanded="paran.20140528183434.1974,paran.20140530135904.1945,paran.20140529075353.1935,paran.20140528183434.2055,paran.20140530135904.1946,paran.20140528183434.2009,paran.20140528183434.2011,paran.20140530135904.1958,paran.20140528183434.2021,paran.20140604093616.2026,"><vh>@shadow Background.tex</vh></v>
 <v t="paran.20140731220748.2032" a="E"
 expanded="paran.20140731220748.2034,paran.20140731220748.2038,paran.20140804074630.2143,"><vh>@shadow Motivation.tex</vh></v>
@@ -1693,10 +1693,18 @@ Git diff =0  Refactor Categories =648</t>
 <t tx="paranhaslett.20130826181255.3063"></t>
 <t tx="paranhaslett.20130826181255.3068"></t>
 <t tx="paranhaslett.20130826181255.3157"></t>
-<t tx="paranhaslett.20131205091806.1894">Tidy whole document
+<t tx="paranhaslett.20131205091806.1894">Re - tidy whole document
+
+tidy the tool 
 
 prepare an example of a manual merge
 
-prepare an example of an automatic merege</t>
+prepare an example of an automatic merege
+
+check reuslts with meld
+
+work on the exprirmental results page
+
+redownload the algorithm2e tool</t>
 </tnodes>
 </leo_file>

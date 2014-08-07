@@ -3,13 +3,29 @@
 %@@color
 %@@language latex
 
-\chapter{Expirimental Results}
+\chapter{Experimental Results}
 
-%@+at
-% the datasets are full git trees of changes for a project
-% 
-%@-at
-%@@c
+The data sets in table ~\ref{tab:DataSets}are complete git repositories which have been examined to discover the proportion of changes to behavior compared to ascetic changes that do not affect the behaviour of the program. 
+\begin{table}
+  \caption{Complete git repositories that are tested}
+  \label{tab:DataSets}
+  \begin{center}
+    \begin{tabular}{|c|c|c|}
+       Jasm & this a a Java bytecode assembler 
+       
+       written for use with the Whiley programming language. & https://github.com/Whiley/Jasm\\
+      foo & bar \\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{itemize}
+  \item Jasm - this a a Java bytecode assembler written for use with the Whiley programming language. https://github.com/Whiley/Jasm
+  \item Jpp - this is a preproccessor for Java based on Bash shell script. https://github.com/maandree/jpp
+  \item AST Java - a small parser wriiten to transform Java into an AST. https://github.com/klangner/ast-java
+  \item Java Object Diff - allows two Java objects to be compared https://github.com/SQiShER/java-object-diff
+  \item DiffJ - a diff tool which in addition to ignoring white space ignores changes of ordering in package names for a Java file https://github.com/jpace/diffj
+\end{itemize}
 
 %@+at
 % Possible datasets
@@ -133,8 +149,6 @@
 % is actually using this library and appreciates all the hard work that goes 
 % into its development.
 % 
-% 
-% 
 % https://github.com/jpace/diffj
 % DiffJ
 % DiffJ compares Java files based on their code, without regard to formatting, 
@@ -146,14 +160,5 @@
 % changes.
 %@-at
 %@@c
-
- 
-
-
-
-
-
-
-
 %@-node:paran.20140605081907.1988:@shadow expirimentalResults.tex
 %@-leo

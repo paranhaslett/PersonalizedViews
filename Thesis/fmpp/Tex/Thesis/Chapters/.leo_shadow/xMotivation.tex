@@ -11,10 +11,10 @@ In a project with multiple developers situations may arise where you need to mak
 %@<<the problem>>
 %@+node:paran.20140731220748.2034:<<the problem>>
 \begin{description}
-  \item [Repeated structure changes for other software developers.]   
+\item [Repeated structure changes for other software developers.]
     %@    <<example>>
     %@+node:paran.20140731220748.2035:<<example>>
-    Imagine a situation where you are working jointly on a project with other people. Since you want to collaborate on different aspects of the same source code you have set up the project in a merge based version control system.  You have checked out your own copy of the code so that you can work on the source code without interfering with any of the changes others are making. You notice that you they are going to have to refactor the code before you add any of your changes.  This would be a fair judgement call as Fowler claims that the main time to do refactoring is before making any changes \cite{Fowler1999}. You complete your changes and check in your code back into the version control system.  While you are doing this other people have been working on the code.  If you manage to check in your code before anyone else you will not need to merge any of your changes.  Anybody who checks in after you however, could have a merge conflict.  Some conflicts that they experience could be because the changes you made directly compete with the changes you have made. Potentially more conflicts would occur between the changes they have made and the refactoring that you have completed. This is because a refactoring often makes a large amount of global changes to the source code.
+Imagine a situation where you are working jointly on a project with other people. Since you want to collaborate on different aspects of the same source code you have set up the project in a merge based version control system.  You have checked out your own copy of the code so that you can work on the source code without interfering with any of the changes others are making. You notice that you they are going to have to refactor the code before you add any of your changes.  This would be a fair judgment call as Fowler claims that the main time to do refactoring is before making any changes \cite{Fowler1999}. You complete your changes and check in your code back into the version control system.  While you are doing this other people have been working on the code.  If you manage to check in your code before anyone else you will not need to merge any of your changes.  Anybody who checks in after you however, could have a merge conflict.  Some conflicts that they experience could be because the changes you made directly compete with the changes you have made. Potentially more conflicts would occur between the changes they have made and the refactoring that you have completed. This is because a refactoring often makes a large amount of global changes to the source code.
 
     \begin{figure}
     \begin{center}
@@ -23,11 +23,11 @@ In a project with multiple developers situations may arise where you need to mak
     \caption{Merging changes with refactored code also merges any refactoring}
     \end{figure}
 
-    As shown in figure the difficulty lies in the fact that not only the functionality that you have added is checked in but also the changes brought about by refactoring.  These refactored changes have not changed how the program functions but have simplified and tidied the code to make the addition of your changes easier. There are some occasions where you may want to avoid changing other peoples code in such a dramatic fashion.  
+    As shown in figure the difficulty lies in the fact that not only the functionality that you have added is checked in but also the changes brought about by refactoring.  These refactored changes have not changed how the program functions but have simplified and tidied the code to make the addition of your changes easier. There are some occasions where you may want to avoid changing other peoples code in such a dramatic fashion.
 
-    In some conditions refactoring is only required to simplify the code to implement a small change as opposed to cleaning up the entire code base.  This partial refactoring is likely if the code base is large. According to Melina et. al. \cite{Milea2014} refactoring is a challenge when the code base is large. By definition refactoring does not any functionality but changes the source code. This means that the code previous to being partially refactored has the equivalent functionality to the code after the partial refactoring.
+In some conditions refactoring is only required to simplify the code to implement a small change as opposed to cleaning up the entire code base.  This partial refactoring is likely if the code base is large. According to Melina et. al. \cite{Milea2014} refactoring is a challenge when the code base is large. By definition refactoring does not any functionality but changes the source code. This means that the code previous to being partially refactored has the equivalent functionality to the code after the partial refactoring.
 
-    By checking in your refactoring code you are forcing others to comply with your vision about how the code should be structured.  This occurs even though you could have no awareness about what changes to the code others have made or intend to make.  Everyone who attempts to check in their code after you will need to merge into a restructured code source that they are unfamiliar with.  The potential for merge based bugs and time wasted doing unnecessary merging increases.
+By checking in your refactoring code you are forcing others to comply with your vision about how the code should be structured.  This occurs even though you could have no awareness about what changes to the code others have made or intend to make.  Everyone who attempts to check in their code after you will need to merge into a restructured code source that they are unfamiliar with.  The potential for merge based bugs and time wasted doing unnecessary merging increases.
 
     %@+at
     % then created a branch
@@ -51,7 +51,7 @@ In a project with multiple developers situations may arise where you need to mak
     %@+node:paran.20140731220748.2036:<<multiple checkins>>
     When there is a large change on a separate branch with many development milestones it is desirable to have the ability to submit your code periodically.  This could be done to ensure that there is not too much divergence between the separate branch and other development projects. The desire to regularly merge the code makes the issue we have discussed even worse. Currently if you have a project where there are periodic check-ins for each development milestone there will be a large impact each time there is a commit. This is because the refactoring for the large refactored project is imposed upon others each time it is merged.
 
-    One of the ways this can be dealt with is by creating separate branches for different projects however this has some issues with merging when working on two or more projects simultaneously.  In order to minimise the amount of divergence it is advisable to merge each of the branches with the trunk often.  If there has been global refactoring changes introduced by one project being merged the merge will be worse for any of the remaining branches when they are checked in.  Instead of having an issue merging at the check-in level we now have an issue at the merging of branches.  As these changes will occur less often than checking in the code, the code will possibly have more divergence.  This divergence is likely to cause more rather than less merge issues at the expense of having to merge less often.
+    One of the ways this can be dealt with is by creating separate branches for different projects however this has some issues with merging when working on two or more projects simultaneously.  In order to minimize the amount of divergence it is advisable to merge each of the branches with the trunk often.  If there has been global refactoring changes introduced by one project being merged the merge will be worse for any of the remaining branches when they are checked in.  Instead of having an issue merging at the check-in level we now have an issue at the merging of branches.  As these changes will occur less often than checking in the code, the code will possibly have more divergence.  This divergence is likely to cause more rather than less merge issues at the expense of having to merge less often.
     %@nonl
     %@-node:paran.20140731220748.2036:<<multiple checkins>>
     %@nl
@@ -116,7 +116,7 @@ We want to be able to maintain private views or separate branches that can have 
 \end{description}
 
 %@+at
-% Can it help with throwaway code or code uede for debugging
+% Can it help with throwaway code or code used for debugging
 % 
 % 
 % When these branches are merged we want to make sure that any source code 
@@ -141,13 +141,13 @@ We want to be able to maintain private views or separate branches that can have 
 \section{Ways individual refactored views could be achieved}
 %@<<How achieved>>
 %@+node:paran.20140804074630.2143:<<How achieved>>
-There are a number of ways we have considered about how to provide differently reafactored views that have the same functionality.
+There are a number of ways we have considered about how to provide differently refactored views that have the same functionality.
 
 \begin{description}
   \item [Comparing differences using a non-ordered comparison algorithm.]   
     %@    <<cduanoca>>
     %@+node:paran.20140804193541.2143:<<cduanoca>>
-    Instead of using the Longest Common Subsequece based approach we could instead use a non-ordered comparison.  The easist way to consider this concept is that the LCS algorithm compares two lists whereas a non-ordered algorithm is a bit more like comparing sets of items. The items within the set will still be ordered.
+    Instead of using the Longest Common Sub-sequence (LCS) based approach we could instead use a non-ordered comparison.  The easiest way to consider this concept is that the LCS algorithm compares two lists whereas a non-ordered algorithm is a bit more like comparing sets of items. The items within the set will still be ordered.
 
     \begin{algorithm}[H]
     \SetAlgoLined
@@ -166,28 +166,35 @@ There are a number of ways we have considered about how to provide differently r
     \end{algorithm}
 
 
-    The problems with using this approach to reconcile to different ordered sets is that comparison whould not know the difference between what needs to strictly remain in order and what is allowed to be in a different order. If the version control system has an understanding of a particular computer language it is much easier to determine what items can be moved without changing functionality and which ones need to stay in the same order. 
+    The problems with using this approach to reconcile to different ordered sets is that comparison would not know the difference between what needs to strictly remain in order and what is allowed to be in a different order. If the version control system has an understanding of a particular computer language it is much easier to determine what items can be moved without changing functionality and which ones need to stay in the same order. 
     %@nonl
     %@-node:paran.20140804193541.2143:<<cduanoca>>
     %@nl
-  \item [Normalising the source code before placing it in the version control system.]
+  \item [Normalizing the source code before placing it in the version control system.]
     %@    <<Normalising>>
     %@+node:paran.20140804193541.2145:<<Normalising>>
-    Before placing the item into source control it could be transformed into an agree upon format. Before allowing a merge on a block of code each the views could transform the block of code using the same method and compare it with the equivelent block of code that in the version control system. If the transformed code is the same then there is no need to merge.
+    Before placing the item into source control it could be transformed into an agree upon format. Before allowing a merge on a block of code each the views could transform the block of code using the same method and compare it with the equivalent block of code that in the version control system. If the transformed code is the same then there is no need to merge.
     %@nonl
     %@-node:paran.20140804193541.2145:<<Normalising>>
     %@nl
-  \item [Storing additional infomation in the version control system.]
+  \item [Storing additional information in the version control system.]
     %@    <<Added Info>>
     %@+node:paran.20140804193541.2144:<<Added Info>>
     By storing additional information within the version control system different views could be managed and recreated.
     This concept is very similar to Ekmans plugin for eclipse that maintains a record different refactorings in addition to the source code \cite{Ekman2004}.
 
-    The problem with this is that it would have to store information about every view that was differently refactored.  In a distributed version control system especally an online one the number of distinct views could be large and change often.   
+    The problem with this is that it would have to store information about every view that was differently refactored.  In a distributed version control system especially an online one the number of distinct views could be large and change often.   
     %@nonl
     %@-node:paran.20140804193541.2144:<<Added Info>>
     %@nl
-  \item [Using a tool like JDime solely as a method of comparision.]
+  \item [Using regular expressions]
+   %@   <<Regular expressions>>
+   %@+node:paran.20140807161213.2155:<<Regular expressions>>
+   It could be possible to use regular experssions to control a lot of the merge process.  We could eliminate a number of comparisons that contain equivalent functionality in this manner.
+   %@nonl
+   %@-node:paran.20140807161213.2155:<<Regular expressions>>
+   %@nl
+  \item [Using a tool like JDime solely as a method of comparison.]
     %@    <<Jdime Compare>>
     %@+node:paran.20140804193541.2146:<<Jdime Compare>>
     As mentioned earlier there are a number of reasons why JDime cannot currently be used as a method of keeping two different refactored views. If changed however it could still be useful.  One idea we had was to attach it to Git and solely use it to detect equivalent pieces of java source code.
@@ -199,6 +206,15 @@ There are a number of ways we have considered about how to provide differently r
 %@-node:paran.20140804074630.2143:<<How achieved>>
 %@nl
 
+\section{Are comments important?}
+%@<<are comments important>>
+%@+node:paran.20140807161213.2156:<<are comments important>>
+Although in this thesis we have focused mostly on changes to the behaviour of a program as opposed to astetic changes to the source code we recognise that sometimes changes to comments may be important.  If a new comment is inserted in a branch or even if a comment is deleted it is likely that the change is specifc to the task the programmer is trying to implement.  However if an existing comment is modified it is more likely that the comment and the task will have some impact on other branches and should be modified.  There could be exceptions where inserted or deleted code should have an impact on other code and where a modification to a comment does not really need to be broadcast to other users during a merge.
+
+Existing comments and even white space can also provide useful information about any changes of order in the code.  If a programmer has cut and pasted a block of code the white space and comments are also moved and provide hints to what has occured.  Even if some of the code has been modified there could be enough clues left behind to suggest that the most likely event is that the code has moved and then adjusted.
+%@nonl
+%@-node:paran.20140807161213.2156:<<are comments important>>
+%@nl
 
 %@-node:paran.20140731220748.2032:@shadow Motivation.tex
 %@-leo

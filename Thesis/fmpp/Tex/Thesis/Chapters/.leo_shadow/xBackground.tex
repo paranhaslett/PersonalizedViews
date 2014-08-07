@@ -4,7 +4,7 @@
 %@@language latex
 \chapter{Background}
 
-As this thesis is about maintaining differently refactored branches within a version control system refactoring what follows is some background concerning version control systems and how they determine if a change has occurred in source code.  We will also cover refactoring before looking more closely at JDime and other tools that attempt to reduce merge conflicts caused by reafctoring.  
+As this thesis is about maintaining differently refactored branches within a version control system refactoring what follows is some background concerning version control systems and how they determine if a change has occurred in source code.  We will also cover refactoring before looking more closely at JDime and other tools that attempt to reduce merge conflicts caused by refactoring.  
 
 \section{Version Control Systems}
 %@<<VersionControlSystems>>
@@ -117,7 +117,7 @@ If not regularly merged is possible for the source code to diverge greatly and i
 \subsubsection{Manual Merging}
 %@<<Manual Merging>>
 %@+node:paran.20140528183434.2056:<<Manual Merging>>
-If you have two files you want to merge but no common starting point for them both you will need to manually merge any differences.  The computer has no record about what the original file looked like so it can not determine which changes were intended.  Features that they have in common will not need to be affected however a decision needs to be made about any differences by the devlopers responsible for those changes.
+If you have two files you want to merge but no common starting point for them both you will need to manually merge any differences.  The computer has no record about what the original file looked like so it can not determine which changes were intended.  Features that they have in common will not need to be affected however a decision needs to be made about any differences by the developers responsible for those changes.
 
 %@+at
 % insert diagram
@@ -131,7 +131,7 @@ If you have two files you want to merge but no common starting point for them bo
 %@<<Automatic Merging>>
 %@+node:paran.20140528183434.2057:<<Automatic Merging>>
 If there is a three way merge it is possible for the computer to calculate the merge independently provided that there are no merge conflicts.
-To do three way merging requires three different revisions are required, the original revision, the revision containing changes we have made and the revision containing changes made by other developers. By comparing the differences between our revison and the original one it is possible to determine which changes we have made.  If we compare the changes made by other developers to the original the changes that they have made can be determined.  If we attempt to update our code by merging other peoples changes and a change only occurs in our code then that change is retained.  If we attempt to update our code by merging other peoples changes and a change only occur in the other persons code the the change is inserted into our code. Only if a different change is made in both your revison and others revison to the same area in the code from the original that a merge conflict can occur. 
+To do three way merging requires three different revisions are required, the original revision, the revision containing changes we have made and the revision containing changes made by other developers. By comparing the differences between our revision and the original one it is possible to determine which changes we have made.  If we compare the changes made by other developers to the original the changes that they have made can be determined.  If we attempt to update our code by merging other peoples changes and a change only occurs in our code then that change is retained.  If we attempt to update our code by merging other peoples changes and a change only occur in the other persons code the the change is inserted into our code. Only if a different change is made in both your revision and others revision to the same area in the code from the original that a merge conflict can occur. 
 
 
 %@+at
@@ -158,7 +158,7 @@ To do three way merging requires three different revisions are required, the ori
   \item [Centralised version control] 
   %@  <<Centralised Version control>>
   %@+node:paran.20140528183434.2058:<<Centralised Version control>>
-  In a centralised version system all the changes are made to one location.  This is refered to a a centralised repository. Having a cenralised repository means that only one place needs to be checked in order to access the most up-to-date and agreed upon source code. The need to be connected to a central system solved a lot of issues but often had a large overhead.  In some centralised system it required a specialist to be involved just to look after the server and ensure that merges were done correctly. However according to Chacon \cite{Chacon2009} this single point of mangement has some adavantages as it is possible to manage what developers had access to. According to ChaconA \cite{Chacon2009} and Bertino \cite{Bertino2012} the main flaw with centralised version control systems is that they have a single point of failure. If anything goes wrong with the server you could lose all your work.
+  In a centralised version system all the changes are made to one location.  This is called a centralised repository. Having a centralised repository means that only one place needs to be checked in order to access the most up-to-date and agreed upon source code. The need to be connected to a central system solved a lot of issues but often had a large overhead.  In some centralised system it required a specialist to be involved just to look after the server and ensure that merges were done correctly. However according to Chacon \cite{Chacon2009} this single point of management has some advantages as it is possible to manage what developers had access to. According to ChaconA \cite{Chacon2009} and Bertino \cite{Bertino2012} the main flaw with centralised version control systems is that they have a single point of failure. If anything goes wrong with the server you could lose all your work.
 
   %@-node:paran.20140528183434.2058:<<Centralised Version control>>
   %@nl
@@ -170,10 +170,10 @@ To do three way merging requires three different revisions are required, the ori
   An advantage to having a complete copy of a project from the repository is that it is possible to make changes to the program remotely.  You are also able to select which changes others have made you want to incorporate into your personal copy. 
   %@-node:paran.20140528183434.2059:<<Distributed Version control>>
   %@nl
-  \item [Online version contol systems]  
+  \item [Online version control systems]  
   %@  <<GitHub>>
   %@+node:paran.20140603140023.2025:<<GitHub>>
-  Whilst is is possible for a measure of collaboration just by using git on it own it requires that you have some method of obtaining the seperate branches on one machine before they can be merged.  One way of doing this within a company is to set up a git server.  This might suitable for projects that are closed source and have a select group of people who work on the source code.  For larger projects that have has programmers in different parts of the world a publicly accessible git server that is on the web may be a better solution. A good example of this it GitHub.  GitHub provide a way for many developers in different parts of the world to change source code for an open source project.  It is possible that the developers for a particular project have not even met in real life or even know about each other. Figure ~\ref{fig:bgUsage} shows the amount of activity that there has been on the JGit. It shows that there are 74 contributers to the source code and 3245 indididual changes over 20 branches. With such a large development team the potential to have conflicting changes must be high. Having many seperate branches may indicate that merges often need to happen. This one example could indicate the need for good merge tools that can reconcile conflicts even if the developers have little contact with each other.
+  Whilst is is possible for a measure of collaboration just by using git on it own it requires that you have some method of obtaining the separate branches on one machine before they can be merged.  One way of doing this within a company is to set up a git server.  This might suitable for projects that are closed source and have a select group of people who work on the source code.  For larger projects that have has programmers in different parts of the world a publicly accessible git server that is on the web may be a better solution. A good example of this it GitHub.  GitHub provide a way for many developers in different parts of the world to change source code for an open source project.  It is possible that the developers for a particular project have not even met in real life or even know about each other. Figure ~\ref{fig:bgUsage} shows the amount of activity that there has been on the JGit. It shows that there are 74 contributors to the source code and 3245 individual changes over 20 branches. With such a large development team the potential to have conflicting changes must be high. Having many separate branches may indicate that merges often need to happen. This one example could indicate the need for good merge tools that can reconcile conflicts even if the developers have little contact with each other.
 
   \begin{figure}[h]
    \begin{center}
@@ -201,7 +201,7 @@ To do three way merging requires three different revisions are required, the ori
 \section{Longest Common Subsequence}
 %@<<LCS>>
 %@+node:paran.20140528183434.2009:<<LCS>>
-According to Balcan \cite{Balcan}The longest common subsequence problem is attempting to find the maximum number of common items in two strings when the strings are examined from left to right. A subsquenece doe not need to be in a single contiguos block however. Algorithms that solve the longest common subsequnce can determine the differences between two lists by working out what is the same.   
+According to Balcan \cite{Balcan}The longest common subsequence problem is attempting to find the maximum number of common items in two strings when the strings are examined from left to right. A subsequence does not need to be in a single contiguous block however. Algorithms that solve the longest common subsequence can determine the differences between two lists by working out what is the same.   
 %@+at
 % look into other uses for LCS
 %@-at
@@ -210,10 +210,9 @@ According to Balcan \cite{Balcan}The longest common subsequence problem is attem
 \subsection{Example}
 %@<<Example of Longest common subsequence>>
 %@+node:paran.20140528183434.2010:<<Example of Longest common subsequence>>
-
 An example of finding the longest common subsequence is:
 
-Imagine we have have two similar sets of java source code that we want to compare with each other.  
+Imagine we have have two similar sets of Java source code that we want to compare with each other.  
 We would like to know what is the same and what is different.
 A longest common subsequence for the source would contain a list of all the lines that are the same and in the same order.
 
@@ -295,7 +294,9 @@ According to Arslan \cite{Arslan2010} there are many algorithms that solve longe
 %@<<Myers>>
 %@+node:paran.20140528183434.2012:<<Myers>>
 \subsection{Myers}
-The Myers algorithm was discovered by Eugene Myers who claimed that finding the minimal differences between any two documents was the equivalent to finding the shortest or longest path in a graph \cite{Myers1986}. This is achived 
+The Myers algorithm was discovered by Eugene Myers who claimed that finding the minimal differences between any two documents was the equivalent to finding the shortest or longest path in a graph \cite{Myers1986}.
+
+% explain how this is achieved 
 %@-node:paran.20140528183434.2012:<<Myers>>
 %@nl
 
@@ -305,7 +306,7 @@ The Myers algorithm was discovered by Eugene Myers who claimed that finding the 
 The patience algorithm instead of figuring out the longest common subsequence directly uses the longest increasing subsequence.
 When this is used with line numbers from the source code the longest common subsequence can be established.
 By examining only unique lines present in both copies of source code it is comparing it ignores items that are repeated multiple times.  as they produce longest common subsequence could give a sub-optimal result.
-As Bram Cohen has pointed out in his blog there are instances where a LCS algorthm can return results that are not as helpful to a developer as they could be.  Instaed of noticing that a method has been inserted it is possible for a LCS algorithm to return that the closing brace of one method followed by another method without the closing brace has changed instead.  
+As Bram Cohen has pointed out in his blog there are instances where a LCS algorithm can return results that are not as helpful to a developer as they could be.  Instead of noticing that a method has been inserted it is possible for a LCS algorithm to return that the closing brace of one method followed by another method without the closing brace has changed instead.  
 %@+at
 % bran Cohen
 % 
@@ -325,7 +326,9 @@ As Bram Cohen has pointed out in his blog there are instances where a LCS algort
 %@<<Histogram>>
 %@+node:paran.20140528183434.2014:<<Histogram>>
 \subsection{Histogram}
-According to comments in the source code a histogram alorithm claims to be equivalnet to a patience sort in some circumstances but provides a better result for when there are multiple copies of some items being merged. Before determing a LCS the 
+According to comments in the source code a histogram algorithm claims to be equivalent to a patience sort in some circumstances but provides a better result for when there are multiple copies of some items being merged. 
+
+% Before determining a LCS the 
 %@nonl
 %@-node:paran.20140528183434.2014:<<Histogram>>
 %@nl
@@ -335,7 +338,7 @@ According to comments in the source code a histogram alorithm claims to be equiv
 \subsection{The problem with LCS}
 %@<<The problem with LCS>>
 %@+node:paran.20140528183434.2015:<<The problem with LCS>>
-There is still a problem with longest common subsequence. It does not notice changes of order in a document.  For the example we have been looking at two methods have swapped positions.  The program still behaves in the same manner when it is run.  It is unnecessary to make any changes to this code in order to get them to behave the same way. Diff tools that solely use the longest common subsequence do not take different ordered items into account even if they can be considered equivalent.
+There is still a problem with longest common subsequence. It does not notice changes of order in a document.  For the example we have been looking at two methods have swapped positions.  The program still behaves in the same manner when it is run.  It is unnecessary to make any changes to this code in order to get them to behave the same way. \emph{Diff tools} that solely use the longest common subsequence do not take different ordered items into account even if they can be considered equivalent.
 
 \begin{figure}[h]
 \begin{center}
@@ -349,16 +352,14 @@ There is still a problem with longest common subsequence. It does not notice cha
 \subsection{How LCS is used in differencing tools}
 %@<<How diffs use LCS>>
 %@+node:paran.20140528183434.2016:<<How diffs use LCS>>
-Often to speed up the differencing process each line is assigned a hash code depending on its contents. 
+Differencing tools (often shortened to "diff tools") are a range of standalone prorams that compare the contents of two files and show the similarities and differences.
+In many diff toola hash code is assigned to each line of the files to speed up the differencing process.
 This means that the differencing tool can work much faster as it does not need to compare each character in the line but can compare hash codes instead.
+However the granularity of what is compared is more course as it shows complete line differeces rather than word or character differences. 
 In the source code for many programming languages the white space is not relevant so many diff tools have the option of ignoring the white-space and only comparing the code.
 This has an impact on the hash codes for each line as the hash code needs to be generated just from the text rather than the white spaces in the code.
-%@+at
-% Remember to say something white space
-% and regular expression differences
-% 
-%@-at
-%@@c
+
+Additionally with some diff tools it is possible to use regular expressions to ignore program features such as comments when doing a diff.  The reason this is important is if it it is possible exclude changes that have no affect on behaviour from a diff then it is possible to also exclude them from a merge.  If we exclude them from a merge we could have less conflicts.
 %@nonl
 %@-node:paran.20140528183434.2016:<<How diffs use LCS>>
 %@nl
@@ -470,7 +471,7 @@ What then happens depends on if order is required in the section of code JDime i
 %@-node:paran.20140528183434.2023:<<How Jdime works>>
 %@nl
 
-\subsection{Testing Jdimes suitability}
+\subsection{Testing JDimes suitability}
 %@<<Testing Jdimes suitability>>
 %@+node:paran.20140528183434.2024:<<Testing Jdimes suitability>>
 
@@ -500,7 +501,7 @@ The methods inside the files are reordered differently for both the left and the
 \begin{center}
 \includegraphics[scale=1]{JdimeTestSetup}
 \end{center}
- \caption{The setup for the test of JDime}
+ \caption{The set-up for the test of JDime}
 \end{figure}
 
 Once the test was set up using the test handler the JDime run to process the directories.
@@ -520,7 +521,7 @@ If it detects an unordered section it does not preserve the order of the output.
 %@-node:paran.20140528183434.2024:<<Testing Jdimes suitability>>
 %@nl
 
-\subsection{Resons why Jdime cannot currently be used to create seperate views}
+\subsection{Reasons why Jdime cannot currently be used to create separate views}
 %@<<Conclusion>>
 %@+node:paran.20140604093616.2026:<<Conclusion>>
 The aim of this thesis is to be able to maintain two views of Java that although having a different format function in the same manner.  Although this tool sounds like it would be able to help achieve those aims there are a few reasons why it cannot be used without changes.
@@ -541,38 +542,28 @@ The second issue is that when JDime parses the code into an AST it strips out an
 
 %@<<third issue>>
 %@+node:paran.20140605091816.2394:<<third issue>>
-The only time an AST based merge is performed is if there are conflicts.  There could be advantage to determining if items that haven't conflicted in the text based merge but have moved from one position in the code to another.  If a method has both been moved and changed in both branches it could have a conflict.  This conflict would appear to the text-merge as a deletion agreed upon by both branches followed by two insertions at different points.  It would not be picked up by the text-merge as containing a conflict even if one was potentially present.  Since the conflict is not detected by a text-merge it is not set aside for testing by examining the AST tree. In this case comparing AST trees could detect that there was a conflict. Although JDime is an improvement over a text-based merge this is a potential conflict that niether detect. There is a performance reason for this design decision. JDime can take a long time to determine if two files contain equivalent source code.
+The only time an AST based merge is performed is if there are conflicts.  There could be advantage to determining if items that haven't conflicted in the text based merge but have moved from one position in the code to another.  If a method has both been moved and changed in both branches it could have a conflict.  This conflict would appear to the text-merge as a deletion agreed upon by both branches followed by two insertions at different points.  It would not be picked up by the text-merge as containing a conflict even if one was potentially present.  Since the conflict is not detected by a text-merge it is not set aside for testing by examining the AST tree. In this case comparing AST trees could detect that there was a conflict. Although JDime is an improvement over a text-based merge this is a potential conflict that neither detect. There is a performance reason for this design decision. JDime can take a long time to determine if two files contain equivalent source code.
 %@nonl
 %@-node:paran.20140605091816.2394:<<third issue>>
 %@nl
 
 %@<<final issue>>
 %@+node:paran.20140605091816.2393:<<final issue>>
-The final concern is that after JDime does the initial comparision of text and finds conflicts it discards those results. It parses the entire file into an AST and begins analysing it again without knowing which parts differ.   
+The final concern is that after JDime does the initial comparison of text and finds conflicts it discards those results. It parses the entire file into an AST and begins analysing it again without knowing which parts differ.   
 %@nonl
 %@-node:paran.20140605091816.2393:<<final issue>>
 %@nl
 %@-node:paran.20140604093616.2026:<<Conclusion>>
 %@nl
 
-
-
-
-
-
 %@-node:paran.20140528183434.2021:<<JDime>>
 %@nl
-
 \section{Other refactoring aware versioning tools}
 %@<<oravt>>
 %@+node:paran.20140731220748.2056:<<oravt>>
-JDime is not the only tool that can be used to address refactor aware version control.  Ekman and Asklund \cite{Ekman2004} introduced a plugin for eclipse that recorded information about refactoring in to version control so that it was eaiser to recognise where refactoring took place.  They did this in a very similar manner as Apel and Le{\ss}nich when they developed JDime.  Both make use of ASTs to record information about any refactoring that took place.  Freese \cite{Freese2006} also developed a tool that was very similar written in Object-Z. Despite this interest in refactoring aware merges however the idea of keeping separate branchs as consistant as possible has not been discussed.
+JDime is not the only tool that can be used to address refactor aware version control.  Ekman and Asklund \cite{Ekman2004} introduced a plug-in for eclipse that recorded information about refactoring in to version control so that it was easier to recognise where refactoring took place.  They did this in a very similar manner as Apel and Le{\ss}nich when they developed JDime.  Both make use of ASTs to record information about any refactoring that took place.  Freese \cite{Freese2006} also developed a tool that was very similar written in Object-Z. Despite this interest in refactoring aware merges however the idea of keeping separate branches as consistent as possible has not been discussed.
 %@nonl
 %@-node:paran.20140731220748.2056:<<oravt>>
 %@nl
- 
- 
-
-
 %@-node:paran.20140515173914.6982:@shadow Background.tex
 %@-leo

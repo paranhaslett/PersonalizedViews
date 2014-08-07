@@ -1,17 +1,18 @@
 
 \chapter{Refactor categories tool}
-In order to prove that having individual refactored views would provide some useful results we created a refator categories tool. The refactor categories tool examines the differences between files and arranges them into a greater variety of categories than used by version control systems or merge and diff tools.  In addition to being able to detect instances of delete, insert and modify the refactor categories tool can also detect instances where the code has been relocated and to some extent renamed.  It also can differentiate between changes to comments, white-space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and some instances where it does not. Although it does not detect more complex differences beyond this we intend to show that changes exist in real world software projects that have no impact on how the project behaviour.
+In order to prove that having individual refactored views would provide some useful results we created a refactor categories tool. The refactor categories tool examines the differences between files and arranges them into a greater variety of categories than used by version control systems or merge and diff tools.  In addition to being able to detect instances of delete, insert and modify the refactor categories tool can also detect instances where the code has been relocated and to some extent renamed.  It also can differentiate between changes to comments, white space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and some instances where it does not. Although it does not detect more complex differences beyond this we intend to show that changes exist in real world software projects that have no impact on how the project behaviour.
+
+
 
 \section{What the tool does}
 % answer what it does and how
 
-By checking to see if an insert at one point matches a delete at another point it is possible to detect to see if the code block has moved. In order to determine if the move is one that has no impact the matches are only counted if a match can be found within the same container.  Here, a container is an enclosing scope within the source code, such as a class or method. For example if a method has been shifted within the same class the program will still act the same.  If a method is moved from one class into an inner class there is no guaramtee that they will be evaluated to determine if there is a suitable match.  If a method is shifted from one class to an inner class however the programs behaviour could have changed.
+By checking to see if an insert at one point matches a delete at another point it is possible to detect to see if the code block has moved. In order to determine if the move is one that has no impact the matches are only counted if a match can be found within the same container.  Here, a container is an enclosing scope within the source code, such as a class or method. For example if a method has been shifted within the same class the program will still act the same.  If a method is moved from one class into an inner class there is no guarantee that they will be evaluated to determine if there is a suitable match.  If a method is shifted from one class to an inner class however the programs' behaviour could have changed.
 
-To a limited extent the refactor categories tool can also deal with renaming.
+To a limited extent the refactor categories tool can also deal with renaming. It does this by examing the node and seeing if its children have remained the same and its type remain the same but its name has changed. It does not analyse other nodes that have also changed names.
 
 The refactor categories tool first does a cursory examination of the text differences between two files. It then examines both the differences in executable Java code and the differences between comments and white-space. 
 
-The refactor categories tool first does a cursory examination of the text differences between two files. It then examines both the differences in executable Java code and the differences in white-space.
 
 
 \section{Overview}
@@ -40,49 +41,36 @@ There is likely to be AST nodes that are not included in any of the change sets 
 
 An example of this can be found in figure \ref{fig:findingASTNode}.  In this figure it is safe to ignore any children of the AST node marked 'Child 1' because 'Child 1' does not contain the text change.  The AST Node marked 'Child 3' however is interesting as its location places it within a text change. 
 
-In some instances items within the text change will not have a corresponding AST node.  These are of interest to us because these are instances where the text may have been changed but it has no impact on the behaviour of the program.  The most likely instances of this is when a comment has changed or if white space has been introduced in the middle of source code. Once the AST node for both revisions has been matched with the text change we can compare the AST nodes and their children to discover if they would behave in the same fashion. If they do behave in the same fashion it could indicate that the change is an astetic one.   
+In some instances items within the text change will not have a corresponding AST node.  These are of interest to us because these are instances where the text may have been changed but it has no impact on the behaviour of the program.  The most likely instances of this is when a comment has changed or if white space has been introduced in the middle of source code. Once the AST node for both revisions has been matched with the text change we can compare the AST nodes and their children to discover if they would behave in the same fashion. If they do behave in the same fashion it could indicate that the change is an ascetic one.
 
 Another change we are interested in is if items have been moved.  We would notice this if there is a both insert and a delete for similar AST node types within the same scope.  If a method has been shifted within a class we would notice similar AST nodes, one being deleted at one location, the other being inserted at a different location.  This is another example of a text based change that does not change the behaviour of the program.
 
-If we can keep track of renaming 
+%If we can keep track of renaming
 
 If we find examples of text based changes that do not change the programs' behaviour we have an indication that we can reduce the amount of changes necessary to update another branch. This in turn could indicate that we would have less merge conflicts by reducing the overall number of changes.
 
 \section{Performance}
-As we are testing the complete revision history for several projects there is a high number of changes.  This means that perfomance is an issue especally for large software projects that have many changes. This means we have not only had to look at using more memory for the refactor categories tool but also had to make some changes to the code to free up more memory where required.  
+As we are testing the complete revision history for several projects there is a high number of changes.  This means that performance is an issue especially for large software projects that have many changes. This means we have not only had to look at using more memory for the refactor categories tool but also had to make some changes to the code to free up more memory where required.
 
 \begin{description}
-  \item [By setting object references back to null when they are no longer used.]
-  Once a difference has been detected we attempt to remove any of the information we are not going to use in the future.  This should help the garbage collecter free up memory. We do this by setting the AST nodes recorded against a difference to null once the difference has been discovered. 
-  \item [By not analying AST node that did not have a text based change.] 
-  By ignoring AST nodes and any of their child nodes that do not have a text based change comparing all the AST nodes can be avoided.  This will also help to speed up anaylisis as these nodes do not need to be analysed to see if they match.
-  \item [By comparing only succsseive changes.] 
-  There are a greater amount of changes if we compare the head against a very old revision. By checking against successive we reduce the number of changes. This also could mean that we need to parse less files.
-  \item [matching within only the required scope.]  
-  If we were not testing for moves in the same scope we would need to test every deleted AST node against every inserted AST node for the entire file. By stipulating that we can only be sure if it is a legal move if it is in the same scope we not only eliminate a lot of relocations of source code that are illegal but also reduce the number of items that need to be compared. In addition to this the AST node along with its type are recorded in a hashMap.  This ensures that only AST nodes that are a similar type are compared against each other
-  
+ \item [By setting object references back to null when they are no longer used.]
+Once a difference has been detected we attempt to remove any of the information we are not going to use in the future.  This should help the garbage collector free up memory. We do this by setting the AST nodes recorded against a difference to null once the difference has been discovered. 
+\item [By not analyzing AST node that did not have a text based change.] 
+By ignoring AST nodes and any of their child nodes that do not have a text based change comparing all the AST nodes can be avoided.  This will also help to speed up analysis as these nodes do not need to be analyzed to see if they match.
+\item [By comparing only successive changes.] 
+There are a greater amounts of changes if we compare the head against a very old revision. By checking against successive we reduce the number of changes. This also could mean that we need to parse fewer files.
+\item [matching within only the required scope.]
+If we were not testing for moves in the same scope we would need to test every deleted AST node against every inserted AST node for the entire file. By stipulating that we can only be sure if it is a legal move if it is in the same scope we not only eliminate a lot of relocations of source code that are illegal but also reduce the number of items that need to be compared. In addition to this the AST node along with its type are recorded in a hash map.  This ensures that only AST nodes that are a similar type are compared against each other
+
 \end{description}
 
-% 
-% 
-% future work: by keeping track of equilvalencies there is no need to retest 
+% future work: by keeping track of equivalencies there is no need to retest
 % using the AST
-% 
 
 \section{Design decisions}
-% 3) Add Section 4.4, called "Design Decision" where you discuss some of the 
-% things you have at the beginning of your current Section 4.2.
-% 
+ There are a number of design differences between JDime and the refactor categories tool.  Instead of doing a text comparison first and only proceeding to analyze the program using an AST if there are conflicts the categorization tool examines all files that have a difference in them.  Although this takes longer and is more memory intensive there are some advantages to this. The main advantage is related to the concept of keeping branches as consistent as possible whenever there is a change. An example of this advantage is if a merge was done using an ordinary text comparison and there is a non functional change to only one revision. Examples of a non functional change could include reordering methods or inserting a comment.  As the changes were only done to one of the revisions there is no conflict and JDime only does a text based merge.  During this text based merge, in addition to any of the changes to functionality that we want, we get the non functional changes that change the source code without changing the programs' behaviour. By examining all changes irrespective of if the text has conflicts means that the refactor categories tool can determine if it is a change that would not affect the behaviour of a program.
 
-% insert diagram of how it finds the ASTs that are within the change set
-% 
-% they are not associated with the AST changes because a comment could be at
-% the end of a line and thus associated with the change before.  A multi-line
-% comment is normally about the line that follows
-
-There are a number of design differences between JDime and the refactor categories tool.  Instead of doing a text comparison first and only proceeding to analyse the program using an AST if there are conflicts the categorisation tool examines all files that have a difference in them.  Although this takes longer and is more memory intensive there are some advantages to this. The main advantage is related to the concept of keeping branches as consistent as possible whenever there is a change. An example of this advantage is if a merge was done using an ordinary text comparison and there is a non functional change to only one revision. Examples of a non functional change could include reordering methods or inserting a comment.  As the changes were only done to one of the revisions there is no conflict and JDime only does a text based merge.  During this text based merge, in addition to any of the changes to functionality that we want, we get the non functional changes that change the source code without changing the programs' behaviour. By examining all changes irrespective of if the text has conflicts means that the refactor categories tool can determine if it is a change that would not affect the behaviour of a program.
-
-As there is a cost overhead with testing all the changes rather than just the conflicting ones the categorisation tool needs to be efficient in how it tests changes.  Assuming that changes occur in select areas within the file there are portions of the file that have not been changed.  We have developed a method that spends a smaller amount time in  within the portions that have already been identified as not containing changes.  Like JDime we initially do a text based merge.  The text based merge we use however uses the histogram merge in JGit.  This allows us to use information from the text based merge when we analyse the AST tree.  The information used is the ranges of line numbers and operations identified by the histogram merge. The change set has been taken from the original JGit based diff contains the start and end of the change in both files and what type of change it is (insert delete or modify).  By reusing these ranges of line numbers it is possible to figure out which AST items these changes affect. This is done by loading the file into the JastAddJ parser to get an AST tree. Line numbers for each item in the tree are then compared to line numbers from the change set. The line numbers are matched to the position information stored in each AST node using the following method.
+As there is a cost overhead with testing all the changes rather than just the conflicting ones the categorization tool needs to be efficient in how it tests changes.  Assuming that changes occur in select areas within the file there are portions of the file that have not been changed.  We have developed a method that spends a smaller amount time in  within the portions that have already been identified as not containing changes.  Like JDime we initially do a text based merge.  The text based merge we use however uses the histogram merge in JGit.  This allows us to use information from the text based merge when we analyze the AST tree.  The information used is the ranges of line numbers and operations identified by the histogram merge. The change set has been taken from the original JGit based diff contains the start and end of the change in both files and what type of change it is (insert delete or modify).  By reusing these ranges of line numbers it is possible to figure out which AST items these changes affect. This is done by loading the file into the JastAddJ parser to get an AST tree. Line numbers for each item in the tree are then compared to line numbers from the change set. The line numbers are matched to the position information stored in each AST node using the following method.
 
 The root of the AST is identified as the AST node we need to start at. 
 We only begin any analysis, if the AST node resides completely within a block of text changes.
@@ -113,7 +101,12 @@ In some instances there is no position information stored in the JastAddJ AST no
 
 To get around this problem we have needed to discover the end position of the previous AST Node to determine the position the inferred AST node should occupy.  This means that the inferred AST node is in the right position but is not represented by a block of text in the source code. 
 
-% need to add something about the choice of java and jastaddj
+% need to add something about the choice of java and JastAddJ
+% 
+% why the the focus on comments and no fuctional changes
+% 
+% why does it do it for the whole repository
+% 
 
 Comment and white-space are also examined separately as they also could give some indication of where code has been moved from or to.
 Before being checked to find matches unnecessary white-space is identified and recorded.
@@ -133,12 +126,9 @@ Because of the way we are using the position in the code to identify AST nodes t
 
 Rather than comparing everything with each other to determine matches it is more efficient to match just the items that are under the same AST structure.  This means that it is more likely that we get a match that is going to be relevant and valid.  An example of this is matching methods. If the methods are under the same container (a class) they may be legally swapped without causing issues.  If the method has been moved to an inner class from an outer one however it becomes more complicated and we cannot guarantee that the code is equivalent.  
 
-% why does it do it for the whole repository
-
-% 
-% note: we might want to use some literate programming here11
-
 \section{Limitations of the tool}
 The refactor categories tool focuses only on areas where there has been a change in the source code. 
 It is harder to investigate any change that has causes side effects in unchanged code.  Fortunately it is not often that this type of side effect will be purposely placed in the code as it reflects bad design decisions.  This may however be an issue with bugs, which are unintentionally placed in the code.  
 This also means that the refactor categories tool will not be able to tell when some code has been copied but the original remains unchanged. Instead it will assume that it is a completely new insertion of code.
+
+If a change of a variable name is noticed the program still retains the same behaviour if the rename operation has worked on all instances where the old name was previously used.  As we do not examine parts of the code that have not experienced a text based change we cannot guarantee that a rename operation is a valid one. We have an indication that it might be if the code still compiles without error. If a variable name is changed to that of an already existing variable however the behavior of the program could change.
