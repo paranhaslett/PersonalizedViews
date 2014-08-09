@@ -12,38 +12,6 @@ In order to prove that having individual refactored views would provide some use
 %@-node:paran.20140731173741.2006:<<tool desc>>
 %@nl
 
-\section{What the tool does}
-%@<<What the tool does>>
-%@+node:paran.20140605081907.1971:<<What the tool does>>
-%@+at
-% answer what it does and how
-%@-at
-%@@c
-
-%@<<detecting moves>>
-%@+node:paran.20140606104644.2007:<<detecting moves>>
-By checking to see if an insert at one point matches a delete at another point it is possible to detect to see if the code block has moved. In order to determine if the move is one that has no impact the matches are only counted if a match can be found within the same container.  Here, a container is an enclosing scope within the source code, such as a class or method. For example if a method has been shifted within the same class the program will still act the same.  If a method is moved from one class into an inner class there is no guarantee that they will be evaluated to determine if there is a suitable match.  If a method is shifted from one class to an inner class however the programs' behaviour could have changed.
-%@nonl
-%@-node:paran.20140606104644.2007:<<detecting moves>>
-%@nl
-
-%@<<detecting renames>>
-%@+node:paran.20140606104644.2009:<<detecting renames>>
-To a limited extent the refactor categories tool can also deal with renaming. It does this by examing the node and seeing if its children have remained the same and its type remain the same but its name has changed. It does not analyse other nodes that have also changed names.
-%@nonl
-%@-node:paran.20140606104644.2009:<<detecting renames>>
-%@nl
-
-%@<<detecting comments>>
-%@+node:paran.20140606104644.2011:<<detecting comments>>
-The refactor categories tool first does a cursory examination of the text differences between two files. It then examines both the differences in executable Java code and the differences between comments and white-space. 
-%@-node:paran.20140606104644.2011:<<detecting comments>>
-%@nl
-
-
-%@-node:paran.20140605081907.1971:<<What the tool does>>
-%@nl
-
 \section{Overview}
 %@<<Overview>>
 %@+node:paran.20140805175513.2154:<<Overview>>
@@ -82,6 +50,42 @@ If we find examples of text based changes that do not change the programs' behav
 %@-node:paran.20140805175513.2154:<<Overview>>
 %@nl
 
+\section{What the tool does}
+%@<<What the tool does>>
+%@+node:paran.20140605081907.1971:<<What the tool does>>
+%@+at
+% answer what it does and how
+%@-at
+%@@c
+
+%@<<detecting moves>>
+%@+node:paran.20140606104644.2007:<<detecting moves>>
+By checking to see if an insert at one point matches a delete at another point it is possible to detect to see if the code block has moved. In order to determine if the move is one that has no impact the matches are only counted if a match can be found within the same container.  Here, a container is an enclosing scope within the source code, such as a class or method. For example if a method has been shifted within the same class the program will still act the same.  If a method is moved from one class into an inner class there is no guarantee that they will be evaluated to determine if there is a suitable match.  If a method is shifted from one class to an inner class however the programs' behaviour could have changed.
+
+To get a good match each possible match is given a score which indicates how much it has changed.  This score is set in the configuration and the default for this is 1000. If there is no apparent change such as in the case of changing whitespaces or equivalent asts a score of zero is given.  For every that change involves a delete or insert the default score is assigned.  As modifies or moves can be thought of as both an insert and a delete twice the deafult score is assigned to them.  The score is divided by the total number of items examined.  An example of this is if a section of source code is examined and there are four AST nodes that have been identified.  If the AST nodes are found to be equivalent apart from the second one which has been modified the calulation is 1000 * 2 / 4.  This is where 1000 is the default score, it is multiplied by 2 as it is a modification rather than an insert or delete and there are 4 ASTs to examine.
+
+Once the various matchs have been tested we use a greedy algorithm to select the lowest score for each item.  Once two items are matched with each other both of them can no longer be matched with anything else. The matched items are removed and the next lowest score for a match is evaluated.  To ensure that anything cannot be matched with anything once all good matches are eliminated once the lowest score reamining is greater than the default score of 1000 then any further matches are ignored.  The two items that could have otherwise been matched will remain a solitary insert and a delete.   
+%@nonl
+%@-node:paran.20140606104644.2007:<<detecting moves>>
+%@nl
+
+%@<<detecting renames>>
+%@+node:paran.20140606104644.2009:<<detecting renames>>
+To a limited extent the refactor categories tool can also deal with renaming. It does this by examing the node and seeing if its children have remained the same and its type remain the same but its name has changed. It can not analyse nodes where the name has not changed as these are not picked up by the initial text comparison.
+%@nonl
+%@-node:paran.20140606104644.2009:<<detecting renames>>
+%@nl
+
+%@<<detecting comments>>
+%@+node:paran.20140606104644.2011:<<detecting comments>>
+The refactor categories tool first does a cursory examination of the text differences between two files. It then examines both the differences in executable Java code and the differences between comments and white-space. 
+%@-node:paran.20140606104644.2011:<<detecting comments>>
+%@nl
+
+
+%@-node:paran.20140605081907.1971:<<What the tool does>>
+%@nl
+
 \section{Performance}
 %@<<Performance>>
 %@+node:paran.20140805175513.2166:<<Performance>>
@@ -91,28 +95,28 @@ As we are testing the complete revision history for several projects there is a 
  \item [By setting object references back to null when they are no longer used.]
   %@  <<setting to null>>
   %@+node:paran.20140806072550.2155:<<setting to null>>
-Once a difference has been detected we attempt to remove any of the information we are not going to use in the future.  This should help the garbage collector free up memory. We do this by setting the AST nodes recorded against a difference to null once the difference has been discovered. 
+  Once a difference has been detected we attempt to remove any of the information we are not going to use in the future.  This should help the garbage collector free up memory. We do this by setting the AST nodes recorded against a difference to null once the difference has been discovered. 
   %@nonl
   %@-node:paran.20140806072550.2155:<<setting to null>>
   %@nl
 \item [By not analyzing AST node that did not have a text based change.] 
   %@  <<not analysing>>
   %@+node:paran.20140805192059.2163:<<not analysing>>
-By ignoring AST nodes and any of their child nodes that do not have a text based change comparing all the AST nodes can be avoided.  This will also help to speed up analysis as these nodes do not need to be analyzed to see if they match.
+  By ignoring AST nodes and any of their child nodes that do not have a text based change comparing all the AST nodes can be avoided.  This will also help to speed up analysis as these nodes do not need to be analyzed to see if they match.
   %@nonl
   %@-node:paran.20140805192059.2163:<<not analysing>>
   %@nl
 \item [By comparing only successive changes.] 
   %@  <<successive changes>>
   %@+node:paran.20140805192059.2164:<<successive changes>>
-There are a greater amounts of changes if we compare the head against a very old revision. By checking against successive we reduce the number of changes. This also could mean that we need to parse fewer files.
+  There are a greater amounts of changes if we compare the head against a very old revision. By checking against successive we reduce the number of changes. This also could mean that we need to parse fewer files.
   %@nonl
   %@-node:paran.20140805192059.2164:<<successive changes>>
   %@nl
 \item [matching within only the required scope.]
   %@  <<matching within only the required scope>>
   %@+node:paran.20140805192059.2165:<<matching within only the required scope>>
-If we were not testing for moves in the same scope we would need to test every deleted AST node against every inserted AST node for the entire file. By stipulating that we can only be sure if it is a legal move if it is in the same scope we not only eliminate a lot of relocations of source code that are illegal but also reduce the number of items that need to be compared. In addition to this the AST node along with its type are recorded in a hash map.  This ensures that only AST nodes that are a similar type are compared against each other
+  If we were not testing for moves in the same scope we would need to test every deleted AST node against every inserted AST node for the entire file. By stipulating that we can only be sure if it is a legal move if it is in the same scope we not only eliminate a lot of relocations of source code that are illegal but also reduce the number of items that need to be compared. In addition to this the AST node along with its type are recorded in a hash map.  This ensures that only AST nodes that are a similar type are compared against each other
   %@nonl
   %@-node:paran.20140805192059.2165:<<matching within only the required scope>>
   %@nl
@@ -131,12 +135,12 @@ If we were not testing for moves in the same scope we would need to test every d
 \section{Design decisions}
 %@<<design decisons>>
 %@+node:paran.20140605081907.1972:<<design decisons>>
- %@ <<compares changes>>
- %@+node:paran.20140801074838.2011:<<compares changes>>
- There are a number of design differences between JDime and the refactor categories tool.  Instead of doing a text comparison first and only proceeding to analyze the program using an AST if there are conflicts the categorization tool examines all files that have a difference in them.  Although this takes longer and is more memory intensive there are some advantages to this. The main advantage is related to the concept of keeping branches as consistent as possible whenever there is a change. An example of this advantage is if a merge was done using an ordinary text comparison and there is a non functional change to only one revision. Examples of a non functional change could include reordering methods or inserting a comment.  As the changes were only done to one of the revisions there is no conflict and JDime only does a text based merge.  During this text based merge, in addition to any of the changes to functionality that we want, we get the non functional changes that change the source code without changing the programs' behaviour. By examining all changes irrespective of if the text has conflicts means that the refactor categories tool can determine if it is a change that would not affect the behaviour of a program.
- %@nonl
- %@-node:paran.20140801074838.2011:<<compares changes>>
- %@nl
+%@<<compares changes>>
+%@+node:paran.20140801074838.2011:<<compares changes>>
+There are a number of design differences between JDime and the refactor categories tool.  Instead of doing a text comparison first and only proceeding to analyze the program using an AST if there are conflicts the categorization tool examines all files that have a difference in them.  Although this takes longer and is more memory intensive there are some advantages to this. The main advantage is related to the concept of keeping branches as consistent as possible whenever there is a change. An example of this advantage is if a merge was done using an ordinary text comparison and there is a non functional change to only one revision. Examples of a non functional change could include reordering methods or inserting a comment.  As the changes were only done to one of the revisions there is no conflict and JDime only does a text based merge.  During this text based merge, in addition to any of the changes to functionality that we want, we get the non functional changes that change the source code without changing the programs' behaviour. By examining all changes irrespective of if the text has conflicts means that the refactor categories tool can determine if it is a change that would not affect the behaviour of a program.
+%@nonl
+%@-node:paran.20140801074838.2011:<<compares changes>>
+%@nl
 
 %@<<drilldown>>
 %@+node:paran.20140606104644.2019:<<drilldown>>
@@ -225,7 +229,7 @@ Because of the way we are using the position in the code to identify AST nodes t
 %@@c
 
 Rather than comparing everything with each other to determine matches it is more efficient to match just the items that are under the same AST structure.  This means that it is more likely that we get a match that is going to be relevant and valid.  An example of this is matching methods. If the methods are under the same container (a class) they may be legally swapped without causing issues.  If the method has been moved to an inner class from an outer one however it becomes more complicated and we cannot guarantee that the code is equivalent.  
-%@nonl
+
 %@-node:paran.20140606104644.2016:<<matcher>>
 %@nl
 %@-node:paran.20140605081907.1972:<<design decisons>>
@@ -238,7 +242,7 @@ The refactor categories tool focuses only on areas where there has been a change
 It is harder to investigate any change that has causes side effects in unchanged code.  Fortunately it is not often that this type of side effect will be purposely placed in the code as it reflects bad design decisions.  This may however be an issue with bugs, which are unintentionally placed in the code.  
 This also means that the refactor categories tool will not be able to tell when some code has been copied but the original remains unchanged. Instead it will assume that it is a completely new insertion of code.
 
-If a change of a variable name is noticed the program still retains the same behaviour if the rename operation has worked on all instances where the old name was previously used.  As we do not examine parts of the code that have not experienced a text based change we cannot guarantee that a rename operation is a valid one. We have an indication that it might be if the code still compiles without error. If a variable name is changed to that of an already existing variable however the behavior of the program could change.
+If a change of a variable name is noticed the program still retains the same behaviour if the rename operation has worked on all instances where the old name was previously used.  As we do not examine parts of the code that have not experienced a text based change we cannot guarantee that a rename operation is a valid one. We have an indication that it might be if the code still compiles without error. If a variable name is changed to that of an already existing variable however the behavior of the program could change. This is known as a \emph{semantic conflict}.  This issue already exists in a text based merge and Fan \cite{Fan2012}, Shao \cite{Shao2009} and others address this issue. 
 %@nonl
 %@-node:paran.20140605081907.1993:<<limitations>>
 %@nl

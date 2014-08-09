@@ -152,7 +152,7 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 <v t="hasletpara.20131202100421.2130"><vh>@shadow Chapters/thesis-introduction.tex</vh></v>
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
 <v t="hasletpara.20131202100421.2134"><vh>@shadow testing.tex</vh></v>
-<v t="paran.20140515173914.6982" a="E"
+<v t="paran.20140515173914.6982"
 expanded="paran.20140528183434.1974,paran.20140530135904.1945,paran.20140529075353.1935,paran.20140528183434.2055,paran.20140530135904.1946,paran.20140528183434.2009,paran.20140528183434.2011,paran.20140530135904.1958,paran.20140528183434.2021,paran.20140604093616.2026,"><vh>@shadow Background.tex</vh></v>
 <v t="paran.20140731220748.2032" a="E"
 expanded="paran.20140731220748.2034,paran.20140731220748.2038,paran.20140804074630.2143,"><vh>@shadow Motivation.tex</vh></v>
@@ -399,80 +399,34 @@ in this situation in becomes easier to recognise that words have been swapped by
 
 The English language is also far too complex to notice anything that is more basic than a word for word swap.
 There are words and sentences that have similar meanings but are spelled and structured differently.</t>
-<t tx="paran.20140803142459.2009">
-
-REFACTOR CATEGORIES:COMMENT:DELETE
------Refactored Bean:/BeanDifferShould.java:(180245, 184321)-----
-
-	
-&gt;&gt;&gt;&gt;&gt;Simplified Diff:/BeanDifferShould.java:(155668, 155669)&gt;&gt;&gt;&gt;&gt;
-) 
-------------------------------------
------Introduced flue:/MapDifferTest.java:(647210, 651266)-----
-
-		
-&gt;&gt;&gt;&gt;&gt;Improved interg:/MapDifferTest.java:(663642, 679938)&gt;&gt;&gt;&gt;&gt;
-
-
-		// this part is needed to reproduce a special error case where the parent node got added as its own
-		// child and caused an infinite loop. this wouldn't happen if the parent node didn't have any changes
-		
-------------------------------------
------Cleaned up Opti:/Options.java:(200741, 204801)-----
-
-
-
-&gt;&gt;&gt;&gt;&gt;Added more JRub:/Options.java:(217139, 237572)&gt;&gt;&gt;&gt;&gt;
-
-
-    /**
-     * The brief option.
-     */
-    
-------------------------------------
-Git diff =0  Refactor Categories =13
-
-REFACTOR CATEGORIES:COMMENT:INSERT
------More migration :/Block.java:(94245, 102408)-----
-
-        // this.tokens = new TokenList(blk);
-        
-&gt;&gt;&gt;&gt;&gt;Further integra:/Block.java:(77884, 81928)&gt;&gt;&gt;&gt;&gt;
-
-        
-------------------------------------
------Added debugging:/Options.java:(262186, 282628)-----
-
-
-    /**
-     * Whether to blather.
-     */
-    
-&gt;&gt;&gt;&gt;&gt;Removed Ant fil:/Options.java:(262179, 266241)&gt;&gt;&gt;&gt;&gt;
-
-
-
-------------------------------------
------Continued work :/Options.java:(139309, 159748)-----
-
-
-    /**
-     * Whether to show the version.
-     */
-    
-&gt;&gt;&gt;&gt;&gt;More work on th:/Options.java:(139308, 143361)&gt;&gt;&gt;&gt;&gt;
-
-
-
-------------------------------------
-Git diff =0  Refactor Categories =4
-
-REFACTOR CATEGORIES:COMMENT:MODIFY
+<t tx="paran.20140803142459.2009">REFACTOR CATEGORIES:COMMENT:DELETE
 -----Added another t:/Main.java:(438273, 438276)-----
 				
 &gt;&gt;&gt;&gt;&gt;More little twe:/Main.java:(438273, 442372)&gt;&gt;&gt;&gt;&gt;
 				// FIXME: get this working!!
 				
+------------------------------------
+-----Added another t:/Main.java:(438273, 438276)-----
+				
+&gt;&gt;&gt;&gt;&gt;More little twe:/Main.java:(438273, 442372)&gt;&gt;&gt;&gt;&gt;
+				// FIXME: get this working!!
+				
+------------------------------------
+-----Yet another bug:/ClassFileReader.java:(3047425, 3047427)-----
+			
+&gt;&gt;&gt;&gt;&gt;Another bug fix:/ClassFileReader.java:(2969601, 2973699)&gt;&gt;&gt;&gt;&gt;
+			// skip attribute for now
+			
+------------------------------------
+Git diff =0  Refactor Categories =10
+
+REFACTOR CATEGORIES:COMMENT:INSERT
+-----Added another t:/TypeAnalysis.java:(995329, 1003523)-----
+			// This is a fall back, since it is permitted to perform an array
+			// load / store on the null type.
+			
+&gt;&gt;&gt;&gt;&gt;More little twe:/TypeAnalysis.java:(991233, 991235)&gt;&gt;&gt;&gt;&gt;
+			
 ------------------------------------
 -----Added another t:/TypeAnalysis.java:(995329, 1003523)-----
 			// This is a fall back, since it is permitted to perform an array
@@ -481,67 +435,58 @@ REFACTOR CATEGORIES:COMMENT:MODIFY
 &gt;&gt;&gt;&gt;&gt;More little twe:/TypeAnalysis.java:(991233, 991235)&gt;&gt;&gt;&gt;&gt;
 			
 ------------------------------------
------More little twe:/ClassFileReader.java:(5562369, 5562371)-----
-			
-&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/ClassFileReader.java:(5562369, 5562371)&gt;&gt;&gt;&gt;&gt;
-			
+-----Minor bug fix f:/TypeAnalysis.java:(1880065, 1884162)-----
+		// TODO: I'm slightly unsure whether or not this is a good idea!
+		
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1880065, 1880066)&gt;&gt;&gt;&gt;&gt;
+		
 ------------------------------------
-Git diff =0  Refactor Categories =3348
+Git diff =0  Refactor Categories =5
+
+REFACTOR CATEGORIES:COMMENT:MODIFY
+-----Minor bug fix f:/TypeAnalysis.java:(970755, 970758)-----
+if (
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(970755, 970757)&gt;&gt;&gt;&gt;&gt;
+if(
+------------------------------------
+-----Minor bug fixes:/Code.java:(155649, 159745)-----
+ * This represents the Code attribute from the JVM Specification.
+ 
+&gt;&gt;&gt;&gt;&gt;Added classfile:/Code.java:(163841, 167937)&gt;&gt;&gt;&gt;&gt;
+ * This represents the Code attribute from the JVM Spec.
+ 
+------------------------------------
+-----Minor bug fixes:/JKitValidTests.java:(368645, 368678)-----
+new ClassFileVerifier().apply(cf);
+&gt;&gt;&gt;&gt;&gt;Added classfile:/JKitValidTests.java:(364545, 372737)&gt;&gt;&gt;&gt;&gt;
+				// FIXME: get this working!!
+				// new TypeAnalysis().apply(cf);
+	
+------------------------------------
+Git diff =0  Refactor Categories =95
 
 REFACTOR CATEGORIES:WHITESPACE:MODIFY
------Updated ClassFi:/ClassFileReader.java:(4087809, 4087810)-----
+-----More little twe:/TypeAnalysis.java:(1069101, 1073153)-----
 		
-&gt;&gt;&gt;&gt;&gt;ClassFileReader:/ClassFileReader.java:(4034561, 4038657)&gt;&gt;&gt;&gt;&gt;
+	
+&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/TypeAnalysis.java:(1093636, 1097729)&gt;&gt;&gt;&gt;&gt;
 
 	
 ------------------------------------
------Working on the :/JKitValidTests.java:(98341, 106496)-----
+-----Minor bug fix f:/TypeAnalysis.java:(1884205, 1888257)-----
 
-
-
-&gt;&gt;&gt;&gt;&gt;Added the JKit :/JKitValidTests.java:(98337, 102400)&gt;&gt;&gt;&gt;&gt;
-
-
+	
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1880065, 1880066)&gt;&gt;&gt;&gt;&gt;
+		
 ------------------------------------
------Working on the :/JKitValidTests.java:(135197, 143360)-----
+-----Another bug fix:/ClassFileReader.java:(3551236, 3555329)-----
 
-
-
-&gt;&gt;&gt;&gt;&gt;Added the JKit :/JKitValidTests.java:(98337, 102400)&gt;&gt;&gt;&gt;&gt;
-
-
+	
+&gt;&gt;&gt;&gt;&gt;Added some miss:/ClassFileReader.java:(3420171, 3424259)&gt;&gt;&gt;&gt;&gt;
+ 			
+			
 ------------------------------------
-Git diff =0  Refactor Categories =283
-
-REFACTOR CATEGORIES:WHITESPACE:EQUIVALENT
------Cleaned up code:/Options.java:(40989, 45057)-----
-
-
-
-&gt;&gt;&gt;&gt;&gt;Began integrati:/Options.java:(36865, 40961)&gt;&gt;&gt;&gt;&gt;
-
-
-
-------------------------------------
------Code cleanup, a:/FileDiff.java:(28711, 32769)-----
-
-
-
-&gt;&gt;&gt;&gt;&gt;Updated to work:/FileDiff.java:(28673, 32769)&gt;&gt;&gt;&gt;&gt;
-
-
-
-------------------------------------
------Updated to work:/JavaFileDiff.java:(40986, 45057)-----
-
-
-
-&gt;&gt;&gt;&gt;&gt;Cleaned up code:/JavaFileDiff.java:(53249, 57345)&gt;&gt;&gt;&gt;&gt;
-
-
-
-------------------------------------
-Git diff =0  Refactor Categories =3
+Git diff =0  Refactor Categories =13
 
 REFACTOR CATEGORIES:JAVA:DELETE
 -----Minor bug fix f:/TypeAnalysis.java:(1884183, 1884191)-----
@@ -559,7 +504,7 @@ t2
 &gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(2760712, 2760713)&gt;&gt;&gt;&gt;&gt;
 t1
 ------------------------------------
-Git diff =0  Refactor Categories =2133
+Git diff =0  Refactor Categories =106
 
 REFACTOR CATEGORIES:JAVA:INSERT
 -----Minor bug fix f:/TypeAnalysis.java:(1884199, 1884202)-----
@@ -577,7 +522,7 @@ t2
 &gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(2760712, 2760713)&gt;&gt;&gt;&gt;&gt;
 t1
 ------------------------------------
-Git diff =0  Refactor Categories =1821
+Git diff =0  Refactor Categories =10
 
 GIT DIFF:JAVA:MODIFY
 ====================================
@@ -624,7 +569,7 @@ store.push(JvmTypes.T_VOID);
 throw new VerificationException(method, index, store,
 					"arrayload expected array type");
 ------------------------------------
-Git diff =12224  Refactor Categories =6855
+Git diff =335  Refactor Categories =249
 
 REFACTOR CATEGORIES:JAVA:MOVE
 -----Minor bug fix f:/TypeAnalysis.java:(1884178, 1884181)-----
@@ -632,42 +577,31 @@ type
 &gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(1880092, 1880095)&gt;&gt;&gt;&gt;&gt;
 type
 ------------------------------------
------Midstream on re:/StatementListDiffer.java:(159825, 159832)-----
-delStart
-&gt;&gt;&gt;&gt;&gt;Refactored Type:/StatementListDiffer.java:(159815, 159822)&gt;&gt;&gt;&gt;&gt;
-delStart
-------------------------------------
------Midstream on re:/StatementListDiffer.java:(172116, 172123)-----
-delStart
-&gt;&gt;&gt;&gt;&gt;Refactored Type:/StatementListDiffer.java:(172106, 172113)&gt;&gt;&gt;&gt;&gt;
-delStart
-------------------------------------
-Git diff =0  Refactor Categories =33
+Git diff =0  Refactor Categories =1
 
 REFACTOR CATEGORIES:JAVA:RENAMED
------More little twe:/ClassFileReader.java:(5562372, 5562433)-----
-String ownerString = getString(read_u2(read_u2(index, 0), 0));
-&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/ClassFileReader.java:(5562372, 5566519)&gt;&gt;&gt;&gt;&gt;
-owner = parseClassDescriptor("L"
-					+ getString(read_u2(read_u2(index, 0), 0)) + ";");
+-----Minor bug fix f:/TypeAnalysis.java:(970822, 974849)-----
+{
+	
+&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(970789, 974849)&gt;&gt;&gt;&gt;&gt;
+{
+	
 ------------------------------------
------More little twe:/TypeAnalysis.java:(1069059, 1069100)-----
-checkIsSubtype(code.type,type,index,orig);
-&gt;&gt;&gt;&gt;&gt;Minor bug fix f:/TypeAnalysis.java:(1069059, 1093635)&gt;&gt;&gt;&gt;&gt;
-if(type instanceof JvmType.Array || type instanceof JvmType.Null) {
-			JvmType.Array arrType = (JvmType.Array) type;
-			checkIsSubtype(code.type,arrType,index,orig);			 			
-		} else {
-			throw new VerificationException(method, index, orig,
-					"arrayload expected array type");
-		}
+-----Minor bug fixes:/TypeAnalysis.java:(1634345, 1638401)-----
+{
+	
+&gt;&gt;&gt;&gt;&gt;Added classfile:/TypeAnalysis.java:(1634341, 1638401)&gt;&gt;&gt;&gt;&gt;
+{
+	
 ------------------------------------
------Minor bug fix f:/TypeAnalysis.java:(970759, 970819)-----
-type instanceof JvmType.Array || type instanceof JvmType.Null
-&gt;&gt;&gt;&gt;&gt;Bug fix for non:/TypeAnalysis.java:(970758, 970786)&gt;&gt;&gt;&gt;&gt;
-type instanceof JvmType.Array
+-----Added classfile:/ClassFileVerifier.java:(229377, 233473)-----
+public class ClassFileVerifier {
+	
+&gt;&gt;&gt;&gt;&gt;Merge pull requ:/Validation.java:(229377, 233473)&gt;&gt;&gt;&gt;&gt;
+public class Validation {
+	
 ------------------------------------
-Git diff =0  Refactor Categories =5338
+Git diff =0  Refactor Categories =27
 
 REFACTOR CATEGORIES:JAVA:EQUIVALENT
 -----More little twe:/TypeAnalysis.java:(970753, 974849)-----
@@ -691,7 +625,7 @@ REFACTOR CATEGORIES:JAVA:EQUIVALENT
 		if (!(type instanceof JvmType.Array)) {
 	
 ------------------------------------
-Git diff =0  Refactor Categories =1211
+Git diff =0  Refactor Categories =54
 </t>
 <t tx="paran.20140803142459.2010"></t>
 <t tx="paran.20140803142459.2011"></t>
