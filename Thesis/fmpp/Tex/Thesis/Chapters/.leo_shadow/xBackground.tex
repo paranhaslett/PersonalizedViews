@@ -28,7 +28,7 @@ Version control systems are a way of managing different revisions (or versions).
   \item [Use branching for experimental features.] 
   %@  <<branching>>
   %@+node:paran.20140530135904.1950:<<branching>>
-  It is also possible to maintain multiple revisions of all the files for a software project. This is useful if there is an experimental feature which you want to explore but want to maintain the original as a separate project. As shown in figure ~\ref{fig:bgBranches} a version control system can keep these multiple interests separate by putting them on different \emph{branches}.  It is still possible to easily switch between the different branches depending on which project you want to make changes to.  A good use of this feature is if you have a software project that you have written on behalf two different companies but each of them would like their own unique customisations on top of the base product.  By making two copies of the base product and having a record of when it was divided the branches can later be recombined to include some or all of the features that have been introduced.
+  It is also possible to maintain multiple revisions of all the files for a software project. This is useful if there is an experimental feature which you want to explore but want to maintain the original as a separate project. As shown in figure ~\ref{fig:bgBranches} a version control system can keep these multiple interests separate by putting them on different \emph{branches}.  It is still possible to easily switch between the different branches depending on which project you want to make changes to.  A good use of this feature is if you have a software project that you have written on behalf two different companies but each of them would like their own unique customisations on top of the base product.  By making two copies of the base product and having a record of when it was divided the branches can later be recombined to include some or all of the features that have been introduced.  According to Willaims \cite{Williams2008} branching and merging still is complex and it is hard to get good results from a text-based merge.
 
   \begin{figure}[h]
    \begin{center}
@@ -37,7 +37,7 @@ Version control systems are a way of managing different revisions (or versions).
    \caption{A project that has been split into two branches}
    \label{fig:bgBranches}
   \end{figure}
-  %@nonl
+
   %@-node:paran.20140530135904.1950:<<branching>>
   %@nl
 
@@ -173,7 +173,7 @@ To do three way merging requires three different revisions are required, the ori
   \item [Online version control systems]  
   %@  <<GitHub>>
   %@+node:paran.20140603140023.2025:<<GitHub>>
-  Whilst is is possible for a measure of collaboration just by using git on it own it requires that you have some method of obtaining the separate branches on one machine before they can be merged.  One way of doing this within a company is to set up a git server.  This might suitable for projects that are closed source and have a select group of people who work on the source code.  For larger projects that have has programmers in different parts of the world a publicly accessible git server that is on the web may be a better solution. A good example of this it GitHub.  GitHub provide a way for many developers in different parts of the world to change source code for an open source project.  It is possible that the developers for a particular project have not even met in real life or even know about each other. Figure ~\ref{fig:bgUsage} shows the amount of activity that there has been on the JGit. It shows that there are 74 contributors to the source code and 3245 individual changes over 20 branches. With such a large development team the potential to have conflicting changes must be high. Having many separate branches may indicate that merges often need to happen. This one example could indicate the need for good merge tools that can reconcile conflicts even if the developers have little contact with each other.
+  Whilst is is possible for a measure of collaboration just by using git on it own it requires that you have some method of obtaining the separate branches on one machine before they can be merged.  One way of doing this within a company is to set up a git server.  This might suitable for projects that are closed source and have a select group of people who work on the source code.  For larger projects that have has programmers in different parts of the world a publicly accessible git server that is on the web may be a better solution. Loeliger \cite{Loeliger2006} how it is possible to access and use a web based git server to achieve this. A good example of a web based git server is GitHub.  GitHub provide a way for many developers in different parts of the world to change source code for an open source project.  It is possible that the developers for a particular project have not even met in real life or even know about each other. Figure ~\ref{fig:bgUsage} shows the amount of activity that there has been on the JGit project. It shows that there are 74 contributors to the source code and 3245 individual changes over 20 branches. With such a large development team the potential to have conflicting changes must be high. Having many separate branches may indicate that merges often need to happen. This one example could indicate the need for good merge tools that can reconcile conflicts even if the developers have little contact with each other.
 
   \begin{figure}[h]
    \begin{center}
@@ -184,10 +184,6 @@ To do three way merging requires three different revisions are required, the ori
   \end{figure}
 
 
-  %@+at
-  %@-at
-  %@@c
-  %@nonl
   %@-node:paran.20140603140023.2025:<<GitHub>>
   %@nl
   
