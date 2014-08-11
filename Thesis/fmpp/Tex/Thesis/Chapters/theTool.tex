@@ -1,12 +1,12 @@
 
 \chapter{Refactor Categories Tool}
-In order to prove that having private views would provide some useful results we created the Refactor Categories Tool. The Refactor Categories Tool examines the differences between files and arranges them into a greater variety of categories than used by version control systems or merge and diff tools.  In addition to being able to detect instances of delete, insert and modify the refactor categories tool can also detect instances where the code has been relocated and to some extent renamed.  It also can differentiate between changes to comments, white space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and some instances where it has been refactored. When we use the word refactored here we refer to the definition of refactoring presented by Murphy-Hill \cite{Murphy-Hill2008} who claims that refactoring simply changes the structure of the code but not the behaviour. Although it does not detect more complex differences beyond this we intend to show that changes exist in real world software projects that have no impact on the projects' behaviour.
+In order to prove that having private views would provide some useful results we created the Refactor Categories Tool. Version control systems such a JGit compare and merge file by differentiating between insert, delete and modify  opperations. The Refactor Categories Tool enhances this by also including instances where a block of code has moved but the function equivlency remains the same. It also can differentiate between changes to comments, white space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and some instances where it has been refactored. When we use the word refactored here we refer to the definition of refactoring presented by Murphy-Hill \cite{Murphy-Hill2008} who claims that refactoring simply changes the structure of the code but not the behaviour. Although it does not detect more complex differences beyond this we intend to show that changes exist in real world software projects that have no impact on the projects' behaviour.
 
 
 
 \section{Overview}
-The Refactor Categories Tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.
-An ordinary text comparison is used as a starting point.  The algorithm used for the text comparison is the histogram LCS one normally used by JGit with white space ignored. The text comparison returns the minimal number of text changes in EditList object.  The information about each change that the EditList object retains are:
+The test we use with the Refactor Categories Tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.
+An ordinary text comparison is used as a starting point.  The algorithm used for the text comparison is the histogram LCS one normally used by JGit with white space ignored. The text comparison returns the minimal number of text changes in an \lstinline{EditList} object.  The \lstinline{EditList} contains a list of changes to the plain text. The information about each change that the \lstinline{EditList} object retains are:
 
 \begin{itemize}
   \item the starting line of the change for both revisions being compared
@@ -16,19 +16,33 @@ An ordinary text comparison is used as a starting point.  The algorithm used for
 
 The types of changes that are detected between two files are limited to inserts, deletes, and modifications. In order to expand this list we need more information.  We obtain information about the meaning of Java files by parsing both revisions we are comparing into an AST using JastAddJ. We then need to discover which AST node matches which change to the source code. 
 
-Each of the AST nodes can contain information about the line of source the AST node starts and ends at.  Unlike the EditList object which we have previously discussed AST node can also hold the column that the AST node starts and ends at.  Using this positional information we can match the text based changes to a set of AST nodes.
+Each of the AST nodes contains information about the line of source the AST node starts and ends at.  Unlike the \lstinline{EditList} object which we have previously discussed, an AST node can also hold the column that the AST node starts and ends at.  Using this positional information we can match the text based changes to a set of AST nodes.
 
-There is likely to be AST nodes that are not included in any of the change sets and can be safely ignored. In order to find just AST nodes we are interested in we need to traverse the AST.  When we start at the root of the AST the start position for the root node is the first line and the first column. The end position for the root node is the last line and last column.  By examining the children of the root however we can determine which children contain all or part of a text based change.
+There are likely to be AST nodes that are not included in any of the change sets and can be safely ignored. In order to find just an AST node we are interested in we need to traverse the AST.  When we start at the root of the AST the start position for the root node is the first line and the first column. The end position for the root node is the last line and last column.  By examining the children of the root however we can determine which children contain all or part of a text based change.
 
-\begin{figure}[h]
+\begin{figure}[!T]
+ \begin{center}
+  \includegraphics[scale=1]{drilldown1}
+ \end{center}
+ \caption{An AST showing each AST Node arranged in a tree and with Child 3 consisting of a text change.  Each AST Node and Text Change has a start row recorded before the node and a end row recorded after the node}
+ \label{fig:findingASTNode}
+\end{figure}
+
+
+
+An example of this can be found in Figure \ref{fig:findingASTNode}.  In this Figure it is safe to ignore any children of the AST node marked 'Child 1' because 'Child 1' does not contain the text change.  The AST Node marked 'Child 3' however is interesting as its location places it within a text change. 
+
+Another interesting question is how the tool deals with situations where a Text Change only partly overlaps an AST node or and AST node only partly covers a text item.  This issue is shown in Figure \ref{fig:troubleASTNode}.
+
+\begin{figure}[!T]
  \begin{center}
   \includegraphics[scale=1]{DrilldownEx}
  \end{center}
- \caption{Finding an AST node we are interested in}
- \label{fig:findingASTNode}
-\end{figure}  
+ \caption{An AST showing an partial overlap between child 2 and a text change and child 3 and a text change}
+ \label{fig:troubleASTNode}
+\end{figure}
 
-An example of this can be found in figure \ref{fig:findingASTNode}.  In this figure it is safe to ignore any children of the AST node marked 'Child 1' because 'Child 1' does not contain the text change.  The AST Node marked 'Child 3' however is interesting as its location places it within a text change. 
+In the situation where only part of and AST Node contains the text change the children of that AST Node are examined to see if they are fully within the text change.  If not it keeps recursively checking until either a child falls completely outside the change or is completely in the change.  In the case where a text change is not represented by an AST node then the portion that is not covered by an AST change is deemed to be solely a text based changed.  Items that could be a text based change are comments and white space items.
 
 In some instances items within the text change will not have a corresponding AST node.  These are of interest to us because these are instances where the text may have been changed but it has no impact on the behaviour of the program.  The most likely instances of this is when a comment has changed or if white space has been introduced in the middle of source code. Once the AST node for both revisions has been matched with the text change we can compare the AST nodes and their children to discover if they would behave in the same fashion. If they do behave in the same fashion it could indicate that the change is an ascetic one.
 
