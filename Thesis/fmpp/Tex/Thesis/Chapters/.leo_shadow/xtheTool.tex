@@ -3,10 +3,10 @@
 %@@color
 %@@language latex
 
-\chapter{Refactor categories tool}
+\chapter{Refactor Categories Tool}
 %@<<tool desc>>
 %@+node:paran.20140731173741.2006:<<tool desc>>
-In order to prove that having individual refactored views would provide some useful results we created a refactor categories tool. The refactor categories tool examines the differences between files and arranges them into a greater variety of categories than used by version control systems or merge and diff tools.  In addition to being able to detect instances of delete, insert and modify the refactor categories tool can also detect instances where the code has been relocated and to some extent renamed.  It also can differentiate between changes to comments, white space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and some instances where it has been refactored. When we use the word refactored here we refer to the defintion of refactoring presented by Murphy-Hill \cite{Murphy-Hill2008} who claims that refactoring simply changes the structure of the code but not the behaviour. Although it does not detect more complex differences beyond this we intend to show that changes exist in real world software projects that have no impact on the projects behaviour.
+In order to prove that having private views would provide some useful results we created the Refactor Categories Tool. The Refactor Categories Tool examines the differences between files and arranges them into a greater variety of categories than used by version control systems or merge and diff tools.  In addition to being able to detect instances of delete, insert and modify the refactor categories tool can also detect instances where the code has been relocated and to some extent renamed.  It also can differentiate between changes to comments, white space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and some instances where it has been refactored. When we use the word refactored here we refer to the definition of refactoring presented by Murphy-Hill \cite{Murphy-Hill2008} who claims that refactoring simply changes the structure of the code but not the behaviour. Although it does not detect more complex differences beyond this we intend to show that changes exist in real world software projects that have no impact on the projects' behaviour.
 
 
 %@-node:paran.20140731173741.2006:<<tool desc>>
@@ -15,7 +15,7 @@ In order to prove that having individual refactored views would provide some use
 \section{Overview}
 %@<<Overview>>
 %@+node:paran.20140805175513.2154:<<Overview>>
-The refactor categories tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.
+The Refactor Categories Tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.
 An ordinary text comparison is used as a starting point.  The algorithm used for the text comparison is the histogram LCS one normally used by JGit with white space ignored. The text comparison returns the minimal number of text changes in EditList object.  The information about each change that the EditList object retains are:
 
 \begin{itemize}
@@ -46,7 +46,16 @@ Another change we are interested in is if items have been moved.  We would notic
 
 %If we can keep track of renaming
 
-If we find examples of text based changes that do not change the programs' behaviour we have an indication that we can reduce the amount of changes necessary to update another branch. This in turn could indicate that we would have less merge conflicts by reducing the overall number of changes.
+If we find examples of text based changes that do not change the programs' behaviour we have an indication that we can reduce the amount of changes necessary to update another view. This in turn could indicate that we would have less merge conflicts by reducing the overall number of changes.
+
+%@+at
+% In order to do this the source code needs to be divided into understandable 
+% sections. When each of these sections for each revising are compared it is 
+% possible to determine if a section has been moved.  This enhances what can 
+% be detected when examining the differences between two files.
+% 
+%@-at
+%@@c
 %@-node:paran.20140805175513.2154:<<Overview>>
 %@nl
 
@@ -75,14 +84,14 @@ Once the various matches have been tested we use a greedy algorithm to select th
 
 %@<<detecting renames>>
 %@+node:paran.20140606104644.2009:<<detecting renames>>
-To a limited extent the refactor categories tool can also deal with renaming. It does this by examing the node and seeing if its children have remained the same and its type remain the same but its name has changed. It can not analyse nodes where the name has not changed as these are not picked up by the initial text comparison.
+To a limited extent the Refactor Categories Tool can also deal with renaming. It does this by examing the node and seeing if its children have remained the same and its type remain the same but its name has changed. It can not analyse nodes where the name has not changed as these are not picked up by the initial text comparison.
 %@nonl
 %@-node:paran.20140606104644.2009:<<detecting renames>>
 %@nl
 
 %@<<detecting comments>>
 %@+node:paran.20140606104644.2011:<<detecting comments>>
-The refactor categories tool first does a cursory examination of the text differences between two files. It then examines both the differences in executable Java code and the differences between comments and white-space. 
+The Refactor Categories Tool first does a cursory examination of the text differences between two files. It then examines both the differences in executable Java code and the differences between comments and white-space. 
 %@-node:paran.20140606104644.2011:<<detecting comments>>
 %@nl
 
@@ -93,7 +102,7 @@ The refactor categories tool first does a cursory examination of the text differ
 \section{Performance}
 %@<<Performance>>
 %@+node:paran.20140805175513.2166:<<Performance>>
-As we are testing the complete revision history for several projects there is a high number of changes.  This means that performance is an issue especially for large software projects that have many changes. This means we have not only had to look at using more memory for the refactor categories tool but also had to make some changes to the code to free up more memory where required.
+As we are testing the complete revision history for several projects there is a high number of changes.  This means that performance is an issue especially for large software projects that have many changes. This means we have not only had to look at using more memory for the Refactor Categories Tool but also had to make some changes to the code to free up more memory where required.
 
 \begin{description}
  \item [By setting object references back to null when they are no longer used.]
@@ -138,9 +147,18 @@ As we are testing the complete revision history for several projects there is a 
 \section{Design decisions}
 %@<<design decisons>>
 %@+node:paran.20140605081907.1972:<<design decisons>>
+%@<<java>>
+%@+node:paran.20140810152125.2156:<<java>>
+Java was chosen as both the language to write the tool in and to be the language that the tool would recognise.  This was done as it was a language we understood and to make use of JDime if it was going to be part of the tool.  We wanted to use git due to its distributed nature.  The reasons for choosing a distributed version control system was that we wanted each private view being able to function on its own as a fully fledged project without being dependant on a server.  As we were already using Java rather than using the main Git distribution which is written in C we needed to use JGit instead.    
+
+It turned out we were not able to use JDime because of the issues discussed earlier. Instead we used JastAddJ the same java implementation that JDime uses so that we could implement some of the differences we required including being comment aware and only examining each of the copies of source code.
+%@nonl
+%@-node:paran.20140810152125.2156:<<java>>
+%@nl
+
 %@<<compares changes>>
 %@+node:paran.20140801074838.2011:<<compares changes>>
-There are a number of design differences between JDime and the refactor categories tool.  Instead of doing a text comparison first and only proceeding to analyze the program using an AST if there are conflicts the categorization tool examines all files that have a difference in them.  Although this takes longer and is more memory intensive there are some advantages to this. The main advantage is related to the concept of keeping branches as consistent as possible whenever there is a change. An example of this advantage is if a merge was done using an ordinary text comparison and there is a non functional change to only one revision. Examples of a non functional change could include reordering methods or inserting a comment.  As the changes were only done to one of the revisions there is no conflict and JDime only does a text based merge.  During this text based merge, in addition to any of the changes to functionality that we want, we get the non functional changes that change the source code without changing the programs' behaviour. By examining all changes irrespective of if the text has conflicts means that the refactor categories tool can determine if it is a change that would not affect the behaviour of a program.
+There are a number of design differences between JDime and the Refactor Categories Tool.  Instead of doing a text comparison first and only proceeding to analyze the program using an AST if there are conflicts the categorization tool examines all files that have a difference in them.  Although this takes longer and is more memory intensive there are some advantages to this. The main advantage is related to the concept of keeping branches as consistent as possible whenever there is a change. An example of this advantage is if a merge was done using an ordinary text comparison and there is a non functional change to only one revision. Examples of a non functional change could include reordering methods or inserting a comment.  As the changes were only done to one of the revisions there is no conflict and JDime only does a text based merge.  During this text based merge, in addition to any of the changes to functionality that we want, we get the non functional changes that change the source code without changing the programs' behaviour. By examining all changes irrespective of if the text has conflicts means that the Refactor Categories Tool can determine if it is a change that would not affect the behaviour of a program.
 %@nonl
 %@-node:paran.20140801074838.2011:<<compares changes>>
 %@nl
@@ -154,7 +172,7 @@ We only begin any analysis, if the AST node resides completely within a block of
 If there are any separate blocks of changes that occur between the start position of the AST node and the end position of the AST node then we recursively examine the AST nodes children.
 
 %@+at
-% The refactor categories tool first works out which text has changed using 
+% The Refactor Categories Tool first works out which text has changed using 
 % the same method as JGit.
 % This initial examination returns the differences based on a line by line 
 % basis rather than using a smaller granularity.
@@ -191,16 +209,6 @@ To get around this problem we have needed to discover the end position of the pr
 %@nonl
 %@-node:paran.20140801202652.2011:<<resolving gaps>>
 %@nl
-
-%@+at 
-% need to add something about the choice of java and JastAddJ
-% 
-% why the the focus on comments and no fuctional changes
-% 
-% why does it do it for the whole repository
-% 
-%@-at
-%@@c
 
 %@<<comments and white space>>
 %@+node:paran.20140606104644.2018:<<comments and white space>>
@@ -241,9 +249,9 @@ Rather than comparing everything with each other to determine matches it is more
 \section{Limitations of the tool}
 %@<<limitations>>
 %@+node:paran.20140605081907.1993:<<limitations>>
-The refactor categories tool focuses only on areas where there has been a change in the source code. 
+The Refactor Categories Tool focuses only on areas where there has been a change in the source code. 
 It is harder to investigate any change that has causes side effects in unchanged code.  Fortunately it is not often that this type of side effect will be purposely placed in the code as it reflects bad design decisions.  This may however be an issue with bugs, which are unintentionally placed in the code.  
-This also means that the refactor categories tool will not be able to tell when some code has been copied but the original remains unchanged. Instead it will assume that it is a completely new insertion of code.
+This also means that the Refactor Categories Tool will not be able to tell when some code has been copied but the original remains unchanged. Instead it will assume that it is a completely new insertion of code.
 
 If a change of a variable name is noticed the program still retains the same behaviour if the rename operation has worked on all instances where the old name was previously used.  As we do not examine parts of the code that have not experienced a text based change we cannot guarantee that a rename operation is a valid one. We have an indication that it might be if the code still compiles without error. If a variable name is changed to that of an already existing variable however the behavior of the program could change. This is known as a \emph{semantic conflict}.  This issue already exists in a text based merge and Fan \cite{Fan2012}, Shao \cite{Shao2009} and others address this issue. 
 %@nonl

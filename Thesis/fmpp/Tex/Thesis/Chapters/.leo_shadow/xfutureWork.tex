@@ -5,18 +5,24 @@
 
 \chapter{Future Work}
 
+Performance of Refactor Categories Tool could be further enhanced by only parsing nodes that are part of the change set or are ancestors of this.  This however would require major changes to the parser or rewriting it. It would save memory in addition to speeding up the parsing of Java code into AST nodes.
+
+
 
 %@+at
 % 
-% removing the AST nodes once they have been used
+% comments need to be able to be associated to blocks of code so that it is 
+% possible tyo tell if removing or addin a comment should be reflected in 
+% other views when there is a source code change
+% 
+% removing AST nodes once they have been used
 % 
 % future work: by keeping track of equivalencies there is no need to retest 
 % using the AST
 % 
-% future work: performance could be further enhanced by only parsing nodes that 
-% are part of the change set or are ancestors of this.  This however would 
-% require major changes to the parser or rewriting it. It would save memory in 
-% addition to speeding up the parsing of Java code into AST nodes.
+% To reuse the refactor categories tool or something similar to create 
+% seperate views as envisaged
+% 
 % 
 %@-at
 %@@c
