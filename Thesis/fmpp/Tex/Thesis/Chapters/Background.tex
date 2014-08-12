@@ -27,7 +27,10 @@ Version control systems are a way of managing different revisions (or versions).
   %According to Willaims \cite{Williams2008} branching and merging still is complex and it is hard to get good results from a text-based merge.
 
   \item [Attach documentation to a feature.]
-  Another useful feature of version control is the ability to record meta information beside changes to a set of files.  The reason this is useful is that you can specify what the change was for.  It is possible to associate a change that has occurred over multiple files as being for the same reason.  Once the change has been made is possible in most version control systems to write a message when the documents are checked in.  In some version control systems this message is required to check-in any set of documents.  The reason this is useful is at a later date if queries are made about what a certain change to a document was for.  Since there is a message beside all the documents about the reason for a particular change it becomes easier to figure out the reason for the individual change we are interested in. If following the example above we were to examine a document and wonder why the address changed we could examine the check in with that change and see the message that the person changing it wrote.
+  Another useful feature of version control is the ability to record meta information beside changes to a set of files.  The reason this is useful is that you can specify what the change was for.  It is possible to associate a change that has occurred over multiple files as being for the same reason.  Once the change has been made is possible in most version control systems to write a message when the documents are checked in.  In some version control systems this message is required to check-in any set of documents.  The reason this is useful is when queries are made about what a certain change to a document was for.  Since there is a message beside all the documents about the reason for a particular change it becomes easier to figure out the reason for the individual change we are interested in. 
+  % If following the example above we were to examine a document and wonder 
+  % why the address changed we could examine the check in with that change and 
+  % see the message that the person changing it wrote.
 
   \begin{figure}[!t]
    \begin{center}
@@ -48,12 +51,7 @@ Version control systems are a way of managing different revisions (or versions).
   \end{figure}
 
   \item [Collaborate with multiple developers.]
-  Version control systems make it possible to have individual revisions that contain each persons' changes. The version control system then manages the way these changes are merged into a composite product. Bertino \cite{Bertino2012} describes the ability to merge the work of multiple people as being a powerful collaborative tool. A version control system allows multiple people to work on the same document. In some circumstances it allows them to work on the document at the same time.  A version control system allows people with different ideas to collaborate on a single document.
-
-  % In order to manage the different version or revisions version control 
-  % systems work better on plain text documents. One of the main uses for a 
-  % version control system is to maintain source code written in a plain text 
-  % programming language, such as Java or C.
+  Version control systems make it possible to have individual revisions that contain each persons' changes. The version control system then manages the way these changes are merged into a composite product. Bertino \cite{Bertino2012} describes the ability to merge the work of multiple people as being a powerful collaborative tool. This is beacuse a version control system allows multiple people with different ideas to collaborate on the same document. In some circumstances it allows them to work on the document at the same time. This feature seems similar to the concept of having a private view that we are exporing in this thesis. The difference is that a version control system has no awareness about the format of the documents. This means it is harder for it to evaluate the difference between features of the document that will be helpful to collaboration and features that express the individual tastes of each of the collaborators.   
 
 \end{description}
 
@@ -71,10 +69,12 @@ One approach is to require that file is only able to be used by one person at a 
 \subsubsection{Smaller structured units}
 Another way to reduce conflicts is to split the programming code into smaller units.  The advantage of this is that if you are using locking you minimise the risk that two people need access to the same unit of source code. Condering two people working on the same project made up of a number of files.  Instead of one person locking a file at a time that person could be allowed to only lock the functions they are changing. As those functions are smaller than the file there is likely to be less changes and they are likely to unlock them sooner.
 \subsubsection{Merging documents}
-Finally we could allow both parties to change the document and try to figure out what the problems are afterwards.  This resolution of anything that remains a problem is known as a \emph{merge conflict}. This occurs whenever the computer cannot automatically process a merge.  The merge then needs to be sorted out manually. Merge conflicts are more likely to occur if there is a dramatic change such as refactoring.
+Finally we could allow both parties to change the document and try to figure out what the problems are afterwards.  This resolution of anything that remains a problem is known as resolving a \emph{merge conflict}. This occurs whenever the computer cannot automatically process a merge.  The merge then needs to be sorted out manually. Merge conflicts are more likely to occur if there is a dramatic change such as refactoring.
 
 If not regularly merged it is possible for the source code to diverge greatly and it becomes harder and harder to reconcile.
  According to Bertino it is possible to keep a smaller more easily deployed repository by excluding files that can be generated. \cite{Bertino2012}. Although Bertino refers to unnecessary files this premise may also be applicable for the smaller blocks of code we are interested in. This suggests that maintaining a record about what is relevant and what is irrelevant may have some benefit. Version control still can have problems with merge conflicts. 
+ 
+% need to tidy this up 
  
 \subsubsection{Manual Merging}
 If you have two files you want to merge but no common starting point for them both you will need to manually merge any differences.  The computer has no record about what the original file looked like so it can not determine which changes were intended.  Features that they have in common will not need to be affected however a decision needs to be made about any differences by the developers responsible for those changes.

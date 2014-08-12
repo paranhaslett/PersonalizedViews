@@ -276,8 +276,8 @@ Rather than comparing everything with each other to determine matches it is more
 \section{Limitations of the tool}
 %@<<limitations>>
 %@+node:paran.20140605081907.1993:<<limitations>>
-The Refactor Categories Tool focuses only on areas where there has been a change in the source code. 
-It is harder to investigate any change that has causes side effects in unchanged code.  Fortunately it is not often that this type of side effect will be purposely placed in the code as it reflects bad design decisions.  This may however be an issue with bugs, which are unintentionally placed in the code.  
+The Refactor Categories Tool focuses only on areas where there has been a text change in the source code. 
+It is harder to investigate any change that has causes side effects in unchanged code.  Fortunately it is not often that this type of side effect will be purposely placed in the code as it reflects bad design decisions.  This may however be an issue with bugs, which are unintentionally occur in the code.  
 This also means that the Refactor Categories Tool will not be able to tell when some code has been copied but the original remains unchanged. Instead it will assume that it is a completely new insertion of code.
 
 If a change of a variable name is noticed the program still retains the same behaviour if the rename operation has worked on all instances where the old name was previously used.  As we do not examine parts of the code that have not experienced a text based change we cannot guarantee that a rename operation is a valid one. We have an indication that it might be if the code still compiles without error. If a variable name is changed to that of an already existing variable however the behavior of the program could change. This is known as a \emph{semantic conflict}.  This issue already exists in a text based merge and Fan \cite{Fan2012}, Shao \cite{Shao2009} and others address this issue. 

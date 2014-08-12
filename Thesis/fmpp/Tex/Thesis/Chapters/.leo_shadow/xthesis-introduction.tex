@@ -30,7 +30,7 @@ However, if there has been a change where a block of source code has been moved 
 
 Without any further analysis this change is recorded in the merged file even if the reordering was a personal preference for the programmer.  Although there has been no functional change the version control systems will treat the relocation of blocks of source code exactly like a change in functionality.  Whenever a programmer attempts to update their code to incorporate any change in functionality, the change to the order of methods is also made to their code.  If a programmer is already familiar with the old structure of code and expects the code to remain relatively consistant the swapping of methods could be disconcerting.
 
-Another issue that non-functional changes raise is an increase in the number of emph{merge conflicts}. These could occur there are two views both have changes in the order of methods. Since in both views the behaviour of the program has not changed and it is possible that the merge conflict occurs about something trivial. An example of this could be different formatting or ordering methods alphabetically. For an ordinary text-based merge these changes to the structure of the source code require manual intervention. These issues highlight the need to develop smarter way to merge.
+Another issue that non-functional changes raise is an increase in the number of \emph{merge conflicts}. These could occur when there are two views both have changes in the order of methods. Since in both views the behaviour of the program has not changed it is possible that the merge conflict occurs about something trivial. An example of this could be different formatting or ordering methods alphabetically. For an ordinary text-based merge these changes to the structure of the source code require manual intervention. These issues highlight the need to develop smarter way to merge.
 %@nonl
 %@-node:paran.20140617082508.2021:<<the problem>>
 %@nl
@@ -44,8 +44,16 @@ It is becoming more important to have accurate merges because of the scale of ma
 
 %@<<how to resolve>>
 %@+node:paran.20140617082508.2022:<<how to resolve>>
-This thesis explores a way of allowing a version source control system to detect when there is a change in the source code but not a funtional change in a program.  Examples of this is if items have been reordered, if comments have been inserted or there have been changes to the formating.  It also introduces the concept of maintaining multiple separate views of differently ordered but equivalent source code for the purpose of reducing the number of changes introduced during a merge. 
+This thesis introduces the concept of maintaining multiple separate views of differently ordered but equivalent source code for the purpose of reducing the number of changes introduced during a merge. 
+It also explores a way of allowing a version source control system to detect when there is a change in the source code but not a funtional change in a program.  Examples of this is if items have been reordered, if comments have been inserted or there have been changes to the formating.  We have used the Refactor Categories Tool we have created in an expiriment that iterates though all the revisions in the version source control for a handful of Java projects.
 
+%@+at 
+%@nonl
+% The Refactor Categories Tool detects
+% 
+% need to write about what we found here
+%@-at
+%@@c
 
 %@-node:paran.20140617082508.2022:<<how to resolve>>
 %@nl
