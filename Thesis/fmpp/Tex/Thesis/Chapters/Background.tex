@@ -16,7 +16,7 @@ Version control systems are a way of managing different revisions (or versions).
   \item [Use branching for experimental features.] 
   It is also possible to maintain multiple revisions of all the files for a software project. This is useful if there is an experimental feature which you want to explore but want to maintain the original as a separate project. As shown in Figure ~\ref{fig:bgBranches} a version control system can keep these multiple interests separate by putting them on different \emph{branches}.  It is still possible to easily switch between the different branches depending on which project you want to make changes to.  A good use of this feature is if you have a software project that you have written on behalf two different companies but each of them would like their own unique customisations on top of the base product.  By making two copies of the base product and having a record of when it was divided the branches can later be recombined to include some or all of the features that have been introduced.  
 
-  \begin{figure}[!T]
+  \begin{figure}[!t]
    \begin{center}
     \includegraphics[scale=1]{branching}
    \end{center}
@@ -29,7 +29,7 @@ Version control systems are a way of managing different revisions (or versions).
   \item [Attach documentation to a feature.]
   Another useful feature of version control is the ability to record meta information beside changes to a set of files.  The reason this is useful is that you can specify what the change was for.  It is possible to associate a change that has occurred over multiple files as being for the same reason.  Once the change has been made is possible in most version control systems to write a message when the documents are checked in.  In some version control systems this message is required to check-in any set of documents.  The reason this is useful is at a later date if queries are made about what a certain change to a document was for.  Since there is a message beside all the documents about the reason for a particular change it becomes easier to figure out the reason for the individual change we are interested in. If following the example above we were to examine a document and wonder why the address changed we could examine the check in with that change and see the message that the person changing it wrote.
 
-  \begin{figure}[!T]
+  \begin{figure}[!t]
    \begin{center}
     \includegraphics[scale=.3]{bugtrack}
    \end{center}
@@ -39,7 +39,7 @@ Version control systems are a way of managing different revisions (or versions).
 
   When used on source code in tandem with an issue tracking system the message can contain the identification number for the bug being fixed or feature being added.  This means that anybody who is examining the revision to see the reasoning for the change has access to a lot more information via the issue tracking system. An example of this is the issue tracking ability that is built in to GitHub, an online version control system. In GitHub an issue can be created as shown in Figure ~\ref{fig:bgBugTrack}. The issue tracker has also been linked with the messages that you need to write when you check in some files. If you include a hash sign followed by a number in the message you check in then GitHub updates the issue with that number as shown in Figure ~\ref{fig:bgBugUpdate}.
 
-  \begin{figure}[!T]
+  \begin{figure}[!t]
    \begin{center}
     \includegraphics[scale=.3]{bugupdate}
    \end{center}
@@ -103,7 +103,7 @@ An automatic merge is possible if three revisions are available, the original re
   \item [Online version control systems]  
   Whilst is is possible for a measure of collaboration just by using a version control system on its own, it requires that you have some method of obtaining the separate branches on one machine before they can be merged.  One way of doing this within a company is to set up a server for the version control system.  This might suitable for projects that are closed source and have a select group of people who work on the source code.  For larger projects that have programmers in different parts of the world a publicly accessible server that is on the web may be a better solution. Loeliger \cite{Loeliger2006} shows how it is possible to access and use a web based version control server to achieve this. A good example of a web based version control server is GitHub.  GitHub provides a way for many developers in different parts of the world to change source code for an open source project.  It is possible that the developers for a particular project have not even met in real life or even know about each other. Figure ~\ref{fig:bgUsage} shows the amount of activity that there has been on the JGit project.  With 74 contributers supplying 3245 changes means that the potential to have conflicting changes must be high. Having 20 separate branches may indicate that merges often need to happen. This one example could indicate the need for good merge tools that can reconcile conflicts even if the developers have little contact with each other.
 
-  \begin{figure}[!T]
+  \begin{figure}[!t]
    \begin{center}
     \includegraphics[scale=.4]{githubUsage}
    \end{center}
@@ -127,6 +127,7 @@ A longest common subsequence for the source would contain a list of all the line
 
 The first listing is as follows:
 
+%\begin{figure}[!t]
 \begin{lstlisting}
 public class SampleLCS { 
 
@@ -142,11 +143,12 @@ public class SampleLCS {
    return num * num;
  }
 }
-
 \end{lstlisting}
+%\end{figure}
 
 In the second listing the order of a number of methods has changed but the way the code works has not been changed.
 
+%\begin{figure}[!t]
 \begin{lstlisting}
 public class SampleLCS {
 
@@ -162,11 +164,12 @@ public class SampleLCS {
    return Math.PI * square(radius);
  }
 }
-
 \end{lstlisting}
+%\end{figure}
 
 A listing containing only the common lines in the same order between both listings follows.  Since this is one of the longest listings possible it is known as the longest common subsequence.  
 
+%\begin{figure}[!t]
 \begin{lstlisting}
 public class SampleLCS { 
 
@@ -175,11 +178,12 @@ public class SampleLCS {
   }
   
 }
-
 \end{lstlisting}
+%\end{figure}
 
 It is possible to have more than one longest common subsequence if there are multiple listings of common lines that have the same number of lines in common and have the maximum number of lines that match.  For instance the following listing is also a longest common subsequence of the above example.
 
+%\begin{figure}[!t]
 \begin{lstlisting}
 public class SampleLCS {
 
@@ -189,6 +193,7 @@ public class SampleLCS {
  
 }
 \end{lstlisting}
+%\begin{figure}
 
 As there are possibly multiple longest common subsequences identifying the longest common subsequence that is going to be most useful becomes difficult.
 
@@ -251,6 +256,7 @@ Additionally with some diff tools it is possible to use regular expressions to i
 A common concern with coding is the need to periodically refactor the code. Refactoring does not involve changing any features of the source code or changes how the compiled program functions. Refactoring simply reorganises the source code so that it is easier to read and add changes. According to Fowler et al. the main time for refactoring is when new functionality is added \cite{Fowler1999}. Similarly according to Kerievsky some of the motivations for refactoring include adding more code and understanding existing code \cite{Kerievsky2004}. As adding more functionality is one of the motivations for refactoring let us consider what happens in a multi-developer environment. Two developers could have different views on what is considered an appropriate refactoring. This is especially true if they need to add different functionality from each other. 
 A simple example is illustrated as follows:
 
+\begin{figure}[!t]
 \begin{lstlisting}
 public TempConv() {
   Scanner keyboard = new Scanner(System.in);
@@ -261,9 +267,11 @@ public TempConv() {
   keyboard.close();
 }
 \end{lstlisting}
+\end{figure}
 
 Refactoring this code depends on what functionality you need to add. One developer may recognize that conversion from Celsius may be used several times throughout the code and so extract the calculations as a separate method as follows:
 
+\begin{figure}[!t]
 \begin{lstlisting}
 public TempConv() {
   Scanner keyboard = new Scanner(System.in);
@@ -278,9 +286,11 @@ public int celsiusToFahrenheit(int celsius){
   return celsius * 2 + 30;
 }
 \end{lstlisting}
+\end{figure}
 
 This change, in spite of producing the same output as the first, provides a number of advantages. Firstly if other programs need to convert from Celsius to Fahrenheit the new method can easily be reused. Secondly since the calculation is a crude estimation it becomes a lot clearer where the code needs to be changed to improve the formula. The ability to add a method that clearly indicates that the calculation is from Celsius to Fahrenheit helps with the readability of the code. There are also disadvantages to doing this refactoring. If we do not care about conversion between Celsius and Fahrenheit the refactoring simply adds to the amount of code we need to examine before understanding what the code does. An alternate way of refactoring is as follows:
 
+\begin{figure}[!t]
 \begin{lstlisting}
 public TempConv(){
   Scanner keyboard = new Scanner(System.in);
@@ -292,6 +302,7 @@ public TempConv(){
   keyboard.close();
 }
 \end{lstlisting}
+\end{figure}
 
 While this again expresses the same functionality as the code above it has not created a new method to do so. This has some of the same advantages. It separates and identifies the formula to convert between Celsius and Fahrenheit. It also uses less code to express this separation than forming a new method. It does not expose the conversion formula outside this method to be used by other calculations however.
 
@@ -360,7 +371,7 @@ The methods inside the files are reordered differently for both the left and the
 Figure ~\ref{fig:bgJDimeTest} demonstrates how the test files were arranged.
 
 
-\begin{figure}[!T]
+\begin{figure}[!t]
 \begin{center}
 \includegraphics[scale=1]{JdimeTestSetup}
 \end{center}

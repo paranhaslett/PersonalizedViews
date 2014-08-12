@@ -30,7 +30,7 @@ Each of the AST nodes contains information about the line of source the AST node
 
 There are likely to be AST nodes that are not included in any of the change sets and can be safely ignored. In order to find just an AST node we are interested in we need to traverse the AST.  When we start at the root of the AST the start position for the root node is the first line and the first column. The end position for the root node is the last line and last column.  By examining the children of the root however we can determine which children contain all or part of a text based change.
 
-\begin{figure}[!T]
+\begin{figure}[!t]
  \begin{center}
   \includegraphics[scale=1]{drilldown1}
  \end{center}
@@ -44,7 +44,7 @@ An example of this can be found in Figure \ref{fig:findingASTNode}.  In this Fig
 
 Another interesting question is how the tool deals with situations where a Text Change only partly overlaps an AST node or and AST node only partly covers a text item.  This issue is shown in Figure \ref{fig:troubleASTNode}.
 
-\begin{figure}[!T]
+\begin{figure}[!t]
  \begin{center}
   \includegraphics[scale=1]{DrilldownEx}
  \end{center}
@@ -83,13 +83,26 @@ If we find examples of text based changes that do not change the programs' behav
 
 %@<<detecting moves>>
 %@+node:paran.20140606104644.2007:<<detecting moves>>
-By checking to see if an insert at one point matches a delete at another point it is possible to detect to see if the code block has moved. In order to determine if the move is one that has no impact the matches are only counted if a match can be found within the same container.  Here, a container is an enclosing scope within the source code, such as a class or method. For example if a method has been shifted within the same class the program will still act the same.  If a method is moved from one class into an inner class there is no guarantee that they will be evaluated to determine if there is a suitable match.  If a method is shifted from one class to an inner class however the programs' behaviour could have changed.
+By checking to see if an insert at one point matches a delete at another point it is possible to detect to see if the code block has moved. In order to determine if the move is one that has no impact the matches are only counted if a match can be found within the same container.  Here, a container is an enclosing scope within the source code, such as a class. For example if a method has been shifted within the same class the program will still act the same.  If a method is moved from one class into an inner class there is no guarantee that they will be evaluated to determine if there is a suitable match.  If a method is shifted from one class to an inner class however the programs' behaviour could have changed.
 
-To get a good match each possible match is given a score which indicates how much it has changed.  This score is set in the configuration and the default for this is 1000. If there is no apparent change such as in the case of changing white spaces or equivalent AST nodes a score of zero is given.  For every that change involves a delete or insert the default score is assigned.  As modifies or moves can be thought of as both an insert and a delete twice the default score is assigned to them.  The score is divided by the total number of items examined.  An example of this is if a section of source code is examined and there are four AST nodes that have been identified.  If the AST nodes are found to be equivalent apart from the second one which has been modified the calculation is:
+It is possible that an item has moved and has also been modified.  When this happens we are not able to directly compare items to see if they are equal.  Instead we have to match the items that are the most alike.   
+To do this each possible match is given a score which indicates how much they differ from each other.  The score is calculated differently for text based comparisons and AST node comparisions.  
 
-1000 * 2 / 4  
+For ast node comparisons we recursively examine the differences beween the child nodes of the items we are comparing.  If an extra child AST node has been inserted or a child AST node is deleted then the default amount is added to the score for the match we are evaluating. If a child AST node has been modified it is the equivalent of both a child AST node being inserted and one being deleted. For this reason the default amount is added to score for the match once for the insertion and once for the removal of the a child AST node.In the example in Figure ~\ref{fig:matchComp} two AST node are being compared with each other. Both the red AST node and the yellow AST node have been removed and a green and an orange node have been inserted.  There has been a total of 4 changes to this level of the AST. 
 
-This is where 1000 is the default score, it is multiplied by 2 as it is a modification rather than an insert or delete and there are 4 AST nodes to examine.
+%@+at
+% need more here
+%@-at
+%@@c 
+
+\begin{figure}[!t]
+ \begin{center}
+ \includegraphics[scale=1]{matchComp}
+ \end{center}
+ \caption{Two AST nodes being compared to each other by comparing the differences in their child nodes.}
+ \label{fig:matchComp}
+\end{figure}
+
 
 Once the various matches have been tested we use a greedy algorithm to select the lowest score for each item.  Once two items are matched with each other both of them can no longer be matched with anything else. The matched items are removed and the next lowest score for a match is evaluated.  To ensure that anything cannot be matched with anything once all good matches are eliminated once the lowest score remaining is greater than the default score of 1000 then any further matches are ignored.  The two items that could have otherwise been matched will remain a solitary insert and a delete.
 %@nonl

@@ -19,7 +19,7 @@ According to Bertino \cite{Bertino2012} \emph{Version control systems} provide a
 
 An alternative approach is to allow multiple changes to a file and to automatically resolve most of them in a process called a \emph{merge}.  The merge process compares the changes made for one version with the changes made on the other revision. If the merge process determines that changes can coexist it creates a merged file that contains all the changes. The changes that cannot be automatically merged are known as \emph{merge conflicts}.  The merge conflicts need to be manually checked and edited to form a merged file with the correct changes.
 
-\begin{figure}[!T]
+\begin{figure}[!t]
  \begin{center}
  \includegraphics[scale=1]{introRevisions}
  \end{center}

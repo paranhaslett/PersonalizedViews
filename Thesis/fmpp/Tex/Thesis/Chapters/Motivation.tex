@@ -15,7 +15,7 @@ There are a couple of challanges when collaborating using versioning control sys
 \item [Repeated structure changes for other software developers.]
 Imagine a situation where you are working jointly on a project with other people. Since you want to collaborate on different aspects of the same source code you have set up the project in a merge based version control system.  You have checked out your own copy of the code so that you can work on the source code without interfering with any of the changes others are making. It is possible that the code will need to be refactored before any of your changes can be added.  This would be a fair judgment call as Fowler claims that the main time to do refactoring is before making any changes \cite{Fowler1999}. You complete your changes and check your code back into the version control system.  While you are doing this other people have been working on the code.  If you manage to check in your code before anyone else you will not need to merge any of your changes.  Anybody who checks in after you however, could have a merge conflict.  A few of conflicts that they experience could be because the changes you made directly compete with the changes they have made. Potentially more conflicts would occur between the changes they have made and the refactoring that you have completed. This is because a refactoring often makes a large amount of global changes to the source code. 
 
-\begin{figure}[!T]
+\begin{figure}[!t]
 \begin{center}
 \includegraphics[scale=0.5]{refactorCheckIn}
 \end{center}
