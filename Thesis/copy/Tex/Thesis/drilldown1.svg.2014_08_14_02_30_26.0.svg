@@ -14,8 +14,8 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="drilldown2.svg"
-   inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldownEx.png"
+   sodipodi:docname="drilldown1.svg"
+   inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -76,7 +76,7 @@
        height="37.69994"
        x="260.15002"
        y="87.512215"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <text
@@ -86,7 +86,7 @@
        y="113.36218"
        id="text3759"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
@@ -100,7 +100,7 @@
        height="37.69994"
        x="171.65002"
        y="168.51221"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <text
@@ -110,7 +110,7 @@
        y="194.36218"
        id="text3759-5"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
@@ -124,7 +124,7 @@
        height="37.69994"
        x="403.65002"
        y="165.51221"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <text
@@ -134,7 +134,7 @@
        y="191.36218"
        id="text3759-5-1"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
@@ -151,7 +151,7 @@
        inkscape:connection-start-point="d4"
        inkscape:connection-end="#rect2987-2"
        inkscape:connection-end-point="d4"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -164,9 +164,46 @@
        inkscape:connection-start-point="d4"
        inkscape:connection-end="#rect2987-2-9"
        inkscape:connection-end-point="d4"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.30006158;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2987-2-9-4"
+       width="106.69994"
+       height="37.69994"
+       x="302.65002"
+       y="251.51221"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="311.5"
+       y="277.36218"
+       id="text3759-5-1-0"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3761-8-4-1"
+         x="311.5"
+         y="277.36218">Child 3</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#Arrow1Lend)"
+       d="m 434.86224,203.21215 -56.72449,48.30006"
+       id="path4483"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="3"
+       inkscape:connection-start="#rect2987-2-9"
+       inkscape:connection-start-point="d4"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:connection-end-point="d4"
+       inkscape:connection-end="#rect2987-2-9-4" />
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -174,7 +211,7 @@
        y="112.36218"
        id="text4669"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
@@ -188,7 +225,7 @@
        y="112.36218"
        id="text4673"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
@@ -202,7 +239,7 @@
        y="193.36218"
        id="text4677"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
@@ -216,7 +253,7 @@
        y="193.36218"
        id="text4681"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
@@ -230,7 +267,7 @@
        y="190.36218"
        id="text4685"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
@@ -244,7 +281,7 @@
        y="190.64246"
        id="text4673-0"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
@@ -254,92 +291,120 @@
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="287"
-       y="292.36218"
+       x="265"
+       y="277.36218"
+       id="text4710"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4712"
+         x="265"
+         y="277.36218">53</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="420"
+       y="274.36218"
+       id="text4714"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4716"
+         x="420"
+         y="274.36218">57</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="296"
+       y="354.36218"
        id="text4718"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4720"
-         x="287"
-         y="292.36218">Text Change</tspan></text>
+         x="296"
+         y="354.36218">Text Change</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="255"
-       y="291.36218"
-       id="text3031"
+       x="251"
+       y="354.36218"
+       id="text4722"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
-         id="tspan3033"
-         x="255"
-         y="291.36218">40</tspan></text>
+         id="tspan4724"
+         x="251"
+         y="354.36218">50</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="422"
-       y="292.36218"
-       id="text3035"
+       x="444"
+       y="353.36218"
+       id="text4726"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
-         id="tspan3037"
-         x="422"
-         y="292.36218">50</tspan></text>
+         id="tspan4728"
+         x="444"
+         y="353.36218">60</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:2.307;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:2.307,6.921;stroke-dashoffset:0"
-       d="m 247.65345,213.01563 36.6931,55.6931"
-       id="path3039"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:1,2;stroke-dashoffset:0"
+       d="m 303,288.36218 6,47"
+       id="path4732"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1.14199996;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:1.14199996,3.42599988;marker-start:none;stroke-dashoffset:0"
-       d="m 439.92896,203.43323 -26.85792,75.8579"
-       id="path3041"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:1,3;stroke-dashoffset:0"
+       d="m 409,288.36218 -42,52"
+       id="path4734"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
-       d="M 206.39483,206.21215 149,264.36218"
-       id="path5076"
+       d="M 209.60143,206.21215 167,258.36218"
+       id="path3112"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
        inkscape:connection-start="#rect2987-2"
        inkscape:connection-start-point="d4"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
-       d="M 222.13671,206.21215 213,266.36218"
-       id="path5078"
+       d="M 225.29,206.21215 226,252.36218"
+       id="path3114"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
        inkscape:connection-start="#rect2987-2"
        inkscape:connection-start-point="d4"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
-       d="M 475.84997,203.21215 518,245.36218"
-       id="path5080"
+       d="M 476.19269,203.21215 513,239.36218"
+       id="path3116"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
        inkscape:connection-start="#rect2987-2-9"
        inkscape:connection-start-point="d4"
-       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/DrilldownEx.png"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/drilldown1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
   </g>
