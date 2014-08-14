@@ -1,0 +1,34 @@
+do some additional tests
+  see what happens with incorrect java
+  initialisation order
+  remove Array and see how quickly it can run over the others 
+
+Jgit already compiles but eclipse complains (we cannot use git attributes)
+
+need to figure out where to make the cahnges in git
+
+look at the code see if there is a way top preserve original structure for the mergee
+retain code equivilencies for text that appears to be different
+  (may be better to retain points where the code differs, or both?)
+  add new comparison into JDime (code already deemed equivilent) 
+    include where in the tree it is no longer equivilent 
+
+figure out how to recognise where in the code the differneces take place 
+    
+
+what we could do 
+
+associate conflicting lines with conflicting code
+trim the AST tree for non conflicting lines
+adjust Jdime to print structure in left order
+if there is no Text or AST conflict for simply output the same text
+if there is a text conflict and no ast cononflict what do we do conflict? prefer left? prefer right?
+
+
+use the jgit line merger isnstead of the diff tool associated with rcs?
+insert Jdime instead of the merge tool 
+
+what capability do we have for jaSTADDj TO RETAIN LINE NO
+
+
+

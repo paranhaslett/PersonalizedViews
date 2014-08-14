@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="matchComp.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3926"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path3923"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="199"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1317"
+     inkscape:window-height="744"
+     inkscape:window-x="49"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.36293364;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2985"
+       width="64.960388"
+       height="24.231606"
+       x="309.4729"
+       y="179.75247"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="fill:#fe0000;fill-opacity:1;stroke:#000000;stroke-width:1.36293364;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2985-1"
+       width="64.960388"
+       height="24.231606"
+       x="191.52864"
+       y="235.10327"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="fill:#feff00;fill-opacity:1;stroke:#000000;stroke-width:1.36293364;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2985-6"
+       width="64.960388"
+       height="24.231606"
+       x="268.995"
+       y="234.28596"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1.36293364;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2985-9"
+       width="64.960388"
+       height="24.231606"
+       x="346.93927"
+       y="233.28596"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.82162219px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 316.13613,203.98408 -66.31034,31.11919"
+       id="path3854"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect2985"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#rect2985-1"
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.82162219px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 332.96005,203.98408 -22.49181,30.30188"
+       id="path3856"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect2985"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#rect2985-6"
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.82162219px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 350.43256,203.98408 370.94,233.28596"
+       id="path3858"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect2985"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#rect2985-9"
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="54"
+       y="306.36218"
+       id="text5469"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5471"
+         x="54"
+         y="306.36218"></tspan><tspan
+         sodipodi:role="line"
+         id="tspan5473"
+         x="54"
+         y="331.36218" /></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.36300004;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.363, 8.178;stroke-dashoffset:0"
+       id="rect2985-9-9"
+       width="64.960388"
+       height="24.231606"
+       x="424.51981"
+       y="232.24637"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 368.50638,203.98408 61.94033,28.26229"
+       id="path5505"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect2985"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#rect2985-9-9"
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.36293364;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2985-69"
+       width="64.960388"
+       height="24.231606"
+       x="306.96844"
+       y="333.57098"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.36299999999999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.36299999999999999, 10.90399999999999991;stroke-dashoffset:0"
+       id="rect2985-1-4"
+       width="64.960388"
+       height="24.231606"
+       x="189.0242"
+       y="388.92178"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:1.36293364000000006;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2985-6-7"
+       width="64.960388"
+       height="24.231606"
+       x="266.49054"
+       y="388.10446"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1.36293364;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2985-9-7"
+       width="64.960388"
+       height="24.231606"
+       x="347.43481"
+       y="388.10446"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.82162219px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 313.63168,357.80259 -66.31033,31.11919"
+       id="path3854-5"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect2985-69"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#rect2985-1-4"
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.82162219px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 330.45559,357.80259 -22.49181,30.30187"
+       id="path3856-4"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect2985-69"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#rect2985-6-7"
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.82162219px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 347.05971,357.80259 23.24423,29.30187"
+       id="path3858-4"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="fill:#ff7f00;fill-opacity:1;stroke:#000000;stroke-width:1.36300004;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2985-9-9-2"
+       width="64.960388"
+       height="24.231606"
+       x="425.01538"
+       y="388.06488"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 365.69439,357.80259 65.55543,30.26229"
+       id="path5505-9"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect2985-69"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#rect2985-9-9-2"
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3,3;stroke-dashoffset:0;marker-end:url(#Arrow1Lend)"
+       d="m 223.81157,259.33488 -2.10991,129.5869"
+       id="path5549"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect2985-1"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#rect2985-1-4"
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend);stroke-miterlimit:4;stroke-dasharray:3,3;stroke-dashoffset:0"
+       d="M 301.27792,258.51757 299.168,388.10446"
+       id="path5737"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect2985-6"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#rect2985-6-7"
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend);stroke-miterlimit:4;stroke-dasharray:3,3;stroke-dashoffset:0"
+       d="m 379.45824,257.51757 0.41799,130.58689"
+       id="path5739"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect2985-9"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#rect2985-9-7"
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend);stroke-miterlimit:4;stroke-dasharray:3,3;stroke-dashoffset:0"
+       d="m 457.03853,256.47797 0.41851,131.58691"
+       id="path5741"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect2985-9-9"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#rect2985-9-9-2"
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="188"
+       y="302.36218"
+       id="text6295"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan6297"
+         x="188"
+         y="302.36218">Remove</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="276"
+       y="301.36218"
+       id="text6299"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan6301"
+         x="276"
+         y="301.36218">Modify</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="430"
+       y="304.36218"
+       id="text6303"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/paran/Documents/Study/Thesis/copy/Tex/Thesis/matchComp.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan6305"
+         x="430"
+         y="304.36218">Insert</tspan></text>
+  </g>
+</svg>

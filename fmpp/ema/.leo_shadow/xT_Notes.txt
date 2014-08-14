@@ -1,0 +1,172 @@
+#@+leo-ver=4-thin
+#@+node:paranhaslett.20130826181255.3073:@shadow ./fmpp/ema/T_Notes.txt
+#@@color
+#@@language md
+#@+others
+#@+node:paranhaslett.20130826181255.3074:Notes
+NOTES
+=====
+#@+others
+#@+node:paranhaslett.20130826181255.3103:Expirements
+Expirements
+-----------
+#@+others
+#@+node:hasletpara.20131128093200.1832:Reproduce Jdimes results with Jgit
+#@-node:hasletpara.20131128093200.1832:Reproduce Jdimes results with Jgit
+#@+node:paranhaslett.20130826181255.3107:Set up an expirment with GIT
+need two different branches of near equivilent code 
+
+Maybe
+
+#@+others
+#@-others
+#@-node:paranhaslett.20130826181255.3107:Set up an expirment with GIT
+#@+node:paranhaslett.20130826181255.3105:Set it up with eclipse plugins
+Nice to look at but will it work with this
+#@-node:paranhaslett.20130826181255.3105:Set it up with eclipse plugins
+#@+node:paranhaslett.20130826181255.3106:download TA-RE
+#@-node:paranhaslett.20130826181255.3106:download TA-RE
+#@-others
+#@-node:paranhaslett.20130826181255.3103:Expirements
+#@+node:paranhaslett.20130826181255.3109:Ideas
+Ideas
+-----
+
+#@+others
+#@+node:paranhaslett.20130826181255.3110:Preserving a structure during change
+### Preserving a structure during change
+#@+others
+#@+node:paranhaslett.20130826181255.3111:1) by reatining a before and after of an entry
+#### 1) by reatining a before and after of an entry
+
+    A
+    B
+    C
+#@-node:paranhaslett.20130826181255.3111:1) by reatining a before and after of an entry
+#@+node:paranhaslett.20130826181255.3112:2) by placing an id beside an entry
+####2) by placing an id beside an entry
+
+    1.A
+    2.B
+    3.C
+#@-node:paranhaslett.20130826181255.3112:2) by placing an id beside an entry
+#@+node:paranhaslett.20130826181255.3113:3) by taking note of Java syntax and treating it as the units of exchange
+####3) by taking note of Java syntax and treating it as the units of exchange
+
+A
+println("");
+C
+#@-node:paranhaslett.20130826181255.3113:3) by taking note of Java syntax and treating it as the units of exchange
+#@+node:paranhaslett.20130826181255.3114:4) depends on the structure preserved
+
+#### 4) depends on the structure preserved
+
+    A
+    B
+     LC
+
+    A
+    B
+    C
+
+    A
+     LB
+       LC
+
+    A
+     LB
+      LC
+
+    A
+     LB
+     C
+#@-node:paranhaslett.20130826181255.3114:4) depends on the structure preserved
+#@-others
+#@-node:paranhaslett.20130826181255.3110:Preserving a structure during change
+#@+node:paranhaslett.20130826181255.3115:Code equivlency
+### Code Equivilenecy
+
+
+    x=x+1;
+    println("foo");
+
+and
+
+    println("foo");
+    x=x+1;`
+
+Need to also test unequivlent code
+
+    x=x+1;
+    println(x);
+
+and
+
+    println(x);
+    x=x+1;
+#@nonl
+#@-node:paranhaslett.20130826181255.3115:Code equivlency
+#@+node:paranhaslett.20130826181255.3116:Ordering
+### Ordering
+
+needs a seperate structure to hold differently ording info
+
+
+File
+
+    A
+    B
+    C
+
+
+Structure
+
+    B
+     LA
+      LC
+#@-node:paranhaslett.20130826181255.3116:Ordering
+#@+node:paranhaslett.20130826181255.3117:2 views relationship
+### 2 views relationship
+
+View A                   View B
+
+Term A --------*---------Term B
+         Synonamous Item
+
+Alternately Using Java auto detect synonamous items an code equivlency
+
+Tomarto
+Tomayto
+#@-node:paranhaslett.20130826181255.3117:2 views relationship
+#@+node:paranhaslett.20130826181255.3118:need a way to display differing views of the same base data
+Actually it is easier when we only need to comapre two views with each other
+#@-node:paranhaslett.20130826181255.3118:need a way to display differing views of the same base data
+#@+node:paranhaslett.20130826181255.3119:Differences in function ordering
+###Differences in function ordering
+
+infix 1 + 1 or 1.add(1);
+prefix + 1 1 or add(1,1)
+suffix 1 1 + or 1.1.add;
+#@-node:paranhaslett.20130826181255.3119:Differences in function ordering
+#@-others
+
+#@-node:paranhaslett.20130826181255.3109:Ideas
+#@+node:paranhaslett.20130826181255.3148:xml
+XML
+---
+#@nonl
+#@-node:paranhaslett.20130826181255.3148:xml
+#@+node:paranhaslett.20130826181255.3149:xml of the model
+###xml of the model
+#@nonl
+#@-node:paranhaslett.20130826181255.3149:xml of the model
+#@+node:paranhaslett.20130826181255.3150:xml containing the file (which may be the same as above
+###xml containing the file (which may be the same as above
+#@nonl
+#@-node:paranhaslett.20130826181255.3150:xml containing the file (which may be the same as above
+#@-others
+#@nonl
+#@-node:paranhaslett.20130826181255.3074:Notes
+#@-others
+#@-node:paranhaslett.20130826181255.3073:@shadow ./fmpp/ema/T_Notes.txt
+#@-leo
