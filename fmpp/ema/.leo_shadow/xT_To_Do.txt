@@ -1,0 +1,23 @@
+#@+leo-ver=4-thin
+#@+node:hasletpara.20131202100421.2178:@shadow ./fmpp/ema/T_To_Do.txt
+#@@color
+#@@language md
+#@+others
+#@+node:paranhaslett.20130827232850.1595:To do
+To Do
+=====
+
+* figure out how jdime is setup
+
+* figure out why we get no output...
+
+* do a write up
+
+* test Jdime with jgit
+
+
+
+#@-node:paranhaslett.20130827232850.1595:To do
+#@-others
+#@-node:hasletpara.20131202100421.2178:@shadow ./fmpp/ema/T_To_Do.txt
+#@-leo
