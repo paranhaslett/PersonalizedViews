@@ -1,0 +1,109 @@
+NOTES
+=====
+Expirements
+-----------
+need two different branches of near equivilent code 
+
+Maybe
+
+Nice to look at but will it work with this
+Ideas
+-----
+
+### Preserving a structure during change
+#### 1) by reatining a before and after of an entry
+
+    A
+    B
+    C
+####2) by placing an id beside an entry
+
+    1.A
+    2.B
+    3.C
+####3) by taking note of Java syntax and treating it as the units of exchange
+
+A
+println("");
+C
+
+#### 4) depends on the structure preserved
+
+    A
+    B
+     LC
+
+    A
+    B
+    C
+
+    A
+     LB
+       LC
+
+    A
+     LB
+      LC
+
+    A
+     LB
+     C
+### Code Equivilenecy
+
+
+    x=x+1;
+    println("foo");
+
+and
+
+    println("foo");
+    x=x+1;`
+
+Need to also test unequivlent code
+
+    x=x+1;
+    println(x);
+
+and
+
+    println(x);
+    x=x+1;
+### Ordering
+
+needs a seperate structure to hold differently ording info
+
+
+File
+
+    A
+    B
+    C
+
+
+Structure
+
+    B
+     LA
+      LC
+### 2 views relationship
+
+View A                   View B
+
+Term A --------*---------Term B
+         Synonamous Item
+
+Alternately Using Java auto detect synonamous items an code equivlency
+
+Tomarto
+Tomayto
+Actually it is easier when we only need to comapre two views with each other
+###Differences in function ordering
+
+infix 1 + 1 or 1.add(1);
+prefix + 1 1 or add(1,1)
+suffix 1 1 + or 1.1.add;
+
+XML
+---
+###xml of the model
+###xml containing the file (which may be the same as above

@@ -1,0 +1,94 @@
+\chapter{Longest common subsequence}
+
+\section{Longest Common Subsequence}
+One method of discovering what has changed is to find the longest common subseqeunce (LCS).
+A simplified example of finding the longest common subsequence is:
+
+Imagine we have have two similar sentances that we want to compare with each other.  
+We would like to know what is the same and what is different.
+A longest common subsequnce for the sentances would contain a list of all the characters that are the same and in the same order
+So for the following sentances
+
+\begin{verbatim}
+
+\"The quick brown fox jumps over the lazy dog\"
+
+\"The rapid brown fox vaults the lazy dog\"
+
+\end{verbatim}
+A longest common subsequence would be
+\begin{verbatim}
+\"The \",\"i\",\" brown fox \",\"v\",\" the lazy dog\"
+\end{verbatim}
+The letters that are missing from the LCS differ between the sentances.
+
+\section{Git difference strategies}
+Git uses the following algorithms to find the LCS.
+
+\subsection{Myers}
+
+
+\subsection{Patience}
+
+% fron the patience game
+% need references
+
+\subsection{Histogram}
+
+\section{The problem with longest common subsequence}
+There is still a problem with longest common subsequence. It does not notice changes of order in a document.  For example if we were to take the following two sentances:
+
+\begin{verbatim}
+
+\"The quick brown fox jumps over the lazy dog\"
+
+\"The lazy brown dog jumps over the quick fox\"
+
+\end{verbatim}
+
+The longest common subsequence of this would be
+
+\begin{verbatim}
+\"The \",\" brown \",\"o\",\" jumps over the \",\"o\"
+\end{verbatim}
+
+Without further analysing the changes it is possible to conclude that instead of swapping certain words that:
+
+\begin{verbatim}
+\"quick\" transforms into \"lazy\"
+\"f\" transforms into \"d\"
+\"x\" transforms into \"g\"
+\"lazy d\" transforms into \"quick f\"
+\"g\" transforms into \"x\"
+\end{verbatim}
+
+What this thesis aims to do is to more accurately portray these changes.
+In order to do this we require some information about the structure of the document.
+For the above example if the computer was aware that the sentence was structured into words rather than characters the result would have been slightly different.
+
+\begin{verbatim}
+\"The \",?,\" brown \",?,\"jumps \", \"over \", \"the \",?,?
+\end{verbatim}
+
+in this situation in becomes easier to recognise that words have been swapped by comparing each of the changes with each other.  
+
+\begin{verbatim}
+\"quick \" transforms into \"lazy \" matches \"lazy\" transforms into \"quick\"
+\"fox \" transforms into \"dog\" matches \"dog\" transforms into \"fox\" 
+\end{verbatim}
+
+The English language is also far too complex to notice anything that is more basic than a word for word swap.
+There are words and sentences that have similar meanings but are spelt and structured differently.
+
+\section{How most difference tools use LCS}
+The above is a simplified illustration of how general LCS works.
+How most difference tools use LCS is quite.
+Most difference tools rather than comparing on a character by character difference compares line of text with each other.
+
+% Remember to say something white space
+% and regular expression differences
+% 
+ 
+ 
+
+
