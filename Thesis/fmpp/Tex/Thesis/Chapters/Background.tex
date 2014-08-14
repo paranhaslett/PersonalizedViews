@@ -51,7 +51,7 @@ Version control systems are a way of managing different revisions (or versions).
   \end{figure}
 
   \item [Collaborate with multiple developers.]
-  Version control systems make it possible to have individual revisions that contain each persons' changes. The version control system then manages the way these changes are merged into a composite product. Bertino \cite{Bertino2012} describes the ability to merge the work of multiple people as being a powerful collaborative tool. This is beacuse a version control system allows multiple people with different ideas to collaborate on the same document. In some circumstances it allows them to work on the document at the same time. This feature seems similar to the concept of having a private view that we are exporing in this thesis. The difference is that a version control system has no awareness about the format of the documents. This means it is harder for it to evaluate the difference between features of the document that will be helpful to collaboration and features that express the individual tastes of each of the collaborators.   
+  Version control systems make it possible to have individual revisions that contain each persons' changes. The version control system then manages the way these changes are merged into a composite product. Bertino \cite{Bertino2012} describes the ability to merge the work of multiple people as being a powerful collaborative tool. This is because a version control system allows multiple people with different ideas to collaborate on the same document. In some circumstances it allows them to work on the document at the same time. This feature seems similar to the concept of having a private view that we are exploring in this thesis. The difference is that a version control system has no awareness about the format of the documents. This means it is harder for it to evaluate the difference between features of the document that will be helpful to collaboration and features that express the individual tastes of each of the collaborators.   
 
 \end{description}
 
@@ -67,7 +67,7 @@ There are a few ways of dealing with these conflicts.
 \subsubsection{Locking}
 One approach is to require that file is only able to be used by one person at a time and that anyone else has to wait. This method avoids the need to resolve any conflicting changes.  The advantage of locking a file like this is that it is that we can be certain about the contents of the file at any given time. This is how one of the original version control systems, RCS ensured that the document stayed consistent. Tichy has explained why he considers locking in a version control system to be a good idea in the design for RCS\cite{Tichy1982} The disadvantage is if one person retains the document for extended periods of time, it cannot be changed by anybody else. Furthermore the resulting document may be barely recognisable as the original if extensive work is done on it. However, if the two parties change distinctly different parts of the file, or both independently make exactly the same changes this restriction is unnecessary. 
 \subsubsection{Smaller structured units}
-Another way to reduce conflicts is to split the programming code into smaller units.  The advantage of this is that if you are using locking you minimise the risk that two people need access to the same unit of source code. Condering two people working on the same project made up of a number of files.  Instead of one person locking a file at a time that person could be allowed to only lock the functions they are changing. As those functions are smaller than the file there is likely to be less changes and they are likely to unlock them sooner.
+Another way to reduce conflicts is to split the programming code into smaller units.  The advantage of this is that if you are using locking you minimise the risk that two people need access to the same unit of source code. Consider two people working on the same project made up of a number of files.  Instead of one person locking a file at a time that person could be allowed to only lock the functions they are changing. As those functions are smaller than the file there is likely to be less changes and they are likely to unlock them sooner.
 \subsubsection{Merging documents}
 Finally we could allow both parties to change the document and try to figure out what the problems are afterwards.  This resolution of anything that remains a problem is known as resolving a \emph{merge conflict}. This occurs whenever the computer cannot automatically process a merge.  The merge then needs to be sorted out manually. Merge conflicts are more likely to occur if there is a dramatic change such as refactoring.
 
@@ -101,7 +101,7 @@ An automatic merge is possible if three revisions are available, the original re
 
   An advantage to having a complete copy of a project from the repository is that it is possible to make changes to the program remotely.  You are also able to select which changes others have made you want to incorporate into your personal copy. 
   \item [Online version control systems]  
-  Whilst is is possible for a measure of collaboration just by using a version control system on its own, it requires that you have some method of obtaining the separate branches on one machine before they can be merged.  One way of doing this within a company is to set up a server for the version control system.  This might suitable for projects that are closed source and have a select group of people who work on the source code.  For larger projects that have programmers in different parts of the world a publicly accessible server that is on the web may be a better solution. Loeliger \cite{Loeliger2006} shows how it is possible to access and use a web based version control server to achieve this. A good example of a web based version control server is GitHub.  GitHub provides a way for many developers in different parts of the world to change source code for an open source project.  It is possible that the developers for a particular project have not even met in real life or even know about each other. Figure ~\ref{fig:bgUsage} shows the amount of activity that there has been on the JGit project.  With 74 contributers supplying 3245 changes means that the potential to have conflicting changes must be high. Having 20 separate branches may indicate that merges often need to happen. This one example could indicate the need for good merge tools that can reconcile conflicts even if the developers have little contact with each other.
+  Whilst is is possible for a measure of collaboration just by using a version control system on its own, it requires that you have some method of obtaining the separate branches on one machine before they can be merged.  One way of doing this within a company is to set up a server for the version control system.  This might suitable for projects that are closed source and have a select group of people who work on the source code.  For larger projects that have programmers in different parts of the world a publicly accessible server that is on the web may be a better solution. Loeliger \cite{Loeliger2006} shows how it is possible to access and use a web based version control server to achieve this. A good example of a web based version control server is GitHub.  GitHub provides a way for many developers in different parts of the world to change source code for an open source project.  It is possible that the developers for a particular project have not even met in real life or even know about each other. Figure ~\ref{fig:bgUsage} shows the amount of activity that there has been on the JGit project.  With 74 contributors supplying 3245 changes means that the potential to have conflicting changes must be high. Having 20 separate branches may indicate that merges often need to happen. This one example could indicate the need for good merge tools that can reconcile conflicts even if the developers have little contact with each other.
 
   \begin{figure}[!t]
    \begin{center}
@@ -116,7 +116,7 @@ An automatic merge is possible if three revisions are available, the original re
 \end{description}
 
 \section{Longest Common Subsequence}
-A simple definitionof the longest common subsequence problem is attempting to find the maximum number of common items in two strings when the strings are examined from left to right. A subsequence does not need to be in a single contiguous block however. Algorithms that solve the longest common subsequence can determine the differences between two lists by working out what is the same.   
+A simple definition of the longest common subsequence problem is attempting to find the maximum number of common items in two strings when the strings are examined from left to right. A subsequence does not need to be in a single contiguous block however. Algorithms that solve the longest common subsequence can determine the differences between two lists by working out what is the same.   
 
 
 \subsection{Example}
@@ -207,13 +207,13 @@ The Myers algorithm was discovered by Eugene Myers who claimed that finding the 
 
 \subsection{Patience}
 The patience algorithm instead of figuring out the longest common subsequence directly uses the longest increasing subsequence. 
-The example used by Aldous \cite{Aldous1999} to explain how it finds the longest increasing subsquence is similar to a single player card game. 
+The example used by Aldous \cite{Aldous1999} to explain how it finds the longest increasing subsequence is similar to a single player card game. 
 When this is used with line numbers from the source code the longest common subsequence can be established.
 
-When it is used to determine the longest common subsequence only the lines in the code that only appear once in both revisons and that match are considered. 
+When it is used to determine the longest common subsequence only the lines in the code that only appear once in both revisions and that match are considered. 
 The lines that only appear once are then used as markers to determine the location for any of the other changes. 
 
-As Bram Cohen has pointed out in his blog there are instances where a traditional LCS algorithm can return results that are not as helpful to a developer as they could be.  Instead of noticing that a method has been inserted it is possible for a LCS algorithm to return that the closing brace of one method followed by another method without the closing brace has changed instead. By initially ignoring items that might occur many times in the source code such as brackets and whitespace the similarities are instead centered around the markers that have been found. 
+As Bram Cohen has pointed out in his blog there are instances where a traditional LCS algorithm can return results that are not as helpful to a developer as they could be.  Instead of noticing that a method has been inserted it is possible for a LCS algorithm to return that the closing brace of one method followed by another method without the closing brace has changed instead. By initially ignoring items that might occur many times in the source code such as brackets and white space the similarities are instead centred around the markers that have been found. 
 
 % bran Cohen
 % 
@@ -248,7 +248,7 @@ This has an impact on the hash codes for each line as the hash code needs to be 
 
 Additionally with some diff tools it is possible to use regular expressions to ignore program features such as comments when doing a diff.  The reason this is important is if it is possible exclude changes that have no affect on behaviour from a diff then it is possible to also exclude them from a merge.  If we exclude them from a merge we could have fewer conflicts.
 
-% insert examples of this with references symantic merge maybe
+% insert examples of this with references semantic merge maybe
  
 
 \section{Refactoring}
@@ -313,7 +313,7 @@ Although this was a simple example it is easy to imagine a case where a much lar
 \section{JDime}
 % Part of the inspiration for this tool come from JDime.
 
-Jdime is a tool written by  Apel and Les{\ss}nich \cite{Apel2012} \cite{Apel2011} \cite{LeBenich2012} to study how to get a balance between fast text-based merges and slow but more acurrate semantic merges.  Jdime is designed to merge two sets of code even if both of them have undergone refactoring. In order to increase performance only if there is a conflict in a text based merge does any of the more expensive semantic merge take place. 
+Jdime is a tool written by  Apel and Les{\ss}nich \cite{Apel2012} \cite{Apel2011} \cite{LeBenich2012} to study how to get a balance between fast text-based merges and slow but more accurate semantic merges.  JDime is designed to merge two sets of code even if both of them have undergone refactoring. In order to increase performance only if there is a conflict in a text based merge does any of the more expensive semantic merge take place. 
 
 \subsection{How JDime works}
 % JDime instead of testing against a source code repository test against files 
@@ -329,19 +329,19 @@ What then happens depends on if order is required in the section of code JDime i
 % needs more here
 
 \subsection{Investigating JDime}
-We perfomed a small expirmenmt to investigate JDime as a tool for automatically merging code which has been reordered.
+We performed a small experiment to investigate JDime as a tool for automatically merging code which has been reordered.
 % As JDime can examine many refactorings and do comparisons between two 
 % private views of source code it is a good contender for allowing us to 
-% create two seperate views that have different reafactorings in them.  
-% However we want the views to remain as consisant as possible. This means we 
+% create two separate views that have different refactorings in them.  
+% However we want the views to remain as consistent as possible. This means we 
 % do not want the structure of one view to change the structure of another 
 % view if they have the same behaviour when the code is executed.  Any changes 
 % to functionality should be able to be communicated between views however 
-% changes that are astestic should not affect the other view.  For this reason 
-% we want to test Jdimes suitabilty to be one of the tools used to create 
-% seperate refactored views.
+% changes that are ascetic should not affect the other view.  For this reason 
+% we want to test JDimes suitability to be one of the tools used to create 
+% separate refactored views.
 % 
-% Jdime has been written mostly in Java.  There are a few exceptions including 
+% JDime has been written mostly in Java.  There are a few exceptions including 
 % the linear programming libraries that need to be created.  As we are 
 % attempting to combine some of their work with Git it was decided to use JGit 
 % rather than the C implementation of Git. As the Java implementation may run 
@@ -395,16 +395,16 @@ Further investigation revealed that the order of the methods in the output did n
 % If it detects an unordered section it does not preserve the order of the 
 % output.
 
-\subsection{Reasons why Jdime cannot currently be used to create separate views}
+\subsection{Reasons why JDime cannot currently be used to create separate views}
 The aim of this thesis is to be able to maintain two views of Java that, although having a different format, function in the same manner.  Although JDime seems like it would be able to help achieve those aims there are a few reasons why it cannot be used without changes.
 
 The first issue is that as explained above that the merged code could be in a totally different order to the original file and both of the revisions.
 
 The second issue is that when JDime parses the code into an AST it strips out any comments or white-space placed in the code.  Although the comments do not have any functional impact on how the program runs they do have an impact on how the source code is understood.  To limit the impact a merge makes on one view comments need to be evaluated as well. In some ways retaining comments or even white-space in the code aids in determining if a section of the code has been copied verbatim from one place to another.
 
-The only time an AST based merge is performed in JDime is if there are plain text conflicts.  However there could be a hidden conflict that the plain text merge does not detect.  For example if we have two different views and a method has both been relocated in both of them.  Athoungh the method in the original version is in the middle of the code one revison relocates it near to the top of the file and the other to the bottom.  If in addition to this a change is introduced inside the method in both revisons that would normally produce a conflict had the method not been moved.
+The only time an AST based merge is performed in JDime is if there are plain text conflicts.  However there could be a hidden conflict that the plain text merge does not detect.  For example if we have two different views and a method has both been relocated in both of them.  Although the method in the original version is in the middle of the code one revision relocates it near to the top of the file and the other to the bottom.  If in addition to this a change is introduced inside the method in both revisions that would normally produce a conflict had the method not been moved.
 
-A text based merge would not recognise this as a conflict however a AST based one would. According to the text based merge both revisions would agree that the method had been deleted from the middle of the file.  One revison however would insist that a new method with the same name as the deleted one has been created near the top of the file.  The other revision would insist that a new method with the same name had been created but near the bottom. When merged both the method at the top and method at the bootm would be inserted inot the merged code.  
+A text based merge would not recognise this as a conflict however a AST based one would. According to the text based merge both revisions would agree that the method had been deleted from the middle of the file.  One revision however would insist that a new method with the same name as the deleted one has been created near the top of the file.  The other revision would insist that a new method with the same name had been created but near the bottom. When merged both the method at the top and method at the bottom would be inserted into the merged code.  
 
 An merge using an AST would recognise the methods described as being a conflicting change.  As the names and method signature has not changed for either method it would recognise the conflicting change that has been introduced.
 
@@ -427,4 +427,4 @@ As JDime does not use an AST comparison to check any items that have been deemed
 The final concern is that after JDime does the initial comparison of text and finds conflicts it discards those results. It parses the entire file into an AST and begins analysing it again without knowing which parts differ.   
 
 \section{Other refactoring aware versioning tools}
-JDime is not the only tool that can be used to address refactor aware version control.  Ekman and Asklund \cite{Ekman2004} introduced a plug-in for eclipse that recorded information about refactoring in to version control so that it was easier to recognise where refactoring took place.  They did this in a very similar manner as Apel and Le{\ss}nich when they developed JDime.  Both make use of ASTs to record information about any refactoring that took place.  Freese \cite{Freese2006} also developed a tool that was very similar written in Object-Z. Despite this interest in refactoring aware merges however the idea of keeping separate branches as consistent as possible has not been discussed.
+JDime is not the only tool that can be used to address refactor aware version control.  Ekman and Asklund \cite{Ekman2004} introduced a plug-in for eclipse that recorded information about refactoring in to version control so that it was easier to recognise where refactoring took place.  They did this in a very similar manner as Apel and Le{\ss}nich when they developed JDime.  Both make use of an AST to record information about any refactoring that took place.  Freese \cite{Freese2006} also developed a tool that was very similar written in Object-Z. Despite this interest in refactoring aware merges however the idea of keeping separate branches as consistent as possible has not been discussed.
