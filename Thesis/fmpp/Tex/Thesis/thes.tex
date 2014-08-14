@@ -1,0 +1,137 @@
+
+\documentclass[12pt, a4paper, twoside, openright]{book}
+
+\usepackage{vuwthesis} % sets up some local things, mostly the front page
+
+\usepackage{palatino} % sets palatino as the default font
+
+\usepackage{url} % for typesetting urls
+
+\usepackage{graphicx}
+
+\usepackage{listings}
+
+\usepackage{float}
+
+\floatstyle{boxed}
+\restylefloat{figure}
+
+%[section] (\usepackage[section]{placeins})
+
+\usepackage[]{algorithm2e}
+
+%\renewcommand{\baselinestretch}{1.00}
+
+
+\begin{document}
+
+\lstloadlanguages{Java}
+\lstset{
+        language=Java,
+        basicstyle=\small\ttfamily,
+        commentstyle=\rmfamily\itshape,
+        stringstyle=\small\itshape,
+        moredelim=*[s][commentstyle]{/*}{*/}, % allows keyword highlighting inside comments
+        morecomment=[l][commentstyle]{//},      % single line comments are set by...
+        frame=single, % adds a frame around the code
+%        frameround=tttt,
+        framesep=0.25cm,
+        texcl,                                                          % ...LaTeX
+        moredelim=[is][\ttfamily]{<code>}{</code>}, % allows setting code inside multi-line comments
+        moredelim=*[s][\ttfamily]{/*@}{*/}, % JML annotations
+        moredelim=*[l][\ttfamily]{//@}, % JML annotations
+        moredelim=**[is][\itshape]{/_}{_/}, % allows emphasizing sub-expressions
+        moredelim=**[is][\bfseries]{/b_}{_b/}, % allows emphasizing sub-expressions
+        escapeinside={(*@}{@*)}, %use (*@\label{line:desc}@*) to label lines for \ref
+        mathescape=true,                % allow $ $ for math mode (will this break things?}
+        tabsize=4,
+        tab=\rightarrowfill,
+        xleftmargin=0.25cm,
+        xrightmargin=0.25cm,
+        showspaces=false,
+        showtabs=false,
+        columns=fullflexible,
+        numberstyle=\tiny,
+        numbers=left,
+        keepspaces=true,
+        mathescape=true, % allows $ to switch in and out of math mode within listings
+        literate={->}{{$\rightarrow$}}1
+           {tau}{{$\tau$}}1 {tau'}{{$\tau\prime$}}1 {(|}{{$\lpbar$}}1 {---}{{$\hole$}}1
+           {-*-}{{$\times$}}1 {||_}{{$\lceilfloor$}}1 {_||}{{$\rceilfloor$}}1
+           {/0}{{$\emptyset$}}1 {/bul}{{$\unit$}}1 {:->}{{$\mapsto$}}1
+           {~}{$\sim$}1,
+}
+
+\frontmatter
+% Book style knows about front matter
+% Report style doesn't so you need to set roman numbering etc yourself :-(
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Maintaining private views in Java}
+\author{Paran Haslett}
+
+\subject{Computer Science}
+\abstract{
+When developers collaborate on a project there are times when the code diverges.  When this happens the code may need to be refactored to best suit your changes before you apply them. The ability to have a separate view which although functionally equivalent to other views can present the code in a different form in these situations would be valuable. It enables the programmer to refactor or change the code with minimal impact on others. Changes in the order of methods and the addition of comments currently impact other developers even if there is no change in how the code works. The Refactor Categories Tool has been written to detect where source code has been moved within a file or comments has been added removed or edited. This gives us an indication that it would be useful for version control systems to differentiate between changes to a program that also change the behaviour and those that do not.
+
+% This could be due to refactoring, or the code being reused in another 
+% project. It could even be due to throw away code or code used for debugging. 
+% This could at times also involve how the structure of the program is 
+% presented or the variable and method names that are being used.
+}
+% Books don't normally have abstracts, and this is a bit of a hack
+
+% Uncomment the appropriate degree
+%\phd
+\mscthesisonly
+%\mscwithhonours
+%\mscbothparts
+% \otherdegree{DEGREE OR DIPLOMA NAME}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\maketitle
+
+\include{thesis-acknowledge}
+
+\tableofcontents
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% book style knows about mainmatter
+% if you are using report style you will have to rest page numbering etc.
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% individual chapters included here
+
+\include{Chapters/thesis-introduction}
+\include{Chapters/Background}
+\include{Chapters/Motivation}
+\include{Chapters/theTool}
+\include{Chapters/expirimentalResults}
+\include{Chapters/futureWork}
+\include{Chapters/thesis-conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% and of course book style knows about backmatter
+% \backmatter caused problems with appendices :-(
+% and of course report style doesn't
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\bibliographystyle{ieeetr}
+\bibliographystyle{acm}
+\bibliography{Thesis}
+
+
+\end{document}

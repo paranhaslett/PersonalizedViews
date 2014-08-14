@@ -1,0 +1,39 @@
+#@+leo-ver=4-thin
+#@+node:paranhaslett.20130826181255.3151:@shadow ./fmpp/ema/T_Structures.txt
+#@@color
+#@@language md
+#@+others
+#@+node:paranhaslett.20130826181255.3057:Structures
+STRUCTURES
+==========
+#@+others
+#@+node:paranhaslett.20130826181255.3058:Tab
+###Tab
+#@-node:paranhaslett.20130826181255.3058:Tab
+#@+node:paranhaslett.20130826181255.3059:Menu
+###Menu
+
+String name
+
+ArrayList<Tag>
+#@-node:paranhaslett.20130826181255.3059:Menu
+#@+node:paranhaslett.20130826181255.3060:Tag
+###Tag
+
+String name (optional)
+#@-node:paranhaslett.20130826181255.3060:Tag
+#@+node:paranhaslett.20130826181255.3061:Node
+###Node
+
+String name
+
+Arraylist <Tag>
+
+Menu content
+#@-node:paranhaslett.20130826181255.3061:Node
+#@-others
+#@nonl
+#@-node:paranhaslett.20130826181255.3057:Structures
+#@-others
+#@-node:paranhaslett.20130826181255.3151:@shadow ./fmpp/ema/T_Structures.txt
+#@-leo

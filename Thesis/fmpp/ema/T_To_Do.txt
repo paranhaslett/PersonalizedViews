@@ -1,0 +1,13 @@
+To Do
+=====
+
+* figure out how jdime is setup
+
+* figure out why we get no output...
+
+* do a write up
+
+* test Jdime with jgit
+
+
+
