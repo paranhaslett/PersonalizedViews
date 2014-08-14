@@ -1,6 +1,0 @@
-sourceRoot: fmpp
-outputRoot: out
-data: {
-    tdd(data/style.tdd)
-    tabbedPages: csv(data/tabbedPages.csv)
-}

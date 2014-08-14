@@ -1,8 +1,0 @@
-Conclusion
-==========
-
-<pre>
-
-\chapter{Conclusions}\label{C:con}
-
-</pre>
