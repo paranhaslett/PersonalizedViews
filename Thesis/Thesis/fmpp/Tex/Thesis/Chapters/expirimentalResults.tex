@@ -1,0 +1,307 @@
+
+\chapter{Experimental Results}
+
+\section{Purpose}
+The purpose of the test is to establish if there are 
+
+\section{Methodology}
+As we are testing the complete revision history for several projects there is a high number of changes. 
+
+The test we use with the Refactor Categories Tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.
+
+By comparing only successive changes.
+  There are a greater amounts of changes if we compare the head against a very old revision. By checking against successive we reduce the number of changes. This also could mean that we need to parse fewer files.
+
+\subsection{Setup}
+This 
+% os ubuntu linux saucy salimandertt 10.13
+% machine
+% 
+% amount of ram disacek sp
+% 
+% programming languge
+% 
+% how  the test was conducted
+% 
+% what were the baselines
+% 
+% memory issues and memory setup to get the results configuration so that the 
+% test can be repeated
+% 
+% insert table
+
+\section{Results}
+\subsection{overview}
+\subsection{detailed examination of some results}
+
+The data sets following are complete git repositories which have been examined to discover the proportion of changes to behavior compared to ascetic changes that do not affect the behaviour of the program. 
+
+% in table ~\ref{tab:DataSets}
+% 
+% \begin{table}
+%   \caption{Complete git repositories that are tested}
+%   \label{tab:DataSets}
+%   \begin{center}
+%     \begin{tabular}{|c|c|c|}
+%        Jasm & this a a Java bytecode assembler
+%        written for use with the Whiley programming language. & 
+% https://github.com/Whiley/Jasm\\
+%       foo & bar \\
+%     \end{tabular}
+%   \end{center}
+% \end{table}
+% 
+
+\begin{itemize}
+  \item Jasm - this a a Java bytecode assembler written for use with the Whiley programming language. https://github.com/Whiley/Jasm
+  \item Jpp - this is a preproccessor for Java based on Bash shell script. https://github.com/maandree/jpp
+  \item AST Java - a small parser wriiten to transform Java into an AST. https://github.com/klangner/ast-java
+  \item Java Object Diff - allows two Java objects to be compared https://github.com/SQiShER/java-object-diff
+  \item DiffJ - a diff tool which in addition to ignoring white space ignores changes of ordering in package names for a Java file https://github.com/jpace/diffj
+\end{itemize}
+
+
+There are a number of Java categories that the Refactor Categories Tool will recognise.  Apart from the traditional insert, delete and modify it will aslo recogise if an Ast Node has been renamed but the content and type of the node remains the same.  It will recognise valid moves within a scope. It will also recognise when the text based merge got it wrong by claiming that the code was not fuctionally equivalent when in fact it was.
+
+Apart from this it will also diferentiate between Java code and comments.  It can tell if comments have been inserted, modified, moved or deleted.  It will also pick up any changes to that whitespace that have not already been figured out by the text based comparison.  
+
+ 
+% Comments
+%     Insert
+%     Delete
+%     Modify
+%     Move
+% White space
+%    Modify
+% 
+% Java
+%  Insert
+%  Delete
+%  Modify
+%  Move
+%  Rename
+
+
+% need the results in here
+% 
+% 
+% what this means
+% modifications to comments
+% 
+% modification to comments could be surplus to need
+% 
+% 
+% Examine certain events
+% 
+% in this case the comment is removed but as the comment is associated with a 
+% functional change the comment also needs to change in both versions
+
+
+
+% Gitblit
+% Gitblit is an open source, pure Java Git solution for managing, viewing, and 
+% serving Git repositories. It can serve repositories over the GIT, HTTP, and 
+% SSH transports; it can authenticate against multiple providers; and it 
+% allows you to get up-and-running with an attractive, capable Git server in 
+% less than 5 minutes.
+% 
+% More information about Gitblit can be found here. 
+% https://github.com/gitblit/gitblit
+% 
+% 
+% https://github.com/jkff/ire
+% IRE
+% What's this
+% ire is a library for incremental regular expression matching, based on 
+% further development of the ideas from Dan Piponi's famous blogpost Fast 
+% Incremental Regular Expression Matching with Monoids.
+% 
+% ire is for "incremental", "regular", "expressions"
+% incremental means "fast recomputation of results according to changes of 
+% input string" (not pattern)
+% regular means "regular" - t.i. no backrefs or other Perl magic.
+% There is an article about it: http://jkff.info/articles/ire
+% 
+% 
+% https://github.com/ReadyTalk/revori
+% Revori - a revision-oriented DBMS
+% Build Status
+% 
+% Revori is a database management system designed to handle rapidly-changing 
+% data efficiently. In addition to traditional relational database queries, 
+% Revori supports query subscriptions which allow clients to retrieve the 
+% intial result of a query followed by a stream containing live updates to 
+% that result.
+% 
+% The design is a hybrid of a relational database management system and a 
+% version control system. A database is represented as an immutable revision 
+% from which new revisions may be derived with data added, subtracted, or 
+% replaced. These revisions may be compared with each other and/or combined 
+% using a three-way merge algorithm.
+% 
+% For more information, see the Wiki
+% 
+% 
+% https://github.com/JnRouvignac/AutoRefactor
+% AutoRefactor
+% The AutoRefactor project delivers free software that automatically refactor 
+% code bases.
+% 
+% The aim is to fix language/API usage in order to deliver smaller, more 
+% maintainable and more expressive code bases.
+% 
+% This is an Eclipse plugin to automatically refactor Java code bases.
+% 
+% License
+% 
+% https://github.com/robinst/git-merge-repos
+% 
+% git-merge-repos
+% Program for merging multiple Git repositories into one, preserving previous 
+% history, tags and branches.
+% 
+% This is useful when you had multiple repositories for one project where you 
+% had the same set of branches and tags.
+% 
+% How it works. For each branch/tag name:
+% 
+% All the commits of the repositories that have this branch/tag are collected.
+% The commits are merged with 1 merge commit (with N parents).
+% The branch/tag is recreated on this merge commit. In case of an annotated 
+% tag, the tag message and tagger information is preserved (this does not work 
+% for signing information).
+% 
+% 
+
+
+
+% Possible datasets
+% <A HREF="https://github.com/clojure/clojure" >clojure/clojure · GitHub</A>
+% A lisp like language written in Java and targeting the JVM
+% <A HREF="https://github.com/rzwitserloot/lombok" >rzwitserloot/lombok · 
+% GitHub</A>
+% A Java library that uses annotations to simplify commonly written code
+% <A HREF="https://github.com/maandree/jpp" >maandree/jpp · GitHub</A>
+% A preprocessor for Java
+% <A HREF="https://github.com/klangner/ast-java">klangner/ast-java · 
+% GitHub</A>
+% parses and represents Java as an AST
+% <A HREF="https://github.com/antlr/antlr4">antlr/antlr4 · GitHub</A>
+% A parser for any language you have language definition for
+% 
+% JaCoCo Java Code Coverage Library
+% JaCoCo is a free Java code coverage library distributed under the Eclipse 
+% Public License. Check http://www.eclemma.org/jacoco for downloads, 
+% documentation and feedback.
+% https://github.com/jacoco/jacoco
+% 
+% Java Object Diff
+% https://github.com/SQiShER/java-object-diff
+% 
+% java-object-diff is a simple, yet powerful library to find differences 
+% between Java objects. It takes two objects and generates a tree structure 
+% that represents any differences between the objects and their children. This 
+% tree can then be traversed to extract more information or apply changes to 
+% the underlying data structures.
+% 
+% Build Status
+% 
+% Features
+% 
+% Generates an easily traversable tree structure to analyze and modify with 
+% surgical precision
+% Detects whether a value or item has been added, removed or changed and shows 
+% the changes
+% Allows to manipulate the underlying objects directly through the generated 
+% tree nodes
+% Works with almost any kind of object (Beans, Lists, Maps, Primitives, 
+% Strings, etc.)
+% Properties can be marked with category tags to easily filter for specific 
+% subsets
+% No configuration needed (but possible)
+% No runtime dependencies except for SLF4J
+% When needed, it leaves it up to you, whether you want to use declarative 
+% configuration or annotations
+% Getting Started
+% 
+% To learn how to use Java Object Diff, please have a look at the Starter 
+% Guide.
+% 
+% Why would you need this?
+% 
+% Sometimes you need to figure out, how one version of an object differs from 
+% another one. One of the simplest solutions that'll cross your mind is most 
+% certainly to use reflection to scan the object for fields or getters and use 
+% them to compare the values of the different object instances. In many cases 
+% this is a perfectly valid strategy and the way to go. After all, we want to 
+% keep things simple, don't we?
+% 
+% However, there are some cases that can increase the complexity dramatically. 
+% What if you need to find differences in collections or maps? What if you 
+% have to deal with nested objects that also need to be compared on a 
+% per-property basis? Or even worse: what if you need to merge such objects?
+% 
+% You suddenly realize that you need to scan the objects recursively, figure 
+% out which collection items have been added, removed or changed; find a way 
+% to return your results in a way that allows you to easily access the 
+% information you are looking for and provide accessors to apply changes.
+% 
+% While all this isn't exactly rocket science, it is complex enough to add 
+% quite a lot of extra code to your project. Code that needs to be tested and 
+% maintained. Since the best code is the code you didn't write, this library 
+% aims to help you with all things related to diffing and merging of Java 
+% objects by providing a robust foundation and a simple, yet powerful API.
+% 
+% This library will hide all the complexities of deep object comparison behind 
+% one line of code:
+% 
+% Node root = ObjectDifferFactory.getInstance().compare(workingObject, 
+% baseObject);
+% This generates a tree structure of the given object type and lets you 
+% traverse its nodes via visitors. Each node represents one property (or 
+% collection item) of the underlying object and tells you exactly if and how 
+% the value differs from the base version. It also provides accessors to read, 
+% write and remove the value from or to any given instance. This way, all you 
+% need to worry about is how to treat changes and not how to find them.
+% 
+% This library has been battle-tested in a rather big project of mine, where I 
+% use it to generate activity streams, resolve database update conflics, 
+% display change logs and limit the scope of entity updates to only a subset 
+% of properties, based on the context or user permissions. It didn't let me 
+% down so far and I hope that it can help you too!
+% 
+% Use Cases
+% 
+% Java Object Diff is currently used (but not limited) to...
+% 
+% Generate Facebook-like activity streams
+% Visualize the differences between object versions
+% Automatically resolve conflicts on concurrent database updates
+% Detect and persist only properties that were actually changed
+% Contribute
+% 
+% You discovered a bug or have an idea for a new feature? Great, why don't you 
+% send me a Pull Request (PR) so everyone can benefit from it? To help you 
+% getting started, here is a brief guide with everyting you need to know to 
+% get involved!
+% 
+% Donate
+% 
+% If you’d like to support this project with a small donation, you can do so 
+% via Flattr or Bitcoin.
+% 
+% Alternatively you could send me a nice tweet, start contributing, write a 
+% blog post about this project, tell your friends about it or simply star this 
+% repository. I'm happy about everything that shows me that someone out there 
+% is actually using this library and appreciates all the hard work that goes 
+% into its development.
+% 
+% https://github.com/jpace/diffj
+% DiffJ
+% DiffJ compares Java files based on their code, without regard to formatting, 
+% organization, comments, or whitespace. Differences are reported as to the 
+% precise type of change.
+% 
+% DiffJ was designed for comparing code when refactoring and reformatting, 
+% with the differences narrowed to the extent possible, thus isolating 
+% changes.
