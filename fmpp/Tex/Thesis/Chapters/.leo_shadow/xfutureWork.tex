@@ -5,20 +5,32 @@
 
 \chapter{Future Work}
 
-Performance of Refactor Categories Tool could be further enhanced by only parsing nodes that are part of the change set or are ancestors of this.  This however would require major changes to the parser or rewriting it. It would save memory in addition to speeding up the parsing of Java code into AST nodes.
+There are a number of things that warrent further examination 
 
+%@<<performance changes>>
+%@+node:paran.20140816070821.2186:<<performance changes>>
+Performance of Refactor Categories Tool could be further enhanced by only parsing nodes that contain the text change.  This however would require major changes to the parser or rewriting it. There would also be the complexity of figureing out how to only partially parse a sorce code. The benefits of rewriting the parser would save memory in addition to speeding up the parsing of Java code into AST nodes.
+%@nonl
+%@-node:paran.20140816070821.2186:<<performance changes>>
+%@nl
 
+%@<<Comments>>
+%@+node:paran.20140816070821.2189:<<Comments>>
 
+Comments could be associateded with the AST Node they relate to.  With this change would be possible to tell if changing a comment should be reflected in other views when there is a source code change. This change is difficult as it is had to tell which block of code the comment referes to.  One way this could be done would be to associate single-line comments at the end of the line with the AST Node that appears directly before them and other comments with the ASTNode that appears directly after them.  This however is only a rough approximation so it may be helpful to also be able to specify execeptions to these rules by using annotations that tie the comment to a block of code.
+
+The annotation could also be used to specify how important the comment is. If the comment is marked as umimportant it would indicate that it still should not be considered a change even if it differs between revisions.
+%@nonl
+%@-node:paran.20140816070821.2189:<<Comments>>
+%@nl
+
+%@<<repurpose>>
+%@+node:paran.20140816070821.2190:<<repurpose>>
+The Refactor Categories tool could be repurposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  This would bring us a step closer to being able to realise the vision of having better seperated private views.  Other tools could also be investigated such as using diffJ as the difference tool used by git.
+%@nonl
+%@-node:paran.20140816070821.2190:<<repurpose>>
+%@nl
 %@+at
-% 
-% comments need to be able to be associated to blocks of code so that it is 
-% possible tyo tell if removing or addin a comment should be reflected in 
-% other views when there is a source code change.
-% 
-% maybe using some form of annotation for exceptional cases where comments are 
-% concerned so thet we know if the comment should be passed to the other view
-% 
-% removing AST nodes once they have been used
 % 
 % future work: by keeping track of equivalencies there is no need to retest 
 % using the AST

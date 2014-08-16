@@ -8,22 +8,21 @@
 \section{Purpose}
 %@<<purpose>>
 %@+node:paran.20140813185646.2164:<<purpose>>
-The purpose of the test is to establish if there are superficial changes in curently working projects.  By superficial we mean that the change does not add   much of value apart from personal taste or formating.  As the order of methods within a class does change the behaviour of a program this is an example of a superficial change.  It is harder to determine if comments are superficial because certain comments could be important to others and others irrelivant. We will attempt to establish if there are any patterns in comments to determine if they are superfical or not.  Determining if there are superficial change may indicate that there is a seperation between personal preferences that would be best contained in a private view and items that can be shared.    
-
+The purpose of this expiriment is to establish if there are superficial changes in curently working projects.  By superficial we mean that the change does not add much of value apart from personal taste or formating.  In some cases cahnges to the order of methods within a class does change the behaviour of a program, this is an example of a superficial change.  It is harder to determine if comments are superficial because certain comments could be important to others and others irrelivant. We will attempt to establish if there are any patterns in comments to determine if they are superfical or not.  Determining if there are superficial change may indicate that there is a seperation between personal preferences that would be best contained in a private view and items that need to be shared for collaboration.
+%@nonl
 %@-node:paran.20140813185646.2164:<<purpose>>
 %@nl
 
 \section{Methodology}
 %@<<Methodology>>
 %@+node:paran.20140813185646.2165:<<Methodology>>
-
-
 \subsection{Setup}
 %@<<setup>>
 %@+node:paran.20140813185646.2166:<<setup>>
 %@<<machine>>
 %@+node:paran.20140814214911.2181:<<machine>>
-The expiriment was run on a lenovo laptap with 3.5 Ram and ? disk space assigned to the ubuntu 10.13 (saucy salamander) operating system.  
+The expiriment was run on a lenovo laptap with 3.5 Ram and 113.2 GB disk space assigned to the 64 bit Ubuntu 13.10 (Saucy Salamander) operating system.
+  
 %@nonl
 %@-node:paran.20140814214911.2181:<<machine>>
 %@nl
@@ -32,24 +31,30 @@ The expiriment was run on a lenovo laptap with 3.5 Ram and ? disk space assigned
 %@+node:paran.20140814214911.2182:<<softaware>>
 The tests were written in Java and run within the eclipse editor.
 
-We had some garbage collection memory issues with some of the baselines that we were testing. To resolve these isseue we increased the memory by changing the parameters
-%@nonl
+We had some garbage collection memory issues with some of the baselines that we were testing. To resolve these isseue we increased the memory by changing the parameters for the run configuration.  The following parameters were added to the run configuration for the test.
+
+\begin{verbatim}
+-Xms512M 
+-Xmx4096M
+\end{verbatim}
+
+Each of the benchmarks were tested individually to further ensure that there were no memory issues. 
 %@-node:paran.20140814214911.2182:<<softaware>>
 %@nl
 
 %@<<how conducted>>
 %@+node:paran.20140814214911.2180:<<how conducted>>
-The Refactor Categories Tool was run individiually once for each baseline.  The Refactor Categories Tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.
+The Refactor Categories Tool was run individiually once for each benchmark.  The Refactor Categories Tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.
 %@nonl
 %@-node:paran.20140814214911.2180:<<how conducted>>
 %@nl
 %@-node:paran.20140813185646.2166:<<setup>>
 %@nl
 
-\subsection{Baselines Examanined}
+\subsection{Benchmarks Examained}
 %@<<baselines>>
 %@+node:paran.20140814214911.2179:<<baselines>>
- The expirment was run over a number of baselines with different numbers of commits.
+ The expirment was run over a number of benchmarks with different numbers of commits.
  
   \begin{itemize}
   \item Jasm
@@ -125,6 +130,10 @@ The Refactor Categories Tool was run individiually once for each baseline.  The 
 %@+node:paran.20140814214911.2177:<<overview>>
 Benchmark : Jasm 
 
+Changes to Comments
+
+Changes to Java Code
+
 
 COMMENT:DELETE 7
 
@@ -145,10 +154,6 @@ REFACTOR CATEGORIES:JAVA:MOVE 1
 REFACTOR CATEGORIES:JAVA:RENAMED 28
 
 REFACTOR CATEGORIES:JAVA:EQUIVALENT 61
-
-
-%@@c
-%@nonl
 %@-node:paran.20140814214911.2177:<<overview>>
 %@nl
 \subsection{Detailed examination of some results}
@@ -181,13 +186,23 @@ The data sets following are complete git repositories which have been examined t
 %@-at
 %@@c
 
-
-
-
-There are a number of Java categories that the Refactor Categories Tool will recognise.  Apart from the traditional insert, delete and modify it will aslo recogise if an Ast Node has been renamed but the content and type of the node remains the same.  It will recognise valid moves within a scope. It will also recognise when the text based merge got it wrong by claiming that the code was not fuctionally equivalent when in fact it was.
-
-Apart from this it will also diferentiate between Java code and comments.  It can tell if comments have been inserted, modified, moved or deleted.  It will also pick up any changes to that whitespace that have not already been figured out by the text based comparison.  
-
+%@+at
+% 
+% 
+% 
+% There are a number of Java categories that the Refactor Categories Tool will 
+% recognise.  Apart from the traditional insert, delete and modify it will 
+% aslo recogise if an Ast Node has been renamed but the content and type of 
+% the node remains the same.  It will recognise valid moves within a scope. It 
+% will also recognise when the text based merge got it wrong by claiming that 
+% the code was not fuctionally equivalent when in fact it was.
+% 
+% Apart from this it will also diferentiate between Java code and comments.  
+% It can tell if comments have been inserted, modified, moved or deleted.  It 
+% will also pick up any changes to that whitespace that have not already been 
+% figured out by the text based comparison.
+%@-at
+%@@c
  
 %@+at
 % Comments
