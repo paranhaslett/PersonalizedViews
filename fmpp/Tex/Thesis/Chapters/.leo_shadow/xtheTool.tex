@@ -6,8 +6,14 @@
 \chapter{Refactor Categories Tool}
 %@<<tool desc>>
 %@+node:paran.20140731173741.2006:<<tool desc>>
-In order to prove that having private views would provide some useful results we created the Refactor Categories Tool. Version control systems such a JGit compare and merge files by differentiating between insert, delete and modify operations. The Refactor Categories Tool enhances this by also including instances where a block of code has moved but the functionality remains unchanged. It also can differentiate between changes to comments, white space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and some instances where it has been refactored.  Although it does not detect more complex differences beyond this we intend to show that changes exist in real world software projects that have no impact on the projects' behaviour.
+In order to prove that having private views would be useful we created the Refactor Categories Tool. Version control systems such a JGit compare and merge files by differentiating between insert, delete and modify operations. The Refactor Categories Tool enhances this by also identifying instances where a block of code has moved but the functionality remains unchanged. It also can differentiate between changes to comments, white space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and some instances where it has been refactored.  
 
+%@+at
+% Although it does not detect more complex differences beyond this we intend 
+% to show that changes exist in real world software projects that have no 
+% impact on the projects' behaviour.
+%@-at
+%@@c
 
 %@-node:paran.20140731173741.2006:<<tool desc>>
 %@nl
@@ -15,8 +21,13 @@ In order to prove that having private views would provide some useful results we
 \section{Overview}
 %@<<Overview>>
 %@+node:paran.20140805175513.2154:<<Overview>>
-The test we use with the Refactor Categories Tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.
-An ordinary text comparison is used as a starting point.  The algorithm used for the text comparison is the histogram LCS one normally used by JGit with white space ignored. The text comparison returns the minimal number of text changes in an \lstinline{EditList} object. The \lstinline{EditList} object contains a list of changes to the plain text. Information about each change that the \lstinline{EditList} object retains is:
+%@+at
+% The test we use with the Refactor Categories Tool analyses all the 
+% historical changes ever made on a software project by extracting successive 
+% revisions from a Git repository using JGit.
+%@-at
+%@@c
+An ordinary text comparison is used as a starting point.  The text diff within JGit is used with white space ignored. The text comparison returns the minimal number of text changes in an \lstinline{EditList} object. The \lstinline{EditList} object contains a list of changes to the plain text. Information about each change that the \lstinline{EditList} object retains is:
 
 \begin{itemize}
   \item the starting line of the change for both revisions being compared
@@ -49,7 +60,7 @@ An example of this can be found in Figure \ref{fig:findingASTNode}.  In this Fig
  \label{fig:troubleASTNode}
 \end{figure}
 
-Another interesting question is how the tool deals with situations where a text change only partly overlaps an AST node or an AST node only partly covers a text item.  This issue is shown in Figure \ref{fig:troubleASTNode}. In the situation where only part of and AST Node contains the text change the children of that AST Node are examined to see if they are fully within the text change.  If not it keeps recursively checking until either a child falls completely outside the change or is completely in the change.  
+Another interesting question is how the tool deals with situations where a text change partly overlaps an AST node or an AST node only partly covers a text item.  This issue is shown in Figure \ref{fig:troubleASTNode}. In the situation where only part of an AST Node contains the text change, the children of that AST Node are examined to see if they are fully within the text change.  If not it keeps recursively checking until either a child falls completely outside the change or is completely in the change.  
 
 In the case where portions of a text change which are outside of a AST node then that change could be a comment or white space. This can be seen in both Figure \ref{fig:findingASTNode} and Figure \ref{fig:troubleASTNode} because in both of these portions of text are outside a text node.  These are of interest to us because these are instances where the text may have been changed but it has no impact on the behaviour of the program.  The most likely instances of this is when a comment has changed or if white space has been introduced in the middle of source code. Once the AST node for both revisions has been matched with the text change we can compare the AST nodes and their children to discover if they would behave in the same fashion. If they do behave in the same fashion it could indicate that the change is an ascetic one.
 
