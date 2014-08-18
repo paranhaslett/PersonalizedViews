@@ -8,7 +8,22 @@
 \section{Purpose}
 %@<<purpose>>
 %@+node:paran.20140813185646.2164:<<purpose>>
-The purpose of this expiriment is to establish if there are superficial changes in curently working projects.  By superficial we mean that the change does not add much of value apart from personal taste or formating.  In some cases cahnges to the order of methods within a class does change the behaviour of a program, this is an example of a superficial change.  It is harder to determine if comments are superficial because certain comments could be important to others and others irrelivant. We will attempt to establish if there are any patterns in comments to determine if they are superfical or not.  Determining if there are superficial change may indicate that there is a seperation between personal preferences that would be best contained in a private view and items that need to be shared for collaboration.
+The purpose of this expiriment is to measure how many insertions, deletion and modifications are performed on the Java ASt verses comment. Simlarly how many insert and delete pairs can be clasiified as moves. 
+
+%@+at
+% establish if there are superficial changes in curently working projects.  By 
+% superficial we mean that the change does not add much of value apart from 
+% personal taste or formating.  In some cases cahnges to the order of methods 
+% within a class does change the behaviour of a program, this is an example of 
+% a superficial change.  It is harder to determine if comments are superficial 
+% because certain comments could be important to others and others irrelivant. 
+% We will attempt to establish if there are any patterns in comments to 
+% determine if they are superfical or not.  Determining if there are 
+% superficial change may indicate that there is a seperation between personal 
+% preferences that would be best contained in a private view and items that 
+% need to be shared for collaboration.
+%@-at
+%@@c
 %@nonl
 %@-node:paran.20140813185646.2164:<<purpose>>
 %@nl
@@ -16,12 +31,15 @@ The purpose of this expiriment is to establish if there are superficial changes 
 \section{Methodology}
 %@<<Methodology>>
 %@+node:paran.20140813185646.2165:<<Methodology>>
+We will now outline an experiment. Our goal is make it possible for someone to reproduce our experiment.
+
 \subsection{Setup}
 %@<<setup>>
 %@+node:paran.20140813185646.2166:<<setup>>
 %@<<machine>>
 %@+node:paran.20140814214911.2181:<<machine>>
-The expiriment was run on a lenovo laptap with 3.5 Ram and 113.2 GB disk space assigned to the 64 bit Ubuntu 13.10 (Saucy Salamander) operating system.
+The experiment was run on a Lenovo laptop with 3.5GB Ram and 113.2 GB disk space assigned to the 64 bit Ubuntu 13.10 (Saucy Salamander) operating system. The tests were written in Java and run within the eclipse editor.
+
   
 %@nonl
 %@-node:paran.20140814214911.2181:<<machine>>
@@ -29,92 +47,102 @@ The expiriment was run on a lenovo laptap with 3.5 Ram and 113.2 GB disk space a
 
 %@<<softaware>>
 %@+node:paran.20140814214911.2182:<<softaware>>
-The tests were written in Java and run within the eclipse editor.
-
-We had some garbage collection memory issues with some of the baselines that we were testing. To resolve these isseue we increased the memory by changing the parameters for the run configuration.  The following parameters were added to the run configuration for the test.
+We had some garbage collection memory issues with some benchmarks that we were testing. To resolve these issue we increased the memory by changing the parameters for the run configuration.  The following parameters were added to the run configuration for the test.
 
 \begin{verbatim}
 -Xms512M 
 -Xmx4096M
 \end{verbatim}
 
-Each of the benchmarks were tested individually to further ensure that there were no memory issues. 
+Each of the benchmarks were tested individually to further ensure that there were no memory issues.
 %@-node:paran.20140814214911.2182:<<softaware>>
 %@nl
 
 %@<<how conducted>>
 %@+node:paran.20140814214911.2180:<<how conducted>>
-The Refactor Categories Tool was run individiually once for each benchmark.  The Refactor Categories Tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.
-%@nonl
+The Refactor Categories Tool was run individiually once for each benchmark.  The Refactor Categories Tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.  Once we have two revisions we need to compare them.  To do this we compare each of the Java files in both revisons one by one. We only test the Java file if it has been modified or renamed.  If it has been inserte or deleted we ignore it. Once we have established that Java files exist, both on the original and the updated copy, we use the text diff in Jgit to compare them. As outlined above \ref{matchingTextWithAST} we figure out which AST nodes the text changes contain.   
+
+%@+at
+% renames are determined as being something where althought the AST label has 
+% changed the type of the AST node remains the same and its contents have not 
+% been changed in any way.
+%@-at
+%@@c  
+
 %@-node:paran.20140814214911.2180:<<how conducted>>
 %@nl
 %@-node:paran.20140813185646.2166:<<setup>>
 %@nl
 
-\subsection{Benchmarks Examained}
+\subsection{Benchmarks Examined}
 %@<<baselines>>
 %@+node:paran.20140814214911.2179:<<baselines>>
- The expirment was run over a number of benchmarks with different numbers of commits.
+ \begin{table}
+    \begin{tabular}{l|lllll}
+    Benchmark        & Description         & URL                   & Version                                 & Commits & LOC   \\ \hline
+    Jasm             &  \begin{minipage}[t]{0.4\textwidth}
+Java bytecode assembler written for use with the Whiley programming language.
+\end{minipage}       & https://github.com/Whiley/Jasm              & b68e1fcfb8c118ea05a1a08ac20673cb90f44580 & 74      & 29139 \\
+    Jpp              & \begin{minipage}[t]{0.4\textwidth}
+    Preprocessor for Java based on Bash shell script.
+\end{minipage}       & https://github.com/maandree/jpp             & ae4223b907432fef957f38f80540165bfdce187b & 40      & 254   \\
+    AST Java         & \begin{minipage}[t]{0.4\textwidth}
+    Small parser written to transform Java into an AST.
+\end{minipage}       & https://github.com/klangner/ast-java        & fb2702daca2d654ebd7fef20fe7c79ed4d2fee3d & 24      & 10174 \\
+    Java Object Diff & \begin{minipage}[t]{0.4\textwidth}
+     Allows two Java objects to be compared at runtime. 
+\end{minipage}       & https://github.com/SQiShER/java-object-diff & d2b89cafdc6b39781cd5525c544ccd62f9725f36 & 291     & 10023 \\
+    DiffJ            & \begin{minipage}[t]{0.4\textwidth}
+    Diff tool which in addition to ignoring white space ignores changes of ordering in package names for a Java file.
+\end{minipage}       & https://github.com/jpace/diffj              & ec05561ac2f58b50e10e52b98962be2c8d288d4e & 490     & 13712 \\
+    IRE              & \begin{minipage}[t]{0.4\textwidth}
+    Java library for regular expression matching.
+\end{minipage}       & https://github.com/jkff/ire                 & 4a4b4ce1e586b125a4480cbbf778396a149018ef & 41      & 2714  \\
+    Syntax           & \begin{minipage}[t]{0.4\textwidth}
+    Compiler compiler used for teaching. 
+\end{minipage}       & https://github.com/jaimegarza/syntax        & 1b1dc22f8d8c348808047125e70a5b2316587226 & 89      & 9376  \\
+    \end{tabular}
+\end{table}
  
-  \begin{itemize}
-  \item Jasm
-  this a a Java bytecode assembler written for use with the Whiley programming language.
-  
-  https://github.com/Whiley/Jasm
-  
-  74 commits 3 branches
-  
-  \item Jpp
-  
-  this is a preproccessor for Java based on Bash shell script. 
-  
-  https://github.com/maandree/jpp
-  
-  40 commits 2 branches
-  
-  \item AST Java
-  
-  a small parser wriiten to transform Java into an AST. 
-  
-  https://github.com/klangner/ast-java
-  
-  24 commits 1 branch
-  
-  \item Java Object Diff
-  
-  allows two Java objects to be compared 
-  
-  https://github.com/SQiShER/java-object-diff
-  
-  291 commits 2 branches
-  
-  \item DiffJ
-  
-  a diff tool which in addition to ignoring white space ignores changes of ordering in package names for a Java file 
-  
-  https://github.com/jpace/diffj
-  
-  490 commits 2 branches
-
-  \item  IRE
-  
-  a java library for regular expression matching
-  
-  https://github.com/jkff/ire
-  
-  41 commits 1 branch
-  
-  \item syntax
-  
-  a compiler compiler used for teaching
-  
-  https://github.com/jaimegarza/syntax
-  
-  89 commits 1 branch
-    
-\end{itemize}
-
-
+%@+at
+%  The experiment was run over a number of benchmarks with different numbers 
+% of commits.
+%   \begin{itemize}
+%   \item Jasm
+%   this a a Java bytecode assembler written for use with the Whiley 
+% programming language.
+%   https://github.com/Whiley/Jasm
+%   74 commits 3 branches
+%   \item Jpp
+%   this is a preprocessor for Java based on Bash shell script.
+%   https://github.com/maandree/jpp
+%   40 commits 2 branches
+%   \item AST Java
+%   a small parser written to transform Java into an AST.
+%   https://github.com/klangner/ast-java
+%   24 commits 1 branch
+%   \item Java Object Diff
+%   allows two Java objects to be compared
+%   https://github.com/SQiShER/java-object-diff
+%   291 commits 2 branches
+%   \item DiffJ
+%   a diff tool which in addition to ignoring white space ignores changes of 
+% ordering in package names for a Java file
+%   https://github.com/jpace/diffj
+%   490 commits 2 branches
+% 
+%   \item  IRE
+%   a Java library for regular expression matching
+%   https://github.com/jkff/ire
+%   41 commits 1 branch
+%   \item syntax
+%   a compiler compiler used for teaching
+%   https://github.com/jaimegarza/syntax
+%   89 commits 1 branch
+% \end{itemize}
+%@-at
+%@@c
+%@nonl
 %@-node:paran.20140814214911.2179:<<baselines>>
 %@nl
 %@nonl
@@ -128,132 +156,247 @@ The Refactor Categories Tool was run individiually once for each benchmark.  The
 \subsection{Overview}
 %@<<overview>>
 %@+node:paran.20140814214911.2177:<<overview>>
-The results for the "Jasm" benchmark are as follows: 
-
-\begin{table}[H]
-    \begin{tabular}{llll}
-    Code Segment Format & Type of Operation & Detected by JGit & Detected by RCT \\ \hline
-    Comments            & Delete            & N/A              & 7               \\
-    ~                   & Insert            & N/A              & 6               \\
-    ~                   & Modify            & N/A              & 95              \\
-    White space         & Modify            & N/A              & 26              \\
-    Java                & Delete            & 91               & 264             \\
-    ~                   & Insert            & 44               & 76              \\
-    ~                   & Modify            & 337              & 385             \\
-    ~                   & Move              & N/A              & 7               \\
-    ~                   & Renamed           & N/A              & 0               \\
-    ~                   & Equivalent        & N/A              & 0               \\
-    \end{tabular}
-\end{table}
-
-The results for the "Jpp" benchmark are as follows: 
-
-\begin{table}[H]
-    \begin{tabular}{llll}
-    Code Segment Format & Type of Operation & Detected by JGit & Detected by RCT \\ \hline
-    Comments            & Delete            & N/A              & 1               \\
-    ~                   & Insert            & N/A              & 2               \\
-    ~                   & Modify            & N/A              & 11              \\
-    White space         & Modify            & N/A              & 6               \\
-    Java                & Delete            & 23               & 43              \\
-    ~                   & Insert            & 3                & 9               \\
-    ~                   & Modify            & 41               & 50              \\
-    ~                   & Move              & N/A              & 0               \\
-    ~                   & Renamed           & N/A              & 0               \\
-    ~                   & Equivalent        & N/A              & 0               \\
-    \end{tabular}
-\end{table}
-
-The results for the "AST java" Bench mark are as follows:
-
-\begin{table}[H]
-    \begin{tabular}{llll}
-    Code Segment Format & Type of Operation & Detected by JGit & Detected by RCT \\ \hline
-    Comments            & Delete            & N/A              & 2               \\
-    ~                   & Insert            & N/A              & 0               \\
-    ~                   & Modify            & N/A              & 22              \\
-    White space         & Modify            & N/A              & 5               \\
-    Java                & Delete            & 44               & 87              \\
-    ~                   & Insert            & 15               & 28              \\
-    ~                   & Modify            & 85               & 72              \\ 
-    ~                   & Move              & N/A              & 1               \\
-    ~                   & Renamed           & N/A              & 0               \\
-    ~                   & Equivalent        & N/A              & 11              \\
-    \end{tabular}
-\end{table}
-
-The results for the "Java object diff" Bench mark are as follows:
-
-\begin{table}[H]
-    \begin{tabular}{llll}
-    Code Segment Format & Type of Operation & Detected by JGit & Detected by RCT \\ \hline
-    Comments            & Delete            & N/A              & 14              \\
-    ~                   & Insert            & N/A              & 39              \\
-    ~                   & Modify            & N/A              & 1438            \\
-    White space         & Modify            & N/A              & 277             \\
-    Java                & Delete            & 1186             & 2645            \\
-    ~                   & Insert            & 837              & 1961            \\
-    ~                   & Modify            & 8219             & 8862            \\
-    ~                   & Move              & N/A              & 5               \\
-    ~                   & Renamed           & N/A              & 9               \\
-    ~                   & Equivalent        & N/A              & 183             \\
-    \end{tabular}
-\end{table}
-
-The results for the "DiffJ" benchmark are as follows
-
-\begin{table}[H]
-    \begin{tabular}{llll}
-    Code Segment Format & Type of Operation & Detected by JGit & Detected by RCT \\ \hline
-    Comments            & Delete            & N/A              & 36              \\
-    ~                   & Insert            & N/A              & 39              \\
-    ~                   & Modify            & N/A              & 281             \\
-    White space         & Modify            & N/A              & 276             \\
-    Java                & Delete            & 746              & 3106            \\
-    ~                   & Insert            & 991              & 3164            \\
-    ~                   & Modify            & 3544             & 5192            \\
-    ~                   & Move              & N/A              & 58              \\
-    ~                   & Renamed           & N/A              & 82              \\
-    ~                   & Equivalent        & N/A              & 18              \\
-    \end{tabular}
-\end{table}
-
-The results for the "IRE" benchmark are as follows:
-
-\begin{table}[H]
-    \begin{tabular}{llll}
-    Code Segment Format & Type of Operation & Detected by JGit & Detected by RCT \\ \hline
-    Comments            & Delete            & N/A              & 10              \\
-    ~                   & Insert            & N/A              & 3               \\
-    ~                   & Modify            & N/A              & 79              \\
-    White space         & Modify            & N/A              & 49              \\
-    Java                & Delete            & 112              & 263             \\
-    ~                   & Insert            & 49               & 213             \\
-    ~                   & Modify            & 465              & 640             \\
-    ~                   & Move              & N/A              & 1               \\
-    ~                   & Renamed           & N/A              & 2               \\
-    ~                   & Equivalent        & N/A              & 30              \\
+\begin{table}
+    \begin{tabular}{l|llllll|l|lll}
+    Benchmark        & \multicolumn{6}{|c|}{Java}           & Whitespace & \multicolumn{3}{|c}{Comments} \\ \cline{2-7} \cline{9-11}
+    ~                & Del  & Ins  & Mod  & Mov & Ren & Eqv & ~          & Del      & Ins & Mod  \\ \hline
+    Jasm             & 264  & 76   & 385  & 7   & 0   & 0   & 26         & 7        & 6   & 95   \\
+    Jpp              & 43   & 9    & 50   & 0   & 0   & 0   & 6          & 1        & 2   & 11   \\
+    AST Java         & 87   & 28   & 72   & 1   & 0   & 11  & 5          & 2        & 0   & 22   \\
+    Java Object Diff & 2645 & 1961 & 8862 & 5   & 9   & 183 & 277        & 14       & 39  & 1438 \\
+    DiffJ            & 3106 & 3164 & 5192 & 58  & 82  & 18  & 276        & 36       & 39  & 291  \\
+    IRE              & 263  & 213  & 640  & 1   & 2   & 30  & 49         & 10       & 3   & 79   \\
+    Syntax           & 1142 & 544  & 2216 & 6   & 7   & 12  & 204        & 14       & 81  & 451  \\
     \end{tabular}
 \end{table}
 
 
-The results for the "Syntax" benchmark are as follows:
 
-\begin{table}[H]
-    \begin{tabular}{llll}
-    Code Segment Format & Type of Operation & Detected by JGit & Detected by RCT \\ \hline
-    Comments               & Delete            & N/A              & 14                                   \\
-    ~                      & Insert            & N/A              & 81                                   \\
-    ~                      & Modify            & N/A              & 451                                  \\
-    White space            & Modify            & N/A              & 204                                  \\
-    Java                   & Delete            & 691              & 1142                                 \\
-    ~                      & Insert            & 214              & 544                                  \\
-    ~                      & Modify            & 1863             & 2216                                 \\
-    ~                      & Move              & N/A              & 6                                    \\
-    ~                      & Renamed           & N/A              & 7                                    \\
-    ~                      & Equivalent        & N/A              & 12                                   \\
+
+
+
+\begin{table}
+    \begin{tabular}{l|lll}
+    Benchmark        & JGit Text Diff & ~   & ~    \\ \hline
+    ~                & Del            & Ins & Mod  \\ \hline
+    Jasm             & 91             & 44  & 337  \\
+    Jpp              & 23             & 3   & 41   \\
+    AST Java         & 44             & 15  & 85   \\
+    Java Object Diff & 1186           & 837 & 8219 \\
+    DiffJ            & 746            & 991 & 3544 \\
+    IRE              & 112            & 49  & 465  \\
+    Syntax           & 691            & 214 & 1863 \\
     \end{tabular}
 \end{table}
+%@+at
+% 
+% 
+% The results for the "Jasm" benchmark are as follows:
+% 
+% \begin{table}[H]
+%     \begin{tabular}{llll}
+%     Code Segment Format & Type of Operation & Detected by JGit & Detected by 
+% RCT \\ \hline
+%     Comments            & Delete            & N/A              & 
+% 7               \\
+%     ~                   & Insert            & N/A              & 
+% 6               \\
+%     ~                   & Modify            & N/A              & 
+% 95              \\
+%     White space         & Modify            & N/A              & 
+% 26              \\
+%     Java                & Delete            & 91               & 
+% 264             \\
+%     ~                   & Insert            & 44               & 
+% 76              \\
+%     ~                   & Modify            & 337              & 
+% 385             \\
+%     ~                   & Move              & N/A              & 
+% 7               \\
+%     ~                   & Renamed           & N/A              & 
+% 0               \\
+%     ~                   & Equivalent        & N/A              & 
+% 0               \\
+%     \end{tabular}
+% \end{table}
+% 
+% The results for the "Jpp" benchmark are as follows:
+% 
+% \begin{table}[H]
+%     \begin{tabular}{llll}
+%     Code Segment Format & Type of Operation & Detected by JGit & Detected by 
+% RCT \\ \hline
+%     Comments            & Delete            & N/A              & 
+% 1               \\
+%     ~                   & Insert            & N/A              & 
+% 2               \\
+%     ~                   & Modify            & N/A              & 
+% 11              \\
+%     White space         & Modify            & N/A              & 
+% 6               \\
+%     Java                & Delete            & 23               & 
+% 43              \\
+%     ~                   & Insert            & 3                & 
+% 9               \\
+%     ~                   & Modify            & 41               & 
+% 50              \\
+%     ~                   & Move              & N/A              & 
+% 0               \\
+%     ~                   & Renamed           & N/A              & 
+% 0               \\
+%     ~                   & Equivalent        & N/A              & 
+% 0               \\
+%     \end{tabular}
+% \end{table}
+% 
+% The results for the "AST Java" Bench mark are as follows:
+% 
+% \begin{table}[H]
+%     \begin{tabular}{llll}
+%     Code Segment Format & Type of Operation & Detected by JGit & Detected by 
+% RCT \\ \hline
+%     Comments            & Delete            & N/A              & 
+% 2               \\
+%     ~                   & Insert            & N/A              & 
+% 0               \\
+%     ~                   & Modify            & N/A              & 
+% 22              \\
+%     White space         & Modify            & N/A              & 
+% 5               \\
+%     Java                & Delete            & 44               & 
+% 87              \\
+%     ~                   & Insert            & 15               & 
+% 28              \\
+%     ~                   & Modify            & 85               & 
+% 72              \\
+%     ~                   & Move              & N/A              & 
+% 1               \\
+%     ~                   & Renamed           & N/A              & 
+% 0               \\
+%     ~                   & Equivalent        & N/A              & 
+% 11              \\
+%     \end{tabular}
+% \end{table}
+% 
+% The results for the "Java object diff" Bench mark are as follows:
+% 
+% \begin{table}[H]
+%     \begin{tabular}{llll}
+%     Code Segment Format & Type of Operation & Detected by JGit & Detected by 
+% RCT \\ \hline
+%     Comments            & Delete            & N/A              & 
+% 14              \\
+%     ~                   & Insert            & N/A              & 
+% 39              \\
+%     ~                   & Modify            & N/A              & 
+% 1438            \\
+%     White space         & Modify            & N/A              & 
+% 277             \\
+%     Java                & Delete            & 1186             & 
+% 2645            \\
+%     ~                   & Insert            & 837              & 
+% 1961            \\
+%     ~                   & Modify            & 8219             & 
+% 8862            \\
+%     ~                   & Move              & N/A              & 
+% 5               \\
+%     ~                   & Renamed           & N/A              & 
+% 9               \\
+%     ~                   & Equivalent        & N/A              & 
+% 183             \\
+%     \end{tabular}
+% \end{table}
+% 
+% The results for the "DiffJ" benchmark are as follows
+% 
+% \begin{table}[H]
+%     \begin{tabular}{llll}
+%     Code Segment Format & Type of Operation & Detected by JGit & Detected by 
+% RCT \\ \hline
+%     Comments            & Delete            & N/A              & 
+% 36              \\
+%     ~                   & Insert            & N/A              & 
+% 39              \\
+%     ~                   & Modify            & N/A              & 
+% 281             \\
+%     White space         & Modify            & N/A              & 
+% 276             \\
+%     Java                & Delete            & 746              & 
+% 3106            \\
+%     ~                   & Insert            & 991              & 
+% 3164            \\
+%     ~                   & Modify            & 3544             & 
+% 5192            \\
+%     ~                   & Move              & N/A              & 
+% 58              \\
+%     ~                   & Renamed           & N/A              & 
+% 82              \\
+%     ~                   & Equivalent        & N/A              & 
+% 18              \\
+%     \end{tabular}
+% \end{table}
+% 
+% The results for the "IRE" benchmark are as follows:
+% 
+% \begin{table}[H]
+%     \begin{tabular}{llll}
+%     Code Segment Format & Type of Operation & Detected by JGit & Detected by 
+% RCT \\ \hline
+%     Comments            & Delete            & N/A              & 
+% 10              \\
+%     ~                   & Insert            & N/A              & 
+% 3               \\
+%     ~                   & Modify            & N/A              & 
+% 79              \\
+%     White space         & Modify            & N/A              & 
+% 49              \\
+%     Java                & Delete            & 112              & 
+% 263             \\
+%     ~                   & Insert            & 49               & 
+% 213             \\
+%     ~                   & Modify            & 465              & 
+% 640             \\
+%     ~                   & Move              & N/A              & 
+% 1               \\
+%     ~                   & Renamed           & N/A              & 
+% 2               \\
+%     ~                   & Equivalent        & N/A              & 
+% 30              \\
+%     \end{tabular}
+% \end{table}
+% 
+% 
+% The results for the "Syntax" benchmark are as follows:
+% 
+% \begin{table}[H]
+%     \begin{tabular}{llll}
+%     Code Segment Format & Type of Operation & Detected by JGit & Detected by 
+% RCT \\ \hline
+%     Comments               & Delete            & N/A              & 
+% 14                                   \\
+%     ~                      & Insert            & N/A              & 
+% 81                                   \\
+%     ~                      & Modify            & N/A              & 
+% 451                                  \\
+%     White space            & Modify            & N/A              & 
+% 204                                  \\
+%     Java                   & Delete            & 691              & 
+% 1142                                 \\
+%     ~                      & Insert            & 214              & 
+% 544                                  \\
+%     ~                      & Modify            & 1863             & 
+% 2216                                 \\
+%     ~                      & Move              & N/A              & 
+% 6                                    \\
+%     ~                      & Renamed           & N/A              & 
+% 7                                    \\
+%     ~                      & Equivalent        & N/A              & 
+% 12                                   \\
+%     \end{tabular}
+% \end{table}
+%@-at
+%@@c
+%@nonl
 %@-node:paran.20140814214911.2177:<<overview>>
 %@nl
 \subsection{Discussion}

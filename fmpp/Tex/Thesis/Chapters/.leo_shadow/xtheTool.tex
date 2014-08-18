@@ -6,7 +6,7 @@
 \chapter{Refactor Categories Tool}
 %@<<tool desc>>
 %@+node:paran.20140731173741.2006:<<tool desc>>
-In order to prove that having private views would be useful we created the Refactor Categories Tool. Version control systems such a JGit compare and merge files by differentiating between insert, delete and modify operations. The Refactor Categories Tool enhances this by also identifying instances where a block of code has moved but the functionality remains unchanged. It also can differentiate between changes to comments, white space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and some instances where it has been refactored.  
+In order to prove that having private views would be useful we created the Refactor Categories Tool. Normally Version Control Systems such a JGit compare and merge files by differentiating between insert, delete and modify operations. The Refactor Categories Tool enhances this by also identifying instances where a block of code has moved but the functionality remains unchanged. It also can differentiate between changes to comments, white space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and some instances where it has been refactored.  
 
 %@+at
 % Although it does not detect more complex differences beyond this we intend 
@@ -27,7 +27,7 @@ In order to prove that having private views would be useful we created the Refac
 % revisions from a Git repository using JGit.
 %@-at
 %@@c
-An ordinary text comparison is used as a starting point.  The text diff within JGit is used with white space ignored. The text comparison returns the minimal number of text changes in an \lstinline{EditList} object. The \lstinline{EditList} object contains a list of changes to the plain text. Information about each change that the \lstinline{EditList} object retains is:
+When the Refactor Categories Tool is run an ordinary text comparison is used as a starting point.  The text comparison within JGit is used with white space ignored. \label{matchingTextWithAST} The text comparison returns the minimal number of text changes in an \lstinline{EditList} object. The \lstinline{EditList} object contains a list of changes to the plain text. Information about each change that the \lstinline{EditList} object retains is:
 
 \begin{itemize}
   \item the starting line of the change for both revisions being compared
@@ -35,11 +35,11 @@ An ordinary text comparison is used as a starting point.  The text diff within J
   \item The type of change that is being made
 \end{itemize}
 
-The types of changes that are detected between two files are limited to inserts, deletes, and modifications. In order to expand this list we need more information.  We obtain information about the meaning of Java files by parsing both revisions we are comparing into an AST using JastAddJ \cite{Oqvist2013}. We then need to discover which AST node matches which change to the source code. 
+As this is a text comparison the types of changes that are detected between two files are limited to inserts, deletes, and modifications. In order to expand this list we need more information.  We obtain information about the meaning of Java files by parsing both of revisions we are comparing.  We use JastAddJ \cite{Oqvist2013} to parse the information into an AST. Once we have the AST we need to discover which AST nodes match which changes to the text in the source code. We use positional information stored both by the parser in the \lstinline{EditList} object to do this.
 
 Each of the AST nodes contains information about the line of source the AST node starts and ends at.  Unlike the \lstinline{EditList} object which we have previously discussed, an AST node can also hold the column that the AST node starts and ends at.  Using this positional information we can match the text changes to a set of AST nodes.
 
-There are likely to be AST nodes that are not included in any of the change sets and can be safely ignored. In order to find those AST nodes we are interested in we need to traverse the AST.  The root node spans the entire file.  By examining the children of the root however we can determine which children contain all or part of a text based change.
+There are likely to be AST nodes that are not included in any of the change sets and can be safely ignored. In order to find those AST nodes we are interested in we need to traverse the AST.  The root node spans the entire file.  By examining the children of the root however, we can determine which children contain all or part of the matching text change.
 
 \begin{figure}[!t]
  \begin{center}
@@ -100,28 +100,11 @@ By checking to see if an insert at one point is similar to a delete at another p
 %@<<base Move>>
 %@+node:paran.20140813185646.2167:<<base Move>>
 public class SampleMoveAndChange {
-
-  public static void main(String[] args) {
-    System.out.println(circleArea(3));
-  }
-
-  public static double triangleArea(double base, double height) {
-    return base / 2 * height;
-  }
-
-  public static double cubeSurface(double length) {
-    return 6 * squareArea(length);
-  }
-
-  public static double circleArea(double radius) {
-    return Math.PI * squareArea(radius);
-
-  }
-
-  public static double squareArea(double num) {
-    return num * num;
-  }
-
+  public static void main(String[] args) {System.out.println(circ(3));}
+  public static double tri(double base, double height) {return base / 2 * height;}
+  public static double cube(double length) { return 6 * sqr(length);}
+  public static double circ(double radius) { return Math.PI * sqr(radius);}
+  public static double sqr(double num) {return num * num;}
 }
 %@-node:paran.20140813185646.2167:<<base Move>>
 %@nl
@@ -135,28 +118,11 @@ public class SampleMoveAndChange {
 %@<<modified Move>>
 %@+node:paran.20140813185646.2168:<<modified Move>>
 public class SampleMoveAndChange {
-
-  public static double triangleArea(double base, double height) {
-    return base / 2 * height;
-  }
-
-  public static void main(String[] args) {
-    System.out.println(circleArea(3));
-  }
-
-  public static double cubeSurface(double length) {
-    return 6 * squareArea(length);
-  }
-
-  public static double squareArea(double num) {
-    return num * num;
-  }
-
-  public static double circleArea(double radius) {
-    return squareArea(radius) * Math.PI;
-
-  }
-
+  public static double tri(double base, double height) {return base / 2 * height;}
+  public static void main(String[] args) {System.out.println(circleArea(3));}
+  public static double cube(double length) {return 6 * sqr(length);}
+  public static double sqr(double num) {return num * num;}
+  public static double circleArea(double radius) {return sqr(radius) * Math.PI;}
 }
 %@-node:paran.20140813185646.2168:<<modified Move>>
 %@nl
