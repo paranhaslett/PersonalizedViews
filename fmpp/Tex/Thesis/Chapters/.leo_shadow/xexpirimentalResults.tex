@@ -8,7 +8,7 @@
 \section{Purpose}
 %@<<purpose>>
 %@+node:paran.20140813185646.2164:<<purpose>>
-The purpose of this experiment is to measure how many insertions, deletion and modifications are performed on the Java AST verses comment. Similarly how many inserts and delete pairs can be classified as moves. 
+The purpose of this experiment is to measure how many insertions, deletion and modifications are performed on the Java AST verses comments across a range of realistic bemchmarks. Similarly, how many insert and delete pairs can be classified as moves. 
 
 %@+at
 % establish if there are superficial changes in currently working projects.  
@@ -31,64 +31,61 @@ The purpose of this experiment is to measure how many insertions, deletion and m
 \section{Methodology}
 %@<<Methodology>>
 %@+node:paran.20140813185646.2165:<<Methodology>>
-We will now outline an experiment. Our goal is make it possible for someone to reproduce our experiment.
+We will now outline the experimental methodology. Our goal is make it possible for someone to reproduce our experiment.
 
-\subsection{Setup}
 %@<<setup>>
 %@+node:paran.20140813185646.2166:<<setup>>
-
-%@<<machine>>
-%@+node:paran.20140814214911.2181:<<machine>>
-The experiment was run on a Lenovo laptop with 3.5GB Ram and 113.2 GB disk space assigned to the 64 bit Ubuntu 13.10 (Saucy Salamander) operating system. The tests were written in Java and run within the eclipse editor.
-
-  
-%@nonl
-%@-node:paran.20140814214911.2181:<<machine>>
-%@nl
-
-%@<<softaware>>
-%@+node:paran.20140814214911.2182:<<softaware>>
-We had some garbage collection memory issues with some benchmarks that we were testing. To resolve these issue we increased the memory by changing the parameters for the run configuration.  The following parameters were added to the run configuration for the test.
-
-\begin{verbatim}
--Xms512M 
--Xmx4096M
-\end{verbatim}
-%@-node:paran.20140814214911.2182:<<softaware>>
-%@nl
+The experiment was run on a Lenovo laptop with 3.5GB Ram and 113.2 GB disk space assigned to the 64 bit Ubuntu 13.10 (Saucy Salamander) operating system. The tests were written in Java and run within the Eclipse IDE
 
 
 %@-node:paran.20140813185646.2166:<<setup>>
 %@nl
 
-\subsection{Benchmarks Examined}
 %@<<baselines>>
 %@+node:paran.20140814214911.2179:<<baselines>>
+ 
+ 
  \begin{table}[H]
+    \small{
     \begin{tabular}{l|lllll}
-    Benchmark        & Description         & URL                   & Version                                  & Commits & LOC   \\ \hline
-    Jasm             &  \begin{minipage}[t]{0.4\textwidth}
+    Benchmark        & Description  & Version   & Commits  & LOC   \\ \hline
+    Jasm             &  \begin{minipage}[t]{0.5\textwidth}
 Java bytecode assembler written for use with the Whiley programming language.
-\end{minipage}       & https://github.com/Whiley/Jasm              & b68e1fcfb8c118ea05a1a08ac20673cb90f44580 & 74      & 29139 \\
+
+github.com/Whiley/Jasm 
+\end{minipage}       & b68e1fcfb8 & 74      & 29139 \\
     Jpp              & \begin{minipage}[t]{0.4\textwidth}
     Preprocessor for Java based on Bash shell script.
-\end{minipage}       & https://github.com/maandree/jpp             & ae4223b907432fef957f38f80540165bfdce187b & 40      & 254   \\
-    AST Java         & \begin{minipage}[t]{0.4\textwidth}
+    
+github.com/maandree/jpp
+\end{minipage}       & ae4223b907 & 40      & 254   \\
+    AST Java         & \begin{minipage}[t]{0.5\textwidth}
     Small parser written to transform Java into an AST.
-\end{minipage}       & https://github.com/klangner/ast-java        & fb2702daca2d654ebd7fef20fe7c79ed4d2fee3d & 24      & 10174 \\
-    Java Object Diff & \begin{minipage}[t]{0.4\textwidth}
-     Allows two Java objects to be compared at runtime. 
-\end{minipage}       & https://github.com/SQiShER/java-object-diff & d2b89cafdc6b39781cd5525c544ccd62f9725f36 & 291     & 10023 \\
-    DiffJ            & \begin{minipage}[t]{0.4\textwidth}
+    
+github.com/klangner/ast-java 
+\end{minipage}       & fb2702daca & 24      & 10174 \\
+\begin{minipage}[t]{0.15\textwidth}Java Object Diff\end{minipage} & \begin{minipage}[t]{0.4\textwidth}
+Allows two Java objects to be compared at runtime.
+     
+github.com/SQiShER/java-object-diff 
+\end{minipage}       & d2b89cafdc & 291     & 10023 \\
+    DiffJ            & \begin{minipage}[t]{0.5\textwidth}
     Diff tool which in addition to ignoring white space ignores changes of ordering in package names for a Java file.
-\end{minipage}       & https://github.com/jpace/diffj              & ec05561ac2f58b50e10e52b98962be2c8d288d4e & 490     & 13712 \\
-    IRE              & \begin{minipage}[t]{0.4\textwidth}
+    
+github.com/jpace/diffj
+\end{minipage}       & ec05561ac2 & 490     & 13712 \\
+    IRE              & \begin{minipage}[t]{0.5\textwidth}
     Java library for regular expression matching.
-\end{minipage}       & https://github.com/jkff/ire                 & 4a4b4ce1e586b125a4480cbbf778396a149018ef & 41      & 2714  \\
-    Syntax           & \begin{minipage}[t]{0.4\textwidth}
+    
+github.com/jkff/ire  
+\end{minipage}       & 4a4b4ce1e5 & 41      & 2714  \\
+    Syntax           & \begin{minipage}[t]{0.5\textwidth}
     Compiler compiler used for teaching. 
-\end{minipage}       & https://github.com/jaimegarza/syntax        & 1b1dc22f8d8c348808047125e70a5b2316587226 & 89      & 9376  \\
+    
+github.com/jaimegarza/syntax 
+\end{minipage}       & 1b1dc22f8d & 89      & 9376  \\
     \end{tabular}
+    }
 \end{table}
  
 %@+at
@@ -133,26 +130,24 @@ Java bytecode assembler written for use with the Whiley programming language.
 %@-node:paran.20140814214911.2179:<<baselines>>
 %@nl
 
-\subsection{Method}
 %@<<how conducted>>
 %@+node:paran.20140814214911.2180:<<how conducted>>
-The Refactor Categories Tool was run individiually once for each benchmark to further ensure that there were no memory issues..  The Refactor Categories Tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.  Once we have two revisions we need to compare them.  To do this we compare each of the Java files in both revisons one by one. We only test the Java file if it has been modified or renamed.  If it has been inserte or deleted we ignore it. Once we have established that Java files exist, both on the original and the updated copy, we use the text diff in Jgit to compare them. As outlined above \ref{matchingTextWithAST} we figure out which AST nodes the text changes contain. 
+The Refactor Categories Tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.  Once we have two revisions we need to compare them.  To do this we compare each of the Java files in both revisons one by one. We only test the Java file if it has been modified or renamed.  If the file been inserted or deleted we ignore it beacuse there is no way to make a comparison. Once we have established that Java files exist, both in the original and the updated copy, we use the text diff in JGit to compare them. As outlined in section \ref{matchingTextWithAST} we figure out which AST nodes the text changes contain. 
 
-The Refactor Categories Tool splits up the identified blocks of souce code into several AST nodes and idenfifies anything between AST Nodes as being text. This text is further evaluated to determine if it is a change to comments or a change to white space. An example of this is if the text comparison detects a single change that inserts two new methods and a comment.  The Refactor Categories Tool will recognise this as three distinct changes. This means that it is possible for the Refactor Categories Tool to notice more changes than a text based comparison. The follow table records the number of text changes that were recognised during text comparison for each benchmark.
+The Refactor Categories Tool splits up the identified blocks of souce code into several AST nodes and identifies anything between AST Nodes as being text. 
+This text is further evaluated to determine if it is a change to comments or a change to white space. 
+An example of this is if the text comparison detects a single change that inserts two new methods and a comment.  
+The Refactor Categories Tool will recognise this as three distinct changes. 
+This means that it is possible for the Refactor Categories Tool to notice more changes than a text based comparison. 
 
-\begin{table}[H]
-    \begin{tabular}{l|lll}
-    Benchmark        & \multicolumn{3}{|c}{Text Diff} \\ \hline
-    ~                & Del            & Ins & Mod  \\ \hline
-    Jasm             & 91             & 44  & 337  \\
-    Jpp              & 23             & 3   & 41   \\
-    AST Java         & 44             & 15  & 85   \\
-    Java Object Diff & 1186           & 837 & 8219 \\
-    DiffJ            & 746            & 991 & 3544 \\
-    IRE              & 112            & 49  & 465  \\
-    Syntax           & 691            & 214 & 1863 \\
-    \end{tabular}
-\end{table}
+We had some garbage collection memory issues with some benchmarks that we were testing. 
+To resolve this the Refactor Categories Tool was run individiually once for each benchmark to further ensure that there were no memory leaks between runs.
+We also increased the memory by changing the parameters for the run configuration.  The following parameters were added to the run configuration for the test.
+
+\begin{verbatim}
+-Xms512M 
+-Xmx4096M
+\end{verbatim}
 
 
 
@@ -198,9 +193,9 @@ The Refactor Categories Tool splits up the identified blocks of souce code into 
 \subsection{Overview}
 %@<<overview>>
 %@+node:paran.20140814214911.2177:<<overview>>
-After running the Refactor Categories tool over a number of bechmarks we obtained the following results 
+After running the Refactor Categories tool over our benchmark suite we obtained the results shown in Table \ref{tab:results}
 
-\begin{table}[H]
+\begin{table}[t!]
     \begin{tabular}{l|llllll|l|lll}
     Benchmark        & \multicolumn{6}{|c|}{Java}           & Whitespace & \multicolumn{3}{|c}{Comments} \\ \cline{2-7} \cline{9-11}
     ~                & Del  & Ins  & Mod  & Mov & Ren & Eqv & ~          & Del      & Ins & Mod  \\ \hline
@@ -212,6 +207,27 @@ After running the Refactor Categories tool over a number of bechmarks we obtaine
     IRE              & 263  & 213  & 640  & 1   & 2   & 30  & 49         & 10       & 3   & 79   \\
     Syntax           & 1142 & 544  & 2216 & 6   & 7   & 12  & 204        & 14       & 81  & 451  \\
     \end{tabular}
+    \caption{Results over our benchmark suite showing the number of deletes, inserts, modifications, moves , renames and equivalences for Java AST, comments and whitespace changes}
+    \label{tab:results}
+\end{table}
+
+The number of text changes that were recognised during text comparison for each benchmark are shown in Table \ref{tab:textcomp}. Note that the values in this table are lower as the Refactor Categories tool detects multiple changes which a text based comparision agregates.  
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l|lll}
+    Benchmark        & \multicolumn{3}{|c}{Text Diff} \\ \hline
+    ~                & Del            & Ins & Mod  \\ \hline
+    Jasm             & 91             & 44  & 337  \\
+    Jpp              & 23             & 3   & 41   \\
+    AST Java         & 44             & 15  & 85   \\
+    Java Object Diff & 1186           & 837 & 8219 \\
+    DiffJ            & 746            & 991 & 3544 \\
+    IRE              & 112            & 49  & 465  \\
+    Syntax           & 691            & 214 & 1863 \\
+    \end{tabular}
+    \caption{The result of doing an ordinary text comparison}
+    \label{tab:textcomp}
 \end{table}
 
 
