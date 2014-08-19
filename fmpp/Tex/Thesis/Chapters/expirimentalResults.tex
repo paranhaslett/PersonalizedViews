@@ -2,17 +2,17 @@
 \chapter{Experimental Results}
 
 \section{Purpose}
-The purpose of this expiriment is to measure how many insertions, deletion and modifications are performed on the Java ASt verses comment. Simlarly how many insert and delete pairs can be clasiified as moves. 
+The purpose of this experiment is to measure how many insertions, deletion and modifications are performed on the Java AST verses comment. Similarly how many inserts and delete pairs can be classified as moves. 
 
-% establish if there are superficial changes in curently working projects.  By 
-% superficial we mean that the change does not add much of value apart from 
-% personal taste or formating.  In some cases cahnges to the order of methods 
+% establish if there are superficial changes in currently working projects.  
+% By superficial we mean that the change does not add much of value apart from 
+% personal taste or formatting.  In some cases changes to the order of methods 
 % within a class does change the behaviour of a program, this is an example of 
 % a superficial change.  It is harder to determine if comments are superficial 
-% because certain comments could be important to others and others irrelivant. 
+% because certain comments could be important to others and others irrelevant. 
 % We will attempt to establish if there are any patterns in comments to 
-% determine if they are superfical or not.  Determining if there are 
-% superficial change may indicate that there is a seperation between personal 
+% determine if they are superficial or not.  Determining if there are 
+% superficial change may indicate that there is a separation between personal 
 % preferences that would be best contained in a private view and items that 
 % need to be shared for collaboration.
 
@@ -20,6 +20,7 @@ The purpose of this expiriment is to measure how many insertions, deletion and m
 We will now outline an experiment. Our goal is make it possible for someone to reproduce our experiment.
 
 \subsection{Setup}
+
 The experiment was run on a Lenovo laptop with 3.5GB Ram and 113.2 GB disk space assigned to the 64 bit Ubuntu 13.10 (Saucy Salamander) operating system. The tests were written in Java and run within the eclipse editor.
 
   
@@ -31,19 +32,12 @@ We had some garbage collection memory issues with some benchmarks that we were t
 -Xmx4096M
 \end{verbatim}
 
-Each of the benchmarks were tested individually to further ensure that there were no memory issues.
-
-The Refactor Categories Tool was run individiually once for each benchmark.  The Refactor Categories Tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.  Once we have two revisions we need to compare them.  To do this we compare each of the Java files in both revisons one by one. We only test the Java file if it has been modified or renamed.  If it has been inserte or deleted we ignore it. Once we have established that Java files exist, both on the original and the updated copy, we use the text diff in Jgit to compare them. As outlined above \ref{matchingTextWithAST} we figure out which AST nodes the text changes contain.   
-
-% renames are determined as being something where althought the AST label has 
-% changed the type of the AST node remains the same and its contents have not 
-% been changed in any way.
 
 
 \subsection{Benchmarks Examined}
- \begin{table}
+ \begin{table}[H]
     \begin{tabular}{l|lllll}
-    Benchmark        & Description         & URL                   & Version                                 & Commits & LOC   \\ \hline
+    Benchmark        & Description         & URL                   & Version                                  & Commits & LOC   \\ \hline
     Jasm             &  \begin{minipage}[t]{0.4\textwidth}
 Java bytecode assembler written for use with the Whiley programming language.
 \end{minipage}       & https://github.com/Whiley/Jasm              & b68e1fcfb8c118ea05a1a08ac20673cb90f44580 & 74      & 29139 \\
@@ -104,10 +98,58 @@ Java bytecode assembler written for use with the Whiley programming language.
 %   89 commits 1 branch
 % \end{itemize}
 
+\subsection{Method}
+The Refactor Categories Tool was run individiually once for each benchmark to further ensure that there were no memory issues..  The Refactor Categories Tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.  Once we have two revisions we need to compare them.  To do this we compare each of the Java files in both revisons one by one. We only test the Java file if it has been modified or renamed.  If it has been inserte or deleted we ignore it. Once we have established that Java files exist, both on the original and the updated copy, we use the text diff in Jgit to compare them. As outlined above \ref{matchingTextWithAST} we figure out which AST nodes the text changes contain. 
+
+The Refactor Categories Tool splits up the identified blocks of souce code into several AST nodes and idenfifies anything between AST Nodes as being text. This text is further evaluated to determine if it is a change to comments or a change to white space. An example of this is if the text comparison detects a single change that inserts two new methods and a comment.  The Refactor Categories Tool will recognise this as three distinct changes. This means that it is possible for the Refactor Categories Tool to notice more changes than a text based comparison. The follow table records the number of text changes that were recognised during text comparison for each benchmark.
+
+\begin{table}[H]
+    \begin{tabular}{l|lll}
+    Benchmark        & \multicolumn{3}{|c}{Text Diff} \\ \hline
+    ~                & Del            & Ins & Mod  \\ \hline
+    Jasm             & 91             & 44  & 337  \\
+    Jpp              & 23             & 3   & 41   \\
+    AST Java         & 44             & 15  & 85   \\
+    Java Object Diff & 1186           & 837 & 8219 \\
+    DiffJ            & 746            & 991 & 3544 \\
+    IRE              & 112            & 49  & 465  \\
+    Syntax           & 691            & 214 & 1863 \\
+    \end{tabular}
+\end{table}
+
+
+
+% There are a number of comparison operations that the refactor categories 
+% tool investigates
+% 
+% \begin{description}
+% 
+%   \item [Delete]
+%   <<del>>
+%   \item [Insert]
+%   <<ins>>
+% 
+%   \item [Modify]
+%   <<mod>>
+%   \item [Move]
+%   <<mov>>
+%   \item [Rename]
+%   <<ren>>
+%   \item [Equivalent]
+%   <<eqv>>
+% \end{description}
+%  @c
+% renames are determined as being something where althought the AST label has 
+% changed the type of the AST node remains the same and its contents have not 
+% been changed in any way.
+
+
 
 \section{Results}
 \subsection{Overview}
-\begin{table}
+After running the Refactor Categories tool over a number of bechmarks we obtained the following results 
+
+\begin{table}[H]
     \begin{tabular}{l|llllll|l|lll}
     Benchmark        & \multicolumn{6}{|c|}{Java}           & Whitespace & \multicolumn{3}{|c}{Comments} \\ \cline{2-7} \cline{9-11}
     ~                & Del  & Ins  & Mod  & Mov & Ren & Eqv & ~          & Del      & Ins & Mod  \\ \hline
@@ -126,19 +168,7 @@ Java bytecode assembler written for use with the Whiley programming language.
 
 
 
-\begin{table}
-    \begin{tabular}{l|lll}
-    Benchmark        & JGit Text Diff & ~   & ~    \\ \hline
-    ~                & Del            & Ins & Mod  \\ \hline
-    Jasm             & 91             & 44  & 337  \\
-    Jpp              & 23             & 3   & 41   \\
-    AST Java         & 44             & 15  & 85   \\
-    Java Object Diff & 1186           & 837 & 8219 \\
-    DiffJ            & 746            & 991 & 3544 \\
-    IRE              & 112            & 49  & 465  \\
-    Syntax           & 691            & 214 & 1863 \\
-    \end{tabular}
-\end{table}
+
 % 
 % 
 % The results for the "Jasm" benchmark are as follows:
