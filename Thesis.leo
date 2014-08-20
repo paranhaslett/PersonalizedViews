@@ -11,7 +11,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="paranhaslett.20130826181255.2958" a="E"><vh>Thesis</vh>
-<v t="paran.20140813185646.2169" a="E"><vh>Raw results</vh>
+<v t="paran.20140813185646.2169"><vh>Raw results</vh>
 <v t="paran.20140813185646.2179"><vh>&lt;&lt;diffj raw results&gt;&gt;</vh></v>
 <v t="paran.20140813185646.2177"><vh>&lt;&lt;java-object-diff raw results&gt;&gt;</vh></v>
 <v t="paran.20140813185646.2175"><vh>&lt;&lt;ast-java raw results&gt;&gt;</vh></v>
@@ -105,7 +105,7 @@
 </v>
 </v>
 </v>
-<v t="hasletpara.20131128093200.1990" a="E"><vh>ScratchPad</vh>
+<v t="hasletpara.20131128093200.1990"><vh>ScratchPad</vh>
 <v t="hasletpara.20131128093200.1969" a="E"><vh>Old</vh>
 <v t="paran.20140723095158.2026"><vh>lcs</vh></v>
 <v t="paran.20140618094449.2025"><vh>&lt;&lt;Git&gt;&gt;</vh></v>
@@ -156,14 +156,14 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 </v>
 <v t="paran.20140605091816.1995" a="E"><vh>@shadow thes.tex</vh></v>
 <v t="paran.20140801074838.2010"><vh>@shadow thesis-acknowledge.tex</vh></v>
-<v t="hasletpara.20131202100421.2130"><vh>@shadow Chapters/thesis-introduction.tex</vh></v>
+<v t="hasletpara.20131202100421.2130" a="E"><vh>@shadow Chapters/thesis-introduction.tex</vh></v>
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
 <v t="paran.20140515173914.6982" a="E"
 expanded="paran.20140528183434.1974,paran.20140530135904.1945,paran.20140529075353.1935,paran.20140528183434.2055,paran.20140530135904.1946,paran.20140528183434.2009,paran.20140528183434.2010,paran.20140528183434.2011,paran.20140530135904.1958,paran.20140528183434.2021,paran.20140604093616.2026,"><vh>@shadow Background.tex</vh></v>
-<v t="paran.20140731220748.2032"
+<v t="paran.20140731220748.2032" a="E"
 expanded="paran.20140731220748.2034,paran.20140731220748.2038,paran.20140804074630.2143,"><vh>@shadow Motivation.tex</vh></v>
 <v t="paran.20140514103950.1918" a="E"
-expanded="paran.20140605081907.1971,paran.20140606104644.2007,paran.20140816070821.2183,paran.20140805175513.2166,paran.20140605081907.1972,"><vh>@shadow theTool.tex</vh></v>
+expanded="paran.20140606104644.2007,paran.20140816070821.2183,paran.20140805175513.2166,paran.20140605081907.1972,"><vh>@shadow theTool.tex</vh></v>
 <v t="paran.20140605081907.1988" a="E"
 expanded="paran.20140813185646.2165,paran.20140814214911.2176,"><vh>@shadow expirimentalResults.tex</vh></v>
 <v t="paran.20140605081907.1978"><vh>@shadow futureWork.tex</vh></v>
@@ -185,7 +185,7 @@ expanded="paran.20140813185646.2165,paran.20140814214911.2176,"><vh>@shadow expi
 <v t="hasletpara.20130905134207.1629"
 expanded="hasletpara.20130905134207.1633,"><vh>@shadow ./fmpp/public_html/generic.html</vh></v>
 </v>
-<v t="paranhaslett.20130826181255.3068"><vh>Ema Wiki</vh>
+<v t="paranhaslett.20130826181255.3068" a="E"><vh>Ema Wiki</vh>
 <v t="paranhaslett.20130826181255.3069"><vh>@shadow ./fmpp/ema/T_Study.txt</vh></v>
 <v t="paranhaslett.20130826181255.3073"
 expanded="paranhaslett.20130826181255.3074,paranhaslett.20130826181255.3103,paranhaslett.20130826181255.3110,"><vh>@shadow ./fmpp/ema/T_Notes.txt</vh></v>
@@ -196,7 +196,8 @@ expanded="paranhaslett.20130826181255.3057,"><vh>@shadow ./fmpp/ema/T_Structures
 <v t="paranhaslett.20130826181255.3070"><vh>@shadow ./fmpp/ema/T_Thesis.txt</vh></v>
 <v t="hasletpara.20131202100421.2139"><vh>@shadow ./fmpp/ema/T_Chapters.txt</vh></v>
 <v t="hasletpara.20131202100421.2146" a="E"><vh>Chapters</vh>
-<v t="hasletpara.20131202100421.2155" a="E"><vh>@shadow ./fmpp/ema/T_Intro.txt</vh></v>
+<v t="hasletpara.20131202100421.2155" a="E"
+expanded="hasletpara.20131202100421.2130,"><vh>@shadow ./fmpp/ema/T_Intro.txt</vh></v>
 <v t="hasletpara.20131202100421.2144" a="E"><vh>@shadow ./fmpp/ema/T_Testing.txt</vh></v>
 <v t="hasletpara.20131202100421.2151"><vh>@shadow ./fmpp/ema/T_Conclusion.txt</vh></v>
 </v>

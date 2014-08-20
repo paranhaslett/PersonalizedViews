@@ -12,12 +12,12 @@ Testing
 #@@language latex
 
 \chapter{Testing}
-In order to test this we must first replicate the work of Apel and Le{\ss}nich
+In order to test this we must first replicate the work of Apel and Le{\ss}enich
 
 \section{Setting up the environment}
-The work of Apel and Les{\ss}nich has mostly been done in Java.  There are a few exceptions including the linear programming libraries that need to be created.  As we are attempting to combine some of their work with Git it was decided to use JGit rather than the C implementation of Git. As the Java implementation may run a bit slower then in order to get a good timing test running we need to run redo the tests of JDime using JGit instead. 
+The work of Apel and Les{\ss}enich has mostly been done in Java.  There are a few exceptions including the linear programming libraries that need to be created.  As we are attempting to combine some of their work with Git it was decided to use JGit rather than the C implementation of Git. As the Java implementation may run a bit slower then in order to get a good timing test running we need to run redo the tests of JDime using JGit instead. 
 
-Also the tests that Le{\ss}nich did on JDime were from files rather than from a repository. It is necessary to set the files back up in the original repository structure to get a adequate baseline.
+Also the tests that Le{\ss}enich did on JDime were from files rather than from a repository. It is necessary to set the files back up in the original repository structure to get a adequate baseline.
 
 The tests I have written are based on simple changes and the range of refactoring available in the eclipse IDE.  They include such things as changing variable and method names 
 

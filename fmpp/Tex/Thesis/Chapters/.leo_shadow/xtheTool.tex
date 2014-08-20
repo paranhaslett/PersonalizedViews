@@ -35,8 +35,9 @@ When the Refactor Categories Tool is run an ordinary text comparison is used as 
   \item The type of change that is being made
 \end{itemize}
 
-As this is a text comparison the types of changes that are detected between two files are limited to inserts, deletes, and modifications. In order to expand this list we need more information.  We obtain information about the meaning of Java files by parsing both of revisions we are comparing.  We use JastAddJ \cite{Oqvist2013} to parse the information into an AST. Once we have the AST we need to discover which AST nodes match which changes to the text in the source code. We use positional information stored both by the parser in the \lstinline{EditList} object to do this.
+As this is a text comparison the types of changes that are detected between two files are limited to inserts, deletes, and modifications. In order to expand this list we need more information.  We obtain information about the meaning of Java files by parsing both of revisions we are comparing.  We use JastAddJ \cite{Oqvist2013} to parse the information into an AST. Once we have the AST we need to discover which AST nodes match which changes to the text in the source code. We use positional information stored both by the parser and the \lstinline{EditList} object to do this.
 
+\label{sec:over} 
 Each of the AST nodes contains information about the line of source the AST node starts and ends at.  Unlike the \lstinline{EditList} object which we have previously discussed, an AST node can also hold the column that the AST node starts and ends at.  Using this positional information we can match the text changes to a set of AST nodes.
 
 There are likely to be AST nodes that are not included in any of the change sets and can be safely ignored. In order to find those AST nodes we are interested in we need to traverse the AST.  The root node spans the entire file.  By examining the children of the root however, we can determine which children contain all or part of the matching text change.
@@ -56,19 +57,44 @@ An example of this can be found in Figure \ref{fig:findingASTNode}.  In this Fig
  \begin{center}
   \includegraphics[scale=1]{DrilldownEx}
  \end{center}
- \caption{An AST showing a partial overlap between child 2 and a text change, and child 3 and a text change}
+ \caption{An AST showing a partial overlap between child 1 and a text change, and child 2 and a text change}
  \label{fig:troubleASTNode}
 \end{figure}
 
-Another interesting question is how the tool deals with situations where a text change partly overlaps an AST node or an AST node only partly covers a text item.  This issue is shown in Figure \ref{fig:troubleASTNode}. In the situation where only part of an AST Node contains the text change, the children of that AST Node are examined to see if they are fully within the text change.  If not it keeps recursively checking until either a child falls completely outside the change or is completely in the change.  
+Another interesting question is how the tool deals with situations where a text change partly overlaps an AST node or an AST node only partly covers a text item.  
+In Figure \ref{fig:troubleASTNode} two different AST nodes each contain part of a text change. 
+By examining any possible children of `Child 1' and `Child 2' we could discover 4 types of AST Nodes.
+\begin{description}
 
-In the case where portions of a text change which are outside of a AST node then that change could be a comment or white space. This can be seen in both Figure \ref{fig:findingASTNode} and Figure \ref{fig:troubleASTNode} because in both of these portions of text are outside a text node.  These are of interest to us because these are instances where the text may have been changed but it has no impact on the behaviour of the program.  The most likely instances of this is when a comment has changed or if white space has been introduced in the middle of source code. Once the AST node for both revisions has been matched with the text change we can compare the AST nodes and their children to discover if they would behave in the same fashion. If they do behave in the same fashion it could indicate that the change is an ascetic one.
+  \item [AST nodes that are not included in the text change.]
+    Any AST node that cannot be associated with a text change can be safely ignored. It means that there are no changes to that AST Node.
+  \item [AST nodes that are fully encapululated by the text change.] 
+    These are the AST nodes that we wanted to discover as they are entirely within the range of text change.  These warrent further investigation.
+  \item [AST nodes that partly include the text change but have child AST Nodes.]
+    If an AST Node has children and it is not fully contained by the text change we recursively check the children.
+  \item [AST nodes that partly include the text change but have no child AST Nodes.]
+    If a AST node is a leaf node in an AST and it contains a text change then it also warrents further investigation.       
+\end{description}
 
-Another change we are interested in is if items have been moved.  We would notice this if there is a both insert and a delete for similar AST node types within the same scope.  If a method has been shifted within a class we would notice similar AST nodes, one being deleted at one location, the other being inserted at a different location.  This is another example of a text change that does not change the behaviour of the program.
+In both Figure \ref{fig:findingASTNode} and Figure \ref{fig:troubleASTNode} there are portions of text that are outside an AST node.  These are of interest to us because these are instances where the text may have been changed but it has no impact on the behaviour of the program.  The most likely instances of this is when a comment has changed or if white space has been introduced in the middle of source code.
 
-%If we can keep track of renaming
-
-If we find examples of text based changes that do not change the programs' behaviour we have an indication that we can reduce the amount of changes necessary to update another view. This in turn could indicate that we would have less merge conflicts by reducing the overall number of changes.
+%@+at
+% 
+% Another change we are interested in is if items have been moved.  We would 
+% notice this if there is a both insert and a delete for similar AST node 
+% types within the same scope.  If a method has been shifted within a class we 
+% would notice similar AST nodes, one being deleted at one location, the other 
+% being inserted at a different location.  This is another example of a text 
+% change that does not change the behaviour of the program.
+% 
+% If we can keep track of renaming
+% 
+% If we find examples of text based changes that do not change the programs' 
+% behaviour we have an indication that we can reduce the amount of changes 
+% necessary to update another view. This in turn could indicate that we would 
+% have less merge conflicts by reducing the overall number of changes.
+%@-at
+%@@c
 
 %@+at
 % In order to do this the source code needs to be divided into understandable
@@ -95,44 +121,39 @@ If we find examples of text based changes that do not change the programs' behav
 %@+node:paran.20140816070821.2183:<<moving AST>>
 By checking to see if an insert at one point is similar to a delete at another point it is possible to see if the code block has moved. In order to determine if the move is one that has no impact the matches are only counted if a match can be found within the same container.  Here, a container is an enclosing scope within the source code, such as a class. For example if a method has been shifted within the same class the program will still act the same.  If a method is moved from one class into an inner class there is no guarantee that they will be evaluated to determine if there is a suitable match.  If a method is shifted from one class to an inner class however the programs' behaviour could have changed.
 
-\begin{figure}[!t]
+To determine if blocks of code have been moved we need to find a deleted block of code that is most similar to an inserted block of code.  An the following show an example of original source code before any methods have been moved: 
+
 \begin{lstlisting}
 %@<<base Move>>
 %@+node:paran.20140813185646.2167:<<base Move>>
 public class SampleMoveAndChange {
-  public static void main(String[] args) {System.out.println(circ(3));}
-  public static double tri(double base, double height) {return base / 2 * height;}
-  public static double cube(double length) { return 6 * sqr(length);}
-  public static double circ(double radius) { return Math.PI * sqr(radius);}
-  public static double sqr(double num) {return num * num;}
+  double rect(double w, double h) {return w * h;}
+  double tri(double b, double h) {return b / 2 * h;}
+  double cube(double len) { return 6 * sqr(len);}
+  double circ(double rad) { return Math.PI * sqr(rad);}
+  double sqr(double num) {return num * num;}
 }
+%@nonl
 %@-node:paran.20140813185646.2167:<<base Move>>
 %@nl
 \end{lstlisting}
-\caption{The original source code before methods have been moved}
- \label{fig:orig}
-\end{figure}
 
-\begin{figure}[!t]
+Once we move the \lstinline{tri} method to before the \lstinline{rect} method and \lstinline{circ} method to after the \lstinline{sqr} method the code now looks like this.
+
 \begin{lstlisting}
 %@<<modified Move>>
 %@+node:paran.20140813185646.2168:<<modified Move>>
 public class SampleMoveAndChange {
-  public static double tri(double base, double height) {return base / 2 * height;}
-  public static void main(String[] args) {System.out.println(circleArea(3));}
-  public static double cube(double length) {return 6 * sqr(length);}
-  public static double sqr(double num) {return num * num;}
-  public static double circleArea(double radius) {return sqr(radius) * Math.PI;}
+  double tri(double b, double h) {return b / 2 * h;}
+  double rect(double w, double h) {return w * h;}
+  double cube(double len) {return 6 * sqr(len);}
+  double sqr(double num) {return num * num;}
+  double circ(double rad) {return sqr(rad) * Math.PI;}
 }
 %@-node:paran.20140813185646.2168:<<modified Move>>
 %@nl
 \end{lstlisting}
-\caption{The modified with methods that have both moved and have changed slightly}
- \label{fig:orig}
-\end{figure}
 
-
-To determine if blocks of code have been moved we need to find a deleted block of code that is most similar to an inserted block of code.  An example of this is if we have the original program shown in Figure ~\ref{fig:orig} and the modified program shown in Figure ~\ref{fig:modified}
 
 \begin{figure}[!t]
 \begin{center}
@@ -143,7 +164,13 @@ To determine if blocks of code have been moved we need to find a deleted block o
 \end{figure}
 
 
-A comparison of the source code using a graphical merge tool is shown in Figure ~\ref{fig:modscreenshot}.  Because two methods have moved there are two deletions from the original and two insertions into modified version.  However the method that calculates the area for a circle has also changed slightly. In the Refactor Categories Tool all the Java are changes are represented by the AST for the original source code and the AST for the modified source code. We are not able to directly compare the AST nodes to see if they are equal because the \lstinline{circleArea} method has been changed slightly. By recursively comparing all the AST nodes for a delete candidate against all the AST nodes for a insert candidate we are able to calculate a score that shows how similar they are.  As in the example there could be multiple inserts and we need to compare them against multiple deletes to obtain all the scores.
+A comparison of the source code using Meld, a graphical merge tool is shown in Figure ~\ref{fig:modscreenshot}. Both \lstinline{rect} and \lstinline{circ} have been deleted from the original version and have been inserted into the modified version.  However the \lstinline{circ} has also changed slightly. 
+When this code is compared and parsed into an AST we will will initally have four differences due to both the deletion and insertion of the two methods.    
+We are not able to directly compare the deleted AST nodes with the inserted AST Node to see if they are equal because the \lstinline{circ} method has been changed slightly. 
+Instead of checking for equality we need to check for similarity.
+By recursively comparing all the AST nodes for a delete candidate against all the AST nodes for a insert candidate we are able to calculate a score that shows how similar they are. 
+There could be multiple inserts and we need to compare them against multiple deletes to obtain the scores for each combination.
+In the above example for instance we need to compare the deletion of \lstinline{circ} with both the insertion of \lstinline{rect} and the modified \lstinline{circ} to determine which one is the better fit.
 
 To calculate the scores for a single change we start at the root AST node for both the insert and delete candidates.  If the root nodes are similar we can then check their children. By performing a diff between the lists of children for both the insert and delete candidates we obtain the minimum number of differences.  If an extra child AST node has been inserted or a child AST node is deleted then 1 is added to the score. If a child AST node has been modified it is the equivalent of both a child AST node being inserted and one being deleted so 2 is added to the score. If there has been no change to a child AST node we need to recursively assign a score using its children. To get the total percentage of children that changed we divide the score against the total number of children for both the delete and insert AST nodes we are scoring.
 
@@ -162,7 +189,7 @@ In the example in Figure ~\ref{fig:matchComp} two AST node are being compared wi
 
 %@<<moving Text>>
 %@+node:paran.20140816070821.2184:<<moving Text>>
-In addition to the comparison of AST nodes to test for where Java code has move we also need to determine when comments move.  As it is possible for the comment to change we also need to test for similarity.  This is done by comparing the characters in from the code block that has been deleted with characters from the code block that has been inserted.  A comparison is done between the two code blocks using a diff to obtain the smallest number of changes. A score of 1 is added for each deleted or inserted of a character.  If a character has been modified a score of 2 is added. To obtain the percentage of items changed the score is divided by the total number of characters in both code blocks.
+In addition to the comparison of AST nodes to test for where Java code has moved we also need to determine when comments move.  As it is possible for the comment to change we also need to test for similarity.  This is done by comparing the characters in from the code block that has been deleted with characters from the code block that has been inserted.  A comparison is done between the two code blocks using a diff to obtain the smallest number of changes. A score of 1 is added for each deleted or inserted of a character.  If a character has been modified a score of 2 is added. To obtain the percentage of items changed the score is divided by the total number of characters in both code blocks.
 %@nonl
 %@-node:paran.20140816070821.2184:<<moving Text>>
 %@nl
@@ -196,7 +223,7 @@ The Refactor Categories Tool first does a cursory examination of the text differ
 \section{Performance}
 %@<<Performance>>
 %@+node:paran.20140805175513.2166:<<Performance>>
- This means that performance is an issue especially for large software projects that have many changes. This means we have not only had to look at using more memory for the Refactor Categories Tool but also had to make some changes to the code to free up more memory where required.
+Performance is an issue especially for when examining large software projects that have many changes. This means we have not only had to look at using more memory for the Refactor Categories Tool but also had to make some changes to the code to free up more memory where required.
 
 \begin{description}
  \item [By setting object references back to null when they are no longer used.]
@@ -245,18 +272,44 @@ We could not use JDime because of the issues discussed earlier. Instead we used 
 
 %@<<compares changes>>
 %@+node:paran.20140801074838.2011:<<compares changes>>
-There are a number of design differences between JDime and the Refactor Categories Tool.  Instead of doing a text comparison first and only proceeding to analyse the program using an AST if there are conflicts the categorization tool examines all files that have a difference in them.  Although this takes longer and is more memory intensive there are some advantages to this. The main advantage is related to the concept of keeping branches as consistent as possible whenever there is a change. An example of this advantage is if a merge was done using an ordinary text comparison and there is a non functional change to only one revision. Examples of a non functional change could include reordering methods or inserting a comment.  As the changes were only done to one of the revisions there is no conflict and JDime only does a text based merge.  During this text based merge, in addition to any of the changes to functionality that we want, we get the non functional changes that change the source code without changing the programs' behaviour. By examining all changes irrespective of if the text has conflicts means that the Refactor Categories Tool can determine if it is a change that would not affect the behaviour of a program.
+There are a number of design differences between JDime and the Refactor Categories Tool.
+ Instead of doing a text comparison first and only proceeding to analyse the program using an AST if there are conflicts the Refactor Categories Tool examines all entries that have a difference in them.
+Although this takes longer and is more memory intensive there is an advantage to this.  
+If a merge was done using an ordinary text comparison and there is a non functional change to only one revision there is no conflict and JDime only does a text based merge.  
+During this text based merge we could get the non functional changes that change the source code without changing the programs' behaviour. By examining all changes irrespective of if the text has conflicts means that the Refactor Categories Tool can determine if it is a change that would not affect the behaviour of a program.
 %@nonl
 %@-node:paran.20140801074838.2011:<<compares changes>>
 %@nl
 
 %@<<drilldown>>
 %@+node:paran.20140606104644.2019:<<drilldown>>
-As there is a cost overhead with testing all the changes rather than just the conflicting ones the categorization tool needs to be efficient in how it tests changes.  Assuming that changes occur in select areas within the file there are portions of the file that have not been changed.  We have developed a method that spends a smaller amount time in  within the portions that have already been identified as not containing changes.  Like JDime we initially do a text based merge.  The text based merge we use however uses the histogram merge in JGit.  This allows us to use information from the text based merge when we analyse the AST tree.  The information used is the ranges of line numbers and operations identified by the histogram merge. The change set has been taken from the original JGit based diff contains the start and end of the change in both files and what type of change it is (insert delete or modify).  By reusing these ranges of line numbers it is possible to figure out which AST items these changes affect. This is done by loading the file into the JastAddJ parser to get an AST tree. Line numbers for each item in the tree are then compared to line numbers from the change set. The line numbers are matched to the position information stored in each AST node using the following method.
+As there is a cost overhead with testing all the changes rather than just the conflicting ones the Refactor Categories Tool needs to be efficient in how it tests changes.  Assuming that changes occur in select areas in the file there are portions of the file that have not been changed.  
+As mentioned in Section \ref{sec:over} we use positional information to match AST Nodes to text changes.  By ignoring portions of the AST that do not have any text changes we avoid spending extra time where we know changes have not occured.
 
-The root of the AST is identified as the AST node we need to start at. 
-We only begin any analysis, if the AST node resides completely within a block of text changes.
-If there are any separate blocks of changes that occur between the start position of the AST node and the end position of the AST node then we recursively examine the AST nodes children.
+%@+at
+% This means that  a smaller amount time in the portions that have already 
+% been identified as not containing changes.  Like JDime we initially do a 
+% text based merge.  The text based merge we use however uses the histogram 
+% merge in JGit.  This allows us to use information from the text based merge 
+% when we analyse the AST tree.  The information used is the ranges of line 
+% numbers and operations identified by the histogram merge. The change set has 
+% been taken from the original JGit based diff contains the start and end of 
+% the change in both files and what type of change it is (insert delete or 
+% modify).  By reusing these ranges of line numbers it is possible to figure 
+% out which AST items these changes affect. This is done by loading the file 
+% into the JastAddJ parser to get an AST tree. Line numbers for each item in 
+% the tree are then compared to line numbers from the change set. The line 
+% numbers are matched to the position information stored in each AST node 
+% using the following method.
+% 
+% The root of the AST is identified as the AST node we need to start at.
+% We only begin any analysis, if the AST node resides completely within a 
+% block of text changes.
+% If there are any separate blocks of changes that occur between the start 
+% position of the AST node and the end position of the AST node then we 
+% recursively examine the AST nodes children.
+%@-at
+%@@c
 
 %@+at
 % The Refactor Categories Tool first works out which text has changed using 
@@ -292,7 +345,7 @@ If there are any separate blocks of changes that occur between the start positio
 %@+node:paran.20140801202652.2011:<<resolving gaps>>
 In some instances there is no position information stored in the JastAddJ AST nodes.  This could be because they are generated by the parser to reflect parts of the Java language that are inferred rather than directly mentioned in the code.  An example of this would be the use of super in the constructor.  Even if it is not written in the code for every constructor has a super. Likewise all methods mentioned in an interface have a public type even if is not in the code.
 
-To get around this problem we have needed to discover the end position of the previous AST Node to determine the position the inferred AST node should occupy.  This means that the inferred AST node is in the right position but is not represented by a block of text in the source code. 
+To get around this problem we needed to discover the end position of the previous AST Node to determine the position the inferred AST node should occupy.  This means that the inferred AST node is in the right position but is not represented by a block of text in the source code. 
 %@nonl
 %@-node:paran.20140801202652.2011:<<resolving gaps>>
 %@nl
@@ -333,14 +386,36 @@ Rather than comparing everything with each other to determine matches it is more
 %@-node:paran.20140605081907.1972:<<design decisons>>
 %@nl
 
-\section{Limitations of the tool}
+%@+at
+% \section{Limitations of the tool}
+%@-at
+%@@c
 %@<<limitations>>
 %@+node:paran.20140605081907.1993:<<limitations>>
-The Refactor Categories Tool focuses only on areas where there has been a text change in the source code. 
-It is harder to investigate any change that has causes side effects in unchanged code.  Fortunately it is not often that this type of side effect will be purposely placed in the code as it reflects bad design decisions.  This may however be an issue with bugs, which are unintentionally occur in the code.
-This also means that the Refactor Categories Tool will not be able to tell when some code has been copied but the original remains unchanged. Instead it will assume that it is a completely new insertion of code.
-
-If a change of a variable name is noticed the program still retains the same behaviour if the rename operation has worked on all instances where the old name was previously used.  As we do not examine parts of the code that have not experienced a text based change we cannot guarantee that a rename operation is a valid one. We have an indication that it might be if the code still compiles without error. If a variable name is changed to that of an already existing variable however the behaviour of the program could change. This is known as a \emph{semantic conflict}.  This issue already exists in a text based merge and Fan \cite{Fan2012}, Shao \cite{Shao2009} and others address this issue. 
+%@+at
+% The Refactor Categories Tool focuses only on areas where there has been a 
+% text change in the source code.
+% It is harder to investigate any change that has causes side effects in 
+% unchanged code.  Fortunately it is not often that this type of side effect 
+% will be purposely placed in the code as it reflects bad design decisions.  
+% This may however be an issue with bugs, which are unintentionally occur in 
+% the code.
+% This also means that the Refactor Categories Tool will not be able to tell 
+% when some code has been copied but the original remains unchanged. Instead 
+% it will assume that it is a completely new insertion of code.
+% 
+% If a change of a variable name is noticed the program still retains the same 
+% behaviour if the rename operation has worked on all instances where the old 
+% name was previously used.  As we do not examine parts of the code that have 
+% not experienced a text based change we cannot guarantee that a rename 
+% operation is a valid one. We have an indication that it might be if the code 
+% still compiles without error. If a variable name is changed to that of an 
+% already existing variable however the behaviour of the program could change. 
+% This is known as a \emph{semantic conflict}.  This issue already exists in a 
+% text based merge and Fan \cite{Fan2012}, Shao \cite{Shao2009} and others 
+% address this issue.
+%@-at
+%@@c
 %@nonl
 %@-node:paran.20140605081907.1993:<<limitations>>
 %@nl
