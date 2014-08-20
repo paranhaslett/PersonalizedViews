@@ -30,7 +30,7 @@ There are likely to be AST nodes that are not included in any of the change sets
  \begin{center}
   \includegraphics[scale=1]{drilldown1}
  \end{center}
- \caption{An AST showing each AST Node arranged in a tree and with Child 3 consisting of a text change.  Each AST Node and text change has a start row recorded before the node and a end row recorded after the node}
+ \caption{An AST showing each AST Node arranged in a tree and with Child 3 consisting of a text change.  Each AST Node and text change has a start row recorded before the node and an end row recorded after the node}
  \label{fig:findingASTNode}
 \end{figure}
 
@@ -52,12 +52,12 @@ By examining any possible children of `Child 1' and `Child 2' we could discover 
 
   \item [AST nodes that are not included in the text change.]
     Any AST node that cannot be associated with a text change can be safely ignored. It means that there are no changes to that AST Node.
-  \item [AST nodes that are fully encapululated by the text change.] 
-    These are the AST nodes that we wanted to discover as they are entirely within the range of text change.  These warrent further investigation.
+  \item [AST nodes that are fully encapsulated by the text change.] 
+    These are the AST nodes that we wanted to discover as they are entirely within the range of text change.  These warrant further investigation.
   \item [AST nodes that partly include the text change but have child AST Nodes.]
     If an AST Node has children and it is not fully contained by the text change we recursively check the children.
   \item [AST nodes that partly include the text change but have no child AST Nodes.]
-    If a AST node is a leaf node in an AST and it contains a text change then it also warrents further investigation.       
+    If a AST node is a leaf node in an AST and it contains a text change then it also warrants further investigation.       
 \end{description}
 
 In both Figure \ref{fig:findingASTNode} and Figure \ref{fig:troubleASTNode} there are portions of text that are outside an AST node.  These are of interest to us because these are instances where the text may have been changed but it has no impact on the behaviour of the program.  The most likely instances of this is when a comment has changed or if white space has been introduced in the middle of source code.
@@ -88,7 +88,7 @@ In both Figure \ref{fig:findingASTNode} and Figure \ref{fig:troubleASTNode} ther
 
 By checking to see if an insert at one point is similar to a delete at another point it is possible to see if the code block has moved. In order to determine if the move is one that has no impact the matches are only counted if a match can be found within the same container.  Here, a container is an enclosing scope within the source code, such as a class. For example if a method has been shifted within the same class the program will still act the same.  If a method is moved from one class into an inner class there is no guarantee that they will be evaluated to determine if there is a suitable match.  If a method is shifted from one class to an inner class however the programs' behaviour could have changed.
 
-To determine if blocks of code have been moved we need to find a deleted block of code that is most similar to an inserted block of code.  An the following show an example of original source code before any methods have been moved: 
+To determine if blocks of code have been moved we need to find a deleted block of code that is most similar to an inserted block of code.  The following shows an example of original source code before any methods have been moved: 
 
 \begin{lstlisting}
 public class SampleMoveAndChange {
@@ -123,7 +123,7 @@ public class SampleMoveAndChange {
 
 
 A comparison of the source code using Meld, a graphical merge tool is shown in Figure ~\ref{fig:modscreenshot}. Both \lstinline{rect} and \lstinline{circ} have been deleted from the original version and have been inserted into the modified version.  However the \lstinline{circ} has also changed slightly. 
-When this code is compared and parsed into an AST we will will initally have four differences due to both the deletion and insertion of the two methods.    
+When this code is compared and parsed into an AST we will initially have four differences due to both the deletion and insertion of the two methods.    
 We are not able to directly compare the deleted AST nodes with the inserted AST Node to see if they are equal because the \lstinline{circ} method has been changed slightly. 
 Instead of checking for equality we need to check for similarity.
 By recursively comparing all the AST nodes for a delete candidate against all the AST nodes for a insert candidate we are able to calculate a score that shows how similar they are. 
@@ -179,7 +179,7 @@ If a merge was done using an ordinary text comparison and there is a non functio
 During this text based merge we could get the non functional changes that change the source code without changing the programs' behaviour. By examining all changes irrespective of if the text has conflicts means that the Refactor Categories Tool can determine if it is a change that would not affect the behaviour of a program.
 
 As there is a cost overhead with testing all the changes rather than just the conflicting ones the Refactor Categories Tool needs to be efficient in how it tests changes.  Assuming that changes occur in select areas in the file there are portions of the file that have not been changed.  
-As mentioned in Section \ref{sec:over} we use positional information to match AST Nodes to text changes.  By ignoring portions of the AST that do not have any text changes we avoid spending extra time where we know changes have not occured.
+As mentioned in Section \ref{sec:over} we use positional information to match AST Nodes to text changes.  By ignoring portions of the AST that do not have any text changes we avoid spending extra time where we know changes have not occurred.
 
 % This means that  a smaller amount time in the portions that have already 
 % been identified as not containing changes.  Like JDime we initially do a 

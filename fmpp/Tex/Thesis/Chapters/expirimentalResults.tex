@@ -1,4 +1,4 @@
-
+9
 \chapter{Experimental Results}
 
 \section{Purpose}
@@ -28,50 +28,60 @@ The experiment was run on a Lenovo laptop with 3.5GB Ram and 113.2 GB disk space
  \begin{table}[H]
     \small{
     \begin{tabular}{l|lllll}
-    Benchmark        & Description  & Version   & Commits  & LOC   \\ \hline
+    Benchmark        & Description   & Commits  & LOC   \\ \hline
     Jasm             &  \begin{minipage}[t]{0.5\textwidth}
 Java bytecode assembler written for use with the Whiley programming language.
 
 github.com/Whiley/Jasm 
-\end{minipage}       & b68e1fcfb8 & 74      & 29139 \\
+\end{minipage}        & 74      & 29139 \\
     Jpp              & \begin{minipage}[t]{0.4\textwidth}
-    Preprocessor for Java based on Bash shell script.
+    Pre-processor for Java based on Bash shell script.
     
 github.com/maandree/jpp
-\end{minipage}       & ae4223b907 & 40      & 254   \\
+\end{minipage}        & 40      & 254   \\
     AST Java         & \begin{minipage}[t]{0.5\textwidth}
     Small parser written to transform Java into an AST.
     
 github.com/klangner/ast-java 
-\end{minipage}       & fb2702daca & 24      & 10174 \\
+\end{minipage}       & 24      & 10174 \\
 \begin{minipage}[t]{0.15\textwidth}Java Object Diff\end{minipage} & \begin{minipage}[t]{0.4\textwidth}
 Allows two Java objects to be compared at runtime.
      
 github.com/SQiShER/java-object-diff 
-\end{minipage}       & d2b89cafdc & 291     & 10023 \\
+\end{minipage}        & 291     & 10023 \\
     DiffJ            & \begin{minipage}[t]{0.5\textwidth}
     Diff tool which in addition to ignoring white space ignores changes of ordering in package names for a Java file.
     
 github.com/jpace/diffj
-\end{minipage}       & ec05561ac2 & 490     & 13712 \\
+\end{minipage}        & 490     & 13712 \\
     IRE              & \begin{minipage}[t]{0.5\textwidth}
     Java library for regular expression matching.
     
 github.com/jkff/ire  
-\end{minipage}       & 4a4b4ce1e5 & 41      & 2714  \\
+\end{minipage}       & 41      & 2714  \\
     Syntax           & \begin{minipage}[t]{0.5\textwidth}
     Compiler compiler used for teaching. 
     
 github.com/jaimegarza/syntax 
-\end{minipage}       & 1b1dc22f8d & 89      & 9376  \\
+\end{minipage}        & 89      & 9376  \\
     \end{tabular}
     }
 \end{table}
  
-
-The Refactor Categories Tool analyses all the historical changes ever made on a software project by extracting successive revisions from a Git repository using JGit.  Once we have two revisions we need to compare them.  To do this we compare each of the Java files in both revisions one by one. We only test the Java file if it has been modified or renamed.  If the file been inserted or deleted we ignore it because there is no way to make a comparison. Once we have established that Java files exist, both in the original and the updated copy, we use the text diff in JGit to compare them. As outlined in section \ref{matchingTextWithAST} we figure out which AST nodes the text changes contain. 
-
-The Refactor Categories Tool splits up the identified blocks of source code into several AST nodes and identifies anything between AST Nodes as being text. 
+% 
+% The Refactor Categories Tool analyses all the historical changes ever made 
+% on a software project by extracting successive revisions from a Git 
+% repository using JGit.  Once we have two revisions we need to compare them.  
+% To do this we compare each of the Java files in both revisions one by one. 
+% We only test the Java file if it has been modified or renamed.  If the file 
+% been inserted or deleted we ignore it because there is no way to make a 
+% comparison. Once we have established that Java files exist, both in the 
+% original and the updated copy, we use the text diff in JGit to compare them. 
+% As outlined in section \ref{matchingTextWithAST} we figure out which AST 
+% nodes the text changes contain.
+% The Refactor Categories Tool splits up the identified blocks of source code 
+% into several AST nodes and identifies anything between AST Nodes as being 
+% text. @c
 This text is further evaluated to determine if it is a change to comments or a change to white space. 
 An example of this is if the text comparison detects a single change that inserts two new methods and a comment.  
 The Refactor Categories Tool will recognise this as three distinct changes. 
@@ -120,12 +130,12 @@ After running the Refactor Categories tool over our benchmark suite we obtained 
 
 \begin{table}[t!]
     \begin{tabular}{l|llllll|l|lll}
-    Benchmark        & \multicolumn{6}{|c|}{Java}           & Whitespace & \multicolumn{3}{|c}{Comments} \\ \cline{2-7} \cline{9-11}
+    Benchmark        & \multicolumn{6}{|c|}{Java}           & WS & \multicolumn{3}{|c}{Comments} \\ \cline{2-7} \cline{9-11}
     ~                & Del  & Ins  & Mod  & Mov & Ren & Eqv & ~          & Del      & Ins & Mod  \\ \hline
     Jasm             & 264  & 76   & 385  & 7   & 0   & 0   & 26         & 7        & 6   & 95   \\
     Jpp              & 43   & 9    & 50   & 0   & 0   & 0   & 6          & 1        & 2   & 11   \\
     AST Java         & 87   & 28   & 72   & 1   & 0   & 11  & 5          & 2        & 0   & 22   \\
-    Java Object Diff & 2645 & 1961 & 8862 & 5   & 9   & 183 & 277        & 14       & 39  & 1438 \\
+    \begin{minipage}[t]{0.15\textwidth}Java Object Diff\end{minipage} & 2645 & 1961 & 8862 & 5   & 9   & 183 & 277        & 14       & 39  & 1438 \\
     DiffJ            & 3106 & 3164 & 5192 & 58  & 82  & 18  & 276        & 36       & 39  & 291  \\
     IRE              & 263  & 213  & 640  & 1   & 2   & 30  & 49         & 10       & 3   & 79   \\
     Syntax           & 1142 & 544  & 2216 & 6   & 7   & 12  & 204        & 14       & 81  & 451  \\
@@ -219,5 +229,4 @@ The data sets following are complete git repositories which have been examined t
 % 
 % in this case the comment is removed but as the comment is associated with a 
 % functional change the comment also needs to change in both versions
-
 
