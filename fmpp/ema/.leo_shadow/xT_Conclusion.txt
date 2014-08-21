@@ -13,7 +13,7 @@ Conclusion
 
 \chapter{Conclusions}\label{C:con}
 
-In this thesis we presented the concept of maitaining private views in version control system. This would allow programers to implement lightweight refactoring to their tastes while minimising the impact on others.  to this end we created the Refactor Categories Tool. This tool anlayses the difference between two revisions such as ecountered during a commit.  The tool parses thes sources for both commits into a AST. We then use the AST to identify additional features that have been changed.  One such feature is when elements such as methods have been moved. 
+In this thesis we presented the concept of maitaining private views in version control system. This would allow programers to implement lightweight refactoring to their tastes while minimising the impact on others.  to this end we created the Refactor Categories Tool. This tool anlayses the difference between two revisions such as ecountered during a commit.  The tool parses thes sources for both commits into a AST. We then use the AST to identify additional features that have been changed. The features we have focused on are ones that do not change any fuctionality such as methods being moved or comments being changed.
 #@nonl
 #@-node:hasletpara.20131202100421.2131:@shadow Chapters/thesis-conclusion.tex
 #@-others

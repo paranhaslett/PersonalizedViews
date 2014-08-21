@@ -1,4 +1,4 @@
-9
+
 \chapter{Experimental Results}
 
 \section{Purpose}
@@ -34,7 +34,7 @@ Java bytecode assembler written for use with the Whiley programming language.
 
 github.com/Whiley/Jasm 
 \end{minipage}        & 74      & 29139 \\
-    Jpp              & \begin{minipage}[t]{0.4\textwidth}
+    Jpp              & \begin{minipage}[t]{0.5\textwidth}
     Pre-processor for Java based on Bash shell script.
     
 github.com/maandree/jpp
@@ -44,7 +44,7 @@ github.com/maandree/jpp
     
 github.com/klangner/ast-java 
 \end{minipage}       & 24      & 10174 \\
-\begin{minipage}[t]{0.15\textwidth}Java Object Diff\end{minipage} & \begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.15\textwidth}Java Object Diff\end{minipage} & \begin{minipage}[t]{0.5\textwidth}
 Allows two Java objects to be compared at runtime.
      
 github.com/SQiShER/java-object-diff 
@@ -64,6 +64,12 @@ github.com/jkff/ire
     
 github.com/jaimegarza/syntax 
 \end{minipage}        & 89      & 9376  \\
+
+    Auto Refactor           & \begin{minipage}[t]{0.5\textwidth}
+    Eclipse plug-in that automatically refactors code 
+    
+github.com/JnRouvignac/AutoRefactor 
+\end{minipage}        & 212      & 13400  \\
     \end{tabular}
     }
 \end{table}
@@ -139,6 +145,7 @@ After running the Refactor Categories tool over our benchmark suite we obtained 
     DiffJ            & 3106 & 3164 & 5192 & 58  & 82  & 18  & 276        & 36       & 39  & 291  \\
     IRE              & 263  & 213  & 640  & 1   & 2   & 30  & 49         & 10       & 3   & 79   \\
     Syntax           & 1142 & 544  & 2216 & 6   & 7   & 12  & 204        & 14       & 81  & 451  \\
+    Auto refactor    & 1702 & 1621 & 2809 & 7   & 16  & 25  & 295        & 30       & 16  & 568  \\
     \end{tabular}
     \caption{Results over our benchmark suite showing the number of deletes, inserts, modifications, moves , renames and equivalences for Java AST, comments and white-space changes}
     \label{tab:results}
@@ -158,6 +165,7 @@ The number of text changes that were recognised during text comparison for each 
     DiffJ            & 746            & 991 & 3544 \\
     IRE              & 112            & 49  & 465  \\
     Syntax           & 691            & 214 & 1863 \\
+    Auto Refactor    & 639            & 309 & 1621 \\
     \end{tabular}
     \caption{The result of doing an ordinary text comparison}
     \label{tab:textcomp}
@@ -166,9 +174,79 @@ The number of text changes that were recognised during text comparison for each 
 
 
 \subsection{Discussion}
+% resons why these benchmarks where used
 
-The data sets following are complete git repositories which have been examined to discover the proportion of changes to behaviour compared to ascetic changes that do not affect the behaviour of the program. 
+Most of the changes where still identified as modifications rather than moves, renames or changes to comments. 
+There are enough of the changes to comments and moves of the code however to warrent further investigation.
 
+
+There were a number of benchmarks we would have liked to have used but due to memory constraints we had to omit these from the benchmark suete.
+
+
+
+ \begin{table}[H]
+    \small{
+    \begin{tabular}{l|lllll}
+    Benchmark        & Description   & Commits  & LOC   \\ \hline
+    Antlr4             &  \begin{minipage}[t]{0.5\textwidth}
+    A parser generator used to create programming grammers.
+
+github.com/antlr/antlr4 
+\end{minipage}        & 2867      & 40373 \\
+
+    Clojure             & \begin{minipage}[t]{0.5\textwidth}
+    A programming language that targets the JVM
+    
+github.com/clojure/clojure
+\end{minipage}        & 2602      & 37512   \\
+    gitblit         & \begin{minipage}[t]{0.5\textwidth}
+     Java implementation of Git.
+    
+github.com/gitblit/gitblit
+\end{minipage}       & 2334       & 72188 \\
+    Jacoco            & \begin{minipage}[t]{0.5\textwidth}
+    Library used to determine code coverage.
+    
+github.com/jacoco/jacoco
+\end{minipage}        & 1184     & 25357 \\
+    JGit             & \begin{minipage}[t]{0.5\textwidth}
+    Java implementation of Git developed by the Eclipse Foundation.
+    
+eclipse.org/jgit  
+\end{minipage}       & 3285      & 137993  \\
+    Lombok           & \begin{minipage}[t]{0.5\textwidth}
+    A library that used annotaions to extend Java. 
+    
+github.com/rzwitserloot/lombok 
+\end{minipage}        & 1624      & 39154  \\
+    Revori           & \begin{minipage}[t]{0.5\textwidth}
+    A revision based DBMS.
+    
+github.com/ReadyTalk/revori 
+\end{minipage}        & 349      & 18931  \\
+    \end{tabular}
+    }
+\end{table}  
+
+% 
+% 
+% Memory issues
+% baselines we could not compare
+% the graeter the amount of revisons the more chance that there was a memeory 
+% error
+% 
+% 
+% Moves
+% Renames
+% comment deletion /inserts and modifications
+%   the largest change
+
+
+% The data sets following are complete git repositories which have been 
+% examined to discover the proportion of changes to behaviour compared to 
+% ascetic changes that do not affect the behaviour of the program.
+% 
+% 
 % in table ~\ref{tab:DataSets}
 % 
 % \begin{table}
