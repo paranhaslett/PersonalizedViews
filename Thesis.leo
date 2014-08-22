@@ -156,13 +156,13 @@ expanded="hasletpara.20130905084546.1632,hasletpara.20130905084546.1650,hasletpa
 </v>
 <v t="paran.20140605091816.1995" a="E"><vh>@shadow thes.tex</vh></v>
 <v t="paran.20140801074838.2010"><vh>@shadow thesis-acknowledge.tex</vh></v>
-<v t="hasletpara.20131202100421.2130" a="E"><vh>@shadow Chapters/thesis-introduction.tex</vh></v>
+<v t="hasletpara.20131202100421.2130"><vh>@shadow Chapters/thesis-introduction.tex</vh></v>
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
 <v t="paran.20140515173914.6982" a="E"
 expanded="paran.20140528183434.1974,paran.20140530135904.1945,paran.20140529075353.1935,paran.20140528183434.2055,paran.20140530135904.1946,paran.20140528183434.2009,paran.20140528183434.2010,paran.20140528183434.2011,paran.20140530135904.1958,paran.20140528183434.2021,paran.20140604093616.2026,"><vh>@shadow Background.tex</vh></v>
 <v t="paran.20140731220748.2032" a="E"
 expanded="paran.20140731220748.2034,paran.20140731220748.2038,paran.20140804074630.2143,"><vh>@shadow Motivation.tex</vh></v>
-<v t="paran.20140514103950.1918" a="E"
+<v t="paran.20140514103950.1918"
 expanded="paran.20140606104644.2007,paran.20140816070821.2183,paran.20140805175513.2166,paran.20140605081907.1972,"><vh>@shadow theTool.tex</vh></v>
 <v t="paran.20140605081907.1988" a="E"
 expanded="paran.20140813185646.2165,paran.20140814214911.2176,paran.20140814214911.2178,"><vh>@shadow expirimentalResults.tex</vh></v>
@@ -196,8 +196,7 @@ expanded="paranhaslett.20130826181255.3057,"><vh>@shadow ./fmpp/ema/T_Structures
 <v t="paranhaslett.20130826181255.3070"><vh>@shadow ./fmpp/ema/T_Thesis.txt</vh></v>
 <v t="hasletpara.20131202100421.2139"><vh>@shadow ./fmpp/ema/T_Chapters.txt</vh></v>
 <v t="hasletpara.20131202100421.2146" a="E"><vh>Chapters</vh>
-<v t="hasletpara.20131202100421.2155" a="E"
-expanded="hasletpara.20131202100421.2130,"><vh>@shadow ./fmpp/ema/T_Intro.txt</vh></v>
+<v t="hasletpara.20131202100421.2155"><vh>@shadow ./fmpp/ema/T_Intro.txt</vh></v>
 <v t="hasletpara.20131202100421.2144" a="E"><vh>@shadow ./fmpp/ema/T_Testing.txt</vh></v>
 <v t="hasletpara.20131202100421.2151"><vh>@shadow ./fmpp/ema/T_Conclusion.txt</vh></v>
 </v>
@@ -207,6 +206,16 @@ expanded="hasletpara.20131202100421.2130,"><vh>@shadow ./fmpp/ema/T_Intro.txt</v
 <v t="paranhaslett.20130826181255.3158" a="E"
 expanded="paranhaslett.20130826181255.3120,paranhaslett.20130826181255.3139,"><vh>@shadow ./fmpp/GradWiki/Wiki.txt</vh></v>
 </v>
+</v>
+</v>
+<v t="paran.20140822144342.2189" a="E"><vh>Recovered Nodes</vh>
+<v t="paran.20140822144342.2190"><vh>Recovered node "&lt;&lt;outline&gt;&gt; from T_Intro.txt</vh>
+<v t="paran.20140822144342.2191"><vh>old:&lt;&lt;outline&gt;&gt;</vh></v>
+<v t="paran.20140822144342.2192"><vh>new:&lt;&lt;outline&gt;&gt;</vh></v>
+</v>
+<v t="paran.20140822144342.2193"><vh>Recovered node "&lt;&lt;how to resolve&gt;&gt; from T_Intro.txt</vh>
+<v t="paran.20140822144342.2194"><vh>old:&lt;&lt;how to resolve&gt;&gt;</vh></v>
+<v t="paran.20140822144342.2195"><vh>new:&lt;&lt;how to resolve&gt;&gt;</vh></v>
 </v>
 </v>
 </vnodes>
@@ -2876,6 +2885,92 @@ i
  
 ------------------------------------
 Git diff =0  Refactor Categories =465</t>
+<t tx="paran.20140822144342.2189"></t>
+<t tx="paran.20140822144342.2190">(uncached) paran.20140822060752.2188
+Diff...
+  In this thesis we explore the idea of having private views that although functionally equivalent can be refactored differently.
+  A version control system allows us to have 
+  In this thesis we will examine the effects of non functional changes caused by light weight refactoring of code on version control systems.
+  To do this we will examine version control systems and how they allow collaboration through merging.
+- We will also examine refactoring and how it can change the code but retain the same behavior.
++ We will also examine refactoring and how it can change the code but retain the same behaviour.
+?                                                                                            +
+  We will some tools that could help when merging refactored code when it is checked into an operating system. 
+- We especally focus on JDime to see if I can help us to build a private view where external code changes are minimised.
++ We especially focus on JDime to see if I can help us to build a private view where external code changes are minimised.
+?         +
+   </t>
+<t tx="paran.20140822144342.2191">In this thesis we explore the idea of having private views that although functionally equivalent can be refactored differently.
+A version control system allows us to have 
+In this thesis we will examine the effects of non functional changes caused by light weight refactoring of code on version control systems.
+To do this we will examine version control systems and how they allow collaboration through merging.
+We will also examine refactoring and how it can change the code but retain the same behaviour.
+We will some tools that could help when merging refactored code when it is checked into an operating system. 
+We especially focus on JDime to see if I can help us to build a private view where external code changes are minimised.
+ </t>
+<t tx="paran.20140822144342.2192">In this thesis we explore the idea of having private views that although functionally equivalent can be refactored differently.
+A version control system allows us to have 
+In this thesis we will examine the effects of non functional changes caused by light weight refactoring of code on version control systems.
+To do this we will examine version control systems and how they allow collaboration through merging.
+We will also examine refactoring and how it can change the code but retain the same behavior.
+We will some tools that could help when merging refactored code when it is checked into an operating system. 
+We especally focus on JDime to see if I can help us to build a private view where external code changes are minimised.
+ </t>
+<t tx="paran.20140822144342.2193">(uncached) paran.20140617082508.2022
+Diff...
+  This thesis introduces the concept of maintaining multiple separate views which can be ordered differently but have functionally equivalent source code.
+  The purpose of these views is to reduce the number of changes introduced during a merge. 
+  It also explores a way of allowing a version control system to detect when there is a change in the source code but not a functional change in a program.
+  Examples of this are if items have been reordered, if comments have been inserted or there have been changes to the formatting. 
+  We developed the Refactor Categories Tool for the purpose of identifying these changes. 
+  We report on the design and implementation of this tool.
+  The Refactor Categories Tool is then used in an experiment evaluating a range of real-world benchmarks.
+  
+  
+  @
+- We have used the Refactor Categories Tool we have created in an expiriment that iterates though all the revisions in the versi on source control for a handful of Java projects.
+?                                                                                                                               -
++ We have used the Refactor Categories Tool we have created in an expiriment that iterates though all the revisions in the version source control for a handful of Java projects.
+  The Refactor Categories Tool detects
+  
+  need to write about what we found here
+  @c
+   
+</t>
+<t tx="paran.20140822144342.2194">This thesis introduces the concept of maintaining multiple separate views which can be ordered differently but have functionally equivalent source code.
+The purpose of these views is to reduce the number of changes introduced during a merge. 
+It also explores a way of allowing a version control system to detect when there is a change in the source code but not a functional change in a program.
+Examples of this are if items have been reordered, if comments have been inserted or there have been changes to the formatting. 
+We developed the Refactor Categories Tool for the purpose of identifying these changes. 
+We report on the design and implementation of this tool.
+The Refactor Categories Tool is then used in an experiment evaluating a range of real-world benchmarks.
+
+
+@
+We have used the Refactor Categories Tool we have created in an expiriment that iterates though all the revisions in the version source control for a handful of Java projects.
+The Refactor Categories Tool detects
+
+need to write about what we found here
+@c
+ 
+</t>
+<t tx="paran.20140822144342.2195">This thesis introduces the concept of maintaining multiple separate views which can be ordered differently but have functionally equivalent source code.
+The purpose of these views is to reduce the number of changes introduced during a merge. 
+It also explores a way of allowing a version control system to detect when there is a change in the source code but not a functional change in a program.
+Examples of this are if items have been reordered, if comments have been inserted or there have been changes to the formatting. 
+We developed the Refactor Categories Tool for the purpose of identifying these changes. 
+We report on the design and implementation of this tool.
+The Refactor Categories Tool is then used in an experiment evaluating a range of real-world benchmarks.
+
+
+@
+We have used the Refactor Categories Tool we have created in an expiriment that iterates though all the revisions in the versi on source control for a handful of Java projects.
+The Refactor Categories Tool detects
+
+need to write about what we found here
+@c
+ 
+</t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>
@@ -2890,6 +2985,68 @@ tidy the tool
 check results with meld
 
 work on the exprirmental results page
+
+work on conclusion
+
+
+p4, still no thesis outline.
+
+p14, the paragraph yuo've added at the start of 2.2.1 should be at the
+start of section 2.2.
+
+p24, "Figure 2.4.2" twice - one of which is part of a passage that should
+be deleted.
+
+p27, give URL for Semantic Merge.
+
+p37, replace "prove" by "show" or "demonstrate" or something else more
+appropriate.
+
+BTW: on p30, you say "As proven by [6]".  This should also be "shown" or
+something similar, not "proven".
+
+p41, "programs'" -&gt; "program's"
+missing figure reference
+
+Looking at Chapters 5 &amp; 6:
+
+p49, Chapter 5 needs to start with a more general statement about what you
+did and what the chapter is about.  For examples, something like "To
+evaluate the effectiveness of our approach, we performed an experiment to
+measure the performance of the Refactor Classifying Tool on a range of Java
+programs."
+
+p49, you need to refer to the table on p50 in the text, explaining what
+programs were used in the experiement.
+
+How were the different versions obtained?
+
+p51, "issues'" should not have an apostrophe
+
+p52, line -5.  "warrent" -&gt; "warrant"
+
+p52, line -1.  "suete" -&gt; "suite
+
+Section 5.3.2.  You need to say more than this about your results.  Refer
+to some specific results and explain what they mean.
+
+The last paragraph doesn't belong here - it should go with the discussion
+of what you did.
+
+I was expecting you to compare the results obtained with your tool with
+that obtained using a tool such as jDIME.  Would that have ben more
+illuminating?
+
+Also a couple of sentences with no full stops at the end.
+
+Chapter 6 still needs some conclusions, specifically a summary of what you
+have done and of your experimental results - that should come before the
+discussion of future work.
+
+That's all for now!
+
+Cheers
+        Lindsay
 </t>
 </tnodes>
 </leo_file>

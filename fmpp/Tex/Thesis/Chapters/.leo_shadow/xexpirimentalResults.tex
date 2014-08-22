@@ -121,7 +121,7 @@ The Refactor Categories Tool will recognise this as three distinct changes.
 This means that it is possible for the Refactor Categories Tool to notice more changes than a text based comparison. 
 
 We had some garbage collection memory issues with some benchmarks that we were testing. 
-To resolve these issues` the Refactor Categories Tool was run individually once for each benchmark to further ensure that there were no memory leaks between runs.
+To resolve these issues the Refactor Categories Tool was run individually once for each benchmark to further ensure that there were no memory leaks between runs.
 We also increased the memory by changing the parameters for the run configuration.  The following parameters were added to the run configuration for the test.
 
 \begin{verbatim}
@@ -175,7 +175,10 @@ We also increased the memory by changing the parameters for the run configuratio
 %@+node:paran.20140814214911.2177:<<overview>>
 After running the Refactor Categories tool over our benchmark suite we obtained the results shown in Table \ref{tab:results}
 
+
+
 \begin{table}[t!]
+    \small
     \begin{tabular}{l|llllll|l|lll}
     Benchmark        & \multicolumn{6}{|c|}{Java}           & WS & \multicolumn{3}{|c}{Comments} \\ \cline{2-7} \cline{9-11}
     ~                & Del  & Ins  & Mod  & Mov & Ren & Eqv & ~          & Del      & Ins & Mod  \\ \hline
@@ -188,7 +191,7 @@ After running the Refactor Categories tool over our benchmark suite we obtained 
     Syntax           & 1142 & 544  & 2216 & 6   & 7   & 12  & 204        & 14       & 81  & 451  \\
     Auto refactor    & 1702 & 1621 & 2809 & 7   & 16  & 25  & 295        & 30       & 16  & 568  \\
     \end{tabular}
-    \caption{Results over our benchmark suite showing the number of deletes, inserts, modifications, moves , renames and equivalences for Java AST, comments and white-space changes}
+    \caption{Results over our benchmark suite showing the number of deletes (DEL), inserts (INS), modifications (MOD), moves (MOV), renames (REN) and equivalences (EQV) for Java AST, comments and white-space (WS) changes}
     \label{tab:results}
 \end{table}
 
@@ -231,7 +234,7 @@ Most of the changes where still identified as modifications rather than moves, r
 There are enough of the changes to comments and moves of the code however to warrent further investigation.
 
 
-There were a number of benchmarks we would have liked to have used but due to memory constraints we had to omit these from the benchmark suete.
+There were a number of benchmarks we would have liked to have used but due to memory constraints we had to omit these from the benchmark suite.
 
 
 
@@ -278,6 +281,8 @@ github.com/ReadyTalk/revori
     \end{tabular}
     }
 \end{table}  
+
+
 
 %@+at
 % 

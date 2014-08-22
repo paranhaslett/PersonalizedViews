@@ -1,9 +1,13 @@
 \chapter{Background}
 
-As this thesis is about maintaining private views within a version control system what follows is some background concerning version control systems and how they determine if a change has occurred in source code.  We will also cover refactoring before looking more closely at JDime and other tools that attempt to reduce merge conflicts caused by refactoring or reformatting.  
+As this thesis is about maintaining private views within a version control system what follows is some background concerning version control systems and how they determine if a change has occurred in source code.  
+We will also cover refactoring before looking more closely at JDime and other tools that attempt to reduce merge conflicts caused by refactoring or reformatting.  
 
 \section{Version Control Systems}
-Version control systems are a way of managing different revisions (or versions). Version control systems can be used to keep revisions of files that are in any format. Most commonly they are used for maintaining source code written for a plain text programming language (e.g. Java, C, etc.). There are a number of reasons why we might want to use a version control system. It can be used to refer to previous revisions, to maintain a revision that has an experimental feature, to associate additional documentation about a feature or to collaborate with multiple developers who are on the same programming project:
+Version control systems are a way of managing different revisions (or versions). 
+Version control systems can be used to keep revisions of files that are in any format. 
+Most commonly they are used for maintaining source code written for a plain text programming language (e.g. Java, C, etc.). 
+There are a number of reasons why we might want to use a version control system. It can be used to refer to previous revisions, to maintain a revision that has an experimental feature, to associate additional documentation about a feature or to collaborate with multiple developers who are on the same programming project:
 
 \begin{description}
 
@@ -19,7 +23,12 @@ Version control systems are a way of managing different revisions (or versions).
 
   
   \item [Use branching for experimental features.] 
-  It is also possible to maintain multiple revisions of all the files for a software project. This is useful if there is an experimental feature which you want to explore but want to maintain the original as a separate project. As shown in Figure ~\ref{fig:bgBranches} a version control system can keep these multiple interests separate by putting them on different \emph{branches}. It is still possible to easily switch between the different branches depending on which project you want to make changes to.  A good use of this feature is if you have a software project that you have written on behalf two different companies but each of them would like their own unique customisations on top of the base product.  By making two copies of the base product and having a record of when it was divided the branches can later be recombined to include some or all of the features that have been introduced.  
+  It is also possible to maintain multiple revisions of all the files for a software project. 
+  This is useful if there is an experimental feature which you want to explore but want to maintain the original as a separate project. 
+  As shown in Figure ~\ref{fig:bgBranches} a version control system can keep these multiple interests separate by putting them on different \emph{branches}. 
+  It is still possible to easily switch between the different branches depending on which project you want to make changes to.  
+  A good use of this feature is if you have a software project that you have written on behalf two different companies but each of them would like their own unique customisations on top of the base product.  
+  By making two copies of the base product and having a record of when it was divided the branches can later be recombined to include some or all of the features that have been introduced.  
 
   \begin{figure}[!t]
    \begin{center}
@@ -66,7 +75,11 @@ Version control systems are a way of managing different revisions (or versions).
   \end{figure}
 
   \item [Collaborate with multiple developers.]
-  Version control systems make it possible to have individual revisions that contain each person's changes. The version control system then manages the way these changes are merged into a composite product. Bertino \cite{Bertino2012} describes the ability to merge the work of multiple people as being a powerful collaborative tool. This is because a version control system allows multiple people with different ideas to collaborate on the same document. In some circumstances it allows them to work on the document at the same time. This feature seems similar to the concept of having a private view that we are exploring in this thesis. The difference is that a version control system has no awareness about the format of the documents. This means it is harder for it to evaluate the difference between features of the document that will be helpful to collaboration and features that express the individual tastes of each of the collaborators.   
+  Version control systems make it possible to have individual revisions that contain each person's changes. 
+  The version control system then manages the way these changes are merged into a composite product. 
+  Bertino \cite{Bertino2012} describes the ability to merge the work of multiple people as being a powerful collaborative tool. 
+  This is because a version control system allows multiple people with different ideas to collaborate on the same document. 
+  In some circumstances it allows them to work on the document at the same time. This feature seems similar to the concept of having a private view that we are exploring in this thesis. The difference is that a version control system has no awareness about the format of the documents. This means it is harder for it to evaluate the difference between features of the document that will be helpful to collaboration and features that express the individual tastes of each of the collaborators.
 
 \end{description}
 
@@ -166,13 +179,14 @@ The merge conflicts need to be dealt with manually.
 \end{description}
 
 \section{Longest Common Subsequence}
+The longest common subsequence problem is relevant to this thesis as it concerns comparing code to determine similarities and differences.
+The similarities and differences can then be used to automatically merge code in a version control system.
+
 A simple definition of the longest common subsequence problem is attempting to find the maximum number of common items in two strings when the strings are examined from left to right. A subsequence does not need to be in a single contiguous block however. Algorithms that solve the longest common subsequence can determine the differences between two lists by working out what is the same.   
 
 
 \subsection{Example}
 \label{sec:examplelcs}
-The longest common subsequence problem is relevant to this thesis as it concerns comparing code to determine similarities and differences.
-The similarities and differences can then be used to automatically merge code in a version control system.
 
 An example of finding the longest common subsequence is as follows.
 Imagine we have two similar sets of Java source code that we want to compare with each other.  

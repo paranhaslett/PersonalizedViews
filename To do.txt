@@ -1,0 +1,61 @@
+Can we do 3pm?  I'd like to get away about 4pm.
+
+Just glancing over the latest version, I can see that you've fixed quite a
+few things (I didn't keep a copy so I can't check them all).  I did notice
+a few things that haven't been fixed:
+
+p4, still no thesis outline.
+
+p24, "Figure 2.4.2" twice - one of which is part of a passage that should
+be deleted.
+
+p27, give URL for Semantic Merge.
+
+p37, replace "prove" by "show" or "demonstrate" or something else more
+appropriate.
+
+BTW: on p30, you say "As proven by [6]".  This should also be "shown" or
+something similar, not "proven".
+
+p41, "programs'" -> "program's"
+missing figure reference
+
+Looking at Chapters 5 & 6:
+
+p49, Chapter 5 needs to start with a more general statement about what you
+did and what the chapter is about.  For examples, something like "To
+evaluate the effectiveness of our approach, we performed an experiment to
+measure the performance of the Refactor Classifying Tool on a range of Java
+programs."
+
+p49, you need to refer to the table on p50 in the text, explaining what
+programs were used in the experiement.
+
+How were the different versions obtained?
+
+p51, "issues'" should not have an apostrophe
+
+p52, line -5.  "warrent" -> "warrant"
+
+p52, line -1.  "suete" -> "suite
+
+Section 5.3.2.  You need to say more than this about your results.  Refer
+to some specific results and explain what they mean.
+
+The last paragraph doesn't belong here - it should go with the discussion
+of what you did.
+
+I was expecting you to compare the results obtained with your tool with
+that obtained using a tool such as jDIME.  Would that have ben more
+illuminating?
+
+Also a couple of sentences with no full stops at the end.
+
+Chapter 6 still needs some conclusions, specifically a summary of what you
+have done and of your experimental results - that should come before the
+discussion of future work.
+
+That's all for now!
+
+Cheers
+        Lindsay
