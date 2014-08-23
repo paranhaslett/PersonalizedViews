@@ -1,6 +1,6 @@
 
 \chapter{Refactor Categories Tool}
-In order to prove that having private views would be useful we created the Refactor Categories Tool. Normally Version Control Systems such a JGit compare and merge files by differentiating between insert, delete and modify operations. The Refactor Categories Tool enhances this by also identifying instances where a block of code has moved but the functionality remains unchanged. It also can differentiate between changes to comments, white space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and some instances where it has been refactored.  
+In order to show that having private views would be useful we created the Refactor Categories Tool. Normally Version Control Systems such a JGit compare and merge files by differentiating between insert, delete and modify operations. The Refactor Categories Tool enhances this by also identifying instances where a block of code has moved but the functionality remains unchanged. It also can differentiate between changes to comments, white space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and some instances where it has been refactored.  
 
 % Although it does not detect more complex differences beyond this we intend 
 % to show that changes exist in real world software projects that have no 
@@ -11,7 +11,10 @@ In order to prove that having private views would be useful we created the Refac
 % The test we use with the Refactor Categories Tool analyses all the 
 % historical changes ever made on a software project by extracting successive 
 % revisions from a Git repository using JGit.
-When the Refactor Categories Tool is run an ordinary text comparison is used as a starting point.  The text comparison within JGit is used with white space ignored. \label{matchingTextWithAST} The text comparison returns the minimal number of text changes in an \lstinline{EditList} object. The \lstinline{EditList} object contains a list of changes to the plain text. Information about each change that the \lstinline{EditList} object retains is:
+When the Refactor Categories Tool is run an ordinary text comparison is used as a starting point.
+The text comparison within JGit is used with white space ignored.
+\label{matchingTextWithAST} The text comparison returns the minimal number of text changes in an \lstinline{EditList} object. 
+The \lstinline{EditList} object contains a list of changes to the plain text. Information about each change that the \lstinline{EditList} object retains is:
 
 \begin{itemize}
   \item the starting line of the change for both revisions being compared
@@ -19,12 +22,21 @@ When the Refactor Categories Tool is run an ordinary text comparison is used as 
   \item The type of change that is being made
 \end{itemize}
 
-As this is a text comparison the types of changes that are detected between two files are limited to inserts, deletes, and modifications. In order to expand this list we need more information.  We obtain information about the meaning of Java files by parsing both of revisions we are comparing.  We use JastAddJ \cite{Oqvist2013} to parse the information into an AST. Once we have the AST we need to discover which AST nodes match which changes to the text in the source code. We use positional information stored both by the parser and the \lstinline{EditList} object to do this.
+As this is a text comparison the types of changes that are detected between two files are limited to inserts, deletes, and modifications. 
+In order to expand this list we need more information.  
+We obtain information about the meaning of Java files by parsing both of revisions we are comparing.  
+We use JastAddJ \cite{Oqvist2013} to parse the information into an AST. 
+Once we have the AST we need to discover which AST nodes match which changes to the text in the source code.
 
 \label{sec:over} 
-Each of the AST nodes contains information about the line of source the AST node starts and ends at.  Unlike the \lstinline{EditList} object which we have previously discussed, an AST node can also hold the column that the AST node starts and ends at.  Using this positional information we can match the text changes to a set of AST nodes.
+Both the \lstinline{EditList} object and  AST nodes contain information about the line of source the AST node starts and ends at.  
+Unlike the \lstinline{EditList} object an AST node can also hold the column that the AST node starts and ends at.  
+Using this positional information we can match the text changes in the \lstinline{EditList} object to a set of AST nodes.
 
-There are likely to be AST nodes that are not included in any of the change sets and can be safely ignored. In order to find those AST nodes we are interested in we need to traverse the AST.  The root node spans the entire file.  By examining the children of the root however, we can determine which children contain all or part of the matching text change.
+There are likely to be AST nodes that are not included in any of the change sets and can be safely ignored.
+In order to find those AST nodes we are interested in we need to traverse the AST.
+The root node spans the entire file. 
+By examining the children of the root however, we can determine which children contain all or part of the matching text change.
 
 \begin{figure}[!t]
  \begin{center}
@@ -51,7 +63,7 @@ By examining any possible children of `Child 1' and `Child 2' we could discover 
 \begin{description}
 
   \item [AST nodes that are not included in the text change.]
-    Any AST node that cannot be associated with a text change can be safely ignored. It means that there are no changes to that AST Node.
+    Any AST node that cannot be associated with a text change can be safely ignored. It means that there are no changes the text and therefore no changes to that AST Node.
   \item [AST nodes that are fully encapsulated by the text change.] 
     These are the AST nodes that we wanted to discover as they are entirely within the range of text change.  These warrant further investigation.
   \item [AST nodes that partly include the text change but have child AST Nodes.]
@@ -62,15 +74,6 @@ By examining any possible children of `Child 1' and `Child 2' we could discover 
 
 In both Figure \ref{fig:findingASTNode} and Figure \ref{fig:troubleASTNode} there are portions of text that are outside an AST node.  These are of interest to us because these are instances where the text may have been changed but it has no impact on the behaviour of the program.  The most likely instances of this is when a comment has changed or if white space has been introduced in the middle of source code.
 
-% 
-% Another change we are interested in is if items have been moved.  We would 
-% notice this if there is a both insert and a delete for similar AST node 
-% types within the same scope.  If a method has been shifted within a class we 
-% would notice similar AST nodes, one being deleted at one location, the other 
-% being inserted at a different location.  This is another example of a text 
-% change that does not change the behaviour of the program.
-% 
-% If we can keep track of renaming
 % 
 % If we find examples of text based changes that do not change the programs' 
 % behaviour we have an indication that we can reduce the amount of changes 
@@ -85,10 +88,9 @@ In both Figure \ref{fig:findingASTNode} and Figure \ref{fig:troubleASTNode} ther
 
 \section{What the tool does}
 % answer what it does and how
-
-By checking to see if an insert at one point is similar to a delete at another point it is possible to see if the code block has moved. In order to determine if the move is one that has no impact the matches are only counted if a match can be found within the same container.  Here, a container is an enclosing scope within the source code, such as a class. For example if a method has been shifted within the same class the program will still act the same.  If a method is moved from one class into an inner class there is no guarantee that they will be evaluated to determine if there is a suitable match.  If a method is shifted from one class to an inner class however the programs' behaviour could have changed.
-
-To determine if blocks of code have been moved we need to find a deleted block of code that is most similar to an inserted block of code.  The following shows an example of original source code before any methods have been moved: 
+\subsection{Detects Moves}
+If an AST Node has been inserted at one point and a similar one deleted it is possible to see if a code block has moved.  
+The following shows an example of original source code before any methods have been moved: 
 
 \begin{lstlisting}
 public class SampleMoveAndChange {
@@ -122,15 +124,39 @@ public class SampleMoveAndChange {
 \end{figure}
 
 
-A comparison of the source code using Meld, a graphical merge tool is shown in Figure ~\ref{fig:modscreenshot}. Both \lstinline{rect} and \lstinline{circ} have been deleted from the original version and have been inserted into the modified version.  However the \lstinline{circ} has also changed slightly. 
+A comparison of the source code using Meld, a graphical merge tool is shown in Figure ~\ref{fig:modscreenshot}.
+Both \lstinline{rect} and \lstinline{circ} have been deleted from the original version and have been inserted into the modified version.  
+However the \lstinline{circ} has also changed slightly. 
 When this code is compared and parsed into an AST we will initially have four differences due to both the deletion and insertion of the two methods.    
 We are not able to directly compare the deleted AST nodes with the inserted AST Node to see if they are equal because the \lstinline{circ} method has been changed slightly. 
 Instead of checking for equality we need to check for similarity.
-By recursively comparing all the AST nodes for a delete candidate against all the AST nodes for a insert candidate we are able to calculate a score that shows how similar they are. 
-There could be multiple inserts and we need to compare them against multiple deletes to obtain the scores for each combination.
+By comparing all the AST nodes for a delete candidate against all the AST nodes for a insert candidate we are able to calculate a score that shows how similar they are.
+
+There could be more than one insert and we need to compare them against all the deletes to obtain the scores for each combination.
 In the above example for instance we need to compare the deletion of \lstinline{circ} with both the insertion of \lstinline{rect} and the modified \lstinline{circ} to determine which one is the better fit.
 
-To calculate the scores for a single change we start at the root AST node for both the insert and delete candidates.  If the root nodes are similar we can then check their children. By performing a diff between the lists of children for both the insert and delete candidates we obtain the minimum number of differences.  If an extra child AST node has been inserted or a child AST node is deleted then 1 is added to the score. If a child AST node has been modified it is the equivalent of both a child AST node being inserted and one being deleted so 2 is added to the score. If there has been no change to a child AST node we need to recursively assign a score using its children. To get the total percentage of children that changed we divide the score against the total number of children for both the delete and insert AST nodes we are scoring.
+If a method is moved from one class into an inner class the programs' behaviour could have changed. 
+When this occurs there is no guarantee that a match between match between that insert and delete is a valid one.
+If a method has been shifted within the same class however, the program will still act the same.  
+Therefore in order to determine if the move is one that has no impact the matches are only counted if a match can be found within the same container.  
+Here, a container is an enclosing scope within the source code, such as a class. 
+Restricting any valid moves to a container ensures we get moves that don't change the behavior of the program.
+
+% 
+% Another change we are interested in is if items have been moved.  We would 
+% notice this if there is a both insert and a delete for similar AST node 
+% types within the same scope.  If a method has been shifted within a class we 
+% would notice similar AST nodes, one being deleted at one location, the other 
+% being inserted at a different location.  This is another example of a text 
+% change that does not change the behaviour of the program.
+
+To calculate the scores for a single change we start at the root AST node for both the insert and delete candidates.  
+If the root nodes are similar we can then check their children. 
+By performing a diff between the lists of children for both the insert and delete candidates we obtain the minimum number of differences.  
+If an extra child AST node has been inserted or a child AST node is deleted then 1 is added to the score. 
+If a child AST node has been modified it is the equivalent of both a child AST node being inserted and one being deleted so 2 is added to the score. 
+If there has been no change to a child AST node we need to recursively assign a score using its children. 
+To get the total percentage of children that changed we divide the score against the total number of children for both the delete and insert AST nodes we are scoring.
 
 In the example in Figure ~\ref{fig:matchComp} two AST node are being compared with each other. The red AST node has been deleted and an orange AST node have been inserted. Because the yellow node has been modified it has effectively been deleted and a green node has been inserted. This means has been a total of 4 changes to this level of the AST. 
 
@@ -142,13 +168,33 @@ In the example in Figure ~\ref{fig:matchComp} two AST node are being compared wi
  \label{fig:matchComp}
 \end{figure}
 
-In addition to the comparison of AST nodes to test for where Java code has moved we also need to determine when comments move.  As it is possible for the comment to change we also need to test for similarity.  This is done by comparing the characters in from the code block that has been deleted with characters from the code block that has been inserted.  A comparison is done between the two code blocks using a diff to obtain the smallest number of changes. A score of 1 is added for each deleted or inserted of a character.  If a character has been modified a score of 2 is added. To obtain the percentage of items changed the score is divided by the total number of characters in both code blocks.
-
 Scores are stored in a two dimensional array where the rows are insert candidates and the columns are delete candidates.  We use the greedy algorithm to select the lowest score in the array.  Insert and delete candidate that are selected are recorded as a move and should not be compared with anything else. The comparisons that are no longer possible are in the same column or row in the array.  The comparisons that are no longer possible are removed and the next lowest score for a match is evaluated.  To ensure that anything cannot be matched with anything once all good matches are eliminated a limit is set ensuring that any further matches are ignored.  The two items that could have otherwise been matched will remain a solitary insert and a delete.
 
-To a limited extent the Refactor Categories Tool can also deal with renaming. It does this by examining the node and seeing if its children have remained the same and its type remain the same but its name has changed. It can not analyse nodes where the name has not changed as these are not picked up by the initial text comparison.
+\subsection{Detects Renames}
+The Refactor Categories Tool can also detects some renaming. 
+It does this by comparing the names for each each node.
+If the name has changed but the node type and all the children nodes are still the same then it places the change into the `rename' category.
+When the Refactor Categories Tool does not check every AST node it can not determine if the rename operation is going to have impact on other code.
+This means that if all copies of a methods or variable have not been uniformly renamed it cannot find the ones that remain unchanged.
 
-The Refactor Categories Tool first does a cursory examination of the text differences between two files. It then examines both the differences in executable Java code and the differences between comments and white-space. 
+\subsection{Detects Equivalent Code}
+I some situations when the code has been modified the ASTs still remain the same.  
+This means that although there have been changes the bahaviour of the code still has not changed.
+
+\subsection{Detects changes to comments} 
+In addition to doing a comparison of AST Nodes the Refactor Categories tool also detects text changes that are located between AST nodes.
+These changes could be comments or white space and are checked to see if they have been inserted, deleted, modified or moved
+The Refactor Categories Tool first does a cursory examination of the text differences between two files.
+It then examines both the differences in executable Java code and the differences between comments and white-space. 
+
+This detection of comments and whitespace also extends to move operations 
+As it is possible for the comment to change we also need to test for similarity rather than equality.  
+This is done by comparing the characters in from the code block that has been deleted with characters from the code block that has been inserted.  
+A comparison is done between the two code blocks using a diff to obtain the smallest number of changes. 
+A score of 1 is added for each deleted or inserted of a character.
+If a character has been modified a score of 2 is added. 
+To obtain the percentage of items changed the score is divided by the total number of characters in both code blocks.
+
 
 
 
