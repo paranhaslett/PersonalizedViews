@@ -140,7 +140,7 @@ After running the Refactor Categories tool over our benchmark suite we obtained 
     \small
     \begin{tabular}{l|llllll|l|lll}
     Benchmark        & \multicolumn{6}{|c|}{Java}           & WS & \multicolumn{3}{|c}{Comments} \\ \cline{2-7} \cline{9-11}
-    ~                & Del  & Ins  & Mod  & Mov & Ren & Eqv & ~          & Del      & Ins & Mod  \\ \hline
+    ~                & Ins  & Del  & Mod  & Mov & Ren & Eqv & ~          & Ins      & Del & Mod  \\ \hline
     Jasm             & 264  & 76   & 385  & 7   & 0   & 0   & 26         & 7        & 6   & 95   \\
     Jpp              & 43   & 9    & 50   & 0   & 0   & 0   & 6          & 1        & 2   & 11   \\
     AST Java         & 87   & 28   & 72   & 1   & 0   & 11  & 5          & 2        & 0   & 22   \\
@@ -150,7 +150,7 @@ After running the Refactor Categories tool over our benchmark suite we obtained 
     Syntax           & 1142 & 544  & 2216 & 6   & 7   & 12  & 204        & 14       & 81  & 451  \\
     Auto refactor    & 1702 & 1621 & 2809 & 7   & 16  & 25  & 295        & 30       & 16  & 568  \\
     \end{tabular}
-    \caption{Results over our benchmark suite showing the number of deletes (DEL), inserts (INS), modifications (MOD), moves (MOV), renames (REN) and equivalences (EQV) for Java AST, comments and white-space (WS) changes}
+    \caption{Results over our benchmark suite showing the number of inserts (INS), deletes (DEL), modifications (MOD), moves (MOV), renames (REN) and equivalences (EQV) for Java AST, comments and white-space (WS) changes}
     \label{tab:results}
 \end{table}
 
@@ -160,7 +160,7 @@ The number of text changes that were recognised during text comparison for each 
     \centering
     \begin{tabular}{l|lll}
     Benchmark        & \multicolumn{3}{|c}{Text Diff} \\ \hline
-    ~                & Del            & Ins & Mod  \\ \hline
+    ~                & Ins            & Del & Mod  \\ \hline
     Jasm             & 91             & 44  & 337  \\
     Jpp              & 23             & 3   & 41   \\
     AST Java         & 44             & 15  & 85   \\
@@ -170,72 +170,91 @@ The number of text changes that were recognised during text comparison for each 
     Syntax           & 691            & 214 & 1863 \\
     Auto Refactor    & 639            & 309 & 1621 \\
     \end{tabular}
-    \caption{The result of doing an ordinary text comparison}
+    \caption{The result of doing an ordinary text comparison showing the number of inserts (INS), deletes (DEL) and modifications (MOD)}
     \label{tab:textcomp}
 \end{table}
 
 
 
 \subsection{Discussion}
-% resons why these benchmarks where used
-% explain how renames are detected
-% 
+Figure \ref{fig:textDifference} show the average for all the benchmarks of the types of operations found during an ordinary text comparison.  
+The most common merge operation is when items have been modified.  
+This occured on average  almost 73 percent of the time.
+
+\begin{figure}[!t]
+ \begin{center}
+ \includegraphics[scale=.8]{TextDifference}
+ \end{center}
+ \caption{Type of operations for an ordinary text comparision on average for all the benchmarks}
+ \label{fig:textDifference}
+\end{figure}
+
+When we examine the Java AST differences for the same benchmark however the number of modifications reduces and the number of insertions and deletes increase.
+This is shown in Figure \ref{fig:javaDifference}.
+The reason for this is because an change done to block of text recorded in the \lstinline{EditList} object is made up of a number of smaller changes.  
+If the block of text is a delete all the smaller changes are also delete.  
+The same is true for inserts, all the smaller changes will also be inserts.
+With a modified block of text modifications however the smaller changes could be inserts, deletes or modifications.
+What this means is that some of the changes that an ordinary text diff recognises as modifications could actully made up of individual inserts and deletes. 
+
+\begin{figure}[!t]
+ \begin{center}
+ \includegraphics[scale=.8]{JavaDiff}
+ \end{center}
+ \caption{Type of operations for an ordinary text comparision on average for all the benchmarks}
+ \label{fig:javaDifference}
+\end{figure}
 
 Most of the changes where still identified as modifications rather than moves, renames or changes to comments. 
 There are enough of the changes to comments and moves of the code however to warrent further investigation.
 
-There were some interesting results for JDiff
+% resons why these benchmarks where used
+% 
+% 
 
-
-There were a number of benchmarks we would have liked to have used but due to memory constraints we had to omit these from the benchmark suite.
-
-
-
- \begin{table}[H]
-    \small{
-    \begin{tabular}{l|lllll}
-    Benchmark        & Description   & Commits  & LOC   \\ \hline
-    Antlr4             &  \begin{minipage}[t]{0.5\textwidth}
-    A parser generator used to create programming grammers.
-
-github.com/antlr/antlr4 
-\end{minipage}        & 2867      & 40373 \\
-
-    Clojure             & \begin{minipage}[t]{0.5\textwidth}
-    A programming language that targets the JVM
-    
-github.com/clojure/clojure
-\end{minipage}        & 2602      & 37512   \\
-    gitblit         & \begin{minipage}[t]{0.5\textwidth}
-     Java implementation of Git.
-    
-github.com/gitblit/gitblit
-\end{minipage}       & 2334       & 72188 \\
-    Jacoco            & \begin{minipage}[t]{0.5\textwidth}
-    Library used to determine code coverage.
-    
-github.com/jacoco/jacoco
-\end{minipage}        & 1184     & 25357 \\
-    JGit             & \begin{minipage}[t]{0.5\textwidth}
-    Java implementation of Git developed by the Eclipse Foundation.
-    
-eclipse.org/jgit  
-\end{minipage}       & 3285      & 137993  \\
-    Lombok           & \begin{minipage}[t]{0.5\textwidth}
-    A library that used annotaions to extend Java. 
-    
-github.com/rzwitserloot/lombok 
-\end{minipage}        & 1624      & 39154  \\
-    Revori           & \begin{minipage}[t]{0.5\textwidth}
-    A revision based DBMS.
-    
-github.com/ReadyTalk/revori 
-\end{minipage}        & 349      & 18931  \\
-    \end{tabular}
-    }
-\end{table}  
-
-
+% There were a number of benchmarks we would have liked to have used but due 
+% to memory constraints we had to omit these from the benchmark suite.
+% 
+% 
+% 
+%  \begin{table}[H]
+%     \small{
+%     \begin{tabular}{l|lllll}
+%     Benchmark        & Description   & Commits  & LOC   \\ \hline
+%     Antlr4             &  \begin{minipage}[t]{0.5\textwidth}
+%     A parser generator used to create programming grammers.
+% 
+% github.com/antlr/antlr4
+% \end{minipage}        & 2867      & 40373 \\
+% 
+%     Clojure             & \begin{minipage}[t]{0.5\textwidth}
+%     A programming language that targets the JVM
+% github.com/clojure/clojure
+% \end{minipage}        & 2602      & 37512   \\
+%     gitblit         & \begin{minipage}[t]{0.5\textwidth}
+%      Java implementation of Git.
+% github.com/gitblit/gitblit
+% \end{minipage}       & 2334       & 72188 \\
+%     Jacoco            & \begin{minipage}[t]{0.5\textwidth}
+%     Library used to determine code coverage.
+% github.com/jacoco/jacoco
+% \end{minipage}        & 1184     & 25357 \\
+%     JGit             & \begin{minipage}[t]{0.5\textwidth}
+%     Java implementation of Git developed by the Eclipse Foundation.
+% eclipse.org/jgit
+% \end{minipage}       & 3285      & 137993  \\
+%     Lombok           & \begin{minipage}[t]{0.5\textwidth}
+%     A library that used annotaions to extend Java.
+% github.com/rzwitserloot/lombok
+% \end{minipage}        & 1624      & 39154  \\
+%     Revori           & \begin{minipage}[t]{0.5\textwidth}
+%     A revision based DBMS.
+% github.com/ReadyTalk/revori
+% \end{minipage}        & 349      & 18931  \\
+%     \end{tabular}
+%     }
+% \end{table}
+% 
 
 % 
 % 
@@ -250,6 +269,7 @@ github.com/ReadyTalk/revori
 % comment deletion /inserts and modifications
 %   the largest change
 
+There were some interesting results for JDiff
 
 % The data sets following are complete git repositories which have been 
 % examined to discover the proportion of changes to behaviour compared to 

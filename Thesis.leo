@@ -156,13 +156,7 @@ expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpa
 </v>
 <v t="paran.20140605091816.1995"><vh>@shadow thes.tex</vh></v>
 <v t="paran.20140801074838.2010"><vh>@shadow thesis-acknowledge.tex</vh></v>
-<v t="hasletpara.20131202100421.2130" a="EO"><vh>@shadow Chapters/thesis-introduction.tex</vh>
-<v t="paran.20140617082508.2020"><vh>&lt;&lt;the scope that the problem exists in&gt;&gt;</vh></v>
-<v t="paran.20140617082508.2021"><vh>&lt;&lt;the problem&gt;&gt;</vh></v>
-<v t="paran.20140805080729.2148"><vh>&lt;&lt;the importance of a good merge&gt;&gt;</vh></v>
-<v t="paran.20140617082508.2022"><vh>&lt;&lt;how to resolve&gt;&gt;</vh></v>
-<v t="paran.20140822060752.2188"><vh>&lt;&lt;outline&gt;&gt;</vh></v>
-</v>
+<v t="hasletpara.20131202100421.2130" a="E"><vh>@shadow Chapters/thesis-introduction.tex</vh></v>
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
 <v t="paran.20140515173914.6982" a="E"
 expanded="paran.20140528183434.1974,paran.20140530135904.1945,paran.20140529075353.1935,paran.20140528183434.2055,paran.20140530135904.1946,paran.20140528183434.2009,paran.20140528183434.2010,paran.20140528183434.2011,paran.20140530135904.1958,paran.20140528183434.2021,paran.20140604093616.2026,"><vh>@shadow Background.tex</vh></v>
@@ -202,9 +196,8 @@ expanded="paranhaslett.20130826181255.3057,"><vh>@shadow ./fmpp/ema/T_Structures
 <v t="paranhaslett.20130826181255.3070"><vh>@shadow ./fmpp/ema/T_Thesis.txt</vh></v>
 <v t="hasletpara.20131202100421.2139"><vh>@shadow ./fmpp/ema/T_Chapters.txt</vh></v>
 <v t="hasletpara.20131202100421.2146" a="E"><vh>Chapters</vh>
-<v t="hasletpara.20131202100421.2155" a="O"><vh>@shadow ./fmpp/ema/T_Intro.txt</vh>
-<v t="hasletpara.20131202100421.2130" a="EO"></v>
-</v>
+<v t="hasletpara.20131202100421.2155"
+expanded="hasletpara.20131202100421.2130,"><vh>@shadow ./fmpp/ema/T_Intro.txt</vh></v>
 <v t="hasletpara.20131202100421.2144" a="E"><vh>@shadow ./fmpp/ema/T_Testing.txt</vh></v>
 <v t="hasletpara.20131202100421.2151"><vh>@shadow ./fmpp/ema/T_Conclusion.txt</vh></v>
 </v>
@@ -247,34 +240,8 @@ This is a limitation which would not suit companies that have many developers wo
 There has to be a lot of communication and agreement about who is working on what.</t>
 <t tx="hasletpara.20131128093200.1990"></t>
 <t tx="hasletpara.20131129101631.1874"></t>
-<t tx="hasletpara.20131202100421.2130">@color
-@language latex
-
-\chapter{Introduction}\label{C:intro}
-
-&lt;&lt;the scope that the problem exists in&gt;&gt;
-
-&lt;&lt;the problem&gt;&gt;
-
-&lt;&lt;LCS&gt;&gt;
-
-&lt;&lt;the importance of a good merge&gt;&gt;
-
-&lt;&lt;how to resolve&gt;&gt;
-
-\section{Overview}
-&lt;&lt;outline&gt;&gt;</t>
 <t tx="hasletpara.20131202100421.2132">@path Chapters</t>
 <t tx="hasletpara.20131202100421.2146"></t>
-<t tx="hasletpara.20131202100421.2155">@color
-@language html
-Introduction
-========
-
-&lt;pre&gt;
-@others
-&lt;/pre&gt;
-</t>
 <t tx="hasletpara.20131202100421.2203"></t>
 <t tx="hasletpara.20140227093334.1830">Do the deletes make any change to the code?
 Do the inserts make any change to the code?</t>
@@ -391,42 +358,6 @@ put down the number of collaborators for a particular project</t>
 <t tx="paran.20140604132703.2092">Come to the conclusion it  </t>
 <t tx="paran.20140605091816.1990">@path ./fmpp/Tex/Thesis
 
-</t>
-<t tx="paran.20140617082508.2020">According to Bertino \cite{Bertino2012} \emph{Version control systems} provide a way of allowing multiple developers to collaborate. When multiple developers work on the same source code there is a risk that they have conflicting changes for the same portion of the source code.  One way of managing these conflicting changes is by ensuring only one person can edit a file at a time. This locking mechanism was recommended by Tichy \cite{Tichy1982} for the RCS version control system. Of course, the problem here is that one person can stop others from being able to edit the file. 
-
-An alternative approach is to allow multiple changes to a file and to automatically resolve most of them in a process called a \emph{merge}.  The merge process compares the changes made in one version with the changes made on the other version. If the merge process determines that changes can coexist, it creates a merged file that contains all the changes. The changes that cannot be automatically merged are known as \emph{merge conflicts}.  The merge conflicts need to be manually checked and edited to form a merged file with the correct changes.
-
-\begin{figure}[!t]
- \begin{center}
- \includegraphics[scale=1]{introRevisions}
- \end{center}
- \caption{A file that has two different revisions}
- \label{fig:introRevisions}
-\end{figure}
-
-
-</t>
-<t tx="paran.20140617082508.2021">Internally the merge process needs to determine what changes have happened to both of the revisions being compared. In Figure  ~\ref{fig:introRevisions} there are two revisions that are derived from a common ancestor. It is possible to determine what has been deleted, inserted or changed by comparing each of the revisions against the common ancestor.  This is often done as a linear comparison of the source code for each revision. This works very well provided there has been no change in the order or structure of the file. However, if there has been a change where a block of source code has been moved from one place to another a linear comparison instead determines that two changes have occurred.  This is equivalent to deleting a block of source code from the common ancestor and inserting that source code elsewhere. It is possible that this change is not important to other programmers as the program behaves in the same manner even when source code is in a different order.  An example of this is if a Java programmer changes the order of methods within a program.  The program will behave in the same way as changing the order of methods does not change any functionality, however the source code is now different. The swapping of the order of the method is still counted as being two different changes even though the program behaves in the same manner as it did before the change took place.
-
-Without any further analysis this change is recorded in the merged file even if the reordering was a personal preference for the programmer.  Although there has been no functional change the version control system will treat the relocation of blocks of source code exactly like a change in functionality.  Whenever a programmer attempts to update their code to incorporate any change in functionality, the change to the order of methods is also made to their code.  If a programmer is already familiar with the old structure of code and expects the code to remain relatively consistent the swapping of methods could be disconcerting.
-
-Another issue that non-functional changes raise is an increase in the number of \emph{merge conflicts}. This could occur when two views have had a small amount of refactoring.  Since in both views the behaviour of the program has not changed it is possible that the merge conflict occurs about something trivial. An example of this could be different formatting or ordering methods alphabetically. For an ordinary text merge these changes to the structure of the source code require manual intervention. These issues highlight the need to develop smarter ways to merge.</t>
-<t tx="paran.20140617082508.2022">This thesis introduces the concept of maintaining multiple separate views which can be ordered differently but have functionally equivalent source code.
-The purpose of these views is to reduce the number of changes introduced during a merge. 
-It also explores a way of allowing a version control system to detect when there is a change in the source code but not a functional change in a program.
-Examples of this are if items have been reordered, if comments have been inserted or there have been changes to the formatting. 
-We developed the Refactor Categories Tool for the purpose of identifying these changes. 
-We report on the design and implementation of this tool.
-The Refactor Categories Tool is then used in an experiment evaluating a range of real-world benchmarks.
-
-
-@
-We have used the Refactor Categories Tool we have created in an expiriment that iterates though all the revisions in the versi on source control for a handful of Java projects.
-The Refactor Categories Tool detects
-
-need to write about what we found here
-@c
- 
 </t>
 <t tx="paran.20140618094449.2025">Git is a repository which is used mostly for software development.
 
@@ -1707,14 +1638,6 @@ Git diff =0  Refactor Categories =3814</t>
 	
 ------------------------------------
 Git diff =0  Refactor Categories =648</t>
-<t tx="paran.20140805080729.2148">It is becoming more important to have smarter merges because of the scale of many software projects and the number of developers working on them.
-Large online repositories, like GitHub, contain many open source projects.
-It is possible for these projects to make source code available to many developers at a time.
-This means it is possible for two developers to work on the same project while having little personal contact.
-Care needs to be taken when their individual work is combined.
-Preferably most of the problems with merging their work should be automatically resolved however,
-there still could be instances where either or both developers will have to figure out how the code should interact.
-Having better automatic merges reduces the risk that time will be spent manually figuring out how different changes should be combined.</t>
 <t tx="paran.20140813185646.2169">&lt;&lt;Jasm raw results&gt;&gt;
 
 &lt;&lt;Jpp raw results&gt;&gt;
@@ -2963,18 +2886,6 @@ i
  
 ------------------------------------
 Git diff =0  Refactor Categories =465</t>
-<t tx="paran.20140822060752.2188">In Chapter 2 we go over the background of version control, LCS and refactoring as well as look at JDime, an exiting tool for merging refactored views.
-In Chapter 3 we discuss private views and what they could mean
-In Chapter 4 we examine the Refactor Categories tool which will alow us to evaluate if additional merge operations are possible
-@
-In this thesis we explore the idea of having private views that although functionally equivalent can be refactored differently.
-A version control system allows us to have 
-In this thesis we will examine the effects of non functional changes caused by light weight refactoring of code on version control systems.
-To do this we will examine version control systems and how they allow collaboration through merging.
-We will also examine refactoring and how it can change the code but retain the same behaviour.
-We will some tools that could help when merging refactored code when it is checked into an operating system. 
-We especially focus on JDime to see if I can help us to build a private view where external code changes are minimised.
-@c </t>
 <t tx="paran.20140822144342.2189"></t>
 <t tx="paran.20140822144342.2190">(uncached) paran.20140822060752.2188
 Diff...
