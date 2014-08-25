@@ -144,7 +144,7 @@ After running the Refactor Categories tool over our benchmark suite we obtained 
     Jasm             & 264  & 76   & 385  & 7   & 0   & 0   & 26         & 7        & 6   & 95   \\
     Jpp              & 43   & 9    & 50   & 0   & 0   & 0   & 6          & 1        & 2   & 11   \\
     AST Java         & 87   & 28   & 72   & 1   & 0   & 11  & 5          & 2        & 0   & 22   \\
-    \begin{minipage}[t]{0.15\textwidth}Java Object Diff\end{minipage} & 2645 & 1961 & 8862 & 5   & 9   & 183 & 277        & 14       & 39  & 1438 \\
+    \begin{minipage}[t]{0.15\textwidth}Java Object Diff\end{minipage} & 2645 & 1961 & 8862 & 5   & 9   & 187 & 270        & 52       & 25 & 881 \\
     DiffJ            & 3106 & 3164 & 5192 & 58  & 82  & 18  & 276        & 36       & 39  & 291  \\
     IRE              & 263  & 213  & 640  & 1   & 2   & 30  & 49         & 10       & 3   & 79   \\
     Syntax           & 1142 & 544  & 2216 & 6   & 7   & 12  & 204        & 14       & 81  & 451  \\
@@ -201,12 +201,58 @@ What this means is that some of the changes that an ordinary text diff recognise
  \begin{center}
  \includegraphics[scale=.8]{JavaDiff}
  \end{center}
- \caption{Type of operations for an ordinary text comparision on average for all the benchmarks}
+ \caption{Type of operations for a Java AST comparison on average for all the benchmarks}
  \label{fig:javaDifference}
 \end{figure}
 
-Most of the changes where still identified as modifications rather than moves, renames or changes to comments. 
-There are enough of the changes to comments and moves of the code however to warrent further investigation.
+Most of the changes were still identified as modifications, inserts and deletes rather than moves or renames.
+What this could mean is although there are some features where people have personalised thier view by using some lightweight refactoring this does not occur very often.
+Perhaps by reducing the risk of impacting others, and giving them a private view, we see much more of this occuring.    
+
+Another aspect we were interested in was the difference between Java based differences and changes non-Java items such as comments or white-space.
+Figure \ref{fig:changeType}shows the how many Java changes were detected as compared to comments and white-space.
+This shows that the predominate change in the source code was a change in functionality rather than a change to the documentation.
+It implies that in programming projects there tends to be many more lines of program than lines of comments.
+What this means for this thesis is that currently there are more changes to functionailty rather than to coding style and documentation.
+As there are still significant amount of changes to comments it is possible that being able to modify comments that will not be merged could be useful.  
+
+\begin{figure}[!t]
+ \begin{center}
+ \includegraphics[scale=.8]{changeTypePie}
+ \end{center}
+ \caption{The type of changes that most often occured over all the benchmarks}
+ \label{fig:changeType}
+\end{figure}
+
+Figure \ref{fig:commentsPie} more closely examines the type changes that have occured to comments in the source code.
+By far the main change to comments is modification.
+This is what you would expect for a programming project that is well established.
+Most of the changes to a project like this would be better classified as updates to the project rather than adding a lot of new functionality.
+When a program is updated like this adding new comments or removing old ones does not happen as often as modifying the existing comments.
+The modification of these comments is likely to be linked with a related code change.
+This would be an instance where a non-functional change would benefit others and needs to be updated in other views.
+
+
+\begin{figure}[!t]
+ \begin{center}
+ \includegraphics[scale=.8]{Comments}
+ \end{center}
+ \caption{Types of operations for comments on average over the benchmarks}
+ \label{fig:commentsPie}
+\end{figure}
+
+A significant number of comments have been inserted and deleted.
+Examining these items a little closer revealed that some included the words "TODO" or "FIXME".
+Although the addition of these comments are likely to be associated with a related code change they may only be relevant to people working on that section of the code.
+The same is true for blocks of commented out code.
+In this situation having a private view could be useful.  
+
+% Although the Refactor Categories tool tested to see if comments moved none 
+% were detected across the benchmarks.
+
+  
+
+
 
 % resons why these benchmarks where used
 % 
@@ -268,8 +314,6 @@ There are enough of the changes to comments and moves of the code however to war
 % Renames
 % comment deletion /inserts and modifications
 %   the largest change
-
-There were some interesting results for JDiff
 
 % The data sets following are complete git repositories which have been 
 % examined to discover the proportion of changes to behaviour compared to 
