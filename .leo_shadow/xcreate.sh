@@ -1,5 +1,5 @@
 #@+leo-ver=4-thin
-#@+node:hasletpara.20130905134207.1647:@shadow ./create.sh
+#@+node:paran.20140826080818.2353:@shadow ./create.sh
 #@@language shell
 #!/bin/bash
 cd ~/Documents/Study/Thesis
@@ -18,5 +18,5 @@ ln ../../../../Bibtex/Thesis.bib
 
 
 
-#@-node:hasletpara.20130905134207.1647:@shadow ./create.sh
+#@-node:paran.20140826080818.2353:@shadow ./create.sh
 #@-leo

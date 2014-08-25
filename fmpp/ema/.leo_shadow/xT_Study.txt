@@ -1,5 +1,5 @@
 #@+leo-ver=4-thin
-#@+node:paranhaslett.20130826181255.3069:@shadow ./fmpp/ema/T_Study.txt
+#@+node:paran.20140826080818.2366:@shadow ./fmpp/ema/T_Study.txt
 #@@color
 #@@language md
 Study
@@ -12,5 +12,5 @@ Study
 * [Structures](ema:T Structures)
 
 * [To Do](ema:T To Do)
-#@-node:paranhaslett.20130826181255.3069:@shadow ./fmpp/ema/T_Study.txt
+#@-node:paran.20140826080818.2366:@shadow ./fmpp/ema/T_Study.txt
 #@-leo

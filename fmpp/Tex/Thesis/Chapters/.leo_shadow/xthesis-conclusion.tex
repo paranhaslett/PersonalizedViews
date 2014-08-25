@@ -5,13 +5,13 @@
 
 \chapter{Conclusions and Future Work}\label{C:con}
 
-In this thesis we presented the concept of maitaining private views in version control system. 
-This would allow programers to implement lightweight refactoring to their tastes while minimising the impact on others.  
+In this thesis we presented the concept of maintaining private views in version control system. 
+This would allow programmers to implement lightweight refactoring to their tastes while minimising the impact on others.  
 To this end we created the Refactor Categories Tool as a precursor to creating private views. 
-This tool anlayses the difference between two revisions such as ecountered during a commit.  
+This tool analyses the difference between two revisions such as encountered during a commit.  
 The tool parses the sources for both commits into a AST. 
 We then use the AST to identify additional features that have been changed. 
-The features we have focused on are ones that do not change any fuctionality such as methods being moved or comments being changed. 
+The features we have focused on are ones that do not change any functionality such as methods being moved or comments being changed. 
 The results show some changes exist that do not change the functionality of a program.
 At the moment however the Refactor Categories Tool does not detect many of these.  
 
@@ -35,7 +35,7 @@ The annotation could also be used to specify how important the comment is. If th
 
 %@<<repurpose>>
 %@+node:paran.20140816070821.2190:<<repurpose>>
-The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  This would bring us a step closer to being able to realise the vision of having better separated private views.  Other tools could also be investigated such as using diffJ as the difference tool used by git.
+The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  This would bring us a step closer to being able to realise the vision of having better separated private views.  Other tools could also be investigated such as using \emph{diffJ} as the difference tool used by git.
 %@nonl
 %@-node:paran.20140816070821.2190:<<repurpose>>
 %@nl

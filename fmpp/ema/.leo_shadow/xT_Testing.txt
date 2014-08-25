@@ -1,5 +1,5 @@
 #@+leo-ver=4-thin
-#@+node:hasletpara.20131202100421.2144:@shadow ./fmpp/ema/T_Testing.txt
+#@+node:paran.20140826080818.2409:@shadow ./fmpp/ema/T_Testing.txt
 #@@color
 #@@language html
 Testing
@@ -7,7 +7,7 @@ Testing
 
 <pre>
 #@+others
-#@+node:hasletpara.20131202100421.2134:@shadow testing.tex
+#@+node:paran.20140826080818.2410:@shadow testing.tex
 #@@color
 #@@language latex
 
@@ -38,8 +38,8 @@ Changing private method names, no change in target
 Changing default method names, no change in target if the whole package is taken into account
 Changing protected variable names, target needs to change as the inherited contract changes
 Changing public variable names, target needs to change as contract is also changing 
-#@-node:hasletpara.20131202100421.2134:@shadow testing.tex
+#@-node:paran.20140826080818.2410:@shadow testing.tex
 #@-others
 </pre>
-#@-node:hasletpara.20131202100421.2144:@shadow ./fmpp/ema/T_Testing.txt
+#@-node:paran.20140826080818.2409:@shadow ./fmpp/ema/T_Testing.txt
 #@-leo

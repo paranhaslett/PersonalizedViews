@@ -1,5 +1,5 @@
 <!--@+leo-ver=4-thin-->
-<!--@+node:hasletpara.20130905134207.1629:@shadow ./fmpp/public_html/generic.html-->
+<!--@+node:paran.20140826080818.2357:@shadow ./fmpp/public_html/generic.html-->
 <!--@@language xml-->
 <!--@@tabwidth -2-->
 <@pp.dropOutputFile />
@@ -7,7 +7,7 @@
 <#list tabbedPages as mainPage>
 <@pp.changeOutputFile name=mainPage.href />
 <!--@+others-->
-<!--@+node:hasletpara.20130905134207.1633:html-->
+<!--@+node:paran.20140826080818.2358:html-->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
 <html>
   <head>
@@ -19,11 +19,11 @@
   </head>
   <div class="topNav">
       <!--@      <<topNav>>-->
-      <!--@+node:hasletpara.20130905134207.1630:<<topNav>>-->
+      <!--@+node:paran.20140826080818.2359:<<topNav>>-->
       <ul>
         <#list tabbedPages as tab>
           <!--@    @+others-->
-          <!--@+node:hasletpara.20130905134207.1631:list item-->
+          <!--@+node:paran.20140826080818.2360:list item-->
           <li class="navMenu">
           <#if tab.href != mainPage.href>
             <a href="${tab.href}">${tab.name}</a>
@@ -31,31 +31,31 @@
             ${tab.name}
           </#if>
           </li>
-          <!--@-node:hasletpara.20130905134207.1631:list item-->
+          <!--@-node:paran.20140826080818.2360:list item-->
           <!--@-others-->
         </#list>
       </ul>
       <!--@nonl-->
-      <!--@-node:hasletpara.20130905134207.1630:<<topNav>>-->
+      <!--@-node:paran.20140826080818.2359:<<topNav>>-->
       <!--@nl-->
   </div>
   <div class="main">
      <!--@     <<Body>>-->
-     <!--@+node:hasletpara.20130905134207.1632:<<Body>>-->
+     <!--@+node:paran.20140826080818.2361:<<Body>>-->
 
      <#if mainPage.name == "Home">
        <!--@  <<Home>>-->
-       <!--@+node:hasletpara.20130905134207.1636:<<Home>>-->
+       <!--@+node:paran.20140826080818.2362:<<Home>>-->
        <h2>Paran Haslett</h2>
 
        <iframe src="http://www.mendeley.com/profiles/paran-haslett/widget/3095/2756342060/154ad93d49cfa4215250060227cfe80df365e026/" frameborder="0" allowTransparency="true" style="width:260px;height:550px;"></iframe><p style='width:260px;'><a href='http://www.mendeley.com/profiles/paran-haslett/' title='Paran Haslett on Mendeley'>Paran Haslett</a> is a memberof <a href='http://www.mendeley.com/disciplines/computer-and-information-science/' title='Computer and Information Science on Mendeley'>Computer and Information Science</a>on <a href='http://www.mendeley.com/' title='Mendeley'>Mendeley</a>.</p>
        <!--@nonl-->
-       <!--@-node:hasletpara.20130905134207.1636:<<Home>>-->
+       <!--@-node:paran.20140826080818.2362:<<Home>>-->
        <!--@nl-->
      </#if>
      <#if mainPage.name == "Reading Topics">
        <!--@  <<Reading Topics>>-->
-       <!--@+node:hasletpara.20130905134207.1637:<<Reading Topics>>-->
+       <!--@+node:paran.20140826080818.2363:<<Reading Topics>>-->
        <h2>Reading Topics</h2>
        <ul>
          <li>Code Source Mining</li>
@@ -68,27 +68,27 @@
          <li>View Mapping Language</li>
        <ul>
        <!--@nonl-->
-       <!--@-node:hasletpara.20130905134207.1637:<<Reading Topics>>-->
+       <!--@-node:paran.20140826080818.2363:<<Reading Topics>>-->
        <!--@nl-->
      </#if>
      <#if mainPage.name == "Ideas">
        <!--@  <<Ideas>>-->
-       <!--@+node:hasletpara.20130905134207.1638:<<Ideas>>-->
+       <!--@+node:paran.20140826080818.2364:<<Ideas>>-->
        <h2>Ideas</h2>
        <!--@nonl-->
-       <!--@-node:hasletpara.20130905134207.1638:<<Ideas>>-->
+       <!--@-node:paran.20140826080818.2364:<<Ideas>>-->
        <!--@nl-->
      </#if>
 
-     <!--@-node:hasletpara.20130905134207.1632:<<Body>>-->
+     <!--@-node:paran.20140826080818.2361:<<Body>>-->
      <!--@nl-->
   </div>
 </html>
 <!--@nonl-->
-<!--@-node:hasletpara.20130905134207.1633:html-->
+<!--@-node:paran.20140826080818.2358:html-->
 <!--@-others-->
 </#list>
 
 
-<!--@-node:hasletpara.20130905134207.1629:@shadow ./fmpp/public_html/generic.html-->
+<!--@-node:paran.20140826080818.2357:@shadow ./fmpp/public_html/generic.html-->
 <!--@-leo-->

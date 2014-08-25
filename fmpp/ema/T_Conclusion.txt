@@ -24,7 +24,7 @@ Comments could be associated with the AST Node they relate to.  With this change
 
 The annotation could also be used to specify how important the comment is. If the comment is marked as unimportant it would indicate that it still should not be considered a change even if it differs between revisions.
 
-The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  This would bring us a step closer to being able to realise the vision of having better separated private views.  Other tools could also be investigated such as using diffJ as the difference tool used by git.
+The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  This would bring us a step closer to being able to realise the vision of having better separated private views.  Other tools could also be investigated such as using \emph{diffJ} as the difference tool used by git.
 # 
 # future work: by keeping track of equivalences there is no need to retest 
 # using the AST

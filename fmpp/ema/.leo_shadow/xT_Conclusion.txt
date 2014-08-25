@@ -1,5 +1,5 @@
 #@+leo-ver=4-thin
-#@+node:hasletpara.20131202100421.2151:@shadow ./fmpp/ema/T_Conclusion.txt
+#@+node:paran.20140826080818.2411:@shadow ./fmpp/ema/T_Conclusion.txt
 #@@color
 #@@language html
 Conclusion
@@ -7,7 +7,7 @@ Conclusion
 
 <pre>
 #@+others
-#@+node:hasletpara.20131202100421.2131:@shadow Chapters/thesis-conclusion.tex
+#@+node:paran.20140826080818.2412:@shadow Chapters/thesis-conclusion.tex
 #@@color
 #@@language latex
 
@@ -26,26 +26,26 @@ At the moment however the Refactor Categories Tool does not detect many of these
 The following changes to the Refactor Categories Tool may improve the result or make the concept of private views a reality.
 
 #@<<performance changes>>
-#@+node:paran.20140816070821.2186:<<performance changes>>
+#@+node:paran.20140826080818.2413:<<performance changes>>
 Performance of Refactor Categories Tool could be further enhanced by only parsing nodes that contain the text change.  This however would require major changes to the parser or rewriting it. There would also be the complexity of figuring out how to only partially parse a source code. The benefits of rewriting the parser would save memory in addition to speeding up the parsing of Java code into AST nodes.
-#@-node:paran.20140816070821.2186:<<performance changes>>
+#@-node:paran.20140826080818.2413:<<performance changes>>
 #@nl
 
 #@<<Comments>>
-#@+node:paran.20140816070821.2189:<<Comments>>
+#@+node:paran.20140826080818.2414:<<Comments>>
 
 Comments could be associated with the AST Node they relate to.  With this change would be possible to tell if changing a comment should be reflected in other views when there is a source code change. This change is difficult as it is had to tell which block of code the comment refers to.  One way this could be done would be to associate single-line comments at the end of the line with the AST Node that appears directly before them and other comments with the AST node that appears directly after them.  This however is only a rough approximation so it may be helpful to also be able to specify exceptions to these rules by using annotations that tie the comment to a block of code.
 
 The annotation could also be used to specify how important the comment is. If the comment is marked as unimportant it would indicate that it still should not be considered a change even if it differs between revisions.
 #@nonl
-#@-node:paran.20140816070821.2189:<<Comments>>
+#@-node:paran.20140826080818.2414:<<Comments>>
 #@nl
 
 #@<<repurpose>>
-#@+node:paran.20140816070821.2190:<<repurpose>>
-The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  This would bring us a step closer to being able to realise the vision of having better separated private views.  Other tools could also be investigated such as using diffJ as the difference tool used by git.
+#@+node:paran.20140826080818.2415:<<repurpose>>
+The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  This would bring us a step closer to being able to realise the vision of having better separated private views.  Other tools could also be investigated such as using \emph{diffJ} as the difference tool used by git.
 #@nonl
-#@-node:paran.20140816070821.2190:<<repurpose>>
+#@-node:paran.20140826080818.2415:<<repurpose>>
 #@nl
 #@+at
 # 
@@ -61,8 +61,8 @@ The Refactor Categories tool could be re-purposed to allow it to be used as a me
 #@-at
 #@@c
 #@nonl
-#@-node:hasletpara.20131202100421.2131:@shadow Chapters/thesis-conclusion.tex
+#@-node:paran.20140826080818.2412:@shadow Chapters/thesis-conclusion.tex
 #@-others
 </pre>
-#@-node:hasletpara.20131202100421.2151:@shadow ./fmpp/ema/T_Conclusion.txt
+#@-node:paran.20140826080818.2411:@shadow ./fmpp/ema/T_Conclusion.txt
 #@-leo
