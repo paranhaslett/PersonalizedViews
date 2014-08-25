@@ -3,44 +3,6 @@
 %@@color
 %@@language latex
 
-\chapter{Future Work}
-
-There are a number of things that warrant further examination 
-
-%@<<performance changes>>
-%@+node:paran.20140816070821.2186:<<performance changes>>
-Performance of Refactor Categories Tool could be further enhanced by only parsing nodes that contain the text change.  This however would require major changes to the parser or rewriting it. There would also be the complexity of figuring out how to only partially parse a source code. The benefits of rewriting the parser would save memory in addition to speeding up the parsing of Java code into AST nodes.
-%@nonl
-%@-node:paran.20140816070821.2186:<<performance changes>>
-%@nl
-
-%@<<Comments>>
-%@+node:paran.20140816070821.2189:<<Comments>>
-
-Comments could be associated with the AST Node they relate to.  With this change would be possible to tell if changing a comment should be reflected in other views when there is a source code change. This change is difficult as it is had to tell which block of code the comment refers to.  One way this could be done would be to associate single-line comments at the end of the line with the AST Node that appears directly before them and other comments with the AST node that appears directly after them.  This however is only a rough approximation so it may be helpful to also be able to specify exceptions to these rules by using annotations that tie the comment to a block of code.
-
-The annotation could also be used to specify how important the comment is. If the comment is marked as unimportant it would indicate that it still should not be considered a change even if it differs between revisions.
-%@nonl
-%@-node:paran.20140816070821.2189:<<Comments>>
-%@nl
-
-%@<<repurpose>>
-%@+node:paran.20140816070821.2190:<<repurpose>>
-The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  This would bring us a step closer to being able to realise the vision of having better separated private views.  Other tools could also be investigated such as using diffJ as the difference tool used by git.
-%@nonl
-%@-node:paran.20140816070821.2190:<<repurpose>>
-%@nl
-%@+at
-% 
-% future work: by keeping track of equivalences there is no need to retest 
-% using the AST
-% 
-% To reuse the refactor categories tool or something similar to create 
-% separate views as envisaged
-% 
-% 
-%@-at
-%@@c
 
 
 

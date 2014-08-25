@@ -154,7 +154,7 @@ expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpa
 <v t="hasletpara.20140227093334.1830"><vh>To detect code moves</vh></v>
 <v t="paran.20140423092515.1913"><vh>Datsets</vh></v>
 </v>
-<v t="paran.20140605091816.1995"><vh>@shadow thes.tex</vh></v>
+<v t="paran.20140605091816.1995" a="E"><vh>@shadow thes.tex</vh></v>
 <v t="paran.20140801074838.2010"><vh>@shadow thesis-acknowledge.tex</vh></v>
 <v t="hasletpara.20131202100421.2130" a="E"><vh>@shadow Chapters/thesis-introduction.tex</vh></v>
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
@@ -166,9 +166,9 @@ expanded="paran.20140731220748.2034,paran.20140731220748.2038,paran.201408040746
 expanded="paran.20140605081907.1971,paran.20140816070821.2183,paran.20140606104644.2011,paran.20140805175513.2166,paran.20140605081907.1972,"><vh>@shadow theTool.tex</vh></v>
 <v t="paran.20140605081907.1988" a="E"
 expanded="paran.20140813185646.2165,paran.20140814214911.2176,"><vh>@shadow expirimentalResults.tex</vh></v>
-<v t="paran.20140605081907.1978" a="E"><vh>@shadow futureWork.tex</vh></v>
+<v t="paran.20140605081907.1978"><vh>@shadow futureWork.tex</vh></v>
 </v>
-<v t="hasletpara.20131202100421.2131"><vh>@shadow Chapters/thesis-conclusion.tex</vh></v>
+<v t="hasletpara.20131202100421.2131" a="E"><vh>@shadow Chapters/thesis-conclusion.tex</vh></v>
 </v>
 </v>
 </v>
@@ -199,7 +199,8 @@ expanded="paranhaslett.20130826181255.3057,"><vh>@shadow ./fmpp/ema/T_Structures
 <v t="hasletpara.20131202100421.2155"
 expanded="hasletpara.20131202100421.2130,"><vh>@shadow ./fmpp/ema/T_Intro.txt</vh></v>
 <v t="hasletpara.20131202100421.2144" a="E"><vh>@shadow ./fmpp/ema/T_Testing.txt</vh></v>
-<v t="hasletpara.20131202100421.2151"><vh>@shadow ./fmpp/ema/T_Conclusion.txt</vh></v>
+<v t="hasletpara.20131202100421.2151"
+expanded="hasletpara.20131202100421.2131,"><vh>@shadow ./fmpp/ema/T_Conclusion.txt</vh></v>
 </v>
 </v>
 </v>
@@ -217,6 +218,30 @@ expanded="paranhaslett.20130826181255.3120,paranhaslett.20130826181255.3139,"><v
 <v t="paran.20140822144342.2193"><vh>Recovered node "&lt;&lt;how to resolve&gt;&gt; from T_Intro.txt</vh>
 <v t="paran.20140822144342.2194"><vh>old:&lt;&lt;how to resolve&gt;&gt;</vh></v>
 <v t="paran.20140822144342.2195"><vh>new:&lt;&lt;how to resolve&gt;&gt;</vh></v>
+</v>
+</v>
+<v t="paran.20140825191445.3380" a="E"><vh>Recovered Nodes</vh>
+<v t="paran.20140825191445.3381"><vh>Recovered node "&lt;&lt;how to resolve&gt;&gt; from T_Intro.txt</vh>
+<v t="paran.20140825191445.3382"><vh>old:&lt;&lt;how to resolve&gt;&gt;</vh></v>
+<v t="paran.20140825191445.3383"><vh>new:&lt;&lt;how to resolve&gt;&gt;</vh></v>
+</v>
+<v t="paran.20140825191445.3384"><vh>Recovered node "&lt;&lt;outline&gt;&gt; from T_Intro.txt</vh>
+<v t="paran.20140825191445.3385"><vh>old:&lt;&lt;outline&gt;&gt;</vh></v>
+<v t="paran.20140825191445.3386"><vh>new:&lt;&lt;outline&gt;&gt;</vh></v>
+</v>
+<v t="paran.20140825191445.3387"><vh>Recovered node "&lt;&lt;repurpose&gt;&gt; from T_Conclusion.txt</vh>
+<v t="paran.20140825191445.3388"><vh>old:&lt;&lt;repurpose&gt;&gt;</vh></v>
+<v t="paran.20140825191445.3389"><vh>new:&lt;&lt;repurpose&gt;&gt;</vh></v>
+</v>
+<v t="paran.20140825191445.3390"><vh>Recovered node "@shadow Chapters/thesis-conclusion.tex from T_Conclusion.txt</vh>
+<v t="paran.20140825191445.3391"><vh>old:@shadow Chapters/thesis-conclusion.tex</vh></v>
+<v t="paran.20140825191445.3392"><vh>new:@shadow Chapters/thesis-conclusion.tex</vh></v>
+</v>
+</v>
+<v t="paran.20140825191445.4007" a="E"><vh>Recovered Nodes</vh>
+<v t="paran.20140825191445.4008"><vh>Recovered node "@shadow Chapters/thesis-conclusion.tex from xT_Conclusion.txt</vh>
+<v t="paran.20140825191445.4009"><vh>old:@shadow Chapters/thesis-conclusion.tex</vh></v>
+<v t="paran.20140825191445.4010"><vh>new:@shadow Chapters/thesis-conclusion.tex</vh></v>
 </v>
 </v>
 </vnodes>
@@ -2972,6 +2997,334 @@ need to write about what we found here
 @c
  
 </t>
+<t tx="paran.20140825191445.3380"></t>
+<t tx="paran.20140825191445.3381">(uncached) paran.20140617082508.2022
+Diff...
+  This thesis introduces the concept of maintaining multiple separate views which can be ordered differently but have functionally equivalent source code.
+  The purpose of these views is to reduce the number of changes introduced during a merge. 
+  It also explores a way of allowing a version control system to detect when there is a change in the source code but not a functional change in a program.
+  Examples of this are if items have been reordered, if comments have been inserted or there have been changes to the formatting. 
+  We developed the Refactor Categories Tool for the purpose of identifying these changes. 
+  We report on the design and implementation of this tool.
+  The Refactor Categories Tool is then used in an experiment evaluating a range of real-world benchmarks.
+  
+  
+  @
+- We have used the Refactor Categories Tool we have created in an expiriment that iterates though all the revisions in the versi on source control for a handful of Java projects.
+?                                                                    ^                                                          -
++ We have used the Refactor Categories Tool we have created in an experiment that iterates though all the revisions in the version source control for a handful of Java projects.
+?                                                                    ^
+  The Refactor Categories Tool detects
+  
+  need to write about what we found here
+  @c
+   
+</t>
+<t tx="paran.20140825191445.3382">This thesis introduces the concept of maintaining multiple separate views which can be ordered differently but have functionally equivalent source code.
+The purpose of these views is to reduce the number of changes introduced during a merge. 
+It also explores a way of allowing a version control system to detect when there is a change in the source code but not a functional change in a program.
+Examples of this are if items have been reordered, if comments have been inserted or there have been changes to the formatting. 
+We developed the Refactor Categories Tool for the purpose of identifying these changes. 
+We report on the design and implementation of this tool.
+The Refactor Categories Tool is then used in an experiment evaluating a range of real-world benchmarks.
+
+
+@
+We have used the Refactor Categories Tool we have created in an experiment that iterates though all the revisions in the version source control for a handful of Java projects.
+The Refactor Categories Tool detects
+
+need to write about what we found here
+@c
+ 
+</t>
+<t tx="paran.20140825191445.3383">This thesis introduces the concept of maintaining multiple separate views which can be ordered differently but have functionally equivalent source code.
+The purpose of these views is to reduce the number of changes introduced during a merge. 
+It also explores a way of allowing a version control system to detect when there is a change in the source code but not a functional change in a program.
+Examples of this are if items have been reordered, if comments have been inserted or there have been changes to the formatting. 
+We developed the Refactor Categories Tool for the purpose of identifying these changes. 
+We report on the design and implementation of this tool.
+The Refactor Categories Tool is then used in an experiment evaluating a range of real-world benchmarks.
+
+
+@
+We have used the Refactor Categories Tool we have created in an expiriment that iterates though all the revisions in the versi on source control for a handful of Java projects.
+The Refactor Categories Tool detects
+
+need to write about what we found here
+@c
+ 
+</t>
+<t tx="paran.20140825191445.3384">(uncached) paran.20140822060752.2188
+Diff...
+- In Chapter 2 we go over the background of version control, the longest common subsquence problem and refactoring as well as look at JDime, an existing tool for merging refactored views.
++ In Chapter 2 we go over the background of version control, the longest common subsequence problem and refactoring as well as look at JDime, an existing tool for merging refactored views.
+?                                                                                   +
+  In Chapter 3 we discuss private views and what they could mean
+  In Chapter 4 we examine the Refactor Categories Tool, a precursor to developing private view. This will allow us to evaluate if additional merge operations are possible
+  In Chapter 5 we evaluate the results produced from the Refactor Categories Tool and determine what this could mean for our concept of private views.
+  In Chapter 6 we will conclude with some future work to make the concept of private view possible. 
+  
+  @
+  In this thesis we explore the idea of having private views that although functionally equivalent can be refactored differently.
+  A version control system allows us to have
+  In this thesis we will examine the effects of non functional changes caused by light weight refactoring of code on version control systems.
+  To do this we will examine version control systems and how they allow collaboration through merging.
+  We will also examine refactoring and how it can change the code but retain the same behaviour.
+  We will some tools that could help when merging refactored code when it is checked into an operating system.
+  We especially focus on JDime to see if I can help us to build a private view where external code changes are minimised.
+  @c </t>
+<t tx="paran.20140825191445.3385">In Chapter 2 we go over the background of version control, the longest common subsequence problem and refactoring as well as look at JDime, an existing tool for merging refactored views.
+In Chapter 3 we discuss private views and what they could mean
+In Chapter 4 we examine the Refactor Categories Tool, a precursor to developing private view. This will allow us to evaluate if additional merge operations are possible
+In Chapter 5 we evaluate the results produced from the Refactor Categories Tool and determine what this could mean for our concept of private views.
+In Chapter 6 we will conclude with some future work to make the concept of private view possible. 
+
+@
+In this thesis we explore the idea of having private views that although functionally equivalent can be refactored differently.
+A version control system allows us to have
+In this thesis we will examine the effects of non functional changes caused by light weight refactoring of code on version control systems.
+To do this we will examine version control systems and how they allow collaboration through merging.
+We will also examine refactoring and how it can change the code but retain the same behaviour.
+We will some tools that could help when merging refactored code when it is checked into an operating system.
+We especially focus on JDime to see if I can help us to build a private view where external code changes are minimised.
+@c </t>
+<t tx="paran.20140825191445.3386">In Chapter 2 we go over the background of version control, the longest common subsquence problem and refactoring as well as look at JDime, an existing tool for merging refactored views.
+In Chapter 3 we discuss private views and what they could mean
+In Chapter 4 we examine the Refactor Categories Tool, a precursor to developing private view. This will allow us to evaluate if additional merge operations are possible
+In Chapter 5 we evaluate the results produced from the Refactor Categories Tool and determine what this could mean for our concept of private views.
+In Chapter 6 we will conclude with some future work to make the concept of private view possible. 
+
+@
+In this thesis we explore the idea of having private views that although functionally equivalent can be refactored differently.
+A version control system allows us to have
+In this thesis we will examine the effects of non functional changes caused by light weight refactoring of code on version control systems.
+To do this we will examine version control systems and how they allow collaboration through merging.
+We will also examine refactoring and how it can change the code but retain the same behaviour.
+We will some tools that could help when merging refactored code when it is checked into an operating system.
+We especially focus on JDime to see if I can help us to build a private view where external code changes are minimised.
+@c </t>
+<t tx="paran.20140825191445.3387">(uncached) paran.20140816070821.2190
+Diff...
+- The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  This would bring us a step closer to being able to realise the vision of having better separated private views.  Other tools could also be investigated such as using diffJ as the difference tool used by git.?                                                                                                                                                                                                                                                                                                                                   ^
++ The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  This would bring us a step closer to being able to realise the vision of having better separated private views.  Other tools could also be investigated such as using DiffJ as the difference tool used by git.?                                                                                                                                                                                                                                                                                                                                   ^
+</t>
+<t tx="paran.20140825191445.3388">The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  This would bring us a step closer to being able to realise the vision of having better separated private views.  Other tools could also be investigated such as using DiffJ as the difference tool used by git.</t>
+<t tx="paran.20140825191445.3389">The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  This would bring us a step closer to being able to realise the vision of having better separated private views.  Other tools could also be investigated such as using diffJ as the difference tool used by git.</t>
+<t tx="paran.20140825191445.3390">(uncached) hasletpara.20131202100421.2131
+Diff...
+  @color
+  @language latex
+  
+  \chapter{Conclusions and Future Work}\label{C:con}
+  
+- In this thesis we presented the concept of maitaining private views in version control system. 
++ In this thesis we presented the concept of maintaining private views in version control system. 
+?                                               +
+- This would allow programers to implement lightweight refactoring to their tastes while minimising the impact on others.  
++ This would allow programmers to implement lightweight refactoring to their tastes while minimising the impact on others.  
+?                        +
+  To this end we created the Refactor Categories Tool as a precursor to creating private views. 
+- This tool anlayses the difference between two revisions such as ecountered during a commit.  
+?              -
++ This tool analyses the difference between two revisions such as encountered during a commit.  
+?             +                                                    +
+  The tool parses the sources for both commits into a AST. 
+  We then use the AST to identify additional features that have been changed. 
+- The features we have focused on are ones that do not change any fuctionality such as methods being moved or comments being changed. 
++ The features we have focused on are ones that do not change any functionality such as methods being moved or comments being changed. 
+?                                                                   +
+  The results show some changes exist that do not change the functionality of a program.
+  At the moment however the Refactor Categories Tool does not detect many of these.  
+  
+  The following changes to the Refactor Categories Tool may improve the result or make the concept of private views a reality.
+  
+  &lt;&lt;performance changes&gt;&gt;
+  
+  &lt;&lt;Comments&gt;&gt;
+  
+  &lt;&lt;repurpose&gt;&gt;
+  @
+  
+  future work: by keeping track of equivalences there is no need to retest using the AST
+  
+  To reuse the refactor categories tool or something similar to create separate views as envisaged
+  
+  to use a simplified parser
+  
+  
+  @c</t>
+<t tx="paran.20140825191445.3391">@color
+@language latex
+
+\chapter{Conclusions and Future Work}\label{C:con}
+
+In this thesis we presented the concept of maintaining private views in version control system. 
+This would allow programmers to implement lightweight refactoring to their tastes while minimising the impact on others.  
+To this end we created the Refactor Categories Tool as a precursor to creating private views. 
+This tool analyses the difference between two revisions such as encountered during a commit.  
+The tool parses the sources for both commits into a AST. 
+We then use the AST to identify additional features that have been changed. 
+The features we have focused on are ones that do not change any functionality such as methods being moved or comments being changed. 
+The results show some changes exist that do not change the functionality of a program.
+At the moment however the Refactor Categories Tool does not detect many of these.  
+
+The following changes to the Refactor Categories Tool may improve the result or make the concept of private views a reality.
+
+&lt;&lt;performance changes&gt;&gt;
+
+&lt;&lt;Comments&gt;&gt;
+
+&lt;&lt;repurpose&gt;&gt;
+@
+
+future work: by keeping track of equivalences there is no need to retest using the AST
+
+To reuse the refactor categories tool or something similar to create separate views as envisaged
+
+to use a simplified parser
+
+
+@c</t>
+<t tx="paran.20140825191445.3392">@color
+@language latex
+
+\chapter{Conclusions and Future Work}\label{C:con}
+
+In this thesis we presented the concept of maitaining private views in version control system. 
+This would allow programers to implement lightweight refactoring to their tastes while minimising the impact on others.  
+To this end we created the Refactor Categories Tool as a precursor to creating private views. 
+This tool anlayses the difference between two revisions such as ecountered during a commit.  
+The tool parses the sources for both commits into a AST. 
+We then use the AST to identify additional features that have been changed. 
+The features we have focused on are ones that do not change any fuctionality such as methods being moved or comments being changed. 
+The results show some changes exist that do not change the functionality of a program.
+At the moment however the Refactor Categories Tool does not detect many of these.  
+
+The following changes to the Refactor Categories Tool may improve the result or make the concept of private views a reality.
+
+&lt;&lt;performance changes&gt;&gt;
+
+&lt;&lt;Comments&gt;&gt;
+
+&lt;&lt;repurpose&gt;&gt;
+@
+
+future work: by keeping track of equivalences there is no need to retest using the AST
+
+To reuse the refactor categories tool or something similar to create separate views as envisaged
+
+to use a simplified parser
+
+
+@c</t>
+<t tx="paran.20140825191445.4007"></t>
+<t tx="paran.20140825191445.4008">(cached) hasletpara.20131202100421.2131
+Diff...
+  @color
+  @language latex
+  
+  \chapter{Conclusions and Future Work}\label{C:con}
+  
+- In this thesis we presented the concept of maitaining private views in version control system. 
++ In this thesis we presented the concept of maintaining private views in version control system. 
+?                                               +
+- This would allow programers to implement lightweight refactoring to their tastes while minimising the impact on others.  
++ This would allow programmers to implement lightweight refactoring to their tastes while minimising the impact on others.  
+?                        +
+  To this end we created the Refactor Categories Tool as a precursor to creating private views. 
+- This tool anlayses the difference between two revisions such as ecountered during a commit.  
+?              -
++ This tool analyses the difference between two revisions such as encountered during a commit.  
+?             +                                                    +
+  The tool parses the sources for both commits into a AST. 
+  We then use the AST to identify additional features that have been changed. 
+- The features we have focused on are ones that do not change any fuctionality such as methods being moved or comments being changed. 
++ The features we have focused on are ones that do not change any functionality such as methods being moved or comments being changed. 
+?                                                                   +
+  The results show some changes exist that do not change the functionality of a program.
+  At the moment however the Refactor Categories Tool does not detect many of these.  
+  
+  The following changes to the Refactor Categories Tool may improve the result or make the concept of private views a reality.
+  
+  &lt;&lt;performance changes&gt;&gt;
+  
+  &lt;&lt;Comments&gt;&gt;
+  
+  &lt;&lt;repurpose&gt;&gt;
+  @
+  
+  future work: by keeping track of equivalences there is no need to retest using the AST
+  
+  To reuse the refactor categories tool or something similar to create separate views as envisaged
+  
+  to use a simplified parser
+  
+  
+  @c</t>
+<t tx="paran.20140825191445.4009">@color
+@language latex
+
+\chapter{Conclusions and Future Work}\label{C:con}
+
+In this thesis we presented the concept of maintaining private views in version control system. 
+This would allow programmers to implement lightweight refactoring to their tastes while minimising the impact on others.  
+To this end we created the Refactor Categories Tool as a precursor to creating private views. 
+This tool analyses the difference between two revisions such as encountered during a commit.  
+The tool parses the sources for both commits into a AST. 
+We then use the AST to identify additional features that have been changed. 
+The features we have focused on are ones that do not change any functionality such as methods being moved or comments being changed. 
+The results show some changes exist that do not change the functionality of a program.
+At the moment however the Refactor Categories Tool does not detect many of these.  
+
+The following changes to the Refactor Categories Tool may improve the result or make the concept of private views a reality.
+
+&lt;&lt;performance changes&gt;&gt;
+
+&lt;&lt;Comments&gt;&gt;
+
+&lt;&lt;repurpose&gt;&gt;
+@
+
+future work: by keeping track of equivalences there is no need to retest using the AST
+
+To reuse the refactor categories tool or something similar to create separate views as envisaged
+
+to use a simplified parser
+
+
+@c</t>
+<t tx="paran.20140825191445.4010">@color
+@language latex
+
+\chapter{Conclusions and Future Work}\label{C:con}
+
+In this thesis we presented the concept of maitaining private views in version control system. 
+This would allow programers to implement lightweight refactoring to their tastes while minimising the impact on others.  
+To this end we created the Refactor Categories Tool as a precursor to creating private views. 
+This tool anlayses the difference between two revisions such as ecountered during a commit.  
+The tool parses the sources for both commits into a AST. 
+We then use the AST to identify additional features that have been changed. 
+The features we have focused on are ones that do not change any fuctionality such as methods being moved or comments being changed. 
+The results show some changes exist that do not change the functionality of a program.
+At the moment however the Refactor Categories Tool does not detect many of these.  
+
+The following changes to the Refactor Categories Tool may improve the result or make the concept of private views a reality.
+
+&lt;&lt;performance changes&gt;&gt;
+
+&lt;&lt;Comments&gt;&gt;
+
+&lt;&lt;repurpose&gt;&gt;
+@
+
+future work: by keeping track of equivalences there is no need to retest using the AST
+
+To reuse the refactor categories tool or something similar to create separate views as envisaged
+
+to use a simplified parser
+
+
+@c</t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>

@@ -33,45 +33,47 @@ The experiment was run on a Lenovo laptop with 3.5GB Ram and 113.2 GB disk space
 Java bytecode assembler written for use with the Whiley programming language.
 
 github.com/Whiley/Jasm 
-\end{minipage}        & 74      & 29139 \\
+\end{minipage}        & 74      & 29139 \\ \hline
     Jpp              & \begin{minipage}[t]{0.5\textwidth}
     Pre-processor for Java based on Bash shell script.
     
 github.com/maandree/jpp
-\end{minipage}        & 40      & 254   \\
+\end{minipage}        & 40      & 254   \\ \hline
     AST Java         & \begin{minipage}[t]{0.5\textwidth}
     Small parser written to transform Java into an AST.
     
 github.com/klangner/ast-java 
-\end{minipage}       & 24      & 10174 \\
+\end{minipage}       & 24      & 10174 \\ \hline
 \begin{minipage}[t]{0.15\textwidth}Java Object Diff\end{minipage} & \begin{minipage}[t]{0.5\textwidth}
 Allows two Java objects to be compared at runtime.
      
 github.com/SQiShER/java-object-diff 
-\end{minipage}        & 291     & 10023 \\
+\end{minipage}        & 291     & 10023 \\ \hline
     DiffJ            & \begin{minipage}[t]{0.5\textwidth}
     Diff tool which in addition to ignoring white space ignores changes of ordering in package names for a Java file.
     
 github.com/jpace/diffj
-\end{minipage}        & 490     & 13712 \\
+\end{minipage}        & 490     & 13712 \\ \hline
     IRE              & \begin{minipage}[t]{0.5\textwidth}
     Java library for regular expression matching.
     
 github.com/jkff/ire  
-\end{minipage}       & 41      & 2714  \\
+\end{minipage}       & 41      & 2714  \\ \hline
     Syntax           & \begin{minipage}[t]{0.5\textwidth}
     Compiler compiler used for teaching. 
     
 github.com/jaimegarza/syntax 
-\end{minipage}        & 89      & 9376  \\
+\end{minipage}        & 89      & 9376  \\ \hline
 
     Auto Refactor           & \begin{minipage}[t]{0.5\textwidth}
     Eclipse plug-in that automatically refactors code 
     
 github.com/JnRouvignac/AutoRefactor 
-\end{minipage}        & 212      & 13400  \\
+\end{minipage}        & 212      & 13400  \\ \hline
     \end{tabular}
     }
+    \caption{A range of benchmarks that will be included in the test}
+    \label{tab:benchmarks}
 \end{table}
  
 % 
@@ -132,9 +134,7 @@ We also increased the memory by changing the parameters for the run configuratio
 
 \section{Results}
 \subsection{Overview}
-After running the Refactor Categories tool over our benchmark suite we obtained the results shown in Table \ref{tab:results}
-
-
+After running the Refactor Categories Tool over our benchmark suite we obtained the results shown in Table \ref{tab:results}
 
 \begin{table}[t!]
     \small
@@ -150,18 +150,18 @@ After running the Refactor Categories tool over our benchmark suite we obtained 
     Syntax           & 1142 & 544  & 2216 & 6   & 7   & 12  & 204        & 14       & 81  & 451  \\
     Auto refactor    & 1702 & 1621 & 2809 & 7   & 16  & 25  & 295        & 30       & 16  & 568  \\
     \end{tabular}
-    \caption{Results over our benchmark suite showing the number of inserts (INS), deletes (DEL), modifications (MOD), moves (MOV), renames (REN) and equivalences (EQV) for Java AST, comments and white-space (WS) changes}
+    \caption{Results over our benchmark suite showing the number of inserts (Ins), deletes (Del), modifications (Mod), moves (Mov), renames (Ren) and equivalences (Eqv) for Java AST nodes, comments and white-space (WS) changes}
     \label{tab:results}
 \end{table}
 
-The number of text changes that were recognised during text comparison for each benchmark are shown in Table \ref{tab:textcomp}. Note that the values in this table are lower as the Refactor Categories tool detects multiple changes which a text based comparison aggregates.  
+The number of text changes that were recognised during ordinary text comparison done using JGit for each benchmark are shown in Table \ref{tab:textcomp}. This table allows us to show the difference between an ordinary text merge (reported by JGit) and the results produced by the Refactor Categories Tool shown in Table \ref{tab:results}. Note that the values in this table are lower as the Refactor Categories tool detects multiple changes which a text based comparison aggregates.  
 
 \begin{table}[H]
     \centering
     \begin{tabular}{l|lll}
-    Benchmark        & \multicolumn{3}{|c}{Text Diff} \\ \hline
+    Benchmark        & \multicolumn{3}{|c}{Ordinary Text Diff (reported by JGit)} \\ \hline
     ~                & Ins            & Del & Mod  \\ \hline
-    Jasm             & 91             & 44  & 337  \\
+    Jasm             & 91       There are a number of things that warrant further examination       & 44  & 337  \\
     Jpp              & 23             & 3   & 41   \\
     AST Java         & 44             & 15  & 85   \\
     Java Object Diff & 1186           & 837 & 8219 \\
@@ -170,93 +170,96 @@ The number of text changes that were recognised during text comparison for each 
     Syntax           & 691            & 214 & 1863 \\
     Auto Refactor    & 639            & 309 & 1621 \\
     \end{tabular}
-    \caption{The result of doing an ordinary text comparison showing the number of inserts (INS), deletes (DEL) and modifications (MOD)}
+    \caption{The result of doing an ordinary text comparison showing the number of inserts (Ins), deletes (Del) and modifications (Mod)}
     \label{tab:textcomp}
 \end{table}
 
 
 
 \subsection{Discussion}
-Figure \ref{fig:textDifference} show the average for all the benchmarks of the types of operations found during an ordinary text comparison.  
-The most common merge operation is when items have been modified.  
-This occured on average  almost 73 percent of the time.
+Figure \ref{fig:textDifference}, which has been taken from Table \ref{tab:textcomp}, shows the average for all the benchmarks of the types of operations found during an ordinary text comparison.  
+Figure \ref{fig:javaDifference}, which has been taken from Table \ref{tab:results}, shows the average for all the benchmarks of the types of operations found during a Java AST node comparison.
 
-\begin{figure}[!t]
+%\begin{minipage}[t]{1\textwidth}
+\begin{figure}[!t] 
  \begin{center}
  \includegraphics[scale=.8]{TextDifference}
  \end{center}
- \caption{Type of operations for an ordinary text comparision on average for all the benchmarks}
+ \caption{Type of operations for an ordinary text comparison on average for all the benchmarks}
  \label{fig:textDifference}
 \end{figure}
 
-When we examine the Java AST differences for the same benchmark however the number of modifications reduces and the number of insertions and deletes increase.
-This is shown in Figure \ref{fig:javaDifference}.
-The reason for this is because an change done to block of text recorded in the \lstinline{EditList} object is made up of a number of smaller changes.  
-If the block of text is a delete all the smaller changes are also delete.  
-The same is true for inserts, all the smaller changes will also be inserts.
-With a modified block of text modifications however the smaller changes could be inserts, deletes or modifications.
-What this means is that some of the changes that an ordinary text diff recognises as modifications could actully made up of individual inserts and deletes. 
-
-\begin{figure}[!t]
+\begin{figure}[!t] 
  \begin{center}
  \includegraphics[scale=.8]{JavaDiff}
  \end{center}
- \caption{Type of operations for a Java AST comparison on average for all the benchmarks}
+ \caption{Type of operations for a Java AST node comparison on average for all the benchmarks}
  \label{fig:javaDifference}
 \end{figure}
+%\end{minipage}
 
-Most of the changes were still identified as modifications, inserts and deletes rather than moves or renames.
-What this could mean is although there are some features where people have personalised thier view by using some lightweight refactoring this does not occur very often.
-Perhaps by reducing the risk of impacting others, and giving them a private view, we see much more of this occuring.    
+When we compare the figures the number of modifications changes.
+The percentage is much higher in the text comparison that JGit normally uses and lower for the Refactor Categories tool.
+The reason for this is because an change done to block of text recorded in the \lstinline{EditList} object is made up of a number of smaller changes.  
+For instance a single line detected by the JGit text comparison may contain a Java AST node change and a change to a comment.
+The Refactor Categories tool records each of these changes.
+A change detected by JGit could be a number of lines, so a single block of text could contain multiple Java AST nodes.  
+If a block of text is a delete all the Java AST nodes or comments in that range will also be deletes. 
+If a block of text is an insert all the Java AST node or comments in that range will also be inserts.
+It is slightly different for blocks of test that have been modified.
+It is possible that some of the changes could be Java AST nodes or comments that have been inserted.
+They could also be deletes rather than modifications.
+Some of the changes that an ordinary text diff recognises as modifications could actually made up of individual inserts and deletes.
+What this means is that when we examine these changes more closely using the Refactor Categories Tool is that the comparative percentage of insert and delete increase while the percentage of modify tends to decrease.  
+
+Instead of having insert, delete and modify operations Figure \ref{fig:javaDifference} also has move and rename.
+Predominately the changes were still identified as modifications, inserts and deletes rather than the move and rename we are interested in.
+What this could mean is although some non-functional changes have been introduced it does not occur very often.   
 
 Another aspect we were interested in was the difference between Java based differences and changes non-Java items such as comments or white-space.
-Figure \ref{fig:changeType}shows the how many Java changes were detected as compared to comments and white-space.
+Figure \ref{fig:changeType} shows the how many Java changes were detected as compared to comments and white-space.
 This shows that the predominate change in the source code was a change in functionality rather than a change to the documentation.
 It implies that in programming projects there tends to be many more lines of program than lines of comments.
-What this means for this thesis is that currently there are more changes to functionailty rather than to coding style and documentation.
+What this means for this thesis is that currently there are more changes to functionality rather than to coding style and documentation.
 As there are still significant amount of changes to comments it is possible that being able to modify comments that will not be merged could be useful.  
 
-\begin{figure}[!t]
+Figure \ref{fig:commentsPie} more closely examines the type changes that have occurred to comments in the source code.
+By far the main change to comments is modification.
+Unlike Java AST Nodes blocks of code containing comments are not further divided.
+This means that the block of code marked as a modification to a comment may in fact contain a number of deletes or inserts.
+Another possible cause for a large number of comment changes to be modification is if a programming project that is well established.
+Most of the changes to a project like this would be better classified as updates to the project rather than adding a lot of new functionality.
+When a program is updated like this, adding new comments, or removing old ones, does not happen as often as modifying the existing comments.
+
+%\begin{minipage}[t]{1\textwidth}
+\begin{figure}[!t] 
  \begin{center}
  \includegraphics[scale=.8]{changeTypePie}
  \end{center}
- \caption{The type of changes that most often occured over all the benchmarks}
+ \caption{The type of changes that most often occurred over all the benchmarks}
  \label{fig:changeType}
 \end{figure}
 
-Figure \ref{fig:commentsPie} more closely examines the type changes that have occured to comments in the source code.
-By far the main change to comments is modification.
-This is what you would expect for a programming project that is well established.
-Most of the changes to a project like this would be better classified as updates to the project rather than adding a lot of new functionality.
-When a program is updated like this adding new comments or removing old ones does not happen as often as modifying the existing comments.
-The modification of these comments is likely to be linked with a related code change.
-This would be an instance where a non-functional change would benefit others and needs to be updated in other views.
-
-
-\begin{figure}[!t]
+\begin{figure}[!t] 
  \begin{center}
  \includegraphics[scale=.8]{Comments}
  \end{center}
  \caption{Types of operations for comments on average over the benchmarks}
  \label{fig:commentsPie}
 \end{figure}
+%\end{minipage}
 
 A significant number of comments have been inserted and deleted.
 Examining these items a little closer revealed that some included the words "TODO" or "FIXME".
 Although the addition of these comments are likely to be associated with a related code change they may only be relevant to people working on that section of the code.
 The same is true for blocks of commented out code.
-In this situation having a private view could be useful.  
+In this situation having a private view could be useful. 
+
+
 
 % Although the Refactor Categories tool tested to see if comments moved none 
 % were detected across the benchmarks.
 
-  
-
-
-
-% resons why these benchmarks where used
-% 
-% 
 
 % There were a number of benchmarks we would have liked to have used but due 
 % to memory constraints we had to omit these from the benchmark suite.
@@ -306,14 +309,9 @@ In this situation having a private view could be useful.
 % 
 % Memory issues
 % baselines we could not compare
-% the graeter the amount of revisons the more chance that there was a memeory 
+% the greater the amount of revisions the more chance that there was a memory 
 % error
 % 
-% 
-% Moves
-% Renames
-% comment deletion /inserts and modifications
-%   the largest change
 
 % The data sets following are complete git repositories which have been 
 % examined to discover the proportion of changes to behaviour compared to 
@@ -380,4 +378,3 @@ In this situation having a private view could be useful.
 % 
 % in this case the comment is removed but as the comment is associated with a 
 % functional change the comment also needs to change in both versions
-
