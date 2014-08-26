@@ -39,16 +39,23 @@ Sometimes this move would have no effect on the code and others it could cause t
 By allowing the Refactor Categories tool to check outside the containing class may also produce some interesting results.
 Although we cannot guarantee that the moves discovered are valid ones it does give as more information about the source code we are examining.
 
-Revising the scoring system for matching up inserts and deletes may produce some better results
+At the moment the Refactor Categories Tool only examines files that have been identified by JGit as being modified or renamed.
+In some instances JGit could have incorrectly determined that a file as beed deleted and reinserted rather than being renamed or moved.
+This could happen easily since during a move or rename the a Java file changes the package reference and class name within a file.
+This is epecially true if the class has both been renamed and modified.
+   
+Revising the scoring system for matching up inserts and deletes may produce some better results.
+At the moment modifications are counted as two changes using the scoring system to match inserts and deletes.
+Expirimenting by reducing this value could improve the number of matches.
 %@nonl
 %@-node:paran.20140826194216.2102:<<getting more results>>
 %@nl
 
 %@<<changes in scope>>
 %@+node:paran.20140826194216.2103:<<changes in scope>>
-In additon to moves and renames changes in the scope of methods may be of interest.
-An example would be if a methods access changes from being private to being public
-There would need to be a whole lot of checking to ensure that the change does not affect fuctionality
+In addition to moves and renames, changes in the scope of methods may be of interest.
+An example would be if a methods access changes from being private to being public.
+There would need to be a whole lot of checking to ensure that the change does not affect functionality.
 %@nonl
 %@-node:paran.20140826194216.2103:<<changes in scope>>
 %@nl
@@ -67,7 +74,8 @@ If the comment is marked as unimportant it would indicate that it still should n
 
 %@<<repurpose>>
 %@+node:paran.20140816070821.2190:<<repurpose>>
-The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  This would bring us a step closer to being able to realise the vision of having better separated private views.  Other tools could also be investigated such as using \emph{diffJ} as the difference tool used by git.
+The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  
+This would bring us a step closer to being able to realise the vision of having better separated private views.  
 %@nonl
 %@-node:paran.20140816070821.2190:<<repurpose>>
 %@nl
@@ -82,6 +90,8 @@ Performance of Refactor Categories Tool could be further enhanced by only parsin
 \subsection{Other lines of enquiry}
 
 There are other tools that could be used to determine if refactoring has taken place.
+As investigated by this thesis JDime although it has some hurdles to overcome could be repurposed.
+Although \emph{diffJ} as the difference tool used by git.
 
 
 %@+at

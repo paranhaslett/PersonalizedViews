@@ -33,11 +33,18 @@ Sometimes this move would have no effect on the code and others it could cause t
 By allowing the Refactor Categories tool to check outside the containing class may also produce some interesting results.
 Although we cannot guarantee that the moves discovered are valid ones it does give as more information about the source code we are examining.
 
-Revising the scoring system for matching up inserts and deletes may produce some better results
+At the moment the Refactor Categories Tool only examines files that have been identified by JGit as being modified or renamed.
+In some instances JGit could have incorrectly determined that a file as beed deleted and reinserted rather than being renamed or moved.
+This could happen easily since during a move or rename the a Java file changes the package reference and class name within a file.
+This is epecially true if the class has both been renamed and modified.
+   
+Revising the scoring system for matching up inserts and deletes may produce some better results.
+At the moment modifications are counted as two changes using the scoring system to match inserts and deletes.
+Expirimenting by reducing this value could improve the number of matches.
 
-In addition to moves and renames changes in the scope of methods may be of interest.
-An example would be if a methods access changes from being private to being public
-There would need to be a whole lot of checking to ensure that the change does not affect functionality
+In addition to moves and renames, changes in the scope of methods may be of interest.
+An example would be if a methods access changes from being private to being public.
+There would need to be a whole lot of checking to ensure that the change does not affect functionality.
 
 Comments could be associated with the AST Node they relate to.  
 With this change would be possible to tell if changing a comment should be reflected in other views when there is a source code change. 
@@ -46,7 +53,8 @@ One way this could be done would be to associate single-line comments at the end
 This however is only a rough approximation so it may be helpful to also be able to specify exceptions to these rules by using annotations that tie the comment to a block of code. Annotations could also be used to specify how important the comment is.
 If the comment is marked as unimportant it would indicate that it still should not be considered a change even if it differs between revisions.
 
-The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  This would bring us a step closer to being able to realise the vision of having better separated private views.  Other tools could also be investigated such as using \emph{diffJ} as the difference tool used by git.
+The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  
+This would bring us a step closer to being able to realise the vision of having better separated private views.  
 
 Performance of Refactor Categories Tool could be further enhanced by only parsing nodes that contain the text change.  This however would require major changes to the parser or rewriting it. There would also be the complexity of figuring out how to only partially parse a source code. The benefits of rewriting the parser would save memory in addition to speeding up the parsing of Java code into AST nodes.
 
@@ -54,6 +62,8 @@ Performance of Refactor Categories Tool could be further enhanced by only parsin
 \subsection{Other lines of enquiry}
 
 There are other tools that could be used to determine if refactoring has taken place.
+As investigated by this thesis JDime although it has some hurdles to overcome could be repurposed.
+Although \emph{diffJ} as the difference tool used by git.
 
 
 % The following changes to the Refactor Categories Tool has potential to 
