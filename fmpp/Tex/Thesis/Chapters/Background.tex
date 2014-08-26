@@ -3,7 +3,7 @@
 As this thesis is about maintaining private views within a version control system what follows is some background concerning version control systems and how they determine if a change has occurred in source code.  
 We will also cover refactoring before looking more closely at JDime and other tools that attempt to reduce merge conflicts caused by refactoring or reformatting.  
 
-\section{Version Control Systems}
+\section{Version control systems}
 Version control systems are a way of managing different revisions (or versions). 
 Version control systems can be used to keep revisions of files that are in any format. 
 Most commonly they are used for maintaining source code written for a plain text programming language (e.g. Java, C, etc.). 
@@ -83,8 +83,6 @@ There are a number of reasons why we might want to use a version control system.
 
 \end{description}
 
-
-
 \subsection{Dealing with conflicts}
 When people work on the same software project there is a need to interact with each other.
 If they require the same source code then there is competition to access that file for each of them to successfully do their work.
@@ -125,8 +123,6 @@ The merge conflicts need to be dealt with manually.
 % 
 \end{description}
  
-
-
 %   Version control still can have problems with merge conflicts.
 
 \subsection{Types of version controls systems}
@@ -274,7 +270,35 @@ As there are possibly multiple longest common subsequences identifying the longe
 According to Arslan \cite{Arslan2010} there are many algorithms that solve longest common subsequence problem. As is it possible for there to be multiple correct solutions to a LCS problem a reason for having a different algorithm may be to find the LCS that make the most intuitive sense. The algorithms used in JGit (an open source implementation of Git in Java) for example are the the Myers, Patience and Histogram algorithms. JGit predominately uses the Histogram algorithm with a fall-back of using the Myers algorithm as a fall-back if it gets to computationally expensive.  There is also the option of using the Patience algorithm however this will produce similar results to the Histogram algorithm which has been derived from it. 
 
 \subsection{Myers}
-The Myers algorithm was discovered by Eugene Myers \cite{Myers1986} who claimed that finding the minimal differences between any two documents was the equivalent to finding the shortest or longest path in a graph.
+The Myers algorithm was discovered by Eugene Myers \cite{Myers1986} who claimed that finding the minimal differences between any two documents was the equivalent to finding the shortest path in an \emph{edit graph}.  
+If we have the two sequences that we wish to compare we can use them to create an edit graph. 
+For example to discover that the longest common subsequence for the two strings "ABBCABAB" and "BACCABBAC" we would create the edit graph shown in Figure \ref{fig:editGraph}
+
+\begin{figure}[!t]
+ \begin{center}
+ \includegraphics[scale=1]{editGraph}
+ \end{center}
+ \caption{An edit graph for two strings, "ABBCABAB" and "BACCABBAC"}
+ \label{fig:editGraph}
+\end{figure} 
+
+Note that the diagonals are on the graph at every point where the letters coincide.
+If we draw a path from the top corner to the bottom corner by following either the edges of the boxes or the diagonals we can determine a subsequence of both of the strings.
+Each time the path crosses a diagonal is an instance where both strings have a common letter.
+If the path uses the fewest number of box edges possible then it contains a lowest common subsequence.
+Figure \ref{fig:lcs} shows a path for a longest common subsequence.
+There may be more than one longest common subsequence.
+For our example another longest common subsequence of "BCABB" is also equally valid.
+
+
+
+\begin{figure}[!t]
+ \begin{center}
+ \includegraphics[scale=1]{lcs}
+ \end{center}
+ \caption{An edit graph for two strings, "ABBCABAB" and "BACCABBAC", showing the path for the longest common subsequence of "ACABA"}
+ \label{fig:lcs}
+\end{figure}
 
 %For example if we have two ...
 
@@ -498,7 +522,7 @@ In other words JDime normalises its output so that methods are in a particular o
 % If it detects an unordered section it does not preserve the order of the 
 % output.
 
-\subsection{Reasons why JDime cannot currently be used to create separate views}
+\subsection{Reasons why JDime cannot currently be used to create private views}
 The aim of this thesis is to be able to maintain two views of Java that, although having a different format, function in the same manner.  Although JDime seems like it would be able to help achieve those aims there are a few reasons why it cannot be used without changes.
 
 The first issue is that as explained above that the merged code could be in a totally different order to the original file and both of the revisions.

@@ -75,17 +75,23 @@ An example of this can be found in Figure \ref{fig:findingASTNode}.  In this Fig
 
 Another interesting question is how the tool deals with situations where a text change partly overlaps an AST node or an AST node only partly covers a text item.  
 In Figure \ref{fig:troubleASTNode} two different AST nodes each contain part of a text change. 
-By examining any possible children of `Child 1' and `Child 2' we could discover 4 types of AST Nodes.
+By examining any possible children of `Child 1' and `Child 2' we could discover 4 types of AST Nodes:
 \begin{description}
 
   \item [AST nodes that are not included in the text change.]
-    Any AST node that cannot be associated with a text change can be safely ignored. It means that there are no changes the text and therefore no changes to that AST Node.
+    Any AST node that cannot be associated with a text change can be safely ignored. 
+    It means that there are no changes the text and therefore no changes to that AST Node.
   \item [AST nodes that are fully encapsulated by the text change.] 
-    These are the AST nodes that we wanted to discover as they are entirely within the range of text change.  These warrant further investigation.
-  \item [AST nodes that partly include the text change but have child AST Nodes.]
-    If an AST Node has children and it is not fully contained by the text change we recursively check the children.
+    These are the AST nodes that we wanted to discover as they are entirely within the range of text change.
+    It means that this AST node has changed and warrants further investigation. 
+    There may also be text changes that are outside the AST node.
+    If they are not part of any AST node they would be classified as comments or white-space. 
+  \item [AST nodes that partly include the text change but have child AST nodes.]
+    If an AST node has children and it is not fully contained by the text change we recursively check the children.
   \item [AST nodes that partly include the text change but have no child AST Nodes.]
-    If a AST node is a leaf node in an AST and it contains a text change then it also warrants further investigation.       
+    If a AST node is a leaf node in an AST and it contains a text change then it is highly likely that the AST node has changed.
+    As there has been changes to this AST node then it also warrants further investigation. 
+    Any part of the text change that is not part of the AST node and not part of any other AST node would be classified as comments or white-space.    
 \end{description}
 
 In both Figure \ref{fig:findingASTNode} and Figure \ref{fig:troubleASTNode} there are portions of text that are outside an AST node.  These are of interest to us because these are instances where the text may have been changed but it has no impact on the behaviour of the program.  The most likely instances of this is when a comment has changed or if white space has been introduced in the middle of source code.
@@ -117,7 +123,7 @@ In both Figure \ref{fig:findingASTNode} and Figure \ref{fig:troubleASTNode} ther
 % answer what it does and how
 %@-at
 %@@c
-\subsection{Detects Moves}
+\subsection{Detects moves}
 %@<<detecting moves>>
 %@+node:paran.20140816070821.2183:<<detecting moves>>
 %@<<move>>
@@ -140,7 +146,7 @@ public class SampleMoveAndChange {
 %@nl
 \end{lstlisting}
 
-Once we move the \lstinline{tri} method to before the \lstinline{rect} method and \lstinline{circ} method to after the \lstinline{sqr} method the code now looks like this.
+Once we move the \lstinline{tri} method to before the \lstinline{rect} method and \lstinline{circ} method to after the \lstinline{sqr} method the code now looks like this:
 
 \begin{lstlisting}
 %@<<modified Move>>
@@ -211,7 +217,7 @@ Restricting any valid moves to a container ensures we get moves that don't chang
 %@<<calculate scores>>
 %@+node:paran.20140823073953.2204:<<calculate scores>>
 To calculate the scores for a single change we start at the root AST node for both the insert and delete candidates.  
-If the root nodes are similar we can then check their children. 
+If the root nodes have the same type and fields then we can then check their children. 
 By performing a diff between the lists of children for both the insert and delete candidates we obtain the minimum number of differences.  
 If an extra child AST node has been inserted or a child AST node is deleted then 1 is added to the score. 
 If a child AST node has been modified it is the equivalent of both a child AST node being inserted and one being deleted so 2 is added to the score. 
@@ -235,7 +241,7 @@ Scores are stored in a two dimensional array where the rows are insert candidate
 %@-node:paran.20140816070821.2183:<<detecting moves>>
 %@nl
 
-\subsection{Detects Renames}
+\subsection{Detects renameing}
 %@<<detecting renames>>
 %@+node:paran.20140606104644.2009:<<detecting renames>>
 The Refactor Categories Tool can also detects some renaming. 
@@ -246,7 +252,7 @@ This means that if all copies of a methods or variable have not been uniformly r
 %@-node:paran.20140606104644.2009:<<detecting renames>>
 %@nl
 
-\subsection{Detects Equivalent Code}
+\subsection{Detects equivalent code}
 %@<<detecting equ>>
 %@+node:paran.20140823073953.2207:<<detecting equ>>
 I some situations when the code has been modified the ASTs still remain the same.  
@@ -282,7 +288,7 @@ To obtain the percentage of items changed the score is divided by the total numb
 %@-node:paran.20140605081907.1971:<<What the tool does>>
 %@nl
 
-\section{Performance}
+\section{Performance decisions}
 %@<<Performance>>
 %@+node:paran.20140805175513.2166:<<Performance>>
 Performance is an issue especially for when examining large software projects that have many changes. This means we have not only had to look at using more memory for the Refactor Categories Tool but also had to make some changes to the code to free up more memory where required.

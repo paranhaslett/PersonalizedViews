@@ -7,7 +7,7 @@
 As this thesis is about maintaining private views within a version control system what follows is some background concerning version control systems and how they determine if a change has occurred in source code.  
 We will also cover refactoring before looking more closely at JDime and other tools that attempt to reduce merge conflicts caused by refactoring or reformatting.  
 
-\section{Version Control Systems}
+\section{Version control systems}
 %@<<VersionControlSystems>>
 %@+node:paran.20140528183434.1974:<<VersionControlSystems>>
 %@<<Reasons for using version control>>
@@ -111,10 +111,8 @@ There are a number of reasons why we might want to use a version control system.
 
 \end{description}
 
-
 %@-node:paran.20140530135904.1945:<<Reasons for using version control>>
 %@nl
-
 \subsection{Dealing with conflicts}
 %@<<LockvsMerge>>
 %@+node:paran.20140529075353.1935:<<LockvsMerge>>
@@ -185,8 +183,6 @@ The merge conflicts need to be dealt with manually.
 %@nl
 \end{description}
  
-
-
 %@+at
 %   Version control still can have problems with merge conflicts.
 %@-at
@@ -396,7 +392,35 @@ According to Arslan \cite{Arslan2010} there are many algorithms that solve longe
 %@<<Myers>>
 %@+node:paran.20140528183434.2012:<<Myers>>
 \subsection{Myers}
-The Myers algorithm was discovered by Eugene Myers \cite{Myers1986} who claimed that finding the minimal differences between any two documents was the equivalent to finding the shortest or longest path in a graph.
+The Myers algorithm was discovered by Eugene Myers \cite{Myers1986} who claimed that finding the minimal differences between any two documents was the equivalent to finding the shortest path in an \emph{edit graph}.  
+If we have the two sequences that we wish to compare we can use them to create an edit graph. 
+For example to discover that the longest common subsequence for the two strings "ABBCABAB" and "BACCABBAC" we would create the edit graph shown in Figure \ref{fig:editGraph}
+
+\begin{figure}[!t]
+ \begin{center}
+ \includegraphics[scale=1]{editGraph}
+ \end{center}
+ \caption{An edit graph for two strings, "ABBCABAB" and "BACCABBAC"}
+ \label{fig:editGraph}
+\end{figure} 
+
+Note that the diagonals are on the graph at every point where the letters coincide.
+If we draw a path from the top corner to the bottom corner by following either the edges of the boxes or the diagonals we can determine a subsequence of both of the strings.
+Each time the path crosses a diagonal is an instance where both strings have a common letter.
+If the path uses the fewest number of box edges possible then it contains a lowest common subsequence.
+Figure \ref{fig:lcs} shows a path for a longest common subsequence.
+There may be more than one longest common subsequence.
+For our example another longest common subsequence of "BCABB" is also equally valid.
+
+
+
+\begin{figure}[!t]
+ \begin{center}
+ \includegraphics[scale=1]{lcs}
+ \end{center}
+ \caption{An edit graph for two strings, "ABBCABAB" and "BACCABBAC", showing the path for the longest common subsequence of "ACABA"}
+ \label{fig:lcs}
+\end{figure}
 
 %For example if we have two ...
 
@@ -701,7 +725,7 @@ In other words JDime normalises its output so that methods are in a particular o
 %@-node:paran.20140528183434.2024:<<Testing Jdimes suitability>>
 %@nl
 
-\subsection{Reasons why JDime cannot currently be used to create separate views}
+\subsection{Reasons why JDime cannot currently be used to create private views}
 %@<<Conclusion>>
 %@+node:paran.20140604093616.2026:<<Conclusion>>
 The aim of this thesis is to be able to maintain two views of Java that, although having a different format, function in the same manner.  Although JDime seems like it would be able to help achieve those aims there are a few reasons why it cannot be used without changes.

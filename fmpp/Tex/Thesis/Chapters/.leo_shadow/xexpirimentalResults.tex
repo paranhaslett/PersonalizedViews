@@ -3,7 +3,7 @@
 %@@color
 %@@language latex
 
-\chapter{Experimental Results}
+\chapter{Experimental results}
 
 \section{Purpose}
 %@<<purpose>>
@@ -45,7 +45,7 @@ The experiment was run on a Lenovo laptop with 3.5GB Ram and 113.2 GB disk space
 %@+node:paran.20140814214911.2179:<<baselines>>
  
  
- \begin{table}[H]
+ \begin{table}[p!]
     \small{
     \begin{tabular}{l|lllll}
     Benchmark        & Description   & Commits  & LOC   \\ \hline
@@ -202,7 +202,7 @@ The number of text changes that were recognised during ordinary text comparison 
     \begin{tabular}{l|lll}
     Benchmark        & \multicolumn{3}{|c}{Ordinary Text Diff (reported by JGit)} \\ \hline
     ~                & Ins            & Del & Mod  \\ \hline
-    Jasm             & 91       There are a number of things that warrant further examination       & 44  & 337  \\
+    Jasm             & 91             & 44  & 337  \\
     Jpp              & 23             & 3   & 41   \\
     AST Java         & 44             & 15  & 85   \\
     Java Object Diff & 1186           & 837 & 8219 \\
@@ -217,16 +217,18 @@ The number of text changes that were recognised during ordinary text comparison 
 
 
 
+  
+%@nonl
 %@-node:paran.20140814214911.2177:<<overview>>
 %@nl
 \subsection{Discussion}
 %@<<examination>>
 %@+node:paran.20140814214911.2178:<<examination>>
-Figure \ref{fig:textDifference}, which has been taken from Table \ref{tab:textcomp}, shows the average for all the benchmarks of the types of operations found during an ordinary text comparison.  
-Figure \ref{fig:javaDifference}, which has been taken from Table \ref{tab:results}, shows the average for all the benchmarks of the types of operations found during a Java AST node comparison.
+Figure \ref{fig:textDifference}, which has been generated from the data in Table \ref{tab:textcomp}, shows the average for all the benchmarks of the types of operations found during an ordinary text comparison.  
+Figure \ref{fig:javaDifference}, which has been generated from the data in Table \ref{tab:results}, shows the average for all the benchmarks of the types of operations found during a Java AST node comparison.
 
 %\begin{minipage}[t]{1\textwidth}
-\begin{figure}[!t] 
+\begin{figure}[p] 
  \begin{center}
  \includegraphics[scale=.8]{TextDifference}
  \end{center}
@@ -234,7 +236,7 @@ Figure \ref{fig:javaDifference}, which has been taken from Table \ref{tab:result
  \label{fig:textDifference}
 \end{figure}
 
-\begin{figure}[!t] 
+\begin{figure}[p] 
  \begin{center}
  \includegraphics[scale=.8]{JavaDiff}
  \end{center}
@@ -243,41 +245,45 @@ Figure \ref{fig:javaDifference}, which has been taken from Table \ref{tab:result
 \end{figure}
 %\end{minipage}
 
-When we compare the figures the number of modifications changes.
+When we compare the figures the number of modifications is different.
 The percentage is much higher in the text comparison that JGit normally uses and lower for the Refactor Categories tool.
-The reason for this is because an change done to block of text recorded in the \lstinline{EditList} object is made up of a number of smaller changes.  
+The reason for this is because a change done to block of text recorded in the \lstinline{EditList} object is made up of a number of smaller changes.  
 For instance a single line detected by the JGit text comparison may contain a Java AST node change and a change to a comment.
-The Refactor Categories tool records each of these changes.
+The Refactor Categories Tool records each of these changes seperately.
 A change detected by JGit could be a number of lines, so a single block of text could contain multiple Java AST nodes.  
 If a block of text is a delete all the Java AST nodes or comments in that range will also be deletes. 
 If a block of text is an insert all the Java AST node or comments in that range will also be inserts.
-It is slightly different for blocks of test that have been modified.
+It is slightly different for blocks of text that have been modified.
 It is possible that some of the changes could be Java AST nodes or comments that have been inserted.
 They could also be deletes rather than modifications.
-Some of the changes that an ordinary text diff recognises as modifications could actually made up of individual inserts and deletes.
-What this means is that when we examine these changes more closely using the Refactor Categories Tool is that the comparative percentage of insert and delete increase while the percentage of modify tends to decrease.  
+Some of the changes that an ordinary text diff recognises as modifications could actually be made up of individual inserts and deletes.
+Note that the number of changes reported by the Refactor Categories Tool will increase exactly for this reason.
+Futhermore, when we examine these changes more closely using the Refactor Categories Tool is that the comparative percentage of insert and delete increase while the percentage of modify tends to decrease.  
 
 Instead of having insert, delete and modify operations Figure \ref{fig:javaDifference} also has move and rename.
 Predominately the changes were still identified as modifications, inserts and deletes rather than the move and rename we are interested in.
-What this could mean is although some non-functional changes have been introduced it does not occur very often.   
+What this could mean is although some non-functional changes have been introduced it does not occur very often.  
+However,it is also possible that a more advanced identification algorithm could improve the results. 
 
-Another aspect we were interested in was the difference between Java based differences and changes non-Java items such as comments or white-space.
+Another aspect we were interested in was the difference between Java based differences and changes and non-Java items such as comments or white-space.
 Figure \ref{fig:changeType} shows the how many Java changes were detected as compared to comments and white-space.
 This shows that the predominate change in the source code was a change in functionality rather than a change to the documentation.
 It implies that in programming projects there tends to be many more lines of program than lines of comments.
 What this means for this thesis is that currently there are more changes to functionality rather than to coding style and documentation.
 As there are still significant amount of changes to comments it is possible that being able to modify comments that will not be merged could be useful.  
 
-Figure \ref{fig:commentsPie} more closely examines the type changes that have occurred to comments in the source code.
+Figure \ref{fig:commentsPie} more closely examines the type of changes that have occurred to comments in the source code.
 By far the main change to comments is modification.
 Unlike Java AST Nodes blocks of code containing comments are not further divided.
 This means that the block of code marked as a modification to a comment may in fact contain a number of deletes or inserts.
-Another possible cause for a large number of comment changes to be modification is if a programming project that is well established.
-Most of the changes to a project like this would be better classified as updates to the project rather than adding a lot of new functionality.
-When a program is updated like this, adding new comments, or removing old ones, does not happen as often as modifying the existing comments.
+Another possible cause for a large number of comment changes to be modification is if a programming project is well established.
+It is possible, in an existing project, that changes are made to the code and the existing comments are modified to reflect that change.
+The changes to the code could include insert or deletes in addition to modifications the source code.
+In this situation when comparing the amount of inserts, deletes and modifications between the source code changes and the comment changes the source code will have comparitely more inserts and deletes whilst the comments will have comparitively more modifications.
+
 
 %\begin{minipage}[t]{1\textwidth}
-\begin{figure}[!t] 
+\begin{figure}[p] 
  \begin{center}
  \includegraphics[scale=.8]{changeTypePie}
  \end{center}
@@ -285,7 +291,7 @@ When a program is updated like this, adding new comments, or removing old ones, 
  \label{fig:changeType}
 \end{figure}
 
-\begin{figure}[!t] 
+\begin{figure}[p] 
  \begin{center}
  \includegraphics[scale=.8]{Comments}
  \end{center}
