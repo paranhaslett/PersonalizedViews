@@ -1,9 +1,17 @@
 
 \chapter{Introduction}\label{C:intro}
 
-According to Bertino \cite{Bertino2012} \emph{version control systems} provide a way of allowing multiple developers to collaborate. When multiple developers work on the same source code there is a risk that they have conflicting changes for the same portion of the source code.  One way of managing these conflicting changes is by ensuring only one person can edit a file at a time. This locking mechanism was recommended by Tichy \cite{Tichy1982} for the RCS version control system. Of course, the problem here is that one person can stop others from being able to edit the file. 
+According to Bertino \cite{Bertino2012} \emph{version control systems} provide a way of allowing multiple developers to collaborate. 
+When multiple developers work on the same portion of source code there is a risk that they have conflicting changes.  
+One way of managing these conflicting changes is by ensuring only one person can edit a file at a time. 
+This locking mechanism was recommended by Tichy \cite{Tichy1982} for the RCS version control system. 
+Of course, the problem here is that one person can stop others from being able to edit the file. 
 
-An alternative approach is to allow multiple changes to a file and to automatically resolve most of them in a process called a \emph{merge}.  The merge process compares the changes made in one version with the changes made on the other version. If the merge process determines that changes can coexist, it creates a merged file that contains all the changes. The changes that cannot be automatically merged are known as \emph{merge conflicts}.  The merge conflicts need to be manually checked and edited to form a merged file with the correct changes.
+An alternative approach is to allow multiple changes to a file and to automatically resolve most of them in a process called a \emph{merge}.  
+The merge process compares the changes made in one version with the changes made on the other version. 
+If the merge process determines that changes can coexist, it creates a merged file that contains all the changes. 
+The changes that cannot be automatically merged are known as \emph{merge conflicts}.  
+The merge conflicts need to be manually checked and edited to form a merged file with the correct changes.
 
 \begin{figure}[!t]
  \begin{center}
@@ -17,15 +25,15 @@ Internally the merge process needs to determine what changes have happened to bo
 
 Without any further analysis this change is recorded in the merged file even if the reordering was a personal preference for the programmer.  Although there has been no functional change the version control system will treat the relocation of blocks of source code exactly like a change in functionality.  Whenever a programmer attempts to update their code to incorporate any change in functionality, the change to the order of methods is also made to their code.  If a programmer is already familiar with the old structure of code and expects the code to remain relatively consistent the swapping of methods could be disconcerting.
 
-Another issue that non-functional changes raise is an increase in the number of \emph{merge conflicts}. This could occur when two views have had a small amount of refactoring.  Since in both views the behaviour of the program has not changed it is possible that the merge conflict occurs about something trivial. An example of this could be different formatting or ordering methods alphabetically. For an ordinary text merge these changes to the structure of the source code require manual intervention. These issues highlight the need to develop smarter ways to merge.
+Another issue that non-functional changes raise is an increase in the number of \emph{merge conflicts}. This could occur when two views have had a small amount of refactoring.  Since in both views the behaviour of the program has not changed it is possible that the merge conflict occurs about something trivial. An example of this could be different formatting or ordering of methods. For an ordinary text merge these changes to the structure of the source code require manual intervention. These issues highlight the need to develop smarter ways to merge.
 
 It is becoming more important to have smarter merges because of the scale of many software projects and the number of developers working on them.
 Large online repositories, like GitHub, contain many open source projects.
 It is possible for these projects to make source code available to many developers at a time.
 This means it is possible for two developers to work on the same project while having little personal contact.
 Care needs to be taken when their individual work is combined.
-Preferably most of the problems with merging their work should be automatically resolved however,
-there still could be instances where either or both developers will have to figure out how the code should interact.
+Preferably most of the problems with merging their work should be automatically resolved. 
+However, there still could be instances where either or both developers will have to figure out how the code should interact.
 Having better automatic merges reduces the risk that time will be spent manually figuring out how different changes should be combined.
 
 This thesis introduces the concept of maintaining multiple private views which can be ordered differently but have functionally equivalent source code.
@@ -48,10 +56,11 @@ The Refactor Categories Tool is then used in an experiment evaluating a range of
 \section{Overview}
 This thesis is organised in the following manner:
 In Chapter 2 we go over the background of version control, the longest common subsequence problem and refactoring as well as look at JDime, an existing tool for merging refactored views.
-In Chapter 3 we discuss our concept of private views and what they could mean
-In Chapter 4 we examine the Refactor Categories Tool, a precursor to developing private view. This will allow us to evaluate if additional merge operations are possible
+In Chapter 3 we discuss our concept of private views and what they could mean.
+In Chapter 4 we examine the Refactor Categories Tool, a precursor to developing private views.
+This will allow us to evaluate if additional merge operations are possible.
 In Chapter 5 we evaluate the results produced from the Refactor Categories Tool and determine what this could mean for our concept of private views.
-In Chapter 6 we will conclude with some future work to make the concept of private view possible. 
+In Chapter 6 we will conclude and discuss future work. 
 
 % In this thesis we explore the idea of having private views that although 
 % functionally equivalent can be refactored differently.

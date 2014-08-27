@@ -6,7 +6,10 @@
 \chapter{Refactor Categories Tool}
 %@<<tool desc>>
 %@+node:paran.20140731173741.2006:<<tool desc>>
-In order to show that having private views would be useful we created the Refactor Categories Tool. Normally Version Control Systems such a JGit compare and merge files by differentiating between insert, delete and modify operations. The Refactor Categories Tool enhances this by also identifying instances where a block of code has moved but the functionality remains unchanged. It also can differentiate between changes to comments, white space and Java code. This means it can differentiate between instances where a change to a source file causes a change in the behaviour of the program and some instances where it has been refactored.  
+In order to show that having private views would be useful we created the Refactor Categories Tool. Normally Version Control Systems such a JGit compare and merge files by differentiating between insert, delete and modify operations. 
+The Refactor Categories Tool enhances this by also identifying instances where a block of code has moved but the functionality remains unchanged. 
+It also can differentiate between changes to comments, white space and Java code. 
+This means it can differentiate between instances where a change to a source file does not cause a change in the behaviour of the program and some instances where it has been refactored.  
 
 %@+at
 % Although it does not detect more complex differences beyond this we intend 
@@ -40,7 +43,7 @@ The \lstinline{EditList} object contains a list of changes to the plain text. In
 
 As this is a text comparison the types of changes that are detected between two files are limited to inserts, deletes, and modifications. 
 In order to expand this list we need more information.  
-We obtain information about the meaning of Java files by parsing both of revisions we are comparing.  
+We obtain information about the meaning of Java files by parsing both of the revisions we are comparing.  
 We use JastAddJ \cite{Oqvist2013} to parse the information into an AST. 
 Once we have the AST we need to discover which AST nodes match which changes to the text in the source code.
 
@@ -58,7 +61,7 @@ By examining the children of the root however, we can determine which children c
  \begin{center}
   \includegraphics[scale=1]{drilldown1}
  \end{center}
- \caption{An AST showing each AST Node arranged in a tree and with Child 3 consisting of a text change.  Each AST Node and text change has a start row recorded before the node and an end row recorded after the node}
+ \caption{An AST showing each AST Node arranged in a tree and with Child 3 consisting of a text change.  Each AST Node and text change has a start row recorded before the node and an end row recorded after the node.}
  \label{fig:findingASTNode}
 \end{figure}
 
@@ -69,7 +72,7 @@ An example of this can be found in Figure \ref{fig:findingASTNode}.  In this Fig
  \begin{center}
   \includegraphics[scale=1]{DrilldownEx}
  \end{center}
- \caption{An AST showing a partial overlap between child 1 and a text change, and child 2 and a text change}
+ \caption{An AST showing a partial overlap between child 1 and a text change, and child 2 and a text change.}
  \label{fig:troubleASTNode}
 \end{figure}
 
@@ -80,16 +83,16 @@ By examining any possible children of `Child 1' and `Child 2' we could discover 
 
   \item [AST nodes that are not included in the text change.]
     Any AST node that cannot be associated with a text change can be safely ignored. 
-    It means that there are no changes the text and therefore no changes to that AST Node.
+    It means that there are no changes to the text and therefore no changes to that AST Node.
   \item [AST nodes that are fully encapsulated by the text change.] 
-    These are the AST nodes that we wanted to discover as they are entirely within the range of text change.
+    These are the AST nodes that we wanted to discover as they are entirely within the range of a text change.
     It means that this AST node has changed and warrants further investigation. 
     There may also be text changes that are outside the AST node.
     If they are not part of any AST node they would be classified as comments or white-space. 
   \item [AST nodes that partly include the text change but have child AST nodes.]
     If an AST node has children and it is not fully contained by the text change we recursively check the children.
   \item [AST nodes that partly include the text change but have no child AST Nodes.]
-    If a AST node is a leaf node in an AST and it contains a text change then it is highly likely that the AST node has changed.
+    If an AST node is a leaf node in an AST and it contains a text change then it is highly likely that the AST node has changed.
     As there has been changes to this AST node then it also warrants further investigation. 
     Any part of the text change that is not part of the AST node and not part of any other AST node would be classified as comments or white-space.    
 \end{description}
@@ -165,16 +168,16 @@ public class SampleMoveAndChange {
 
 \begin{figure}[!t]
 \begin{center}
- \includegraphics[scale=.3]{movediff}
+ \includegraphics[scale=.37]{movediff}
  \end{center}
 \caption{A comparison of similar code with methods that have moved and changed}
- \label{fig:orig}
+ \label{fig:modscreenshot}
 \end{figure}
 
 
 A comparison of the source code using Meld, a graphical merge tool is shown in Figure ~\ref{fig:modscreenshot}.
 Both \lstinline{rect} and \lstinline{circ} have been deleted from the original version and have been inserted into the modified version.  
-However the \lstinline{circ} has also changed slightly. 
+However the \lstinline{circ} method has also changed slightly. 
 When this code is compared and parsed into an AST we will initially have four differences due to both the deletion and insertion of the two methods.    
 We are not able to directly compare the deleted AST nodes with the inserted AST Node to see if they are equal because the \lstinline{circ} method has been changed slightly. 
 Instead of checking for equality we need to check for similarity.
@@ -194,7 +197,7 @@ In the above example for instance we need to compare the deletion of \lstinline{
 %@<<move within container>>
 %@+node:paran.20140823073953.2203:<<move within container>>
 If a method is moved from one class into an inner class the programs' behaviour could have changed. 
-When this occurs there is no guarantee that a match between match between that insert and delete is a valid one.
+When this occurs there is no guarantee that a match between that insert and delete is a valid one.
 If a method has been shifted within the same class however, the program will still act the same.  
 Therefore in order to determine if the move is one that has no impact the matches are only counted if a match can be found within the same container.  
 Here, a container is an enclosing scope within the source code, such as a class. 
@@ -224,7 +227,7 @@ If a child AST node has been modified it is the equivalent of both a child AST n
 If there has been no change to a child AST node we need to recursively assign a score using its children. 
 To get the total percentage of children that changed we divide the score against the total number of children for both the delete and insert AST nodes we are scoring.
 
-In the example in Figure ~\ref{fig:matchComp} two AST node are being compared with each other. The red AST node has been deleted and an orange AST node have been inserted. Because the yellow node has been modified it has effectively been deleted and a green node has been inserted. This means has been a total of 4 changes to this level of the AST. 
+In the example in Figure ~\ref{fig:matchComp} two AST nodes are being compared with each other. The red AST node has been deleted and an orange AST node have been inserted. Because the yellow node has been modified it has effectively been deleted and a green node has been inserted. This means there have been a total of four changes to this level of the AST. 
 
 \begin{figure}[!t]
  \begin{center}
@@ -234,14 +237,20 @@ In the example in Figure ~\ref{fig:matchComp} two AST node are being compared wi
  \label{fig:matchComp}
 \end{figure}
 
-Scores are stored in a two dimensional array where the rows are insert candidates and the columns are delete candidates.  We use the greedy algorithm to select the lowest score in the array.  Insert and delete candidate that are selected are recorded as a move and should not be compared with anything else. The comparisons that are no longer possible are in the same column or row in the array.  The comparisons that are no longer possible are removed and the next lowest score for a match is evaluated.  To ensure that anything cannot be matched with anything once all good matches are eliminated a limit is set ensuring that any further matches are ignored.  The two items that could have otherwise been matched will remain a solitary insert and a delete.
+Scores are stored in a two dimensional array where the rows are insert candidates and the columns are delete candidates.  
+We use the greedy algorithm to select the lowest score in the array.  
+Insert and delete candidates that are selected are recorded as a move and should not be compared with anything else. 
+The comparisons that are no longer possible are in the same column or row in the array.  
+The comparisons that are no longer possible are removed and the next lowest score for a match is evaluated.  
+To ensure that anything cannot be matched with anything once all good matches are eliminated a limit is set ensuring that any further matches are ignored.  
+The two items that could have otherwise been matched will remain a solitary insert and a delete.
 %@nonl
 %@-node:paran.20140823073953.2204:<<calculate scores>>
 %@nl
 %@-node:paran.20140816070821.2183:<<detecting moves>>
 %@nl
 
-\subsection{Detects renameing}
+\subsection{Detects renaming}
 %@<<detecting renames>>
 %@+node:paran.20140606104644.2009:<<detecting renames>>
 The Refactor Categories Tool can also detects some renaming. 
@@ -255,7 +264,7 @@ This means that if all copies of a methods or variable have not been uniformly r
 \subsection{Detects equivalent code}
 %@<<detecting equ>>
 %@+node:paran.20140823073953.2207:<<detecting equ>>
-I some situations when the code has been modified the ASTs still remain the same.  
+In some situations when the code has been modified the ASTs still remain the same.  
 This means that although there have been changes the behaviour of the code still has not changed.
 %@nonl
 %@-node:paran.20140823073953.2207:<<detecting equ>>
@@ -265,7 +274,7 @@ This means that although there have been changes the behaviour of the code still
 %@<<detecting comments>>
 %@+node:paran.20140606104644.2011:<<detecting comments>>
 In addition to doing a comparison of AST Nodes the Refactor Categories tool also detects text changes that are located between AST nodes.
-These changes could be comments or white space and are checked to see if they have been inserted, deleted, modified or moved
+These changes could be comments or white space and are checked to see if they have been inserted, deleted, modified or moved.
 The Refactor Categories Tool first does a cursory examination of the text differences between two files.
 It then examines both the differences in executable Java code and the differences between comments and white-space. 
 
@@ -273,9 +282,9 @@ It then examines both the differences in executable Java code and the difference
 %@+node:paran.20140816070821.2184:<<moving Text>>
 This detection of comments and white-space also extends to move operations 
 As it is possible for the comment to change we also need to test for similarity rather than equality.  
-This is done by comparing the characters in from the code block that has been deleted with characters from the code block that has been inserted.  
+This is done by comparing the characters in the code block that has been deleted with characters from the code block that has been inserted.  
 A comparison is done between the two code blocks using a diff to obtain the smallest number of changes. 
-A score of 1 is added for each deleted or inserted of a character.
+A score of 1 is added for each deleted or inserted character.
 If a character has been modified a score of 2 is added. 
 To obtain the percentage of items changed the score is divided by the total number of characters in both code blocks.
 
@@ -331,9 +340,11 @@ Performance is an issue especially for when examining large software projects th
 %@+node:paran.20140605081907.1972:<<design decisons>>
 %@<<java>>
 %@+node:paran.20140810152125.2156:<<java>>
-Java was chosen as both the language to write the tool in and to be the language that the tool would recognise.  This was done as it was a language we understood and to make use of JDime if it was going to be part of the tool.  We wanted to use git due to its distributed nature.  The reasons for choosing a distributed version control system was that we wanted each private view being able to function on its own as a fully fledged project without being dependant on a server.  As we were already using Java rather than using the main Git distribution which is written in C we needed to use JGit instead.
+Java was chosen as both the language to write the tool in and to be the language that the tool would recognise.  This was done as it was a language we understood and to make use of JDime if it was going to be part of the tool.  
+We wanted to use Git due to its distributed nature.  
+The reasons for choosing a distributed version control system was that we wanted each private view being able to function on its own as a fully fledged project without being dependant on a server.  As we were already using Java rather than using the main Git distribution which is written in C we needed to use JGit instead.
 
-We could not use JDime because of the issues discussed earlier. Instead we used JastAddJ the same Java implementation that JDime uses so that we could implement some of the differences we required including being comment aware and only examining each of the copies of source code.
+We could not use JDime because of the issues discussed earlier. Instead we used JastAddJ --- the same Java implementation that JDime uses so that we could implement some of the differences we required including being comment aware and only examining each of the copies of source code.
 %@nonl
 %@-node:paran.20140810152125.2156:<<java>>
 %@nl

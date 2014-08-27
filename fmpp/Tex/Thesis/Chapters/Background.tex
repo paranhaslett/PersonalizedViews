@@ -27,7 +27,7 @@ There are a number of reasons why we might want to use a version control system.
   This is useful if there is an experimental feature which you want to explore but want to maintain the original as a separate project. 
   As shown in Figure ~\ref{fig:bgBranches} a version control system can keep these multiple interests separate by putting them on different \emph{branches}. 
   It is still possible to easily switch between the different branches depending on which project you want to make changes to.  
-  A good use of this feature is if you have a software project that you have written on behalf two different companies but each of them would like their own unique customisations on top of the base product.  
+  A good use of this feature is if you have a software project that you have written on behalf of two different companies but each of them would like their own unique customisations on top of the base product.  
   By making two copies of the base product and having a record of when it was divided the branches can later be recombined to include some or all of the features that have been introduced.  
 
   \begin{figure}[!t]
@@ -60,7 +60,7 @@ There are a number of reasons why we might want to use a version control system.
    \label{fig:bgBugTrack}
   \end{figure}
 
-  When used on source code in tandem with an \emph{bug tracking system} the message can contain the identification number for the bug being fixed or feature being added.
+  When used on source code in tandem with a \emph{bug tracking system} the message can contain the identification number for the bug being fixed or feature being added.
   This means that anybody who is examining the revision to see the reasoning for the change has access to a lot more information via the bug tracking system.
   An example of this is the \emph{issue tracker} that is built in to GitHub, an online version control system. In GitHub an issue (e.g. a bug report or feature request) can be created as shown in Figure ~\ref{fig:bgBugTrack}. 
   The issue tracker is linked with the messages that you need to write when you check in files.
@@ -91,7 +91,7 @@ If different changes are made to the same block of source code then they have a 
 There are a few ways of dealing with these conflicts.
 
 \subsubsection{Locking}
-One approach is to require that a file is only able to be used by one person at a time and that anyone else has to wait. This method avoids the need to resolve any conflicting changes.  The advantage of locking a file like this is that it is that we can be certain about the contents of the file at any given time. This is how one of the original version control systems, RCS ensured that the document stayed consistent. Tichy \cite{Tichy1982} has explained why he considers locking in a version control system to be a good idea in the design for RCS. The disadvantage is if one person retains the document for extended periods of time, it cannot be changed by anybody else. Furthermore the resulting document may be barely recognisable as the original if extensive work is done on it. However, if the two parties change distinctly different parts of the file, or both independently make exactly the same changes this restriction is unnecessary. 
+One approach is to require that a file is only able to be used by one person at a time and that anyone else has to wait. This method avoids the need to resolve any conflicting changes.  The advantage of locking a file like this is that we can be certain about the contents of the file at any given time. This is how one of the original version control systems, RCS ensured that the document stayed consistent. Tichy \cite{Tichy1982} has explained why he considers locking in a version control system to be a good idea in the design for RCS. The disadvantage is if one person retains the document for extended periods of time, it cannot be changed by anybody else. Furthermore the resulting document may be barely recognisable as the original if extensive work is done on it. However, if the two parties change distinctly different parts of the file, or both independently make exactly the same changes this restriction is unnecessary. 
 \subsubsection{Smaller structured units}
 Another way to reduce conflicts is to split the programming code into smaller units.  The advantage of this is that if you are using locking you minimise the risk that two people need access to the same unit of source code. Consider two people working on the same project made up of a number of files.  Instead of one person locking a file at a time that person could be allowed to only lock the functions they are changing. As those functions are smaller than the file there is likely to be less changes and they are likely to unlock them sooner.
 \subsubsection{Merging documents}
@@ -103,12 +103,12 @@ If not regularly merged it is possible for the source code to diverge greatly an
 \begin{description}
   \item [Manual Merging.]
 If you have two files you want to merge but no common starting point for them both you will need to manually merge any differences.
-The computer has no record about what the original file looked like so it can not determine which changes were intended.
+The computer has no record about what the original file looked like so it cannot determine which changes were intended.
 Features that they have in common will not need to be affected however a decision needs to be made about any differences by the developers responsible for those changes.
 
 % insert diagram
   \item [Automatic Merging.] 
-An automatic merge is possible if three revisions are available, the original revision, the revision containing changes we have made and the revision containing changes made by other developers. 
+An automatic merge is possible if three revisions are available: the original revision, the revision containing changes we have made and the revision containing changes made by other developers. 
 By comparing the differences between our revision and the original one it is possible to determine which changes we have made.  
 If we compare the changes made by other developers to the original, the changes that they have made can be determined.  
 If we attempt to update our code by merging other people's changes and a change only occurs in our code then that change is retained. 
@@ -132,8 +132,8 @@ The merge conflicts need to be dealt with manually.
   In a centralised version control system all the changes are made to one location.
   This is called a centralised repository.
   Having a centralised repository means that only one place needs to be checked in order to access the most up-to-date and agreed upon source code.
-  The need to be connected to a central system allowed multiple developers the ability to work on the same source code but often had a large overhead.
-  Some centralised systems required a specialist to be involved just to look after the server and ensure that merges were done correctly.
+  The need to be connected to a central system allows multiple developers the ability to work on the same source code but often has a large overhead.
+  Some centralised systems require a specialist to be involved just to look after the server and ensure that merges were done correctly.
   However according to Chacon \cite{Chacon2009} this single point of management has some advantages as it is possible to manage what developers had access to. 
   According to Chacon \cite{Chacon2009} and Bertino \cite{Bertino2012} the main flaw with centralised version control systems is that they have a single point of failure.
   If anything goes wrong with the server you could lose all your work.
@@ -157,7 +157,7 @@ The merge conflicts need to be dealt with manually.
   GitHub provides a way for many developers in different parts of the world to change source code for an open source project.
   It is possible that the developers for a particular project have not even met in real life or even know about each other.
 
-  As an example we could look at the JGit.
+  As an example we could look at the JGit project in GitHub.
   JGit is a pure Java implementation of the Git version control system.
   Figure ~\ref{fig:bgUsage} shows part of the GitHub page for JGit highlighting the amount of activity that there has been on the JGit project.
   With 74 contributors supplying 3245 changes means that the potential to have conflicting changes must be high. Having 20 separate branches may indicate that merges often need to happen. This one example could indicate the need for good merge tools that can reconcile conflicts even if the developers have little contact with each other.
@@ -267,7 +267,7 @@ public class SampleLCS {
 As there are possibly multiple longest common subsequences identifying the longest common subsequence that is going to be most useful becomes difficult.
 
 \subsection{Methods of calculating LCS}
-According to Arslan \cite{Arslan2010} there are many algorithms that solve longest common subsequence problem. As is it possible for there to be multiple correct solutions to a LCS problem a reason for having a different algorithm may be to find the LCS that make the most intuitive sense. The algorithms used in JGit (an open source implementation of Git in Java) for example are the the Myers, Patience and Histogram algorithms. JGit predominately uses the Histogram algorithm with a fall-back of using the Myers algorithm as a fall-back if it gets to computationally expensive.  There is also the option of using the Patience algorithm however this will produce similar results to the Histogram algorithm which has been derived from it. 
+According to Arslan \cite{Arslan2010} there are many algorithms that solve longest common subsequence problem. As is it possible for there to be multiple correct solutions to a LCS problem a reason for having a different algorithm may be to find the LCS that make the most intuitive sense. The algorithms used in JGit (an open source implementation of Git in Java) for example are the the Myers, Patience and Histogram algorithms. JGit predominately uses the Histogram algorithm with a fall-back of using the Myers algorithm if it gets too computationally expensive.  There is also the option of using the Patience algorithm however this will produce similar results to the Histogram algorithm which has been derived from it. 
 
 \subsection{Myers}
 The Myers algorithm was discovered by Eugene Myers \cite{Myers1986} who claimed that finding the minimal differences between any two documents was the equivalent to finding the shortest path in an \emph{edit graph}.  
@@ -305,7 +305,7 @@ For our example another longest common subsequence of "BCABB" is also equally va
 % explain how this is achieved 
 
 \subsection{Patience}
-The patience algorithm instead of figuring out the longest common subsequence directly uses the longest increasing subsequence. 
+The Patience algorithm instead of figuring out the longest common subsequence directly uses the longest increasing subsequence. 
 The example used by Aldous \cite{Aldous1999} to explain how the Patience algorithm finds the longest increasing subsequence is similar to a single player card game.
 The aim of the game is to create the minimal number of piles of cards in a row.
 A higher card may not be placed on a pile with a lower one in it.
@@ -313,10 +313,13 @@ Cards need to be placed on the leftmost valid pile.
 A new pile needs to be created at the end of the row for any cards that cannot be placed on any existing pile.
 This game discovers the longest increasing subsequence of the cards when they were shuffled before the game is played.
 The cards in the pile to the immediate left of each card when it is played are all possible elements that could come before it in a longest increasing subsequence.
-By taking notes of the card on top of of the pile to the immediate left whenever a card is played a longest subsequence can be calculated.     
+By taking notes of the card on top of the pile to the immediate left whenever a card is played a longest subsequence can be calculated.     
 
-The Patience algorithm only detects \emph{markers} which are matching lines of code that appear only once in both revisions of the source code.
-By using the Patience algorithm on line numbers for the markers instead of on cards the longest common subsequence can be established for those markers. 
+When the Patience algorithm is used on source code line numbers are compared (rather than cards).
+The Patience algorithm is not applied to every line in the source code, but is only applied to \emph{markers}.
+A marker is when there are lines of code that match in both revisons and appear only once.
+The longest common subsequence is computed just for those markers.
+The portions of code between those markers in the longest common subsequence are then computed recursively.   
 
 As Bram Cohan \cite{bramcohen} has pointed out in his blog there are instances where a traditional LCS algorithm can return results that although correct are not as helpful as they could be.
 This is especially true when there are multiple possible longest common subsequences.
@@ -324,10 +327,10 @@ The patience algorithm initially ignores lines that appear multiple times and fo
 By doing this it has a clearer picture about where to place the lines that occur multiple times.
 
 \subsection{Histogram}
-The patience algorithm works well when there are matches that only occur once in both revisions, but has difficulty in determining what to do if line only appear more than once.
+The patience algorithm works well when there are matches that only occur once in both revisions, but has difficulty in determining what to do if lines appear more than once.
 It is possible to fall back on a Myers algorithm for the segments where multiple matches occur, however it is possible for Myers to produce unhelpful results. 
 The Histogram algorithm attempts to overcome this by also detecting lines that occur in both revisions a small number of times.
-The algorithm is solely used in JGit at the moment and is a derivative of the Bram Cohens patience algorithm. 
+The algorithm is solely used in JGit at the moment and is a derivative of Bram Cohens patience algorithm. 
 More details about this algorithm can be found in the Javadoc for HistogramDiff in the JGit source code \cite{Foundation2014}. 
 
 
@@ -341,14 +344,14 @@ However the granularity of what is compared is more coarse as it shows complete 
 In the source code for many programming languages the white space is not relevant so many diff tools have the option of ignoring the white space and only comparing the code.
 This has an impact on the hash codes for each line as the hash code needs to be generated just from the text without including white spaces.
 
-Additionally with some diff tools it is possible to use regular expressions to ignore program features such as comments when doing a diff.  The reason this is important is if it is possible exclude changes that have no affect on behaviour from a diff then it is possible to also exclude them from a merge.  If we exclude them from a merge we could have fewer conflicts.
+Additionally with some diff tools it is possible to use regular expressions to ignore program features such as comments when doing a diff.  The reason this is important is if it is possible to exclude changes that have no affect on behaviour from a diff then it is possible to also exclude them from a merge.  If we exclude them from a merge we could have fewer conflicts. An example of something that is already excluded in JGit is white-space. 
 
 % insert examples of this with references semantic merge maybe
 
 \subsection{The problem with LCS}
 From the perspective of this thesis there is still a problem with longest common subsequence. 
 It does not notice changes of order in a document.  
-For the example in section \ref{sec:examplelcs} two methods that have swapped positions.
+For the example in section \ref{sec:examplelcs} two methods have swapped positions.
 The program still behaves in the same manner when it is run.
 It is unnecessary to make any changes to this code in order to get them to behave the same way.
 Diff tools that solely use the longest common subsequence do not take different ordered items into account even if they can be considered equivalent.
@@ -437,9 +440,11 @@ As the value of a particular refactoring appears to depend on what is trying to 
 Although this was a simple example it is easy to imagine a case where a much larger refactoring process is undertaken. In such circumstances a merge becomes difficult. 
 
 \section{JDime}
-% Part of the inspiration for this tool come from JDime.
-
-JDime is a tool written by  Apel and Le{\ss}enich \cite{Apel2012} \cite{Apel2011} \cite{LeBenich2012} to study how to get a balance between fast text-based merges and slow but more accurate semantic merges.  JDime is designed to merge two sets of code even if both of them have undergone refactoring. It does this by parsing the class files into AST and evalutating the AST for a \emph{semantic merge} In order to increase performance only if there is a conflict in a text based merge does any of the more expensive semantic merge take place. 
+\label{sec:Jdime}
+JDime is a tool written by  Apel and Le{\ss}enich \cite{Apel2012} \cite{Apel2011} \cite{LeBenich2012} to study how to get a balance between fast text-based merges and slow but more accurate \emph{semantic merge}.  
+A semantic merge is done by parsing the class files into AST and evalutating the AST.
+JDime is designed to merge two sets of code even if both of them have undergone refactoring. 
+In order to increase performance, only if there is a conflict in a text based merge does any of the more expensive semantic merge take place. 
 
 \subsection{How JDime works}
 % JDime instead of testing against a source code repository test against files 
@@ -449,7 +454,8 @@ JDime is a tool written by  Apel and Le{\ss}enich \cite{Apel2012} \cite{Apel2011
 % repository into the file system.
 
 Before doing any calculations, JDime runs a regular text merge over the source code.  
-If the regular text merge has conflicts then JDime parses the file into an abstract syntax tree (AST).  JDime uses the AST to determine if sections of the source code need to be in a particular order or could be in any order.
+If the regular text merge has conflicts then JDime parses the file into an abstract syntax tree (AST).  
+JDime uses the AST to determine if sections of the source code need to be in a particular order or could be in any order.
 What then happens depends on if order is required in the section of code JDime is examining.
 
 % needs more here
@@ -477,7 +483,7 @@ We performed a small experiment to investigate JDime as a tool for automatically
 % Also the tests that Le{\ss}enich did on JDime were from files rather than 
 % from a repository. It is necessary to set the files back up in the original 
 % repository structure to get a adequate baseline.
-As JDime performs a type of automatic merge it requires 3 different revisions.
+As JDime performs a type of automatic merge it requires three different revisions.
 JDime requires a revision that has changes that we want included.  This is commonly called the right revision however I will call this the merger revision as the changes in it are meant to be merged.
 JDime also requires a revision that we want to merge into.  This is commonly called the left revision, however I will refer to this as being the mergee. 
 Finally JDime requires an original revision that both the merger and the mergee are based on.
@@ -488,12 +494,14 @@ This is commonly called the base revision.
 % This means that the necessary Java source code to be used by JDime in base, 
 % left and right directories.
 
-In order to show how JDime performs extra refactoring based merging we need to attempt to try something that would incorrectly cause a conflict in a text based merge.  The reason that this is necessary is that if there are no conflicts in a text based merge the refactoring aware portion of JDime will not be run.  This saves the overhead of loading the program into an AST in the event that the initial text merge has no conflicts. 
+In order to show how JDime performs extra refactoring based merging we need to attempt to try something that would incorrectly cause a conflict in a text based merge.  
+The reason that this is necessary is that if there are no conflicts in a text based merge the refactoring aware portion of JDime will not be run.  
+This saves the overhead of parsing the program into an AST in the event that the initial text merge has no conflicts. 
 One way to get a lot of text conflicts between two pieces of code that are equivalent when they run is to change the order of the methods.
 Although the methods are in different order the programs are still "functionally equivalent".
 In order to examine how JDime works and test its suitability a test handler was written.
 The test handler creates all of the directories and files for JDime to process.
-The methods inside the files are reordered differently for both the left and the right directories.
+The methods inside the files are reordered differently for both the merger and the mergee.
 Figure ~\ref{fig:bgJDimeTest} demonstrates how the test files were arranged.
 
 
@@ -505,8 +513,9 @@ Figure ~\ref{fig:bgJDimeTest} demonstrates how the test files were arranged.
  \caption{The set-up for the test of JDime}
 \end{figure}
 
-Once the test was set up using the test handler the JDime run to process the directories.
-What we expected to happen was that JDime would reorder the methods to match the order in the mergee. As shown in Figure ~\ref{fig:bgJDimeScreenShot} When we compared the methods using a graphical merge tool however we found that the order of the methods in the files did not match.
+Once the test was set up using the test handler JDime was run to process the directories.
+What we expected to happen was that JDime would reorder the methods to match the order in the mergee. 
+As shown in Figure ~\ref{fig:bgJDimeScreenShot} when we compared the methods using a graphical merge tool however we found that the order of the methods in the files did not match.
 
 \begin{figure}[!t]
 \begin{center}
@@ -518,11 +527,13 @@ What we expected to happen was that JDime would reorder the methods to match the
 
 
 Further investigation revealed that the order of the methods in the final merged code example did not match the order of any of the equivalent input files.    
-In other words JDime normalises its output so that methods are in a particular order.
+In other words JDime normalises its output so that methods are in a particular order, but this does not necessarily reflect the order of any of the original files.
+
 % If it detects an unordered section it does not preserve the order of the 
 % output.
 
 \subsection{Reasons why JDime cannot currently be used to create private views}
+\label{sec:notJdime}
 The aim of this thesis is to be able to maintain two views of Java that, although having a different format, function in the same manner.  Although JDime seems like it would be able to help achieve those aims there are a few reasons why it cannot be used without changes.
 
 The first issue is that as explained above that the merged code could be in a totally different order to the original file and both of the revisions.

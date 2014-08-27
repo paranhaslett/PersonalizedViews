@@ -12,6 +12,7 @@ Some example of this are as follows:
 \begin{itemize}
   \item MolhadoRef \cite{DannyDig} \cite{Dig2008} attempts to incorporate refactoring in version control systems.
   \item Semantic Merge \cite{CODICESOFTWARE} is a series of stand alone diff tools for different languages. 
+  \item JDime as already discussed in Section \ref{sec:Jdime}.
 \end{itemize}
 
 \section{The problems to address}
@@ -22,14 +23,8 @@ There are a couple of challenges when collaborating using version control system
 Imagine a situation where you are working jointly on a project with other people. 
 Since you want to collaborate on different aspects of the same source code you have set up the project in a merge based version control system.  
 You have checked out your own copy of the code so that you can work on the source code without interfering with any of the changes others are making.
-
-In some conditions refactoring is only required to simplify the code to implement a small change as opposed to cleaning up the entire code base.
-This lightweight refactoring is likely if the code base is large. 
-According to Melina et. al. \cite{Milea2014} refactoring all the source is a challenge when the code base is large. 
-Also by doing some lightweight refactoring at this point could help you better understand what the code is doing.
-Fowler \cite{Fowler1999} claims that the main time to do refactoring is before making any changes so reformatting the code before working on it is appropriate. 
-However it also possible that you do not want to share that lightweight refactoring with others as it was solely for your benefit.
-
+You decide that it would be helpful to make a small refactoring.
+This lightweight refactoring will help you to better understand the source code and could involve some reformatting. 
 You complete your changes and check your code back into the version control system.  
 While you are doing this other people have been working on the code.  
 If you manage to check in your code before anyone else you will not need to merge any of your changes.  
@@ -50,6 +45,20 @@ As shown in Figure ~\ref{fig:motMerge} the difficulty lies in the fact that not 
 
 By checking in your refactoring code you are forcing others to comply with your vision about how the code should be structured.  This occurs even though you could have no awareness about what changes to the code others have made or intend to make.  Everyone who attempts to check in their code after you will need to merge into a restructured code source that they are unfamiliar with.  The potential for merge based bugs and time wasted doing unnecessary merging increases.
 
+% 
+% 
+% In some conditions refactoring is only required to simplify the code to 
+% implement a small change as opposed to cleaning up the entire code base.
+% This lightweight refactoring is likely if the code base is large.
+% According to Melina et. al. \cite{Milea2014} refactoring all the source is a 
+% challenge when the code base is large.
+% Also by doing some lightweight refactoring at this point could help you 
+% better understand what the code is doing.
+% Fowler \cite{Fowler1999} claims that the main time to do refactoring is 
+% before making any changes so reformatting the code before working on it is 
+% appropriate.
+% However it also possible that you do not want to share that lightweight 
+% refactoring with others as it was solely for your benefit.
 % 
 % By definition refactoring does not change any functionality, but changes the 
 % source code.
@@ -96,15 +105,22 @@ As this happens periodically a  lot of time could be spent adjusting the code ba
 % possibly have more divergence.  This divergence is likely to cause more 
 % rather than less merge issues at the expense of having to merge less often.
 \item [Differences in how code is understood.]    
-According to  Kerievsky a reason for refactoring code is to better understand it \cite{Kerievsky2004}. As shown by \cite{Bois2005} the very act of going through the source code and reprocessing it in a clearer form can help with the understanding of it. This would suggest that developers tend to leave the code in a difficult to understand state or that different developers understand things differently.
-Kerievsky also relates a tale about how the lack of knowledge of patterns makes a particular refactoring look a lot more complex \cite{Kerievsky2004}. The different perspectives meant that the programmer he refers to as John has a differing opinion that the refactored code was not an improvement. This shows that it is not just different functionality that influences the need to refactor but sometime the knowledge and experience of the developers themselves. It is often the case that two developers could have different views about what is an appropriate refactoring. This could be because each person brings different skills, notices different issues and has a preferred way of visualising a problem and solution.
+According to  Kerievsky a reason for refactoring code is to better understand it \cite{Kerievsky2004}. 
+As shown by \cite{Bois2005} the very act of going through the source code and reprocessing it in a clearer form can help with the understanding of it. 
+This would suggest that developers tend to leave the code in a difficult to understand state or that different developers understand things differently.
+Kerievsky also relates a tale about how the lack of knowledge of patterns makes a particular refactoring look a lot more complex \cite{Kerievsky2004}. 
+The different perspectives meant that the programmer he refers to as John has a differing opinion that the refactored code was not an improvement. 
+This shows that it is not just different functionality that influences the need to refactor but sometimes the knowledge and experience of the developers themselves. 
+It is often the case that two developers could have different views about what is an appropriate refactoring. 
+This could be because each person brings different skills, notices different issues and has a preferred way of visualising a problem and solution.
 \item [Version control systems not being aware of changes in the order.]
 One of the changes which is not catered for by current version control systems is changes in the order of methods.  The first person to check-in their code will have no issue as the version control system assumes that all the changes are simply a new revision.  When the second person attempts to reconcile their view there is the possibility of having unnecessary conflicts.  A lot of these conflicts will be with refactored or reformatted code which although works the same has a different structure.
 \end{description}
 
 
 \section{Benefits of private views}
-We want to be able to maintain private views that can have different but equivalent refactoring. Different structures of code that function the same way have a number of features that could be of interest.
+We want to be able to maintain private views that can have different but equivalent refactorings. 
+Different structures of code that function the same way have a number of features that could be of interest.
 
 \begin{description}
 
@@ -112,7 +128,7 @@ We want to be able to maintain private views that can have different but equival
 One benefit is that it is possible to keep the structure of code that each programmer works on as consistent as possible. 
 This means that when the developer examines the code again that it remains familiar and in a similar state to how it was when they last examined the code.
 The location of methods and variables are more likely to remain in the place the software developer left them even if a merge occurs.
-By maintaining two private views it allows software developers to work on the same programming project to freely refactor or add notes with minimal interference from others.
+By maintaining two private views it allows software developers working on the same programming project to freely refactor or add notes with minimal interference from others.
 It also means that the software developer will not interfere with others.
 If changes that are purely for formatting are not included when the code is merged then there will be less changes.
 The reduced changes would also mean that there will be less merge conflicts when merging code.
@@ -150,8 +166,7 @@ There are a number of ways we have considered about how to provide private views
 
 \begin{description}
   \item [Comparing differences using a non-ordered comparison algorithm.]   
-    Instead of using the Longest Common Sub-sequence (LCS) based approach we could instead use a non-ordered comparison.  The easiest way to consider this concept is that the LCS algorithm compares two lists whereas a non-ordered algorithm is a bit more like comparing sets of items. In this illustration each item would be a chunk of code. The items will still need to be ordered.
-
+    Instead of using the Longest Common Sub-sequence (LCS) based approach we could instead use a non-ordered comparison.  The easiest way to consider this concept is that the LCS algorithm compares two lists whereas a non-ordered algorithm is a bit more like comparing sets of items. In this illustration each item would be a chunk of code. Node that the items within these items may still need to be ordered.
     % \begin{algorithm}[H]
     % \SetAlgoLined
     % \While{There are elements on both sides that match}{
@@ -172,7 +187,7 @@ There are a number of ways we have considered about how to provide private views
     % \caption{A non-ordered comparison algorithm}
     % \end{algorithm}
 
-    The problems with using this approach to reconcile two different ordered sets is that the comparison would not know the difference between what needs to strictly remain in order and what is allowed to be in a different order. If the version control system has an understanding of a particular computer language it is much easier to determine what items can be moved without changing functionality and which ones need to stay in the same order. 
+    The problems with using this approach to reconcile two different sets is that the comparison would not know the difference between what needs to strictly remain in order and what is allowed to be in a different order. If the version control system has an understanding of a particular computer language it is much easier to determine what items can be moved without changing functionality and which ones need to stay in the same order. 
   \item [Normalising the source code before placing it in the version control system.]
     Before placing the item into source control it could be automatically transformed into an agreed upon format. That is before doing a merge both the code currently in the view and the code that is in source control would need to be transformed into normal form.  Here normal form could mean that all the methods are arranged alphabetically.  Once we have the normal form of both items being merged it will be easier to compare versions to see if they are equivalent.  If both versions are equivalent there is no need to merge them. 
 
@@ -181,16 +196,15 @@ There are a number of ways we have considered about how to provide private views
     It seems more efficient to compare two revisions directly with each other rather than to go to the effort of transforming them before comparing them. 
   \item [Storing additional information in the version control system.]
     By storing additional information within the version control system different views could be managed and recreated.
-    This concept is very similar to Ekmans plug-in for eclipse that maintains a record different refactorings in addition to the source code \cite{Ekman2004}.
+    This concept is very similar to Ekmans plug-in for eclipse that maintains a record of different refactorings in addition to the source code \cite{Ekman2004}.
 
     The problem with this is that it would have to store information about every private view.  In a distributed version control system especially an online one the number of distinct views could be large and change often.   
  % \item [Using regular expressions]
- %   % It could be possible to use regular expressions to control a lot of the  % merge process.  We could eliminate a number of comparisons that contain  % equivalent functionality in this manner. % 
- % Regular expressions however could be to cumbersome to use to represent a 
+ %   % It could be possible to use regular expressions to control a lot of the  % merge process.  We could eliminate a number of comparisons that contain  % equivalent functionality in this manner. %  % Regular expressions however could be to cumbersome to use to represent a 
  % programming language.
   
   \item [Using a tool like JDime solely as a method of comparison.]
-    As mentioned earlier there are a number of reasons why JDime cannot currently be used as a method of keeping two private views. If changed however it could still be useful.  One idea we had was to attach it to Git and solely use it to detect equivalent pieces of Java source code.
+    As mentioned earlier (see Section \ref{sec:notJdime})there are a number of reasons why JDime cannot currently be used as a method of keeping two private views. If changed however it could still be useful.  One idea we had was to attach it to Git and solely use it to detect equivalent pieces of Java source code.
 
     The difficulty we experienced with this idea was that JDime had features that we did not want.  Moulding JDime into something that we could use was too complex and it was easier to explore using the JastAddJ compiler. 
 \end{description}
@@ -202,7 +216,7 @@ Although in this thesis we have focused mostly on changes to the behaviour of a 
 
 Existing comments and even white space can also provide useful information about any changes of order in the code.  If a programmer has cut and pasted a block of code the white space and comments are also moved and provide hints to what has occurred.  Even if some of the code has been modified there could be enough clues left behind to suggest that the most likely event is that the code has moved and then adjusted.
 
-For these reasons comments are investigated as part of the Refactor Categories tool.
+For these reasons comments are investigated as part of the Refactor Categories Tool.
 
 % If a new comment is inserted in a branch or even if a comment is deleted it 
 % is likely that the change is specific to the task the programmer is trying 
