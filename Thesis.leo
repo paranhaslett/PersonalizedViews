@@ -154,18 +154,18 @@ expanded="hasletpara.20130905084546.1650,hasletpara.20130905084546.1662,hasletpa
 <v t="hasletpara.20140227093334.1830"><vh>To detect code moves</vh></v>
 <v t="paran.20140423092515.1913"><vh>Datsets</vh></v>
 </v>
-<v t="paran.20140605091816.1995" a="E"><vh>@shadow thes.tex</vh></v>
+<v t="paran.20140605091816.1995"><vh>@shadow thes.tex</vh></v>
 <v t="paran.20140801074838.2010"><vh>@shadow thesis-acknowledge.tex</vh></v>
-<v t="hasletpara.20131202100421.2130" a="E"><vh>@shadow Chapters/thesis-introduction.tex</vh></v>
+<v t="hasletpara.20131202100421.2130"><vh>@shadow Chapters/thesis-introduction.tex</vh></v>
 <v t="hasletpara.20131202100421.2132" a="E"><vh>Chapters</vh>
-<v t="paran.20140515173914.6982" a="E"
-expanded="paran.20140528183434.1974,paran.20140530135904.1945,paran.20140529075353.1935,paran.20140528183434.2055,paran.20140530135904.1946,paran.20140528183434.2009,paran.20140528183434.2010,paran.20140528183434.2011,paran.20140530135904.1958,paran.20140528183434.2021,paran.20140604093616.2026,"><vh>@shadow Background.tex</vh></v>
+<v t="paran.20140515173914.6982"
+expanded="paran.20140529075353.1935,paran.20140528183434.2055,paran.20140530135904.1946,paran.20140528183434.2010,paran.20140528183434.2011,paran.20140604093616.2026,"><vh>@shadow Background.tex</vh></v>
 <v t="paran.20140731220748.2032" a="E"
 expanded="paran.20140731220748.2034,paran.20140731220748.2038,paran.20140804074630.2143,"><vh>@shadow Motivation.tex</vh></v>
-<v t="paran.20140514103950.1918" a="E"
+<v t="paran.20140514103950.1918"
 expanded="paran.20140605081907.1971,paran.20140816070821.2183,paran.20140606104644.2011,paran.20140805175513.2166,paran.20140605081907.1972,"><vh>@shadow theTool.tex</vh></v>
 <v t="paran.20140605081907.1988" a="E"
-expanded="paran.20140814214911.2176,"><vh>@shadow expirimentalResults.tex</vh></v>
+expanded="paran.20140814214911.2176,paran.20140814214911.2178,"><vh>@shadow expirimentalResults.tex</vh></v>
 </v>
 <v t="hasletpara.20131202100421.2131" a="E"><vh>@shadow Chapters/thesis-conclusion.tex</vh></v>
 </v>
@@ -2838,72 +2838,10 @@ Git diff =0  Refactor Categories =465</t>
 <t tx="paranhaslett.20130826181255.2958"></t>
 <t tx="paranhaslett.20130826181255.2959">DOCUMENTS
 @others</t>
-<t tx="paranhaslett.20131205091806.1894">Re - tidy whole document
+<t tx="paranhaslett.20131205091806.1894">Resolve any outstanding issues
+Read through the whole document ensure it is clear, grammer is correct and it makes sense
 
 
-
-work on the exprirmental results page
-
-work on conclusion
-
-
-p4, still no thesis outline.
-
-p14, the paragraph yuo've added at the start of 2.2.1 should be at the
-start of section 2.2.
-
-p24, "Figure 2.4.2" twice - one of which is part of a passage that should
-be deleted.
-
-
-p37, replace "prove" by "show" or "demonstrate" or something else more
-appropriate.
-
-BTW: on p30, you say "As proven by [6]".  This should also be "shown" or
-something similar, not "proven".
-
-p41, "programs'" -&gt; "program's"
-missing figure reference
-
-Looking at Chapters 5 &amp; 6:
-
-p49, Chapter 5 needs to start with a more general statement about what you
-did and what the chapter is about.  For examples, something like "To
-evaluate the effectiveness of our approach, we performed an experiment to
-measure the performance of the Refactor Classifying Tool on a range of Java
-programs."
-
-p49, you need to refer to the table on p50 in the text, explaining what
-programs were used in the experiement.
-
-How were the different versions obtained?
-
-p51, "issues'" should not have an apostrophe
-
-p52, line -5.  "warrent" -&gt; "warrant"
-
-p52, line -1.  "suete" -&gt; "suite
-
-Section 5.3.2.  You need to say more than this about your results.  Refer
-to some specific results and explain what they mean.
-
-The last paragraph doesn't belong here - it should go with the discussion
-of what you did.
-
-I was expecting you to compare the results obtained with your tool with
-that obtained using a tool such as jDIME.  Would that have ben more
-illuminating?
-
-Also a couple of sentences with no full stops at the end.
-
-Chapter 6 still needs some conclusions, specifically a summary of what you
-have done and of your experimental results - that should come before the
-discussion of future work.
-
-That's all for now!
-
-Cheers
-        Lindsay
 </t>
 </tnodes>
 </leo_file>

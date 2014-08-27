@@ -177,7 +177,7 @@ We also increased the memory by changing the parameters for the run configuratio
 %@+node:paran.20140814214911.2177:<<overview>>
 After running the Refactor Categories Tool over our benchmark suite we obtained the results shown in Table \ref{tab:results}
 
-\begin{table}[t!]
+\begin{table}[!p]
     \small
     \begin{tabular}{l|llllll|l|lll}
     Benchmark        & \multicolumn{6}{|c|}{Java}           & WS & \multicolumn{3}{|c}{Comments} \\ \cline{2-7} \cline{9-11}
@@ -197,7 +197,7 @@ After running the Refactor Categories Tool over our benchmark suite we obtained 
 
 The number of text changes that were recognised during ordinary text comparison done using JGit for each benchmark are shown in Table \ref{tab:textcomp}. This table allows us to show the difference between an ordinary text merge (reported by JGit) and the results produced by the Refactor Categories Tool shown in Table \ref{tab:results}. Note that the values in this table are lower as the Refactor Categories tool detects multiple changes which a text based comparison aggregates.  
 
-\begin{table}[H]
+\begin{table}[!p]
     \centering
     \begin{tabular}{l|lll}
     Benchmark        & \multicolumn{3}{|c}{Ordinary Text Diff (reported by JGit)} \\ \hline
@@ -224,6 +224,8 @@ The number of text changes that were recognised during ordinary text comparison 
 \subsection{Discussion}
 %@<<examination>>
 %@+node:paran.20140814214911.2178:<<examination>>
+%@<<figures>>
+%@+node:paran.20140827082213.3569:<<figures>>
 Figure \ref{fig:textDifference}, which has been generated from the data in Table \ref{tab:textcomp}, shows the average for all the benchmarks of the types of operations found during an ordinary text comparison.  
 Figure \ref{fig:javaDifference}, which has been generated from the data in Table \ref{tab:results}, shows the average for all the benchmarks of the types of operations found during a Java AST node comparison.
 
@@ -244,12 +246,15 @@ Figure \ref{fig:javaDifference}, which has been generated from the data in Table
  \label{fig:javaDifference}
 \end{figure}
 %\end{minipage}
+%@nonl
+%@-node:paran.20140827082213.3569:<<figures>>
+%@nl
 
 When we compare the figures the number of modifications is different.
 The percentage is much higher in the text comparison that JGit normally uses and lower for the Refactor Categories tool.
-The reason for this is because a change done to block of text recorded in the \lstinline{EditList} object is made up of a number of smaller changes.  
+The reason for this is because a change done to a block of text recorded in the \lstinline{EditList} object is made up of a number of smaller changes.  
 For instance a single line detected by the JGit text comparison may contain a Java AST node change and a change to a comment.
-The Refactor Categories Tool records each of these changes seperately.
+The Refactor Categories Tool records each of these changes separately.
 A change detected by JGit could be a number of lines, so a single block of text could contain multiple Java AST nodes.  
 If a block of text is a delete all the Java AST nodes or comments in that range will also be deletes. 
 If a block of text is an insert all the Java AST node or comments in that range will also be inserts.
@@ -258,14 +263,16 @@ It is possible that some of the changes could be Java AST nodes or comments that
 They could also be deletes rather than modifications.
 Some of the changes that an ordinary text diff recognises as modifications could actually be made up of individual inserts and deletes.
 Note that the number of changes reported by the Refactor Categories Tool will increase exactly for this reason.
-Futhermore, when we examine these changes more closely using the Refactor Categories Tool is that the comparative percentage of insert and delete increase while the percentage of modify tends to decrease.  
+Furthermore, when we examine these changes more closely using the Refactor Categories Tool the comparative percentage of insert and delete increases while the percentage of modifications tends to decrease.  
 
-Instead of having insert, delete and modify operations Figure \ref{fig:javaDifference} also has move and rename.
+Instead of having insert, delete and modifications Figure \ref{fig:javaDifference} also has move and rename.
 Predominately the changes were still identified as modifications, inserts and deletes rather than the move and rename we are interested in.
 What this could mean is although some non-functional changes have been introduced it does not occur very often.  
-However,it is also possible that a more advanced identification algorithm could improve the results. 
+However, it is also possible that a more advanced identification algorithm could improve the results. 
 
-Another aspect we were interested in was the difference between Java based differences and changes and non-Java items such as comments or white-space.
+%@<<comments>>
+%@+node:paran.20140827082213.3570:<<comments>>
+Another aspect we were interested in was the difference between Java based differences and non-Java changes such as comments or white-space.
 Figure \ref{fig:changeType} shows the how many Java changes were detected as compared to comments and white-space.
 This shows that the predominate change in the source code was a change in functionality rather than a change to the documentation.
 It implies that in programming projects there tends to be many more lines of program than lines of comments.
@@ -278,9 +285,8 @@ Unlike Java AST Nodes blocks of code containing comments are not further divided
 This means that the block of code marked as a modification to a comment may in fact contain a number of deletes or inserts.
 Another possible cause for a large number of comment changes to be modification is if a programming project is well established.
 It is possible, in an existing project, that changes are made to the code and the existing comments are modified to reflect that change.
-The changes to the code could include insert or deletes in addition to modifications the source code.
-In this situation when comparing the amount of inserts, deletes and modifications between the source code changes and the comment changes the source code will have comparitely more inserts and deletes whilst the comments will have comparitively more modifications.
-
+The changes to the code could include insert or deletes in addition to modifications to the source code.
+In this situation when comparing the amount of inserts, deletes and modifications between the source code changes and the comment changes the source code will have comparatively more inserts and deletes whilst the comments will have comparatively more modifications.
 
 %\begin{minipage}[t]{1\textwidth}
 \begin{figure}[p] 
@@ -297,14 +303,17 @@ In this situation when comparing the amount of inserts, deletes and modification
  \end{center}
  \caption{Types of operations for comments on average over the benchmarks}
  \label{fig:commentsPie}
-\end{figure}
+\end{figure} ~\\
 %\end{minipage}
 
 A significant number of comments have been inserted and deleted.
 Examining these items a little closer revealed that some included the words "TODO" or "FIXME".
 Although the addition of these comments are likely to be associated with a related code change they may only be relevant to people working on that section of the code.
 The same is true for blocks of commented out code.
-In this situation having a private view could be useful. 
+In this situation having a private view could be useful.
+%@nonl
+%@-node:paran.20140827082213.3570:<<comments>>
+%@nl
 
 
 

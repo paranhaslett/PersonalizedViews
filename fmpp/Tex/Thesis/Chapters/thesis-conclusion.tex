@@ -4,80 +4,95 @@
 In this thesis we presented the concept of maintaining private views in Java.
 A private view presented here is an environment that allows a developer to import changes they want while avoiding hidden unwanted changes. 
 This concept would also allow programmers to implement lightweight refactoring to their tastes, while minimising the impact on others.  
-In evaluating what these private view will look like we use version control systems as a starting point.
-There are some features of version control systems that already temporarily limit unwanted changes.
+In evaluating what these private view will look like we used version control systems as a starting point.
+There are some features of version control systems that already temporarily limit unwanted changes (e.g. branches).
 However, during a merge any unwanted refactoring is imported. 
 To this end we created the Refactor Categories Tool as a precursor to creating private views. 
-This tool analyses the difference between two revisions such as encountered during a commit and identifies some examples of lightweight reafactoring.
+This tool analyses the difference between two revisions such as encountered during a commit and identifies some examples of lightweight refactoring.
 The way that the Refactor Categories Tool analyses these differences is by first parsing the source for both commits into a Java Abstract Syntax Tree (AST).
 Once the AST is populated we then identify which parts of the AST match the differences we want to examine.
 We then use the AST to identify additional features that have been changed. 
 The features we have focused on are ones that do not change any functionality such as methods being moved or comments being changed. 
-The results show some changes that do not change the functionality of a program.
-As the Refactor Categories Tool as a prototype it does not detect many of these.
-We believe that it is possible to detect many more non-functional changes because more mature tools, such as JDime, are capable of detecting a wider range of refactoring. 
-
-%We also examine any difference that does not have a corresponding AST match as these differences are comments or whitespace. 
+The results show that some of these lightweight refactorings are encountered in practice.
+As the Refactor Categories Tool is a prototype it did not, unfortunately, select as many as we hoped.
+We believe that it is possible to detect many more non-functional changes using more advanced identification algorithms.
 
 \section{Future work}
 
 In order to further the research into private views it would be useful to evaluate how the Refactor Categories Tool could be enhanced to detect more non functional changes. 
 In addition to this some other tools could be adapted to create and evaluate the usefulness of private views.  
 \subsection{Changes to the Refactor Categories Tool}
-There are a number of ways that the Refactor Categories tool could be changed to discover more moves, and renames.
 
-At the moment the Refactor Categories Tool only examines moves that occur within a class, however, there could be non-functional changes that occur inside a method. 
+There are a number of ways that the Refactor Categories Tool could be changed to discover more moves, and renames:
+
+\begin{itemize}
+
+  \item At the moment the Refactor Categories Tool only examines moves that occur within a class, however, there could be non-functional changes that occur inside a method. 
 An example would be if a local variable declaration was moved.
 Sometimes this move would have no effect on the code and others it could cause the code to no longer compile.
+  
+  \item At the moment the refactor categories tool only compares matches within a limited scope (i.e. a class).  
+  By allowing the Refactor Categories Tool to check other parts of the code, such as inner classes or even other files may also produce some interesting results.
+Although we cannot guarantee that the moves discovered are valid ones this could give us more information about the source code we are examining.
 
-By allowing the Refactor Categories tool to check outside the containing class may also produce some interesting results.
-Although we cannot guarantee that the moves discovered are valid ones it does give as more information about the source code we are examining.
-
-At the moment the Refactor Categories Tool only examines files that have been identified by JGit as being modified or renamed.
-In some instances JGit could have incorrectly determined that a file as beed deleted and reinserted rather than being renamed or moved.
+  \item At the moment the Refactor Categories Tool only examines files that have been identified by JGit as being modified or renamed.
+In some instances JGit could have incorrectly determined that a file as been deleted and reinserted rather than being renamed or moved.
 This could happen easily since during a move or rename the a Java file changes the package reference and class name within a file.
-This is epecially true if the class has both been renamed and modified.
-   
-Revising the scoring system for matching up inserts and deletes may produce some better results.
-At the moment modifications are counted as two changes using the scoring system to match inserts and deletes.
-Expirimenting by reducing this value could improve the number of matches.
+This is especially true if the class has both been renamed and modified.
 
-In addition to moves and renames, changes in the scope of methods may be of interest.
+  \item Revising the scoring system for matching up inserts and deletes may produce some better results.
+At the moment modifications are counted as two changes using the scoring system to match inserts and deletes.
+Experimenting by reducing this value could improve the number of matches.
+
+\end{itemize}
+
+
+
+
+   
+
+In addition to moves and renames, other lightweight refactoring may be of interest.
+One of these are changes to access modifiers.
 An example would be if a methods access changes from being private to being public.
-There would need to be a whole lot of checking to ensure that the change does not affect functionality.
+Each of the method calls would then need to be rechecked to ensure that the change does not affect functionality.
+Due to the possibilities of overloaded methods in Java this would be complicated.
+
+An additional lightweight refactoring that could be considered is code that has been duplicated.
+This could be done in a similar manner as how the Refactor Categories Tool check for code that has moved.
+If we also check for code that has been modified slightly we may be able to determine that a copy and paste has been used to generate new code.
+However, at the moment the Refactor Categories Tool only considers code that has been changed.
+If we want to analyse where code has been copied we would need to check the entire source for copies as opposed to just the items that have changed.
 
 Comments could be associated with the AST Node they relate to.  
 With this change would be possible to tell if changing a comment should be reflected in other views when there is a source code change. 
-This change is difficult as it is had to tell which block of code the comment refers to.  
+This change is difficult as it is hard to tell which block of code the comment refers to.  
 One way this could be done would be to associate single-line comments at the end of the line with the AST Node that appears directly before them and other comments with the AST node that appears directly after them.  
 This however is only a rough approximation so it may be helpful to also be able to specify exceptions to these rules by using annotations that tie the comment to a block of code. Annotations could also be used to specify how important the comment is.
 If the comment is marked as unimportant it would indicate that it still should not be considered a change even if it differs between revisions.
 
-The Refactor Categories tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  
+The Refactor Categories Tool could be re-purposed to allow it to be used as a merge tool rather than a comparison tool that we are currently using it for.  
 This would bring us a step closer to being able to realise the vision of having better separated private views.  
 
-Performance of Refactor Categories Tool could be further enhanced by only parsing nodes that contain the text change.  This however would require major changes to the parser or rewriting it. There would also be the complexity of figuring out how to only partially parse a source code. The benefits of rewriting the parser would save memory in addition to speeding up the parsing of Java code into AST nodes.
+Performance of Refactor Categories Tool could be further enhanced by only parsing nodes that contain the text change.
+This however would require major changes to the parser or rewriting it. There would also be the complexity of figuring out how to only partially parse a source code.
+The benefits of rewriting the parser would save memory in addition to speeding up the parsing of Java code into AST nodes.
 
 
 \subsection{Other lines of enquiry}
 
-There are other tools that could be used to determine if refactoring has taken place.
-As investigated by this thesis JDime although it has some hurdles to overcome could be repurposed.
-Although \emph{diffJ} as the difference tool used by git.
+There are other tools that could be modified to determine when a refactoring has taken place.
+
+JDime has already been investigates as part of this thesis.
+Although JDime cannot recognise changes to comments or white-space it could be re-purposed.
+If it could be converted into a comparison tool rather than a merge tool then code that has been refactored differently could be compared without the result being normalised.
+
+According to Pace \cite{Pace} \emph{DiffJ} is able to find the functional differences between two revisions of Java source code.
+When computing the difference DiffJ ignores a range of lightweight refactorings such as moved methods, moved imports and the code being reformatted. 
+As it ignores comments and white-space however, it will not be able to determine if there have been comment based changes that may be important. 
 
 
-% The following changes to the Refactor Categories Tool has potential to 
-% improve the results or make the concept of private views a reality.
+
 % 
 % future work: by keeping track of equivalences there is no need to retest 
 % using the AST
-% 
-% To reuse the refactor categories tool or something similar to create 
-% separate views as envisaged
-% 
-% to use a simplified parser
-% 
-% to include copy as a option that we examine
-% 
-% examined deleted files or inserted files
 % 
