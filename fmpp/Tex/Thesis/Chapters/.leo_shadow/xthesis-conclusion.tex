@@ -7,7 +7,7 @@
 
 In this thesis we presented the concept of maintaining private views in Java.
 A private view presented here is an environment that allows a developer to import changes they want while avoiding hidden unwanted changes. 
-This concept would also allow programmers to implement lightweight refactoring to their tastes, while minimising the impact on others.  
+This would also allow programmers to implement lightweight refactoring to their tastes, while minimising the impact on others.  
 In evaluating what these private view will look like we used version control systems as a starting point.
 There are some features of version control systems that already temporarily limit unwanted changes (e.g. branches).
 However, during a merge any unwanted refactoring is imported. 
@@ -18,7 +18,7 @@ Once the AST is populated we then identify which parts of the AST match the diff
 We then use the AST to identify additional features that have been changed. 
 The features we have focused on are ones that do not change any functionality such as methods being moved or comments being changed. 
 The results show that some of these lightweight refactorings are encountered in practice.
-As the Refactor Categories Tool is a prototype it did not, unfortunately, select as many as we hoped.
+As the Refactor Categories Tool is a prototype it did not, unfortunately, identify as many as we hoped.
 We believe that it is possible to detect many more non-functional changes using more advanced identification algorithms.
 
 \section{Future work}
@@ -38,12 +38,12 @@ An example would be if a local variable declaration was moved.
 Sometimes this move would have no effect on the code and others it could cause the code to no longer compile.
   
   \item At the moment the Refactor Categories Tool only compares matches within a limited scope (i.e. a class).  
-  By allowing the Refactor Categories Tool to check other parts of the code, such as inner classes or even other files may also produce some interesting results.
+Allowing the Refactor Categories Tool to check other parts of the code, such as inner classes or even other files may also produce some interesting results.
 Although we cannot guarantee that the moves discovered are valid ones this could give us more information about the source code we are examining.
 
   \item At the moment the Refactor Categories Tool only examines files that have been identified by JGit as being modified or renamed.
 In some instances JGit could have incorrectly determined that a file as been deleted and reinserted rather than being renamed or moved.
-This could happen easily since during a move or rename the a Java file changes the package reference and class name within a file.
+This could happen easily since during a move or rename Java changes the package reference and class name within the file.
 This is especially true if the class has both been renamed and modified.
 
   \item Revising the scoring system for matching up inserts and deletes may produce some better results.

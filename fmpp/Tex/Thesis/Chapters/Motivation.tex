@@ -41,7 +41,9 @@ Potentially merge conflicts could also occur between the changes they have made 
 \label{fig:motMerge}
 \end{figure}
 
-As shown in Figure ~\ref{fig:motMerge} the difficulty lies in the fact that not only the functionality that you have added is checked in but also the changes brought about by lightweight refactoring.  These refactored changes have not changed how the program functions but have simplified and tidied the code to make the addition of your changes easier. These could also include any formatting changes, or code restructuring used to create a programming environment to allow you to be more productive.  During these occasions you may want to avoid changing other peoples code in such a dramatic fashion.
+As shown in Figure ~\ref{fig:motMerge} the difficulty lies in the fact that not only the functionality that you have added is checked in but also the changes brought about by lightweight refactoring.
+These refactored changes have not changed how the program functions but have simplified and tidied the code to make the addition of your changes easier. 
+These could include any formatting changes, or code restructuring used to create a programming environment to allow you to be more productive.  During these occasions you may want to avoid changing other peoples code in such a dramatic fashion.
 
 By checking in your refactoring code you are forcing others to comply with your vision about how the code should be structured.  This occurs even though you could have no awareness about what changes to the code others have made or intend to make.  Everyone who attempts to check in their code after you will need to merge into a restructured code source that they are unfamiliar with.  The potential for merge based bugs and time wasted doing unnecessary merging increases.
 
@@ -200,8 +202,7 @@ There are a number of ways we have considered about how to provide private views
 
     The problem with this is that it would have to store information about every private view.  In a distributed version control system especially an online one the number of distinct views could be large and change often.   
  % \item [Using regular expressions]
- %   % It could be possible to use regular expressions to control a lot of the  % merge process.  We could eliminate a number of comparisons that contain  % equivalent functionality in this manner. %  % Regular expressions however could be to cumbersome to use to represent a 
- % programming language.
+ %   % It could be possible to use regular expressions to control a lot of the  % merge process.  We could eliminate a number of comparisons that contain  % equivalent functionality in this manner. %  % Regular expressions however could be to cumbersome to use to represent a  % programming language.
   
   \item [Using a tool like JDime solely as a method of comparison.]
     As mentioned earlier (see Section \ref{sec:notJdime})there are a number of reasons why JDime cannot currently be used as a method of keeping two private views. If changed however it could still be useful.  One idea we had was to attach it to Git and solely use it to detect equivalent pieces of Java source code.
