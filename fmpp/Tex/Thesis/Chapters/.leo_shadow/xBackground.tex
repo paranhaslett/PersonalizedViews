@@ -443,7 +443,7 @@ By taking notes of the card on top of the pile to the immediate left whenever a 
 
 When the Patience algorithm is used on source code line numbers are compared (rather than cards).
 The Patience algorithm is not applied to every line in the source code, but is only applied to \emph{markers}.
-A marker is when there are lines of code that match in both revisons and appear only once.
+A marker is when there are lines of code that match in both revisions and appear only once.
 The longest common subsequence is computed just for those markers.
 The portions of code between those markers in the longest common subsequence are then computed recursively.   
 
@@ -617,7 +617,7 @@ Although this was a simple example it is easy to imagine a case where a much lar
 %@+node:paran.20140528183434.2021:<<JDime>>
 \label{sec:Jdime}
 JDime is a tool written by  Apel and Le{\ss}enich \cite{Apel2012} \cite{Apel2011} \cite{LeBenich2012} to study how to get a balance between fast text-based merges and slow but more accurate \emph{semantic merge}.  
-A semantic merge is done by parsing the class files into AST and evalutating the AST.
+A semantic merge is done by parsing the class files into AST and evaluating the AST.
 JDime is designed to merge two sets of code even if both of them have undergone refactoring. 
 In order to increase performance, only if there is a conflict in a text based merge does any of the more expensive semantic merge take place. 
 
